@@ -1,8 +1,15 @@
 body {
-   font-weight: 400;
+  font-family: $font-secondary;
+  font-weight: 400;
   // font-size: 16px;
   line-height: 1.7;
   padding: 3rem;
 }
 
-// .heading-primary
+h1,
+h2,
+h3 {
+  font-family: $font-primary, sans-serif;
+  font-weight: normal;
+  margin: 0;
+}
