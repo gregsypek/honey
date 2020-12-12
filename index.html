@@ -1,15 +1,55 @@
 <!DOCTYPE html>
 <html lang="pl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Miodek</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bungee&family=Poppins:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="sass/main.css" />
-  </head>
-  <body></body>
+
+<head>
+	<meta charset="UTF-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Miodek</title>
+	<script src="https://kit.fontawesome.com/fb7f6f30e4.js"></script>
+	<link href="https://fonts.googleapis.com/css2?family=Bungee&family=Poppins:wght@400;600&display=swap"
+		rel="stylesheet" />
+	<link rel="stylesheet" href="sass/main.css" />
+</head>
+
+<body>
+	<header class="navigation">
+		<div class="navigation__row navigation__row--first">
+
+			<a href="#main-menu" id="main-menu-toggle" class="menu-toggle" aria-label="Open main menu">
+				<span class="sr-only">Open main menu</span>
+				<span class="fa fa-bars" aria-hidden="true"></span>
+			</a>
+
+			<img src="./src/images/logo-miodek.svg" alt="" class="navigation__logo">
+			<div class="navigation__buttons">
+				<button class="btn btn--login">zaloguj się</button>
+				<button class="btn btn--register">zarejestruj się</button>
+			</div>
+		</div>
+		<hr>
+		<!-- <svg viewBox="0 0 800 30" height="30px" width="800px">
+			<line x1="5" y1="15" x2="800" y2="15" stroke="currentColor" />
+		</svg> -->
+
+		<div class="navigation__row navigation__row--second">
+			<nav id="main-menu"class="navigation__nav" aria-label="Main menu">
+
+				<a href="#main-menu-toggle" id="main-menu-close" class="menu-close" aria-label="Close main menu">
+					<span class="sr-only">Close main menu</span>
+					<span class="fa fa-close" aria-hidden="true"></span>
+			</a>
+
+				<ul class="navigation__list">
+					<li class="navigation__item"><a href="#" class="navigation__link">O nas</a></li>
+					<li class="navigation__item"><a href="#" class="navigation__link">Galeria</a></li>
+					<li class="navigation__item"><a href="#" class="navigation__link">Oferta</a></li>
+					<li class="navigation__item"><a href="#" class="navigation__link">Kontakt</a></li>
+				</ul>
+			</nav>
+			<a href="#main-menu-toggle" class="backdrop" tabindex="-1" hidden></a>
+		</div>
+	</header>
+
+</body>
+
 </html>
