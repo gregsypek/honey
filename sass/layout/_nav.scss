@@ -10,6 +10,7 @@
     &--first {
       justify-content: space-between;
     }
+
     .sr-only {
       position: absolute;
       width: 1px;
@@ -27,6 +28,7 @@
       margin-right: 1rem;
       font-size: 3rem;
     }
+
     .menu-close {
       color: $color-white;
       margin-right: 1rem;
@@ -57,11 +59,13 @@
       cursor: pointer;
       transition: all 0.3s ease-in-out;
     }
+
     .btn--login {
       margin-right: 2rem;
       background-color: $color-white-2;
     }
-    .btn--register {    
+
+    .btn--register {
       background-color: $color-gray;
       color: $color-white;
     }
@@ -114,7 +118,7 @@
         z-index: 1000;
       }
 
-      + .backdrop {
+      +.backdrop {
         position: fixed;
         display: block;
         left: 0;
@@ -137,6 +141,7 @@
     width: 200px;
     background-color: $color-gray;
   }
+
   &__link {
     /* Make links block to make them fully clickable on mobile. Remember this is finger navigation, so include plenty of clickable area. All links get a bottom border */
 
@@ -182,17 +187,55 @@
     &__list {
       /* Undo off-canvas styling */
 
-      padding: 0;
-      height: auto;
+      padding: 4rem;
+      height: 20rem;
       width: auto;
       background: none;
       overflow: hidden;
       text-align: center;
     }
 
+    //item is a li tag in HTML
     &__item {
       /* display the li's horizontally */
       display: inline-block;
+      width: 22rem;
+
+      /* CREATES A HEXAGON ELEMENT WITH SHADOW AND ROTATE IT ON HOVER
+      START //////////////////////////////*/
+      &:hover span::before {
+        transform: rotate(-13deg);
+      }
+
+      span {
+        position: relative;
+        z-index: -1;
+        @include shadow;
+
+        &::before {
+          content: '';
+          position: absolute;
+          width: 6rem;
+          height: 7rem;
+          top: -42px;
+          left: -16px;
+          @include hexagon;
+          background: $color-white;
+          transform: rotate(-134deg);
+          transition: all .5s ease-in-out;
+        }
+
+        &.orange::before {
+          background: $color-honey;
+        }
+      }
+
+      /*END
+      ///////////////////////////////*/
+    }
+
+    &__item:not(:last-child) {
+      margin-right: 2.5rem;
     }
 
     &__link {
@@ -200,6 +243,8 @@
       // border-bottom: none;
       display: inline;
       font-size: 3rem;
+      // THIS SHOULD DELET ORANGE LINE !!!!!!!!
+      border-bottom: none;
 
       &:first-of-type {
         border-top: none;

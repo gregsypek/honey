@@ -212,8 +212,8 @@ h3 {
   }
   .navigation__list {
     /* Undo off-canvas styling */
-    padding: 0;
-    height: auto;
+    padding: 4rem;
+    height: 20rem;
     width: auto;
     background: none;
     overflow: hidden;
@@ -222,11 +222,48 @@ h3 {
   .navigation__item {
     /* display the li's horizontally */
     display: inline-block;
+    width: 22rem;
+    /* CREATES A HEXAGON ELEMENT WITH SHADOW AND ROTATE IT ON HOVER
+      START //////////////////////////////*/
+    /*END
+      ///////////////////////////////*/
+  }
+  .navigation__item:hover span::before {
+    -webkit-transform: rotate(-13deg);
+            transform: rotate(-13deg);
+  }
+  .navigation__item span {
+    position: relative;
+    z-index: -1;
+    -webkit-filter: drop-shadow(-4px 2px 5px rgba(79, 79, 79, 0.8));
+            filter: drop-shadow(-4px 2px 5px rgba(79, 79, 79, 0.8));
+  }
+  .navigation__item span::before {
+    content: '';
+    position: absolute;
+    width: 6rem;
+    height: 7rem;
+    top: -42px;
+    left: -16px;
+    -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+            clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+    background: #ffffff;
+    -webkit-transform: rotate(-134deg);
+            transform: rotate(-134deg);
+    -webkit-transition: all .5s ease-in-out;
+    transition: all .5s ease-in-out;
+  }
+  .navigation__item span.orange::before {
+    background: #EECF90;
+  }
+  .navigation__item:not(:last-child) {
+    margin-right: 2.5rem;
   }
   .navigation__link {
     color: #333333;
     display: inline;
     font-size: 3rem;
+    border-bottom: none;
   }
   .navigation__link:first-of-type {
     border-top: none;
