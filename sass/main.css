@@ -85,6 +85,29 @@ h3 {
   padding: 2rem 0.2rem;
 }
 
+.navigation__buttons .btn {
+  width: 18rem;
+  height: 5rem;
+  font-size: 1.8rem;
+  font-family: inherit;
+  border-radius: 5%;
+  border: 2px solid #333333;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+
+.navigation__buttons .btn--login {
+  margin-right: 2rem;
+  background-color: #F2F2F2;
+}
+
+.navigation__buttons .btn--register {
+  background-color: #333333;
+  color: #ffffff;
+}
+
 .navigation__nav {
   /*
    Mobile first - this is the mobile menu, positioned offscreen to start 
