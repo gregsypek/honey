@@ -20,7 +20,6 @@ body {
   font-family: "Poppins", sans-serif;
   font-weight: 400;
   line-height: 1.7;
-  padding: 3rem;
 }
 
 h1,
@@ -29,6 +28,12 @@ h3 {
   font-family: "Bungee", cursive, sans-serif;
   font-weight: normal;
   margin: 0;
+}
+
+.wrapper {
+  height: 250vh;
+  background-image: linear-gradient(70deg, rgba(238, 207, 144, 0.9) 0%, rgba(213, 178, 117, 0.9) 65%, transparent 10%);
+  height: 250vh;
 }
 
 .navigation__row {
@@ -82,16 +87,17 @@ h3 {
 }
 
 .navigation__logo {
-  padding: 2rem 0.2rem;
+  padding: 2rem 0.2rem 0 0.2rem;
 }
 
 .navigation__buttons .btn {
-  width: 18rem;
-  height: 5rem;
-  font-size: 1.8rem;
+  width: 17rem;
+  height: 4.5rem;
+  font-size: 1.6rem;
   font-family: inherit;
+  color: #828282;
+  border: none;
   border-radius: 5%;
-  border: 2px solid #333333;
   text-transform: uppercase;
   cursor: pointer;
   -webkit-transition: all 0.3s ease-in-out;
@@ -104,8 +110,8 @@ h3 {
 }
 
 .navigation__buttons .btn--register {
-  background-color: #333333;
-  color: #ffffff;
+  border: 2px solid #BDBDBD;
+  background-color: #ffffff;
 }
 
 .navigation__nav {
@@ -212,7 +218,7 @@ h3 {
   }
   .navigation__list {
     /* Undo off-canvas styling */
-    padding: 4rem;
+    padding: 2.5rem 0rem 2rem 18rem;
     height: 20rem;
     width: auto;
     background: none;
@@ -241,8 +247,8 @@ h3 {
   .navigation__item span::before {
     content: '';
     position: absolute;
-    width: 6rem;
-    height: 7rem;
+    width: 5.7em;
+    height: 6.5rem;
     top: -42px;
     left: -16px;
     -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
@@ -262,7 +268,7 @@ h3 {
   .navigation__link {
     color: #333333;
     display: inline;
-    font-size: 3rem;
+    font-size: 2.5rem;
     border-bottom: none;
   }
   .navigation__link:first-of-type {
@@ -273,5 +279,9 @@ h3 {
     color: #F2994A;
     text-decoration: none;
   }
+}
+
+.wrapper {
+  padding: 15px;
 }
 /*# sourceMappingURL=main.css.map */

@@ -44,32 +44,36 @@
   }
 
   &__logo {
-    padding: 2rem 0.2rem;
+    padding: 2rem 0.2rem 0 0.2rem;
   }
 
   &__buttons {
     .btn {
-      width: 18rem;
-      height: 5rem;
-      font-size: 1.8rem;
+      width: 17rem;
+      height: 4.5rem;
+      font-size: 1.6rem;
       font-family: inherit;
+      color: $color-gray-3;
+      border: none;
       border-radius: 5%;
-      border: 2px solid $color-gray;
       text-transform: uppercase;
       cursor: pointer;
       transition: all 0.3s ease-in-out;
     }
-
+    
     .btn--login {
       margin-right: 2rem;
       background-color: $color-white-2;
     }
-
+    
     .btn--register {
-      background-color: $color-gray;
-      color: $color-white;
+      border: 2px solid $color-gray-2;
+      background-color: $color-white;
+      // background-color: $color-gray;
     }
   }
+
+
 
   &__nav {
     /*
@@ -187,7 +191,7 @@
     &__list {
       /* Undo off-canvas styling */
 
-      padding: 4rem;
+      padding: 2.5rem 0rem 2rem 18rem;
       height: 20rem;
       width: auto;
       background: none;
@@ -215,8 +219,8 @@
         &::before {
           content: '';
           position: absolute;
-          width: 6rem;
-          height: 7rem;
+          width: 5.7em;
+          height: 6.5rem;
           top: -42px;
           left: -16px;
           @include hexagon;
@@ -242,7 +246,7 @@
       color: $color-gray;
       // border-bottom: none;
       display: inline;
-      font-size: 3rem;
+      font-size: 2.5rem;
       // THIS SHOULD DELET ORANGE LINE !!!!!!!!
       border-bottom: none;
 
