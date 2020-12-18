@@ -1,7 +1,40 @@
-.wrapper{
-  height: 250vh;
-background-image: linear-gradient(70deg,rgba(238, 207, 144, 0.9) 0%,rgba(213, 178, 117, 0.9) 65%, transparent 10%);   
-    height: 250vh;
-}
+.wrapper {
+  position: relative;
+  // height: auto;
 
+  height: 200vh;
+  background-image: linear-gradient(68deg, rgba(238, 207, 144, 0.9) 60%, rgba(255, 255, 255,1) 60%, rgba(255, 255, 255, 1) 100%,transparent 50%), url(../../src/images/Vector1.png);
+  background-size: 100%;
+  background-size: cover;
+  background-position: bottom;
+  position: relative; 
+  background-repeat: no-repeat;
+
+  
+    .hero {
+
+      &__part-1{}
+      &__title {
+
+      }
+    }
+    &__intro {
+      font-family: $font-secondary;
+      // margin-top: 13rem;
+      // margin-bottom: 13rem;
+      width: 30vw;
+      letter-spacing: 5%;
+      font-size: 10rem;
+      // font-weight: 600;
+      line-height: 42px;
+    }
+    &__part-2 {
+
+    }
+    &__btn {
+      
+    }
+
+    
+  }
 

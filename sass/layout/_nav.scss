@@ -44,14 +44,14 @@
   }
 
   &__logo {
-    padding: 2rem 0.2rem 0 0.2rem;
+    padding: 0 0.2rem 0 0.2rem;
   }
 
   &__buttons {
     .btn {
-      width: 17rem;
-      height: 4.5rem;
-      font-size: 1.6rem;
+      width: 15rem;
+      height: 3.5rem;
+      font-size: 1.2rem;
       font-family: inherit;
       color: $color-gray-3;
       border: none;
@@ -139,6 +139,7 @@
   &__list {
     /* turn off bullets, set width and background color of flyout menu. Width here and "left" property on main-menu should be the same absolute number */
     list-style: none;
+
     margin: 0;
     padding-top: 5em;
     min-height: 100%;
@@ -150,7 +151,7 @@
     /* Make links block to make them fully clickable on mobile. Remember this is finger navigation, so include plenty of clickable area. All links get a bottom border */
 
     display: block;
-    padding: 2rem;
+    padding: 3rem;
     color: #fff;
     text-decoration: none;
     border-bottom: 1px solid $color-orange;
@@ -162,7 +163,7 @@
 
     &:hover,
     &:focus {
-      background: #333;
+      // background: #333;
       text-decoration: underline;
     }
   }
@@ -190,64 +191,70 @@
 
     &__list {
       /* Undo off-canvas styling */
-
-      padding: 2.5rem 0rem 2rem 18rem;
-      height: 20rem;
-      width: auto;
-      background: none;
-      overflow: hidden;
-      text-align: center;
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-top:0;
+    // margin:3rem 0;
+    background: none;
+    width: 100vw;
+    max-width: 100%;
+    height: 11rem;
+    
+    &::before {
+      content: '';
+      position: absolute;
+      z-index: -2;
+      width :100%;
+      height: 6rem;
+      background-color: $color-white;
+    }
+    
     }
 
-    //item is a li tag in HTML
     &__item {
       /* display the li's horizontally */
       display: inline-block;
-      width: 22rem;
+      width: 20rem;
+      padding: 2rem 0 2rem;
+      background: none;
 
       /* CREATES A HEXAGON ELEMENT WITH SHADOW AND ROTATE IT ON HOVER
       START //////////////////////////////*/
       &:hover span::before {
-        transform: rotate(-13deg);
-      }
-
-      span {
-        position: relative;
-        z-index: -1;
-        @include shadow;
-
-        &::before {
-          content: '';
+     
+        content: '';
           position: absolute;
-          width: 5.7em;
-          height: 6.5rem;
-          top: -42px;
-          left: -16px;
+          width: 75px;
+          height: 86px;
+          top: -44px;
+          left: 14px;
           @include hexagon;
           background: $color-white;
           transform: rotate(-134deg);
-          transition: all .5s ease-in-out;
-        }
-
-        &.orange::before {
-          background: $color-honey;
-        }
+          transition: all .5s ease;
       }
+      &:active span::before {
 
-      /*END
-      ///////////////////////////////*/
+         transform: rotate(-3deg);
+      }
+      span {
+        position: relative;
+        z-index: -1;
+        @include shadow2;
+        transition: hover .5s ease;
+      }
     }
 
     &__item:not(:last-child) {
-      margin-right: 2.5rem;
+      margin-right: 1.8rem;
     }
 
     &__link {
       color: $color-gray;
-      // border-bottom: none;
       display: inline;
-      font-size: 2.5rem;
-      // THIS SHOULD DELET ORANGE LINE !!!!!!!!
+      font-size: 2rem;
       border-bottom: none;
 
       &:first-of-type {
@@ -257,7 +264,6 @@
       &:hover,
       &:hover {
         background: none;
-        color: $color-orange;
         text-decoration: none;
       }
     }

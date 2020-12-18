@@ -31,9 +31,22 @@ h3 {
 }
 
 .wrapper {
-  height: 250vh;
-  background-image: linear-gradient(70deg, rgba(238, 207, 144, 0.9) 0%, rgba(213, 178, 117, 0.9) 65%, transparent 10%);
-  height: 250vh;
+  position: relative;
+  height: 200vh;
+  background-image: linear-gradient(68deg, rgba(238, 207, 144, 0.9) 60%, white 60%, white 100%, transparent 50%), url(../../src/images/Vector1.png);
+  background-size: 100%;
+  background-size: cover;
+  background-position: bottom;
+  position: relative;
+  background-repeat: no-repeat;
+}
+
+.wrapper__intro {
+  font-family: "Poppins", sans-serif;
+  width: 30vw;
+  letter-spacing: 5%;
+  font-size: 10rem;
+  line-height: 42px;
 }
 
 .navigation__row {
@@ -87,13 +100,13 @@ h3 {
 }
 
 .navigation__logo {
-  padding: 2rem 0.2rem 0 0.2rem;
+  padding: 0 0.2rem 0 0.2rem;
 }
 
 .navigation__buttons .btn {
-  width: 17rem;
-  height: 4.5rem;
-  font-size: 1.6rem;
+  width: 15rem;
+  height: 3.5rem;
+  font-size: 1.2rem;
   font-family: inherit;
   color: #828282;
   border: none;
@@ -187,7 +200,7 @@ h3 {
 .navigation__link {
   /* Make links block to make them fully clickable on mobile. Remember this is finger navigation, so include plenty of clickable area. All links get a bottom border */
   display: block;
-  padding: 2rem;
+  padding: 3rem;
   color: #fff;
   text-decoration: none;
   border-bottom: 1px solid #F2994A;
@@ -198,7 +211,6 @@ h3 {
 }
 
 .navigation__link:hover, .navigation__link:focus {
-  background: #333;
   text-decoration: underline;
 }
 
@@ -218,57 +230,73 @@ h3 {
   }
   .navigation__list {
     /* Undo off-canvas styling */
-    padding: 2.5rem 0rem 2rem 18rem;
-    height: 20rem;
-    width: auto;
+    position: relative;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding-top: 0;
     background: none;
-    overflow: hidden;
-    text-align: center;
+    width: 100vw;
+    max-width: 100%;
+    height: 11rem;
+  }
+  .navigation__list::before {
+    content: '';
+    position: absolute;
+    z-index: -2;
+    width: 100%;
+    height: 6rem;
+    background-color: #ffffff;
   }
   .navigation__item {
     /* display the li's horizontally */
     display: inline-block;
-    width: 22rem;
+    width: 20rem;
+    padding: 2rem 0 2rem;
+    background: none;
     /* CREATES A HEXAGON ELEMENT WITH SHADOW AND ROTATE IT ON HOVER
       START //////////////////////////////*/
-    /*END
-      ///////////////////////////////*/
   }
   .navigation__item:hover span::before {
-    -webkit-transform: rotate(-13deg);
-            transform: rotate(-13deg);
-  }
-  .navigation__item span {
-    position: relative;
-    z-index: -1;
-    -webkit-filter: drop-shadow(-4px 2px 5px rgba(79, 79, 79, 0.8));
-            filter: drop-shadow(-4px 2px 5px rgba(79, 79, 79, 0.8));
-  }
-  .navigation__item span::before {
     content: '';
     position: absolute;
-    width: 5.7em;
-    height: 6.5rem;
-    top: -42px;
-    left: -16px;
+    width: 75px;
+    height: 86px;
+    top: -44px;
+    left: 14px;
     -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
             clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
     background: #ffffff;
     -webkit-transform: rotate(-134deg);
             transform: rotate(-134deg);
-    -webkit-transition: all .5s ease-in-out;
-    transition: all .5s ease-in-out;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
   }
-  .navigation__item span.orange::before {
-    background: #EECF90;
+  .navigation__item:active span::before {
+    -webkit-transform: rotate(-3deg);
+            transform: rotate(-3deg);
+  }
+  .navigation__item span {
+    position: relative;
+    z-index: -1;
+    -webkit-filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.25));
+            filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.25));
+    -webkit-transition: hover .5s ease;
+    transition: hover .5s ease;
   }
   .navigation__item:not(:last-child) {
-    margin-right: 2.5rem;
+    margin-right: 1.8rem;
   }
   .navigation__link {
     color: #333333;
     display: inline;
-    font-size: 2.5rem;
+    font-size: 2rem;
     border-bottom: none;
   }
   .navigation__link:first-of-type {
@@ -276,7 +304,6 @@ h3 {
   }
   .navigation__link:hover, .navigation__link:hover {
     background: none;
-    color: #F2994A;
     text-decoration: none;
   }
 }
