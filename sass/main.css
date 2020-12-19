@@ -14,6 +14,7 @@ html {
 body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 body {
@@ -117,6 +118,39 @@ h3 {
           filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.25));
 }
 
+.hexagons {
+  position: relative;
+  -webkit-filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.25));
+}
+
+.hexagons .hexagon {
+  position: absolute;
+  z-index: -3;
+  width: 463.26px;
+  height: 542.19px;
+  -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+          clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  -webkit-transform: rotate(-107.04deg);
+          transform: rotate(-107.04deg);
+  background: #ffffff;
+}
+
+.hexagons .hexagon-1 {
+  right: -217.28px;
+  bottom: -225px;
+}
+
+.hexagons .hexagon-2 {
+  right: 131.28px;
+  bottom: -585px;
+}
+
+.hexagons .hexagon-3 {
+  right: -12.72px;
+  bottom: -1059px;
+}
+
 .navigation__row {
   /* places hamburger button and logo next to each other */
   display: -webkit-box;
@@ -172,6 +206,8 @@ h3 {
 }
 
 .navigation__buttons .btn {
+  position: relative;
+  z-index: 2;
   width: 15rem;
   height: 3.5rem;
   font-size: 1.2rem;

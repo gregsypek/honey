@@ -3,78 +3,102 @@
   // height: auto;
 
   height: 200vh;
-  background-image: linear-gradient(68deg, rgba(238, 207, 144, 0.9) 60%, rgba(255, 255, 255,1) 60%, rgba(255, 255, 255, 1) 100%,transparent 50%), url(../../src/images/Vector1.png);
+  background-image: linear-gradient(
+      68deg,
+      rgba(238, 207, 144, 0.9) 60%,
+      rgba(255, 255, 255, 1) 60%,
+      rgba(255, 255, 255, 1) 100%,
+      transparent 50%
+    ),
+    url(../../src/images/Vector1.png);
   background-size: 100%;
   background-size: cover;
   background-position: bottom;
-  position: relative; 
+  position: relative;
   background-repeat: no-repeat;
 }
-  
-    .hero {
-      margin-top: 10rem;
-      display: grid;
-      grid-template-columns: 20% 25% 55%;
-      grid-row-gap: 11rem;
-     
-      &__title {
-        font-size: 7rem;
-        line-height: 86px;
-           
-      }
-      &__title-container{
-        grid-column: 2/3;  
-      
-        h1:first-of-type{
-          color:$color-gray;
-        }
-      //  + h1 {
-      //   color: orangered;
-      // }
-      h1+h1{
-        margin-top:1rem;
-        color: $color-honey-2;
-        position:relative;
-        z-index:1;
 
-        &:before{
-          content: '';
-          position: absolute;
-          z-index: -2;
-          top: 0;
-          left: -20px;
-          bottom: 0;
-          background: $color-white;
-          width: 60vw;
-          // height: 7rem;
-        }
+.hero {
+  margin-top: 10rem;
+  display: grid;
+  grid-template-columns: 20% 25% 55%;
+  grid-row-gap: 11rem;
+
+  &__title {
+    font-size: 7rem;
+    line-height: 86px;
+  }
+  &__title-container {
+    grid-column: 2/3;
+
+    h1:first-of-type {
+      color: $color-gray;
+    }
+    //  + h1 {
+    //   color: orangered;
+    // }
+    h1 + h1 {
+      margin-top: 1rem;
+      color: $color-honey-2;
+      position: relative;
+      z-index: 1;
+
+      &:before {
+        content: '';
+        position: absolute;
+        z-index: -2;
+        top: 0;
+        left: -20px;
+        bottom: 0;
+        background: $color-white;
+        width: 60vw;
+        // height: 7rem;
       }
     }
-      &__intro {
-        grid-column: 2/3;        
-        font-family: $font-secondary;
-       color:$color-gray;
-        letter-spacing: 5%;
-        font-size: 2.4rem;
-        font-weight: 400;
-        line-height: 36px;
-        letter-spacing: 0.05em;
-      }
-      &__btn {
-        grid-column: 2/3;      
-        font-size: 2rem;
-        @include btn;
-        text-transform: uppercase;
-        color:$color-gray;
-        background-color: $color-yellow;
-        @include shadow2;
+  }
+  &__intro {
+    grid-column: 2/3;
+    font-family: $font-secondary;
+    color: $color-gray;
+    letter-spacing: 5%;
+    font-size: 2.4rem;
+    font-weight: 400;
+    line-height: 36px;
+    letter-spacing: 0.05em;
+  }
+  &__btn {
+    grid-column: 2/3;
+    font-size: 2rem;
+    @include btn;
+    text-transform: uppercase;
+    color: $color-gray;
+    background-color: $color-yellow;
+    @include shadow2;
+  }
+}
 
-
-      }
-    }
-   
-    
-
-    
-  
-
+.hexagons {
+  position: relative;
+  @include shadow2;
+  .hexagon {
+    position: absolute;
+    z-index: -3;
+    width: 463.26px;
+    height: 542.19px;
+    @include hexagon;
+    @include hexRotate;
+    background: $color-white;
+  }
+  .hexagon-1 { 
+    right: -217.28px;
+    bottom: -225px;
+  }
+  .hexagon-2 {
+    right: 131.28px;
+    bottom: -585px;
+  }
+  .hexagon-3 {
+    right: -12.72px;
+    bottom: -1059px;
+  }
+}

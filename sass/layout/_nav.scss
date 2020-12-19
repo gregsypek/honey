@@ -49,6 +49,8 @@
 
   &__buttons {
     .btn {
+      position: relative;
+      z-index: 2;
       width: 15rem;
       height: 3.5rem;
       font-size: 1.2rem;
@@ -232,7 +234,7 @@
           left: 14px;
           @include hexagon;
           background: $color-white;
-          transform: rotate(-134deg);
+        @include rotate;
           transition: all .5s ease;
       }
       &:active span::before {
