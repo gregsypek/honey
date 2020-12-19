@@ -1,5 +1,7 @@
 .navigation {
+
   &__row {
+
     /* places hamburger button and logo next to each other */
     display: flex;
     flex-flow: row nowrap;
@@ -44,11 +46,12 @@
   }
 
   &__logo {
-    padding: 0 0.2rem 0 0.2rem;
+    padding: 15px ;
   }
 
   &__buttons {
     .btn {
+      margin: 15px;
       position: relative;
       z-index: 2;
       width: 15rem;

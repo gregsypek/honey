@@ -1,0 +1,33 @@
+.info {
+  h3 {
+    font-family: $font-secondary;
+    color: $color-honey-3;
+    font-size: 2.5rem;
+  }
+  display: grid;
+  grid-template-columns: 3fr 2fr;
+  grid-row-gap: 10rem;
+  margin-top: 11rem;
+  min-height: 600px;
+  text-transform: none;
+  //Photo by Annie Spratt on Unsplash
+  background: linear-gradient(0deg, rgba(235, 99, 73, 0.902)),
+    url(../../src/images/id_bg.jpeg);
+
+  &__address {
+    grid-column: 2/3;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    &--name {
+      font-size: 4.2rem;
+      color: $color-orange;
+    }
+  }
+  &__id {
+    grid-column: 2/3;
+    span {
+      display: block;
+    }
+  }
+}
