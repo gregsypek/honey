@@ -9,32 +9,72 @@
   background-position: bottom;
   position: relative; 
   background-repeat: no-repeat;
-
+}
   
     .hero {
-
-      &__part-1{}
+      margin-top: 10rem;
+      display: grid;
+      grid-template-columns: 20% 25% 55%;
+      grid-row-gap: 11rem;
+     
       &__title {
+        font-size: 7rem;
+        line-height: 86px;
+           
+      }
+      &__title-container{
+        grid-column: 2/3;  
+      
+        h1:first-of-type{
+          color:$color-gray;
+        }
+      //  + h1 {
+      //   color: orangered;
+      // }
+      h1+h1{
+        margin-top:1rem;
+        color: $color-honey-2;
+        position:relative;
+        z-index:1;
+
+        &:before{
+          content: '';
+          position: absolute;
+          z-index: -2;
+          top: 0;
+          left: -20px;
+          bottom: 0;
+          background: $color-white;
+          width: 60vw;
+          // height: 7rem;
+        }
+      }
+    }
+      &__intro {
+        grid-column: 2/3;        
+        font-family: $font-secondary;
+       color:$color-gray;
+        letter-spacing: 5%;
+        font-size: 2.4rem;
+        font-weight: 400;
+        line-height: 36px;
+        letter-spacing: 0.05em;
+      }
+      &__btn {
+        grid-column: 2/3;      
+        font-size: 2rem;
+        @include btn;
+        text-transform: uppercase;
+        color:$color-gray;
+        background-color: $color-yellow;
+        @include shadow2;
+
 
       }
     }
-    &__intro {
-      font-family: $font-secondary;
-      // margin-top: 13rem;
-      // margin-bottom: 13rem;
-      width: 30vw;
-      letter-spacing: 5%;
-      font-size: 10rem;
-      // font-weight: 600;
-      line-height: 42px;
-    }
-    &__part-2 {
-
-    }
-    &__btn {
-      
-    }
+   
+    
 
     
-  }
+  
 

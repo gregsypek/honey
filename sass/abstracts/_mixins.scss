@@ -9,14 +9,14 @@
 @mixin btn {
   border: none;
   display: block;
-  width: 21rem;
-  height: 7rem;
+  width: 20rem;
+  height: 6rem;
   border-radius: 5%;
-  color: inherit;
+  // color: inherit;
   font-weight: bold;
   text-transform: uppercase;
   cursor: pointer;
-
+border:2px solid $color-gray;
 }
 
 @mixin shadow2{

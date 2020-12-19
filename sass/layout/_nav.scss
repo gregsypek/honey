@@ -216,7 +216,7 @@
     &__item {
       /* display the li's horizontally */
       display: inline-block;
-      width: 20rem;
+      width: 17rem;
       padding: 2rem 0 2rem;
       background: none;
 
@@ -237,7 +237,7 @@
       }
       &:active span::before {
 
-         transform: rotate(-3deg);
+        transform: rotate(-3deg);
       }
       span {
         position: relative;
