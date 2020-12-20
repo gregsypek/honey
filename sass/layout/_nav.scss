@@ -54,16 +54,9 @@
       margin: 15px;
       position: relative;
       z-index: 2;
-      width: 15rem;
-      height: 3.5rem;
-      font-size: 1.2rem;
-      font-family: inherit;
-      color: $color-gray-3;
-      border: none;
-      border-radius: 5%;
-      text-transform: uppercase;
-      cursor: pointer;
-      transition: all 0.3s ease-in-out;
+      // font-family: inherit;
+      @include btn;  
+      @include btn--small;   
     }
     
     .btn--login {
@@ -74,7 +67,7 @@
     .btn--register {
       border: 2px solid $color-gray-2;
       background-color: $color-white;
-      // background-color: $color-gray;
+      border: 1px solid $color-gray-2;
     }
   }
 

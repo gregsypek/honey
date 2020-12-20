@@ -1,32 +1,46 @@
 @mixin hexagon {
-  clip-path:polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
 }
 
-@mixin shadow {  
-  filter:drop-shadow( -4px 2px 5px rgba(79, 79, 79, 0.8));
+@mixin shadow {
+  filter: drop-shadow(-4px 2px 5px rgba(79, 79, 79, 0.8));
 }
 
-@mixin btn {
-  border: none;
+@mixin span {
   display: block;
-  width: 20rem;
-  height: 6rem;
-  border-radius: 5%;
-  // color: inherit;
+  color: $color-orange;
+}
+@mixin btn { 
+  border:none;
+  border-radius: 5%; 
   font-weight: bold;
   text-transform: uppercase;
   cursor: pointer;
-border:2px solid $color-gray;
+ 
+  transition: all 0.2s ease;
+  padding: 1.6rem 3rem;
+}
+@mixin btn--small {
+  // width: 15rem;
+      // height: 3.5rem;
+      font-size: 1rem;      
+      padding: 1rem 1.4rem;
+      color: $color-gray-3;
+
+}
+@mixin btn--yellow {
+  background-color: $color-yellow;
+  font-size: 2rem;
+  color: $color-gray; 
+  border: 2px solid $color-gray;
 }
 
-@mixin shadow2{
-  filter: 
-drop-shadow( -1px 2px 2px rgba(0, 0, 0, 0.25));
+@mixin shadow2 {
+  filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.25));
 }
 @mixin rotate {
   transform: rotate(-134deg);
 }
 @mixin hexRotate {
   transform: rotate(-107.04deg);
-
 }

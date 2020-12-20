@@ -6,9 +6,7 @@
     rgba(238, 207, 144, 1) 69%,
     rgba(238, 207, 144, 1) 100%,
     transparent 50%
-  );
-
- 
+  ); 
 
   &__box {
     display: grid;
@@ -27,8 +25,7 @@
     grid-column: 2/6;
     line-height: 77px;
     span {
-      display: block;
-      color: $color-orange;
+    @include span;
     }
   }
   &__img {

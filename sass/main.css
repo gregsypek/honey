@@ -17,7 +17,7 @@ body {
   overflow-x: hidden;
 }
 
-section {
+section:not(.info) {
   padding-top: 11rem;
 }
 
@@ -52,6 +52,7 @@ h3 {
   -ms-grid-columns: 20% 25% 55%;
       grid-template-columns: 20% 25% 55%;
   grid-row-gap: 11rem;
+  justify-items: start;
 }
 
 .hero__title {
@@ -104,19 +105,18 @@ h3 {
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
-  font-size: 2rem;
   border: none;
-  display: block;
-  width: 20rem;
-  height: 6rem;
   border-radius: 5%;
   font-weight: bold;
   text-transform: uppercase;
   cursor: pointer;
-  border: 2px solid #333333;
-  text-transform: uppercase;
-  color: #333333;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  padding: 1.6rem 3rem;
   background-color: #F6C768;
+  font-size: 2rem;
+  color: #333333;
+  border: 2px solid #333333;
   -webkit-filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.25));
 }
@@ -212,17 +212,17 @@ h3 {
   margin: 15px;
   position: relative;
   z-index: 2;
-  width: 15rem;
-  height: 3.5rem;
-  font-size: 1.2rem;
-  font-family: inherit;
-  color: #828282;
   border: none;
   border-radius: 5%;
+  font-weight: bold;
   text-transform: uppercase;
   cursor: pointer;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  padding: 1.6rem 3rem;
+  font-size: 1rem;
+  padding: 1rem 1.4rem;
+  color: #828282;
 }
 
 .navigation__buttons .btn--login {
@@ -233,6 +233,7 @@ h3 {
 .navigation__buttons .btn--register {
   border: 2px solid #BDBDBD;
   background-color: #ffffff;
+  border: 1px solid #BDBDBD;
 }
 
 .navigation__nav {
@@ -554,5 +555,145 @@ h3 {
   right: -216px;
   top: -123px;
   z-index: -1;
+}
+
+.think_over {
+  min-height: 600px;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[12];
+      grid-template-columns: repeat(12, 1fr);
+  grid-column-gap: 1rem;
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(235, 99, 73, 0.902))), url(../../src/images/think-over_bg.png);
+  background: linear-gradient(0deg, rgba(235, 99, 73, 0.902)), url(../../src/images/think-over_bg.png);
+}
+
+.think_over__left {
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 4;
+  grid-column: 2/6;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.think_over__left h2 {
+  font-size: 5rem;
+  color: #ffffff;
+  line-height: 110%;
+}
+
+.think_over__left span {
+  display: block;
+  color: #F2994A;
+}
+
+.think_over__text {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.think_over__btn {
+  border: none;
+  border-radius: 5%;
+  font-weight: bold;
+  text-transform: uppercase;
+  cursor: pointer;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
+  padding: 1.6rem 3rem;
+  background-color: #F6C768;
+  font-size: 2rem;
+  color: #333333;
+  border: 2px solid #333333;
+  -webkit-filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.25));
+}
+
+.think_over__right {
+  -ms-grid-column: 7;
+  -ms-grid-column-span: 4;
+  grid-column: 7/11;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+}
+
+.think_over__box {
+  background: rgba(255, 255, 255, 0.9);
+  height: 25rem;
+  border-radius: 5px;
+  -webkit-filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.25));
+}
+
+.think_over__recommend {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  font-family: "Poppins", sans-serif;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 3rem;
+}
+
+.think_over__recommend h4 {
+  font-weight: 300;
+  color: iherit;
+  font-size: 2.5rem;
+}
+
+.think_over__recommend p {
+  -ms-flex-item-align: end;
+      align-self: flex-end;
+  color: #963B29;
+  font-size: 1.6rem;
+}
+
+.think_over__dots {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.think_over__dot {
+  width: 3rem;
+  height: 3rem;
+  border-radius: 50%;
+  background-color: #BDBDBD;
+}
+
+.think_over__dot:not(:last-of-type) {
+  margin-right: 3rem;
+}
+
+.think_over .dot-yellow {
+  background-color: #F6C768;
 }
 /*# sourceMappingURL=main.css.map */

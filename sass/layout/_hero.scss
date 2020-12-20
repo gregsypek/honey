@@ -26,6 +26,7 @@
   display: grid;
   grid-template-columns: 20% 25% 55%;
   grid-row-gap: 11rem;
+  justify-items: start;
 
   &__title {
     font-size: 7rem;
@@ -70,12 +71,10 @@
     letter-spacing: 0.05em;
   }
   &__btn {
-    grid-column: 2/3;
-    font-size: 2rem;
+    grid-column: 2/3;  
+
     @include btn;
-    text-transform: uppercase;
-    color: $color-gray;
-    background-color: $color-yellow;
+    @include btn--yellow;
     @include shadow2;
   }
 }
