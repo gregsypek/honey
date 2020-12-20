@@ -1,110 +1,115 @@
 <!DOCTYPE html>
 <html lang="pl">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Miodek</title>
-    <script src="https://kit.fontawesome.com/fb7f6f30e4.js"></script>
-    <link
-      href="https://fonts.googleapis.com/css2?family=Bungee&family=Poppins:wght@400;600&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="sass/main.css" />
-  </head>
 
-  <body>
-    <div class="wrapper">
-      
-     
-      <header class="navigation">
-        <div class="navigation__row navigation__row--first">
-          <a
-            href="#main-menu"
-            id="main-menu-toggle"
-            class="menu-toggle"
-            aria-label="Open main menu"
-          >
-            <span class="sr-only">Open main menu</span>
-            <span class="fa fa-bars" aria-hidden="true"></span>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Miodek</title>
+  <script src="https://kit.fontawesome.com/fb7f6f30e4.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Poppins:wght@400;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="sass/main.css" />
+</head>
+
+<body>
+  <div class="wrapper">
+
+
+    <header class="navigation">
+      <div class="navigation__row navigation__row--first">
+        <a href="#main-menu" id="main-menu-toggle" class="menu-toggle" aria-label="Open main menu">
+          <span class="sr-only">Open main menu</span>
+          <span class="fa fa-bars" aria-hidden="true"></span>
+        </a>
+
+        <img src="./src/images/logo-miodek.svg" alt="logo" class="navigation__logo" />
+        <div class="navigation__buttons">
+          <button class="btn btn--login">zaloguj się</button>
+          <button class="btn btn--register">zarejestruj się</button>
+        </div>
+      </div>
+
+      <div class="navigation__row navigation__row--second">
+        <nav id="main-menu" class="navigation__nav" aria-label="Main menu">
+          <a href="#main-menu-toggle" id="main-menu-close" class="menu-close" aria-label="Close main menu">
+            <span class="sr-only">Close main menu</span>
+            <span class="fa fa-close" aria-hidden="true"></span>
           </a>
 
-          <img
-            src="./src/images/logo-miodek.svg"
-            alt="logo"
-            class="navigation__logo"
-          />
-          <div class="navigation__buttons">
-            <button class="btn btn--login">zaloguj się</button>
-            <button class="btn btn--register">zarejestruj się</button>
-          </div>
-        </div>    
-
-        <div class="navigation__row navigation__row--second">
-          <nav id="main-menu" class="navigation__nav" aria-label="Main menu">
-            <a
-              href="#main-menu-toggle"
-              id="main-menu-close"
-              class="menu-close"
-              aria-label="Close main menu"
-            >
-              <span class="sr-only">Close main menu</span>
-              <span class="fa fa-close" aria-hidden="true"></span>
-            </a>
-
-            <ul class="navigation__list">
-              <li class="navigation__item">
-                <!-- span is for shadow effect -->
-                <span></span>
-                <a href="#" class="navigation__link">O nas</a>
-              </li>
-              <li class="navigation__item">
-                <span></span>
-                <a href="#" class="navigation__link">Galeria</a>
-              </li>
-              <li class="navigation__item">
-                <span ></span>
-                <a href="#" class="navigation__link">Oferta</a>
-              </li>
-              <li class="navigation__item">
-                <span ></span>
-                <a href="#" class="navigation__link">Kontakt</a>
-              </li>
-            </ul>
-          </nav>
-          <a href="#main-menu-toggle" class="backdrop" tabindex="-1" hidden></a>
-        </div>
-      </header>
-      <div class="hexagons">
-        <div class="hexagon hexagon-1"></div>
-        <div class="hexagon hexagon-2"></div>
-        <div class="hexagon hexagon-3"></div>
+          <ul class="navigation__list">
+            <li class="navigation__item">
+              <!-- span is for shadow effect -->
+              <span></span>
+              <a href="#" class="navigation__link">O nas</a>
+            </li>
+            <li class="navigation__item">
+              <span></span>
+              <a href="#" class="navigation__link">Galeria</a>
+            </li>
+            <li class="navigation__item">
+              <span></span>
+              <a href="#" class="navigation__link">Oferta</a>
+            </li>
+            <li class="navigation__item">
+              <span></span>
+              <a href="#" class="navigation__link">Kontakt</a>
+            </li>
+          </ul>
+        </nav>
+        <a href="#main-menu-toggle" class="backdrop" tabindex="-1" hidden></a>
       </div>
-      <main class="hero">
-          <div class="hero__title-container">
-            <h1 class="hero__title">Pasieka</h1>
-            <h1 class="hero__title">miodek</h1>
-          </div>
-          <h2 class="hero__intro">
-            Mamy dla Ciebie naturalny miód, który starannie zbieramy prosto z
-            naszych pasiek.
-          </h2>          
-          <h2 class="hero__intro">Miód, który smakuje jak żaden inny.</h2>
-          <h2 class="hero__intro">Miód tylko od naszych pszczółek.</h2>
-          <h2 class="hero__intro">Po prostu miód z którego jesteśmy dumni.</h2>
-          <button class="hero__btn btn">Kup teraz</button>          
-      </main>
-      <section class="info">
-        <div class="info__address">
-          <h2 class="info__address--name">Jan Pszczelarz</h2>
-          <h3 class="info__address--city">Łąki 23</h3>
-          <h3 class="info__address--post">30-305 Miody</h3>
-        </div>
-        <div class="info__id">
-         <h3 class="info__id--nr">Nr Identyfikacji Weterynaryjnej: <span>12345678999</span></h3>
-        </div>
-        </div>
-      </section>
-    
+    </header>
+    <div class="hexagons">
+      <div class="hexagon hexagon-1"></div>
+      <div class="hexagon hexagon-2"></div>
+      <div class="hexagon hexagon-3"></div>
     </div>
-  </body>
+    <main class="hero">
+      <div class="hero__title-container">
+        <h1 class="hero__title">Pasieka</h1>
+        <h1 class="hero__title">miodek</h1>
+      </div>
+      <h2 class="hero__intro">
+        Mamy dla Ciebie naturalny miód, który starannie zbieramy prosto z
+        naszych pasiek.
+      </h2>
+      <h2 class="hero__intro">Miód, który smakuje jak żaden inny.</h2>
+      <h2 class="hero__intro">Miód tylko od naszych pszczółek.</h2>
+      <h2 class="hero__intro">Po prostu miód z którego jesteśmy dumni.</h2>
+      <button class="hero__btn btn">Kup teraz</button>
+    </main>
+    <section class="info">
+      <div class="info__address">
+        <h2 class="info__address--name">Jan Pszczelarz</h2>
+        <h3 class="info__address--city">Łąki 23</h3>
+        <h3 class="info__address--post">30-305 Miody</h3>
+      </div>
+      <div class="info__id">
+        <h3 class="info__id--nr">Nr Identyfikacji Weterynaryjnej: <span>12345678999</span></h3>
+      </div>
+  </div>
+  </section>
+  <section class="the-best">
+    <div class="the-best__box">
+      <h2 class="the-best__title">Oto co sparawia,
+        że jesteśmy <span>najlepsi:</span>
+        </h2>
+      <img src="../../src/images/the-best_bg.jpg" alt="" class="the-best__img">
+
+    </div>
+    <div class="the-best__box">
+      <h3 class="the-best__info info--1">Mamy duże doświadczenie w hodowli pszczół. Nasz miód wyróżnia się wysoką
+        jakością i znajduje spore uznanie wsród klientów.</h3>
+      <h3 class="the-best__info info--2">Kupując u nas masz pewność, że miód pochodzi z naszych lokalnych, czystych
+        terenów</h3>
+      <h3 class="the-best__info info--3">Nie słodzimy nie poprawiamy nie psujemy. Wszystko odbywa sie w naturalny sposób.
+        Pszczoły wiedzą co dobre!</h3>
+    </div>
+
+
+  </section>
+
+  </div>
+</body>
+
 </html>

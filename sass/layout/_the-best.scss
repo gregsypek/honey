@@ -1,0 +1,81 @@
+.the-best {
+  height: 200vh;
+  background-image: linear-gradient(
+    109deg,
+    rgba(255, 255, 255, 0.9) 69%,
+    rgba(238, 207, 144, 1) 69%,
+    rgba(238, 207, 144, 1) 100%,
+    transparent 50%
+  );
+
+ 
+
+  &__box {
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
+    grid-row-gap: 10rem;
+
+    // +h3{
+    //   transform: rotate(-2deg);
+    // }
+  }
+  &__title {
+    position: relative;
+    z-index: 1;
+    font-size: 5rem;
+    grid-column: 2/6;
+    line-height: 77px;
+    span {
+      display: block;
+      color: $color-orange;
+    }
+  }
+  &__img {
+    background: $color-white;
+    // position:relative;
+    // z-index: -1;
+    grid-column: 6/-1;
+    width: 60rem;
+    height: auto;
+    opacity: 0.6;
+    // margin-top: 3rem;
+    margin-left: -25rem;
+  }
+  &__info {
+    grid-column: 3/9;
+    font-family: $font-secondary;
+    font-size: 3rem;
+    font-weight: 500;
+    letter-spacing: 6%;
+  }
+  // h3.info--1 {
+  //   transform: rotate(-2deg);
+
+  // }  
+  .info--1 {
+    position: relative;
+    z-index: 3;
+    transform: rotate(-2deg);
+    &::before {
+      content: url(../../src/images/hexOra.svg);
+      position: absolute;
+      left: -200px;
+      top: -134px;
+      z-index: -1;
+    }
+    &::after {
+      content: '';
+      position: absolute;
+      z-index: -1;
+      top: -30px;
+      left: -30px;
+      bottom: 0;
+      right: 0;
+      width: 110%;
+      height:120%;
+      background: $color-honey-4;
+      border-radius: 10px;
+      transform: rotate(-2deg);
+    }
+  }
+}
