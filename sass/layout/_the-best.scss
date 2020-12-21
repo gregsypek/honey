@@ -14,9 +14,6 @@
     grid-row-gap: 25rem;
     color: $color-gray;
 
-    // +h3{
-    //   transform: rotate(-2deg);
-    // }
   }
   &__title {
     position: relative;
@@ -30,8 +27,6 @@
   }
   &__img {
     background: $color-white;
-    // position:relative;
-    // z-index: -1;
     grid-column: 6/-1;
     width: 60rem;
     height: auto;
@@ -39,50 +34,76 @@
     // margin-top: 3rem;
     margin-left: -25rem;
   }
+
+ 
   &__info {
     grid-column: 3/9;
     font-family: $font-secondary;
-    font-size: 3rem;
+    font-size: 2.5rem;
     font-weight: 400;
     letter-spacing: 6%;
+    padding: 2.5rem;
+    z-index: 3;
+    position: relative;
+    transform: rotate(-2deg);
   }
-  // h3.info--1 {
-  //   transform: rotate(-2deg);
-
-  // }  
+  
   .info--1,
   .info--3 {
-    position: relative;
-    z-index: 3;
-    transform: rotate(-2deg);
-    width: 100%;
-    height:100%;
-    background: $color-honey-4;
-    border-radius: 5px;
-    padding: 1rem;
+    // position: relative;
+    // z-index: 3;
+    // transform: rotate(-2deg);
+    
+    //  BEFORE IS A HEXAGON
     &::before {
-      content: url(../../src/images/hexOra.svg);
+      content: url(../../src/images/hexWhite3.svg);
       position: absolute;
       left: -216px;
     top: -123px;
       z-index: -1;
     }
+    //AFTER IS A BACKGROUND RECTANGLE
+    &::after {
+      content: '';
+      position:absolute;
+      top:0;
+      left:0;
+      z-index: -1;
+      width: 100%;
+      height:100%;
+      background: $color-honey-4;
+      border-radius: 5px;
+   
+    }
   }
   .info--2{
-    position: relative;
-    z-index: 3;
-    transform: rotate(2deg);
     width: 100%;
     height:100%;
-    background: $color-white-2;
-    border-radius: 5px;
-    padding: 4rem 1rem;
-    &::after {
-      content: url(../../src/images/hexWhite.svg);
+    padding-top: 4rem;
+    padding-bottom: 4rem;
+    // position: relative;
+    // z-index: 3;
+    // transform: rotate(2deg);
+    // background: $color-white-2;
+    // border-radius: 5px;
+    &::before {
+      content: url(../../src/images/hexWhite3.svg);
       position: absolute;
       right: -216px;
     top: -123px;
       z-index: -1;
+    }
+    &::after {
+      content: '';
+      position:absolute;
+      top:0;
+      left:0;
+      z-index: -1;
+      width: 100%;
+      height:100%;
+      background: $color-white-2;
+      border-radius: 5px;
+   
     }
   }
   

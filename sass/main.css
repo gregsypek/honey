@@ -510,51 +510,63 @@ h3 {
   -ms-grid-column-span: 6;
   grid-column: 3/9;
   font-family: "Poppins", sans-serif;
-  font-size: 3rem;
+  font-size: 2.5rem;
   font-weight: 400;
   letter-spacing: 6%;
-}
-
-.the-best .info--1,
-.the-best .info--3 {
-  position: relative;
+  padding: 2.5rem;
   z-index: 3;
+  position: relative;
   -webkit-transform: rotate(-2deg);
           transform: rotate(-2deg);
-  width: 100%;
-  height: 100%;
-  background: #FADEA4;
-  border-radius: 5px;
-  padding: 1rem;
 }
 
 .the-best .info--1::before,
 .the-best .info--3::before {
-  content: url(../../src/images/hexOra.svg);
+  content: url(../../src/images/hexWhite3.svg);
   position: absolute;
   left: -216px;
   top: -123px;
   z-index: -1;
 }
 
-.the-best .info--2 {
-  position: relative;
-  z-index: 3;
-  -webkit-transform: rotate(2deg);
-          transform: rotate(2deg);
+.the-best .info--1::after,
+.the-best .info--3::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
   width: 100%;
   height: 100%;
-  background: #f2f2f2;
+  background: #FADEA4;
   border-radius: 5px;
-  padding: 4rem 1rem;
 }
 
-.the-best .info--2::after {
-  content: url(../../src/images/hexWhite.svg);
+.the-best .info--2 {
+  width: 100%;
+  height: 100%;
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.the-best .info--2::before {
+  content: url(../../src/images/hexWhite3.svg);
   position: absolute;
   right: -216px;
   top: -123px;
   z-index: -1;
+}
+
+.the-best .info--2::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: #f2f2f2;
+  border-radius: 5px;
 }
 
 .think_over {
