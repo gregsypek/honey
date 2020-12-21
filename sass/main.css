@@ -15,9 +15,11 @@ body {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   overflow-x: hidden;
+  max-width: 1440px;
+  margin: 0 auto;
 }
 
-section:not(.info) {
+section:not(.info, .about) {
   padding-top: 11rem;
 }
 
@@ -707,5 +709,30 @@ h3 {
 
 .think_over .dot-yellow {
   background-color: #F6C768;
+}
+
+.about__image {
+  position: relative;
+  min-height: 60vh;
+  overflow: hidden;
+}
+
+.about__image img {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  min-width: 100%;
+  min-height: 100%;
+}
+
+.about__text {
+  font-size: 5rem;
+}
+
+.about__text span {
+  display: block;
+  color: #F2994A;
 }
 /*# sourceMappingURL=main.css.map */

@@ -15,9 +15,10 @@ body {
   box-sizing: border-box;
   // margin: 0;
   overflow-x: hidden;// for hexagons in home section
- 
+ max-width: 1440px;
+ margin:0 auto;
 }
 
-section:not(.info){
+section:not(.info, .about){
   padding-top: 11rem;
 }

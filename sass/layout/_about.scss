@@ -1,0 +1,36 @@
+.about {
+  &__header {
+  }
+  &__image {
+    position: relative;
+    min-height:60vh;
+    overflow: hidden;
+
+
+    img {
+      position: absolute;
+      top: 60%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      min-width: 100%;
+      min-height: 100%;
+
+      
+    }
+  }
+  &__text {
+    font-size: 5rem;
+
+    span {
+      @include span;
+    }
+  }
+  &__main {
+  }
+  &__paragraph {
+  }
+  &__info {
+  }
+  &__info--1 {
+  }
+}
