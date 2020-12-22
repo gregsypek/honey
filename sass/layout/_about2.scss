@@ -1,0 +1,146 @@
+.about {
+  // &__header {
+  // }
+  position: relative;
+
+ 
+  &__triangle {
+    position: absolute;
+    width: 400px;
+    height: 600px;
+    background-color: #EECF90;  
+    clip-path: polygon(0% 0px, 0px 100%, 51.55% 0%);
+    z-index: 1;
+  }
+  &__text {
+    position: absolute;
+    z-index: 3;
+    top:11rem;
+    left:10vw;
+  font-size: 5rem;
+
+  span {
+    @include span;
+  }
+}
+  &__image {
+    position: relative;
+   
+    min-height:60vh;
+    overflow: hidden;
+    opacity: .8;
+    @media only screen and (min-width: 800px) {
+
+      
+      min-height:70vh;
+    }
+
+    img {
+      position: absolute;
+      z-index:-1;
+      top: 60%;
+      left: 40%;
+      transform: translate(-50%, -50%);
+      min-width: 100%;
+      min-height: 100%;
+
+
+      // width: 100%;
+      // max-width: 800px;
+      // object-fit: cover;
+
+      @media only screen and (min-width: 800px) {
+        // width: 100%;
+        // max-width: 1440px;
+        transform: translate(-13%, -20%);
+        top: 21px;
+        left: 200px;
+        object-fit: contain;
+        // max-width: 1440px;
+      }
+    }
+  }
+
+&__main {
+  // position: relative;
+  // padding: 11rem 0;
+  height: 150vh;
+  display:grid;
+  grid-template-columns: repeat(12,1fr);
+  grid-template-rows: 18rem repeat(2, minmax(60vh ,1fr)) 11rem;
+  grid-column-gap:2rem;
+  color: $color-gray;
+
+
+  // CREATES A BACKGROUND SLICE
+
+  background: linear-gradient(62deg, rgba(238, 207, 144, 1) 30%,rgba(255,255,255,1) 30%, rgba(255,255,255,1) 100%, transparent 50%);
+}
+&__paragraph {
+  font-size: 2.8rem;
+  position: relative;
+  z-index: 3;
+
+
+//CREATES A HEXAGON ELEMENT WITH SHADOW AND ROTATE IT ON HOVER
+     
+      span {
+        position: absolute;
+        z-index:-1;
+        @include shadow2;
+      
+        &::before {
+          content: '';
+          position: absolute;
+          width: 75px;
+          height: 86px;
+          top: -10px;
+          left: -25px;
+          @include hexagon;
+          background: rgba($color-honey, 1);
+       
+        @include rotate;
+        }
+      }
+      span.white {
+        
+      
+        &::before {
+          content: '';          
+          background: $color-white;
+       
+        }
+      }
+
+    }
+
+      
+    .paragraph--1, 
+    .paragraph--2 {
+      grid-row: 2/3;
+    }
+    .paragraph--3, 
+    .paragraph--4 {
+      grid-row: 3/4;
+    }
+
+
+.paragraph--1,
+.paragraph--3 {
+  grid-column: 3/7;
+}
+.paragraph--2,
+.paragraph--4 {
+  grid-column: 8/11;
+}
+
+&__info::first-letter {
+font-size: 5rem;
+}
+
+  
+}
+
+
+
+
