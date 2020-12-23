@@ -1,21 +1,30 @@
+$margin: 7rem;
+
 .about {
   // &__header {
   // }
   position: relative;
+  margin-top:$margin;
 
- 
+
+
   &__triangle {
     position: absolute;
     width: 400px;
     height: 600px;
+    top: calc( -#{$margin});
+    left:0;
     background-color: #EECF90;  
-    clip-path: polygon(0% 0px, 0px 100%, 51.55% 0%);
+    clip-path: polygon(0% 0px, 0px 62%, 38.55% 0%);
     z-index: 1;
   }
   &__text {
     position: absolute;
     z-index: 3;
-    top:11rem;
+    color:$color-gray;
+
+    //variable is on the top of this file
+    top: calc(11rem - #{$margin});
     left:10vw;
   font-size: 5rem;
 
@@ -26,13 +35,13 @@
   &__image {
     position: relative;
    
-    min-height:60vh;
+    min-height:70vh;
     overflow: hidden;
-    opacity: .8;
+    opacity: 1;
     @media only screen and (min-width: 800px) {
 
       
-      min-height:70vh;
+      min-height:80vh;
     }
 
     img {
@@ -52,8 +61,8 @@
       @media only screen and (min-width: 800px) {
         // width: 100%;
         // max-width: 1440px;
-        transform: translate(-13%, -20%);
-        top: 21px;
+        transform: translate(-13%, -36%);
+        top: 156px;
         left: 200px;
         object-fit: contain;
         // max-width: 1440px;
@@ -74,7 +83,7 @@
 
   // CREATES A BACKGROUND SLICE
 
-  background: linear-gradient(62deg, rgba(238, 207, 144, 1) 30%,rgba(255,255,255,1) 30%, rgba(255,255,255,1) 100%, transparent 50%);
+  // background: linear-gradient(62deg, rgba(238, 207, 144, 1) 30%,rgba(255,255,255,1) 30%, rgba(255,255,255,1) 100%, transparent 50%);
 }
 &__paragraph {
   font-size: 2.6rem;
@@ -103,12 +112,31 @@
         @include rotate;
         }
       }
-      span.white {
-        
-      
+      span.one {       
         &::before {
           content: '';          
-          background: $color-white;
+          background: $color-grape;
+       
+        }
+      }
+      span.two {       
+        &::before {
+          content: '';          
+          background: $color-grape2;
+       
+        }
+      }
+      span.three {       
+        &::before {
+          content: '';          
+          background: $color-grape3;
+       
+        }
+      }
+      span.four {       
+        &::before {
+          content: '';          
+          background: $color-grape4;
        
         }
       }

@@ -16,16 +16,17 @@
   font-weight: bold;
   text-transform: uppercase;
   cursor: pointer;
- 
+  
   transition: all 0.2s ease;
   padding: 1.6rem 3rem;
 }
 @mixin btn--small {
   // width: 15rem;
-      // height: 3.5rem;
-      font-size: 1rem;      
-      padding: 1rem 1.4rem;
-      color: $color-gray-3;
+  // height: 3.5rem;
+  border-radius: 5%; 
+      font-size: 1.2rem;      
+      padding: .8rem 2rem;
+      color: $color-gray-2;
 
 }
 @mixin btn--yellow {
@@ -36,7 +37,7 @@
 }
 @mixin btn--white {
   background-color: $color-white;
-  font-size: 1.8rem;
+  // font-size: 1.6rem;
   color: $color-gray; 
   border: 2px solid $color-gray;
 }
