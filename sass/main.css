@@ -922,4 +922,57 @@ h3 {
   color: #333333;
   border: 2px solid #333333;
 }
+
+.footer {
+  padding-top: 11rem;
+  height: 25vh;
+  background: #4F4F4F;
+  display: -ms-grid;
+  display: grid;
+  justify-items: center;
+  -ms-grid-columns: (2fr)[2] 4fr 2fr;
+      grid-template-columns: repeat(2, 2fr) 4fr 2fr;
+  grid-column-gap: 5rem;
+  padding: 2rem;
+}
+
+.footer__logo {
+  -ms-flex-item-align: start;
+      -ms-grid-row-align: start;
+      align-self: start;
+}
+
+.footer__address {
+  color: #ffffff;
+  font-size: 1.8rem;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+}
+
+.footer__copyright {
+  color: #BDBDBD;
+  font-size: 1.3rem;
+  -ms-flex-item-align: end;
+      -ms-grid-row-align: end;
+      align-self: end;
+}
+
+.footer__icons {
+  -ms-flex-item-align: start;
+      align-self: start;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.footer__icon--facebook, .footer__icon--instagram {
+  -webkit-box-align: baseline;
+      -ms-flex-align: baseline;
+          align-items: baseline;
+}
+
+.footer__icon--facebook {
+  margin-right: 2rem;
+}
 /*# sourceMappingURL=main.css.map */

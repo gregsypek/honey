@@ -1,0 +1,41 @@
+.footer{
+  padding-top:11rem;
+  height: 25vh;
+  background:$color-dark;
+  display: grid;
+  justify-items: center;
+  grid-template-columns: repeat(2,2fr) 4fr 2fr;
+  grid-column-gap: 5rem;
+  padding: 2rem;
+  &__logo{
+    align-self:start;
+  }
+  &__address{
+    color: $color-white;
+    font-size: 1.8rem;
+    align-self: center;
+  }
+  &__copyright{
+    color: $color-gray-2;
+    font-size: 1.3rem;
+    align-self: end;
+  }
+  &__icons{
+    align-self: start;
+    display: flex;
+  }
+   &__icon{ 
+    &--facebook,
+    &--instagram {
+      
+      align-items: baseline;
+      
+    }
+      &--facebook
+      {
+        margin-right:2rem;
+      }
+  }
+}
+
+//https://css-tricks.com/snippets/css/complete-guide-grid/
