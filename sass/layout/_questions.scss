@@ -1,11 +1,13 @@
 .questions {
   padding: 0 10vw;
  min-height: 600px;  
-  background: linear-gradient(0deg, rgba(235, 99, 73, 0.902)),
-    url(../../src/images/questions_bg.jpg);
+  background: linear-gradient(0deg, rgba(235, 99, 73, 0.902));
+  
+  // background: linear-gradient(0deg, rgba(235, 99, 73, 0.902)),
+  //   url(../../src/images/questions_bg.jpg);
 
   &__header{
-    padding:11rem 0;
+    padding:$sectionMargin 0 10rem 0;
     font-size: 5rem;
     color: $color-orange;
     line-height: 110%;
@@ -22,6 +24,7 @@ display:flex;
 flex-flow: row wrap;
 justify-content: space-between;
   // align-content: stretch;
+  margin-bottom: $sectionMargin;
   }
 
   &__box {

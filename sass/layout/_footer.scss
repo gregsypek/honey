@@ -1,23 +1,28 @@
 .footer{
-  padding-top:11rem;
-  height: 25vh;
+  // padding-top:$sectionMargin;
+  // height: 25vh;
   background:$color-dark;
-  display: grid;
-  justify-items: center;
-  grid-template-columns: repeat(2,2fr) 4fr 2fr;
-  grid-column-gap: 5rem;
-  padding: 2rem;
+  // padding: 2rem;
+  &__container{
+    display: grid;
+    justify-items: center;
+    grid-template-columns: repeat(2, 2fr) 4fr 2fr;
+    grid-column-gap: 5rem;
+    padding: ($sectionMargin/2 ) 0 3rem 0;
+  }
   &__logo{
     align-self:start;
+    margin-top: -2rem;
+    width: 80%;
   }
   &__address{
     color: $color-white;
-    font-size: 1.8rem;
+    font-size: 1.6rem;
     align-self: center;
   }
   &__copyright{
     color: $color-gray-2;
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     align-self: end;
   }
   &__icons{
@@ -29,6 +34,8 @@
     &--instagram {
       
       align-items: baseline;
+      width: 3rem;
+      height: auto;
       
     }
       &--facebook

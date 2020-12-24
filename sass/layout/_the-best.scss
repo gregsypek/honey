@@ -1,5 +1,9 @@
+
+
+// hexagon size: width="320" height="374"
+
 .the-best {
-  height: 240vh;
+  // height: 240vh;
   background-image: linear-gradient(
     109deg,
     rgba(255, 255, 255, 0.9) 69%,
@@ -11,17 +15,18 @@
   &__box {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
-    grid-row-gap: 25rem;
+    grid-row-gap: 20rem;
     color: $color-gray;
 
   }
   &__title {
     position: relative;
-    margin-top:11rem;
+    margin-top:$sectionMargin;
     z-index: 1;
     font-size: 5rem;
     grid-column: 2/6;
     line-height: 77px;
+    margin-bottom: $sectionMargin;
     span {
     @include span;
     }
@@ -32,8 +37,8 @@
     width: 60rem;
     height: auto;
     opacity: 0.6;
-    // margin-top: 3rem;
-    margin-left: -25rem;
+    margin-top: 4rem;
+    margin-left: -19rem;
   }
 
  
@@ -107,5 +112,7 @@
    
     }
   }
-  
+  .info--3{
+    margin-bottom:$sectionMargin;  
+  }
 }

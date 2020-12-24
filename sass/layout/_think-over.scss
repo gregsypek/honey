@@ -7,14 +7,14 @@
   // background: linear-gradient(0deg, rgba(235, 99, 73, 0.902)),
   //   url(../../src/images/think-over_bg.png);
   background: linear-gradient(0deg, rgba(235, 99, 73, 0.902));
-   
-  // background: linear-gradient(0deg, rgba(235, 99, 73, 0.902));
+  
   &__left {
     grid-column: 2/6;
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: flex-start;
+    margin:$sectionMargin 0;
 
     h2 {
       font-size: 5rem;
@@ -40,11 +40,12 @@
     display:flex;
     flex-direction: column;
     justify-content: space-evenly;
+    margin:$sectionMargin 0;
   }
   &__box {
-    background: rgba($color-white, 0.9);
+    background: $color-white;
     height: 25rem;
-    border-radius: 5px;
+    border-radius: 20px;
     @include shadow2;
   }
   &__recommend {
@@ -57,8 +58,8 @@
     padding: 3rem;
     h4 {
       font-weight: 300;
-      color: iherit;
-      font-size: 2.5rem;
+      color: $color-gray;
+      font-size: 2rem;
     }
     p {
       align-self: flex-end;

@@ -1,10 +1,10 @@
-$margin: 7rem;
+// $marginSky: 7rem;
 
 .about {
   // &__header {
   // }
   position: relative;
-  margin-top:$margin;
+  margin-top:$marginSky;
 
 
 
@@ -12,7 +12,7 @@ $margin: 7rem;
     position: absolute;
     width: 400px;
     height: 600px;
-    top: calc( -#{$margin});
+    top: calc( -#{$marginSky});
     left:0;
     background-color: #EECF90;  
     clip-path: polygon(0% 0px, 0px 62%, 38.55% 0%);
@@ -24,7 +24,7 @@ $margin: 7rem;
     color:$color-gray;
 
     //variable is on the top of this file
-    top: calc(11rem - #{$margin});
+    top: calc(#{$sectionMargin} - #{$marginSky});
     left:10vw;
   font-size: 5rem;
 
@@ -73,10 +73,11 @@ $margin: 7rem;
 &__main {
   // position: relative;
   // padding: 11rem 0;
-  height: 150vh;
+  // height: 150vh;
   display:grid;
   grid-template-columns: repeat(12,1fr);
-  grid-template-rows: 18rem repeat(2, minmax(60vh ,1fr)) 11rem;
+  grid-template-rows: $sectionMargin repeat(2, minmax(auto ,1fr)) 0$sectionMargin;
+  // grid-template-rows: repeat(3,$sectionMargin);
   grid-column-gap:2rem;
   color: $color-gray;
 
