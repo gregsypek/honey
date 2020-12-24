@@ -741,6 +741,18 @@ h3 {
   z-index: 1;
 }
 
+.about__triangle2 {
+  position: absolute;
+  width: 400px;
+  height: 500px;
+  bottom: 0;
+  right: 0;
+  background-color: #EECF90;
+  -webkit-clip-path: polygon(0% 0px, 0px 62%, 38.55% 0%);
+  clip-path: polygon(100% 0px, 175px 120%, 100.55% 100%);
+  z-index: 1;
+}
+
 .about__text {
   position: absolute;
   z-index: 3;
