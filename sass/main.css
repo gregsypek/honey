@@ -967,6 +967,10 @@ h3 {
   background-repeat: no-repeat;
 }
 
+.gallery {
+  margin: 0 4vw;
+}
+
 .gallery h1 {
   margin: 7rem 0 10rem 10vw;
   font-size: 5rem;
@@ -990,10 +994,69 @@ h3 {
   padding: 3rem 10vw;
 }
 
+.gallery__gallery-box {
+  margin-top: 14rem;
+}
+
+.gallery__photos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  list-style: none;
+}
+
+.gallery__photos li {
+  -ms-flex-preferred-size: 28vw;
+      flex-basis: 28vw;
+  margin-bottom: 14rem;
+}
+
+.gallery__photos img {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  -webkit-filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.25));
+}
+
+.gallery__contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  font-size: 1.4rem;
+  margin-bottom: 14rem;
+  font-weight: bold;
+  background-color: #d5b275;
+  padding: 3rem;
+  color: #333333;
+  border-radius: 5px;
+}
+
+.gallery__contact a {
+  color: inherit;
+}
+
+.gallery__contact > * {
+  -ms-flex-preferred-size: 28vw;
+      flex-basis: 28vw;
+}
+
 .navigation__buttons .btn--gallery-login {
   margin-right: 2rem;
   font-weight: lighter;
-  background-color: #d5b275;
+  background-color: #EECF90;
   color: #ffffff;
 }
 

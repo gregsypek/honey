@@ -21,6 +21,8 @@
 
 .gallery {  
   @include header(7rem 0 10rem 10vw);
+  margin: 0 4vw;
+
   &__info-box{
     width: 100vw;
     background: $color-honey;    
@@ -33,15 +35,51 @@
 
   }
   &__gallery-box{
-
+    margin-top:$sectionMargin;  
+   
+    
   }
-  &__photo{
-    &--1{}
+  &__photos{
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-content: stretch;
+    list-style: none;
+li {
+
+  flex-basis: 28vw;
+  margin-bottom: $sectionMargin;
+}
+
+ img {
+   width:100%;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  @include shadow2;
+}
+
+   
   }
   &__contact{
-    &--phone{}
-    &--info{}
-    &--social-media{}
+
+    display:flex;
+    justify-content: space-between;
+    font-size: 1.4rem;
+    margin-bottom: $sectionMargin;
+    font-weight: bold;
+    background-color: $color-honey-2;
+    padding: 3rem;
+    color:$color-gray;
+    border-radius: 5px;
+
+    a{
+      color:inherit;
+
+    }
+    > * {
+      flex-basis: 28vw;
+    }
+   
   }
 }
 
@@ -54,7 +92,7 @@
   
   .btn--gallery-login {
     @include btn--login;
-      background-color: $color-honey-2;
+      background-color: $color-honey;
       color: $color-white;
     }
     
