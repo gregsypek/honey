@@ -10,6 +10,9 @@
   display: block;
   color: $color-orange;
 }
+
+
+//----------------BUTTONS-----------------
 @mixin btn { 
   border:none;
   border-radius: 5%; 
@@ -42,6 +45,21 @@
   border: 2px solid $color-gray;
 }
 
+@mixin btn--login {
+  margin-right: 2rem;  
+  font-weight: lighter;
+ 
+
+}
+@mixin btn--register {
+  border-width: 1px;
+  border-style: solid;
+  font-weight: lighter;
+
+ 
+  background-color: transparent;
+}
+//----------------SHADOWS-----------------
 @mixin shadow2 {
   filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.25));
 }
@@ -51,3 +69,5 @@
 @mixin hexRotate {
   transform: rotate(-107.04deg);
 }
+
+

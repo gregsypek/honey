@@ -1,0 +1,65 @@
+.wrapper--gallery {
+  position: relative;
+  background-image: linear-gradient(
+    62deg,
+    rgba(255, 255, 255, 1) 61%,
+    rgba($color-honey-2, .9) 61%,
+    rgba($color-honey-2, .9) 100%,     
+    transparent 50%
+  ),
+  //Obraz Mabel Amber z Pixabay 
+  url(../../src/images/gallery_bg.png);
+  
+ 
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+
+
+
+.gallery {  
+  @include header(7rem 0 10rem 10vw);
+  &__info-box{
+    width: 100vw;
+    background: $color-honey;    
+  }
+  &__info{
+    color: $color-gray;
+    font-family: $font-secondary;
+    font-size: 2.5rem;
+    padding: 3rem 10vw;
+
+  }
+  &__gallery-box{
+
+  }
+  &__photo{
+    &--1{}
+  }
+  &__contact{
+    &--phone{}
+    &--info{}
+    &--social-media{}
+  }
+}
+
+
+    
+
+//change navigation background colors
+.navigation__buttons {
+ 
+  
+  .btn--gallery-login {
+    @include btn--login;
+      background-color: $color-honey-2;
+      color: $color-white;
+    }
+    
+    .btn--gallery-register {     
+      @include btn--register;    
+      color: $color-white;
+    }
+}

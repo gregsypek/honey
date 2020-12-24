@@ -1,0 +1,12 @@
+//----------------HEADERS-----------------
+
+@mixin header($margin) {
+  h1 {
+    margin:$margin; 
+    font-size: 5rem;
+    color: $color-gray;
+    span {
+      @include span;
+  }
+}
+}

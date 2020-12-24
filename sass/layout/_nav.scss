@@ -61,14 +61,14 @@
     }
     
     .btn--login {
-      margin-right: 2rem;
-      background-color: $color-white-2;
+    @include btn--login;
+    background-color: $color-white-2;
+      
     }
     
-    .btn--register {
-      border: 2px solid $color-gray-2;
-      background-color: $color-white;
-      border: 1px solid $color-gray-2;
+    .btn--register {     
+     
+    @include btn--register
     }
   }
 

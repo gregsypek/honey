@@ -2,7 +2,7 @@
   position: relative;
   // height: auto;
 
-  height: calc(200vh+15px);
+  // height: calc(200vh+15px);
   background-image: linear-gradient(
       62deg,
       rgba(238, 207, 144, 0.9) 67%,
@@ -84,6 +84,7 @@
     @include btn;
     @include btn--yellow;
     @include shadow2;
+    margin-bottom:$sectionMargin;
   }
 }
 
