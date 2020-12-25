@@ -207,7 +207,7 @@ h3 {
 }
 
 .navigation__logo {
-  padding: 15px 0 5px 0;
+  padding: 15px 0 0 15px;
   font-size: 1.8rem;
 }
 
@@ -539,19 +539,6 @@ h3 {
   z-index: -1;
 }
 
-.the-best .info--1::after,
-.the-best .info--3::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  background: #ffffff;
-  border-radius: 5px;
-}
-
 .the-best .info--2 {
   width: 100%;
   height: 100%;
@@ -565,18 +552,6 @@ h3 {
   right: -216px;
   top: -123px;
   z-index: -1;
-}
-
-.the-best .info--2::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-  width: 100%;
-  height: 100%;
-  background: #ffffff;
-  border-radius: 5px;
 }
 
 .the-best .info--3 {
@@ -961,14 +936,10 @@ h3 {
 
 .wrapper--gallery {
   position: relative;
-  background-image: linear-gradient(62deg, white 61%, rgba(213, 178, 117, 0.9) 61%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../../src/images/gallery_bg.png);
+  background-image: linear-gradient(62deg, white 52%, rgba(213, 178, 117, 0.9) 52%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../../src/images/gallery_bg.png);
   background-size: cover;
-  background-position: top center;
+  background-position: top right;
   background-repeat: no-repeat;
-}
-
-.gallery {
-  margin: 0 4vw;
 }
 
 .gallery h1 {
@@ -982,8 +953,19 @@ h3 {
   color: #F2994A;
 }
 
+.gallery__triangle {
+  position: absolute;
+  width: 52%;
+  height: 85%;
+  top: -14rem;
+  right: 0px;
+  background-color: #d5b275;
+  -webkit-clip-path: polygon(0% 0px, 0px 62%, 38.55% 0%);
+  clip-path: polygon(35% -2%, 100% 90vh, 100% 0);
+  z-index: 0;
+}
+
 .gallery__info-box {
-  width: 100vw;
   background: #EECF90;
 }
 
@@ -996,6 +978,7 @@ h3 {
 
 .gallery__gallery-box {
   margin-top: 14rem;
+  position: relative;
 }
 
 .gallery__photos {
@@ -1012,12 +995,27 @@ h3 {
   -ms-flex-line-pack: stretch;
       align-content: stretch;
   list-style: none;
+  margin: 0 4vw;
 }
 
 .gallery__photos li {
   -ms-flex-preferred-size: 28vw;
       flex-basis: 28vw;
   margin-bottom: 14rem;
+}
+
+@media (max-width: 800px) {
+  .gallery__photos li {
+    -ms-flex-preferred-size: 44vw;
+        flex-basis: 44vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .gallery__photos li {
+    -ms-flex-preferred-size: 92vw;
+        flex-basis: 92vw;
+  }
 }
 
 .gallery__photos img {
@@ -1038,7 +1036,7 @@ h3 {
   font-size: 1.4rem;
   margin-bottom: 14rem;
   font-weight: bold;
-  background-color: #d5b275;
+  background: #EECF90;
   padding: 3rem;
   color: #333333;
   border-radius: 5px;
