@@ -1,0 +1,65 @@
+.wrapper--content {
+  position: relative;
+  background-image: linear-gradient(
+    62deg,
+    rgba(255, 255, 255, 1) 52%,
+    rgba($color-honey-2, .9) 52%,
+    rgba($color-honey-2, .9) 100%,     
+    transparent 50%
+  ),
+  //Obraz Mabel Amber z Pixabay 
+  url(../../src/images/gallery_bg.png);
+  background-size: cover;
+  background-position: top right;
+  background-repeat: no-repeat;
+}
+
+.content {  
+  @include header(7rem 0 10rem 10vw);
+
+  // margin: 0 4vw;
+ 
+
+&__triangle {
+  
+  position: absolute;
+  width: 52%;
+  height: 85%;
+  top: -14rem;
+  right: 0px;
+  background-color: #d5b275;
+  -webkit-clip-path: polygon(0% 0px, 0px 62%, 38.55% 0%);
+  clip-path: polygon(35% -2%, 100% 90vh, 100% 0);
+  z-index: 0;  
+}
+
+  
+  &__content-box{
+    margin-top:$sectionMargin;  
+    position:relative;//for a triangle bg
+  }
+}
+
+//change navigation background colors
+.navigation__buttons {
+ 
+  
+  .btn--gallery-login {
+    @include btn--login;
+      background-color: $color-honey-2;
+      color: $color-white;
+    }
+    
+    .btn--gallery-register {     
+      @include btn--register;    
+      color: $color-white;
+    }
+}
+
+
+// SVG
+
+.card__icon {
+  width: 18px;
+  height: 29px;
+}

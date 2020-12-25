@@ -1123,4 +1123,55 @@ h3 {
   background-color: transparent;
   color: #ffffff;
 }
+
+.wrapper--content {
+  position: relative;
+  background-image: linear-gradient(62deg, white 52%, rgba(213, 178, 117, 0.9) 52%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../../src/images/gallery_bg.png);
+  background-size: cover;
+  background-position: top right;
+  background-repeat: no-repeat;
+}
+
+.content h1 {
+  margin: 7rem 0 10rem 10vw;
+  font-size: 5rem;
+  color: #333333;
+}
+
+.content h1 span {
+  display: block;
+  color: #F2994A;
+}
+
+.content__triangle {
+  position: absolute;
+  width: 52%;
+  height: 85%;
+  top: -14rem;
+  right: 0px;
+  background-color: #d5b275;
+  -webkit-clip-path: polygon(0% 0px, 0px 62%, 38.55% 0%);
+  clip-path: polygon(35% -2%, 100% 90vh, 100% 0);
+  z-index: 0;
+}
+
+.content__content-box {
+  margin-top: 14rem;
+  position: relative;
+}
+
+.navigation__buttons .btn--gallery-login {
+  margin-right: 2rem;
+  font-weight: lighter;
+  background-color: #d5b275;
+  color: #ffffff;
+}
+
+.navigation__buttons .btn--gallery-register {
+  border-width: 1px;
+  border-style: solid;
+  font-weight: lighter;
+  background-color: transparent;
+  color: #ffffff;
+}
 /*# sourceMappingURL=main.css.map */
