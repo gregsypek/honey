@@ -1,65 +1,191 @@
 .wrapper--content {
   position: relative;
-  background-image: linear-gradient(
-    62deg,
-    rgba(255, 255, 255, 1) 52%,
-    rgba($color-honey-2, .9) 52%,
-    rgba($color-honey-2, .9) 100%,     
-    transparent 50%
-  ),
-  //Obraz Mabel Amber z Pixabay 
-  url(../../src/images/gallery_bg.png);
+  background-image: linear-gradient(62deg,
+      rgba(255, 255, 255, 1) 52%,
+      rgba($color-honey-2, 0.9) 52%,
+      rgba($color-honey-2, 0.9) 100%,
+      transparent 50%),
+    //Obraz Mabel Amber z Pixabay
+    url(../../src/images/gallery_bg.png);
   background-size: cover;
   background-position: top right;
   background-repeat: no-repeat;
 }
 
-.content {  
+.content {
   @include header(7rem 0 10rem 10vw);
 
   // margin: 0 4vw;
- 
 
-&__triangle {
-  
-  position: absolute;
-  width: 52%;
-  height: 85%;
-  top: -14rem;
-  right: 0px;
-  background-color: #d5b275;
-  -webkit-clip-path: polygon(0% 0px, 0px 62%, 38.55% 0%);
-  clip-path: polygon(35% -2%, 100% 90vh, 100% 0);
-  z-index: 0;  
+  &__triangle {
+    position: absolute;
+    width: 52%;
+    height: 85%;
+    top: -14rem;
+    right: 0px;
+    background-color: #d5b275;
+    -webkit-clip-path: polygon(0% 0px, 0px 62%, 38.55% 0%);
+    clip-path: polygon(35% -2%, 100% 90vh, 100% 0);
+    z-index: 0;
+  }
+
+  .content__cards {
+    margin-top: $sectionMargin;
+    position: relative; //for a triangle bg
+  }
 }
 
-  
-  &__content-box{
-    margin-top:$sectionMargin;  
-    position:relative;//for a triangle bg
+.card-container {
+  max-width: 120rem;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 7rem;
+}
+
+.card {
+  border-radius: 3px;
+  // overflow: hidden;
+  @include shadow2;
+  background-color: $color-white;
+
+  display: flex;
+  flex-direction: column;
+  backface-visibility: hidden;
+
+  &__header {
+    height: 20rem;
+    position: relative;
+    @include shadow2;
   }
+
+  &__picture {
+    position: absolute;
+    z-index: -2;
+    width: 18rem;
+    height: 21.3rem;
+    top: 0;
+    right: 0;
+    @include hexagon;
+    mix-blend-mode: normal;
+    border: 5px solid #FFFFFF;
+    opacity: 0.8;
+    object-fit: cover;
+    transform: matrix(-0.17, 0.99, -0.97, -0.2, 0, 0);
+
+    background-image: url(../../src/images/honeys/m_rzepakowy.png);
+
+  }
+
+  .heading-tertirary {
+    position: absolute;
+    top: 3rem;
+    left: -5rem;
+    width: 70%;
+    z-index: 10;
+    font-size: 2.8rem;
+    color: $color-white;
+    font-family: $font-primary;
+    text-align: center;
+
+    span {
+      z-index: -1;
+      // display: inline-block;
+      background: $color-red-3;
+      padding: 1.2rem 2rem;
+      line-height: 1;
+
+      // width: 100%;
+      +span {
+        z-index: 1;
+      }
+
+    }
+  }
+
+
+  &__details {
+    // display: grid;
+    display: flex;
+    flex-direction: column;
+    padding: 2.5rem 3rem;
+  }
+
+  &__description {
+    grid-column: 1/-1;
+    font-size: 1.6rem;
+    font-weight: normal;
+    line-height: 120%;
+  }
+
+  // &__footer{} 
+  &__data-box {
+    margin: 3rem 0;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-row-gap: 1.7rem;
+    grid-column-gap: 2rem;
+    background: $color-honey-3;
+    padding: 2.5rem 3rem;
+
+  }
+
+  &__data {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .card__icon {
+      margin-right: 1rem;
+    }
+
+  }
+
+  &__stars {
+    display: flex;
+    justify-content: center;
+    margin-top: -3rem;
+    margin-bottom: 1.5rem;
+
+  }
+
+  &__star:not(:last-child) {
+    margin-right: 1rem;
+  }
+
+  &__footer {
+    background-color: $color-red-3;
+    // height: 2.6rem;
+    display: flex;
+    justify-content: flex-end;
+    padding: .8rem .8rem;
+
+    .btn {
+      text-decoration: none;
+      @include btn--tiny;
+      @include btn--white;
+      
+
+    }
+  }
+
 }
 
 //change navigation background colors
 .navigation__buttons {
- 
-  
   .btn--gallery-login {
     @include btn--login;
-      background-color: $color-honey-2;
-      color: $color-white;
-    }
-    
-    .btn--gallery-register {     
-      @include btn--register;    
-      color: $color-white;
-    }
+    background-color: $color-honey-2;
+    color: $color-white;
+  }
+
+  .btn--gallery-register {
+    @include btn--register;
+    color: $color-white;
+  }
 }
 
 
-// SVG
-
-.card__icon {
-  width: 18px;
-  height: 29px;
+.card__star img {
+  width: 20px;
 }

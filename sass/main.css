@@ -1155,9 +1155,167 @@ h3 {
   z-index: 0;
 }
 
-.content__content-box {
+.content .content__cards {
   margin-top: 14rem;
   position: relative;
+}
+
+.card-container {
+  max-width: 120rem;
+  margin: 0 auto;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[3];
+      grid-template-columns: repeat(3, 1fr);
+  grid-gap: 7rem;
+}
+
+.card {
+  border-radius: 3px;
+  -webkit-filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.25));
+  background-color: #ffffff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+
+.card__header {
+  height: 20rem;
+  position: relative;
+  -webkit-filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.25));
+}
+
+.card__picture {
+  position: absolute;
+  z-index: -2;
+  width: 18rem;
+  height: 21.3rem;
+  top: 0;
+  right: 0;
+  -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+          clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  mix-blend-mode: normal;
+  border: 5px solid #FFFFFF;
+  opacity: 0.8;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -webkit-transform: matrix(-0.17, 0.99, -0.97, -0.2, 0, 0);
+          transform: matrix(-0.17, 0.99, -0.97, -0.2, 0, 0);
+  background-image: url(../../src/images/honeys/m_rzepakowy.png);
+}
+
+.card .heading-tertirary {
+  position: absolute;
+  top: 3rem;
+  left: -5rem;
+  width: 70%;
+  z-index: 10;
+  font-size: 2.8rem;
+  color: #ffffff;
+  font-family: "Bungee", cursive;
+  text-align: center;
+}
+
+.card .heading-tertirary span {
+  z-index: -1;
+  background: #ED806B;
+  padding: 1.2rem 2rem;
+  line-height: 1;
+}
+
+.card .heading-tertirary span + span {
+  z-index: 1;
+}
+
+.card__details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 2.5rem 3rem;
+}
+
+.card__description {
+  grid-column: 1/-1;
+  font-size: 1.6rem;
+  font-weight: normal;
+  line-height: 120%;
+}
+
+.card__data-box {
+  margin: 3rem 0;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+  grid-row-gap: 1.7rem;
+  grid-column-gap: 2rem;
+  background: #F1E2C4;
+  padding: 2.5rem 3rem;
+}
+
+.card__data {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.card__data .card__icon {
+  margin-right: 1rem;
+}
+
+.card__stars {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-top: -3rem;
+  margin-bottom: 1.5rem;
+}
+
+.card__star:not(:last-child) {
+  margin-right: 1rem;
+}
+
+.card__footer {
+  background-color: #ED806B;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  padding: .8rem .8rem;
+}
+
+.card__footer .btn {
+  text-decoration: none;
+  border-radius: 5%;
+  font-size: 1.2rem;
+  padding: .3rem 1.2rem;
+  color: #BDBDBD;
+  background-color: #ffffff;
+  color: #333333;
+  border: 2px solid #333333;
 }
 
 .navigation__buttons .btn--gallery-login {
@@ -1173,5 +1331,9 @@ h3 {
   font-weight: lighter;
   background-color: transparent;
   color: #ffffff;
+}
+
+.card__star img {
+  width: 20px;
 }
 /*# sourceMappingURL=main.css.map */
