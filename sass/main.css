@@ -1,3 +1,4 @@
+@charset "UTF-8";
 *,
 *::after,
 *::before {
@@ -312,16 +313,24 @@ h3 {
   margin: 0;
   padding-top: 5em;
   min-height: 100%;
-  width: 200px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  display: block;
   background-color: #333333;
+  width: 200px;
 }
 
 .navigation__link {
   /* Make links block to make them fully clickable on mobile. Remember this is finger navigation, so include plenty of clickable area. All links get a bottom border */
-  display: block;
   padding: 3rem;
-  color: #fff;
   text-decoration: none;
+  color: #fff;
   border-bottom: 1px solid #F2994A;
 }
 
@@ -379,7 +388,9 @@ h3 {
     display: inline-block;
     width: 17rem;
     padding: 2rem 0 2rem;
+    color: #333333;
     background: none;
+    text-decoration: none;
     /* CREATES A HEXAGON ELEMENT WITH SHADOW AND ROTATE IT ON HOVER
       START //////////////////////////////*/
   }
@@ -422,7 +433,7 @@ h3 {
   .navigation__link:first-of-type {
     border-top: none;
   }
-  .navigation__link:hover, .navigation__link:hover {
+  .navigation__link:hover {
     background: none;
     text-decoration: none;
   }
@@ -938,6 +949,239 @@ h3 {
   color: #333333;
 }
 
+/* round of applause to Chris Coyer: https://css-tricks.com/responsive-data-tables/
+and Adrian Roselli: http://adrianroselli.com/2017/11/a-responsive-accessible-table.html#Responsive
+*/
+.table {
+  margin: 0 5vw 14rem 5vw;
+}
+
+table {
+  border-collapse: separate;
+  border: 1px solid #EECF90;
+  background-color: transparent;
+  border-spacing: 0 3rem;
+}
+
+th {
+  text-align: left;
+  font-weight: normal;
+}
+
+.dark {
+  font-weight: bold;
+}
+
+/* Force table to not be like tables anymore */
+table,
+thead,
+tbody,
+th,
+tr,
+td {
+  display: block;
+  padding: 0.3rem;
+}
+
+/* Hide table headers (but not display: none;, for accessibility -- sighted users will see labels below) */
+thead tr {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  font-family: "Bungee", cursive;
+}
+
+/* tr {border: 1px solid black;} */
+td {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  padding: 0.5rem;
+  border: none;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+/* long desciption should stay on the right side */
+#table-first tbody tr td:first-of-type,
+#table-second tbody tr td:first-of-type {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+td:before {
+  /* weird but it works  */
+  white-space: nowrap;
+  font-weight: bold;
+  /* resize for bigger screen if you want */
+  -ms-flex-preferred-size: 30%;
+      flex-basis: 30%;
+  margin-right: 2rem;
+}
+
+/* first table only for small screen */
+#table-first td:nth-of-type(1)::before {
+  content: "";
+}
+
+#table-first td:nth-of-type(2)::before {
+  content: "900 ml";
+}
+
+#table-first td:nth-of-type(3)::before {
+  content: "720 ml";
+}
+
+#table-first td:nth-of-type(4)::before {
+  content: "320 ml";
+}
+
+/* second table  only for small screen*/
+#table-second td:nth-of-type(1)::before {
+  content: "";
+}
+
+#table-second td:nth-of-type(2)::before {
+  content: "Ilość słoików";
+}
+
+#table-second td:nth-of-type(3)::before {
+  content: "Ekonomiczna";
+}
+
+#table-second td:nth-of-type(4)::before {
+  content: "Priorytet";
+}
+
+/* third table is not necessary because of different html structure */
+/* let the table scroll as a backup */
+.tablescroll {
+  overflow-x: auto;
+}
+
+caption {
+  width: 100%;
+  text-align: left;
+  font-weight: bold;
+  font-size: 3.2rem;
+  padding: 0.5rem;
+  font-family: "Bungee", cursive;
+  color: #333333;
+  margin-bottom: 5rem;
+}
+
+th {
+  padding: 1rem;
+  font-family: "Bungee", cursive;
+}
+
+td {
+  font-family: "Poppins", sans-serif;
+}
+
+tr:nth-child(odd) {
+  background-color: #F1E2C4;
+}
+
+tr:nth-child(even) {
+  background-color: #fbf6ed;
+}
+
+.hexagon-bg-3::before {
+  content: "";
+  position: absolute;
+  /* left: -78.97%; */
+  left: -50.97%;
+  top: -113%;
+  z-index: -1;
+}
+
+/* @media (min-width: 300px) {
+section.offer {
+  position: relative;
+  height: 190vh;
+  grid-template-columns: 1fr 7fr 1fr;
+  grid-template-rows: 5% 90% 5%;
+  display: grid;
+  justify-content: center;
+}
+} */
+/* For wider dimensions, change our layout so the table can take the full width of the screen. */
+/* table MQ's */
+@media (min-width: 768px) {
+  td {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: start;
+  }
+}
+
+@media (min-width: 950px) {
+  /* section.offer {
+    height: 150vh;
+  } */
+  /* td:before is not specific enough to override the original declarations, thus this method */
+  #table-first td:nth-of-type(odd):before,
+  #table-first td:nth-of-type(even):before,
+  #table-second td:nth-of-type(odd):before,
+  #table-second td:nth-of-type(even):before {
+    content: "";
+    margin-right: 0;
+  }
+  thead tr {
+    position: static;
+  }
+  thead,
+  tbody {
+    display: table-row-group;
+  }
+  th,
+  td {
+    display: table-cell;
+    padding: 1em;
+    font-size: 3.2rem;
+  }
+  td {
+    font-size: 2.8rem;
+    color: #333333;
+  }
+  tr {
+    display: table-row;
+  }
+  table {
+    display: table;
+    width: 100%;
+    border: none;
+  }
+  caption {
+    font-size: 3.2rem;
+    text-align: center;
+    text-transform: lowercase;
+    line-height: 3rem;
+  }
+  .dark,
+  thead tr.dark {
+    background-color: #ED806B;
+    color: #ffffff;
+    font-weight: bold;
+    font-family: "Bungee", cursive;
+    text-transform: uppercase;
+  }
+  .table__chosen {
+    -ms-grid-column: 2;
+    -ms-grid-column-span: 1;
+    grid-column: 2/3;
+    -ms-grid-column-align: stretch;
+        justify-self: stretch;
+  }
+}
+
 .footer {
   background: #4F4F4F;
 }
@@ -1190,14 +1434,15 @@ h3 {
 }
 
 .card__picture-frame {
-  position: absolute;
-  z-index: 1;
   width: 21.9rem;
   height: 25.3rem;
   top: -60px;
   right: -2px;
   -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
           clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  position: absolute;
+  z-index: 1;
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
   mix-blend-mode: normal;
   background-color: #f2f2f2;
   -webkit-transform: rotate(-74deg);
@@ -1504,14 +1749,15 @@ h3 {
 }
 
 .content__order-frame {
-  position: absolute;
-  z-index: -1;
   width: 47.9rem;
   height: 57.3rem;
   top: -118px;
   right: -145px;
   -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
           clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  position: absolute;
+  z-index: 1;
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
   mix-blend-mode: normal;
   background-color: #f2f2f2;
   -webkit-transform: rotate(-74deg);
@@ -1545,18 +1791,49 @@ h3 {
   background: #ffffff;
 }
 
-.navigation__buttons .btn--gallery-login {
-  margin-right: 2rem;
-  font-weight: lighter;
-  background-color: #d5b275;
-  color: #ffffff;
+.navigation-info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.navigation__buttons .btn--gallery-register {
-  border-width: 1px;
-  border-style: solid;
-  font-weight: lighter;
-  background-color: transparent;
-  color: #ffffff;
+.navigation-info__list {
+  list-style: none;
+  margin: 0;
+  padding-top: 5em;
+  min-height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  font-size: 2.4rem;
+  text-transform: uppercase;
+  margin-bottom: 14rem;
+  border-bottom: 2px solid #EECF90;
+}
+
+.navigation-info__item {
+  display: inline-block;
+  width: 17rem;
+  padding: 2rem 0 2rem;
+  color: #333333;
+  background: none;
+  text-decoration: none;
+  color: #828282;
+}
+
+.navigation-info__link {
+  text-decoration: none;
+  position: relative;
+}
+
+.navigation-info__link .active {
+  position: relative;
+  color: #333333;
+  background: url(../../src/icons/emptyHex.svg);
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 /*# sourceMappingURL=main.css.map */

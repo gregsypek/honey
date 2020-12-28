@@ -63,8 +63,8 @@
     font-family: $font-secondary;
 
     &-left {
-      position:relative;
-      z-index:3;
+      position: relative;
+      z-index: 3;
     }
 
     padding: 0 10vw;
@@ -127,16 +127,14 @@
     // &__picture {
 
     &-frame {
-      position: absolute;
-      z-index: -1;
+     
       width: 47.9rem;
       height: 57.3rem;
       top: -118px;
       right: -145px;
       @include hexagon;
-      mix-blend-mode: normal;
-      background-color: $color-white-2;
-      transform: rotate(-74deg);
+      @include hexFrame;
+     
     }
 
     &-img {
@@ -151,32 +149,43 @@
     }
 
     &-overlay {
-      position: absolute;
-      z-index: 4;
-      top: 0;
-      left: 0;
-      right: 0;
-      bottom: 0;
-      width: 100%;
-      height: 100%;
-      transform: rotate(-3deg);
-      clip-path: polygon(53% 9px, 97% 29%, 94% 74%, 48% 95%, 6px 71%, 12px 25%);
-      background: $color-white;
+      @include overlay;
     }
 
   }
 }
 
-//change navigation background colors
-.navigation__buttons {
-  .btn--gallery-login {
-    @include btn--login;
-    background-color: $color-honey-2;
-    color: $color-white;
+
+.navigation-info {
+  display: flex;
+
+  &__list {
+    @include list;
+    margin-bottom: $sectionMargin;
+    border-bottom: 2px solid $color-honey;
   }
 
-  .btn--gallery-register {
-    @include btn--register;
-    color: $color-white;
+  &__item {
+    @include item; 
+    color: $color-gray-3;
   }
+
+  &__link {
+    text-decoration: none;
+    position: relative;
+    
+    .active {
+      position: relative;
+      color: $color-gray;
+     
+    
+      background: url(../../src/icons/emptyHex.svg);
+      background-repeat: no-repeat;
+      background-size: contain;
+    }
+  
+
+  }
+// section.table is formatted as  table.scss  in layout folder
+
 }

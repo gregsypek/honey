@@ -56,19 +56,19 @@
       position: relative;
       z-index: 2;
       // font-family: inherit;
-      @include btn;  
-      @include btn--small;   
+      @include btn;
+      @include btn--small;
     }
-    
+
     .btn--login {
-    @include btn--login;
-    background-color: $color-white-2;
-      
+      @include btn--login;
+      background-color: $color-white-2;
+
     }
-    
-    .btn--register {     
-     
-    @include btn--register
+
+    .btn--register {
+
+      @include btn--register
     }
   }
 
@@ -137,22 +137,19 @@
 
   &__list {
     /* turn off bullets, set width and background color of flyout menu. Width here and "left" property on main-menu should be the same absolute number */
-    list-style: none;
-
-    margin: 0;
-    padding-top: 5em;
-    min-height: 100%;
-    width: 200px;
+    @include list;
+    display: block;
     background-color: $color-gray;
+    width: 200px;
   }
 
   &__link {
     /* Make links block to make them fully clickable on mobile. Remember this is finger navigation, so include plenty of clickable area. All links get a bottom border */
 
-    display: block;
     padding: 3rem;
-    color: #fff;
     text-decoration: none;
+    color: #fff;
+
     border-bottom: 1px solid $color-orange;
 
     //MOZE NIE DZIALAC
@@ -167,6 +164,8 @@
     }
   }
 }
+
+//////////////////////////////////////////////////
 
 @media (min-width: 800px) {
   .navigation {
@@ -191,55 +190,54 @@
     &__list {
       /* Undo off-canvas styling */
       margin-top: -3rem;
-    position: relative;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding-top:0;
-    // margin:3rem 0;
-    background: none;
-    width: 100vw;
-    max-width: 100%;
-    // height: 100%;
-    height: 10rem;
-    
-    &::before {
-      content: '';
-      position: absolute;
-      z-index: -2;
-      width :100%;
-      height: 6rem;
-      background-color: $color-white;
-    }
-    
+      position: relative;
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      padding-top: 0;
+      // margin:3rem 0;
+      background: none;
+      width: 100vw;
+      max-width: 100%;
+      // height: 100%;
+      height: 10rem;
+
+      &::before {
+        content: '';
+        position: absolute;
+        z-index: -2;
+        width: 100%;
+        height: 6rem;
+        background-color: $color-white;
+      }
+
     }
 
     &__item {
       /* display the li's horizontally */
-      display: inline-block;
-      width: 17rem;
-      padding: 2rem 0 2rem;
-      background: none;
+      @include item;
 
       /* CREATES A HEXAGON ELEMENT WITH SHADOW AND ROTATE IT ON HOVER
       START //////////////////////////////*/
       &:hover span::before {
-     
+
         content: '';
-          position: absolute;
-          width: 75px;
-          height: 86px;
-          top: -44px;
-          left: 14px;
-          @include hexagon;
-          background: $color-white;
+        position: absolute;
+        width: 75px;
+        height: 86px;
+        top: -44px;
+        left: 14px;
+        @include hexagon;
+        background: $color-white;
         @include rotate;
-          transition: all .5s ease;
+        transition: all .5s ease;
       }
+
       &:active span::before {
 
         transform: rotate(-3deg);
       }
+
       span {
         position: relative;
         z-index: -1;
@@ -262,7 +260,7 @@
         border-top: none;
       }
 
-      &:hover,
+
       &:hover {
         background: none;
         text-decoration: none;

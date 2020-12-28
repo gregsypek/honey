@@ -1,0 +1,272 @@
+/* round of applause to Chris Coyer: https://css-tricks.com/responsive-data-tables/
+and Adrian Roselli: http://adrianroselli.com/2017/11/a-responsive-accessible-table.html#Responsive
+*/
+
+
+.table {
+  margin: 0 5vw $sectionMargin 5vw;
+  // height: auto;
+}
+
+// .table__chosen {
+  // display: grid;
+  // grid-template-rows: repeat(3, 1fr);
+  // grid-column: 2/3;
+  // grid-row-gap: 3rem;
+// }
+
+table {
+  border-collapse: separate;
+  border: 1px solid $color-honey;
+  background-color: transparent;
+  border-spacing: 0 3rem;
+}
+
+th {
+  text-align: left;
+  font-weight: normal;
+}
+
+.dark {
+  font-weight: bold;
+}
+
+/* Force table to not be like tables anymore */
+table,
+thead,
+tbody,
+th,
+tr,
+td {
+  display: block;
+  padding: 0.3rem;
+
+}
+
+/* Hide table headers (but not display: none;, for accessibility -- sighted users will see labels below) */
+thead tr {
+  position: absolute;
+  top: -9999px;
+  left: -9999px;
+  font-family: $font-primary;
+}
+
+/* tr {border: 1px solid black;} */
+
+td {
+  display: flex;
+  flex-flow: row wrap;
+  padding: 0.5rem;
+  border: none;
+  justify-content: space-between;
+}
+
+/* long desciption should stay on the right side */
+#table-first tbody tr td:first-of-type,
+#table-second tbody tr td:first-of-type {
+  justify-content: flex-end;
+}
+
+td:before {
+  /* weird but it works  */
+  white-space: nowrap;
+  font-weight: bold;
+
+  /* resize for bigger screen if you want */
+  flex-basis: 30%;
+
+  margin-right: 2rem;
+}
+
+/* first table only for small screen */
+
+#table-first td:nth-of-type(1)::before {
+  content: "";
+}
+
+#table-first td:nth-of-type(2)::before {
+  content: "900 ml";
+}
+
+#table-first td:nth-of-type(3)::before {
+  content: "720 ml";
+}
+
+#table-first td:nth-of-type(4)::before {
+  content: "320 ml";
+}
+
+/* second table  only for small screen*/
+#table-second td:nth-of-type(1)::before {
+  content: "";
+}
+
+#table-second td:nth-of-type(2)::before {
+  content: "Ilość słoików";
+}
+
+#table-second td:nth-of-type(3)::before {
+  content: "Ekonomiczna";
+}
+
+#table-second td:nth-of-type(4)::before {
+  content: "Priorytet";
+}
+
+/* third table is not necessary because of different html structure */
+
+/* let the table scroll as a backup */
+.tablescroll {
+  overflow-x: auto;
+  // max-height: 500px;
+}
+
+caption {
+  width: 100%;
+  text-align: left;
+  font-weight: bold;
+  font-size: 3.2rem;
+  padding: 0.5rem;
+  font-family: $font-primary;
+  color: $color-gray;
+  margin-bottom: 5rem;
+  // background-color: $color-white;
+}
+
+th
+{
+  padding: 1rem;
+  font-family: $font-primary;
+}
+
+
+td {
+  font-family: $font-secondary;
+
+}
+
+tr:nth-child(odd) {
+  background-color: $color-honey-3;
+}
+
+tr:nth-child(even) {
+  background-color: lighten($color-honey-3, 10%);
+}
+
+.hexagon-bg-3::before {
+  content: "";
+  position: absolute;
+  /* left: -78.97%; */
+  left: -50.97%;
+
+  top: -113%;
+  z-index: -1;
+}
+
+
+/* @media (min-width: 300px) {
+section.offer {
+  position: relative;
+  height: 190vh;
+  grid-template-columns: 1fr 7fr 1fr;
+  grid-template-rows: 5% 90% 5%;
+  display: grid;
+  justify-content: center;
+}
+} */
+
+
+/* For wider dimensions, change our layout so the table can take the full width of the screen. */
+/* table MQ's */
+@media (min-width: 768px) {
+  td {
+    justify-content: start;
+  }
+}
+
+@media (min-width: 950px) {
+  /* section.offer {
+    height: 150vh;
+  } */
+
+  /* td:before is not specific enough to override the original declarations, thus this method */
+  #table-first td:nth-of-type(odd):before,
+  #table-first td:nth-of-type(even):before,
+  #table-second td:nth-of-type(odd):before,
+  #table-second td:nth-of-type(even):before {
+    content: "";
+    margin-right: 0;
+  }
+
+  thead tr {
+    position: static;
+  }
+
+  thead,
+  tbody {
+    display: table-row-group;
+  }
+
+  th,
+  td {
+    display: table-cell;
+    padding: 1em;
+    font-size: 3.2rem;
+  }
+  td {
+    font-size: 2.8rem;
+    color:$color-gray;
+
+  }
+
+  tr {
+    display: table-row;
+  }
+
+  table {
+    display: table;
+    width: 100%;
+    border: none;
+  }
+
+  caption {
+    font-size: 3.2rem;
+    text-align: center;
+    text-transform: lowercase;
+ 
+    line-height: 3rem;
+  }
+
+  .dark,
+  thead tr.dark {
+    background-color: $color-red-3;
+    color: $color-white;
+    font-weight: bold;
+    font-family: $font-primary;
+    text-transform: uppercase;
+  }
+
+  .table__chosen {
+    grid-column: 2/3;
+    justify-self: stretch;
+  }
+
+ 
+}
+
+
+// @media (min-width: 1200px) {
+//   section.offer {
+//     display: flex;
+//     flex-direction: column;
+//     align-items: center;
+
+//     height: auto;
+
+
+//   }
+
+//   .table-third {
+//     margin-bottom: 4rem;
+//   }
+// }
