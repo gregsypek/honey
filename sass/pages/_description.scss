@@ -12,62 +12,171 @@
   background-position: center;
   background-repeat: no-repeat;
 
-
   @media (min-width: 800px) {
     .navigation {
-     
       &__list {
-        margin-bottom:$sectionMargin;
-
+        margin-bottom: $sectionMargin;
       }
     }
   }
 }
 
+.content {
+  &__title {
+    &--description {
+      background-color: $color-white;
+      display: flex;
+      align-items: baseline;
+      justify-content: space-between;
+      @include header(8rem 10vw);
 
-      .content {
-        &__title {
-          &--description {
-            background-color: $color-white;
-            display: flex;
-            align-items: baseline;
-            justify-content: space-between;
-            @include header(8rem 10vw);
+      span.inline {
+        display: inline-block;
+        color: $color-honey-2;
+      }
+    }
 
-            span.inline {
-              display: inline-block;
-              color: $color-honey-2;
-            }
-          }
+    &-stars {
+      display: flex;
+      margin-right: 10vw;
+    }
+  }
 
-          &-stars {
-            display: flex;
-            margin-right: 10vw;
-          }
-        }
+  &__star {
+    width: 4rem;
+    height: 5rem;
 
-        &__star {
-          width: 4rem;
-          height: 5rem;
+    &:not(:last-of-type) {
+      margin-right: 5rem;
+    }
 
-          &:not(:last-of-type) {
+    .star {
+      fill: $color-grape4;
+    }
 
-            margin-right: 5rem;
-          }
-        }
+    .gray {
+      fill: $color-gray-3;
+    }
+  }
+
+  &__order {
+    font-family: $font-secondary;
+
+    &-left {
+      position:relative;
+      z-index:3;
+    }
+
+    padding: 0 10vw;
+    margin-top: $sectionMargin;
+
+    display: flex;
+    justify-content: space-around;
+
+    &-form {
+      // font-weight: bold;
+      font-size: 2.5rem;
+      text-transform: uppercase;
+      display: flex;
+      flex-direction: column;
+
+      >* {
+        padding: 2rem 5rem;
+        width: 50rem;
       }
 
-
-      //change navigation background colors
-      .navigation__buttons {
-        .btn--gallery-login {
-          @include btn--login;
-          background-color: $color-honey-2;
-          color: $color-white;
-        }
-
-        .btn--gallery-register {
-          @include btn--register;
-          color: $color-white;
-        }
+      >*:not(:last-child) {
+        margin-bottom: 2rem;
       }
+
+      .cap,
+      .qty {
+        background-color: $color-red-3;
+        color: $color-white;
+        display: flex;
+        justify-content: space-between;
+      }
+
+      // .qty {}
+
+      .btn {
+        color: inherit;
+        font-family: inherit;
+        text-transform: uppercase;
+        font-size: inherit;
+        font-weight: bold;
+
+      }
+
+      .btn--submit {
+        @include btn--white;
+      }
+
+      .btn--back {
+        border: none;
+        background: transparent;
+        color: $color-red-2;
+      }
+    }
+
+    &-right {
+      position: relative;
+      @include shadow2;
+    }
+
+    // &__picture {
+
+    &-frame {
+      position: absolute;
+      z-index: -1;
+      width: 47.9rem;
+      height: 57.3rem;
+      top: -118px;
+      right: -145px;
+      @include hexagon;
+      mix-blend-mode: normal;
+      background-color: $color-white-2;
+      transform: rotate(-74deg);
+    }
+
+    &-img {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      left: 32px;
+      top: 41px;
+      transform: rotate(88deg);
+      opacity: .8;
+
+    }
+
+    &-overlay {
+      position: absolute;
+      z-index: 4;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      width: 100%;
+      height: 100%;
+      transform: rotate(-3deg);
+      clip-path: polygon(53% 9px, 97% 29%, 94% 74%, 48% 95%, 6px 71%, 12px 25%);
+      background: $color-white;
+    }
+
+  }
+}
+
+//change navigation background colors
+.navigation__buttons {
+  .btn--gallery-login {
+    @include btn--login;
+    background-color: $color-honey-2;
+    color: $color-white;
+  }
+
+  .btn--gallery-register {
+    @include btn--register;
+    color: $color-white;
+  }
+}

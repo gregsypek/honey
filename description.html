@@ -12,9 +12,7 @@
 </head>
 
 <body>
-    <div class="wrapper-description">
-
-
+  <div class="wrapper-description">
     <header class="navigation">
       <div class="navigation__row navigation__row--first">
         <a href="#main-menu" id="main-menu-toggle" class="menu-toggle" aria-label="Open main menu">
@@ -58,46 +56,74 @@
         </nav>
         <a href="#main-menu-toggle" class="backdrop" tabindex="-1" hidden></a>
       </div>
-    </header>  
+    </header>
     <main class="content">
-     
-        <div class="content__title--description">
-          <h1 class="content__title">Miód <span class="inline">rzepakowy</span></h1>
-          <div class="content__title-stars">
-            <div class="content__star">
-              <img src="./src/images/icons/star.svg" alt="star">
-            </div>
-            <div class="content__star card__star--black"><img src="./src/images/icons/star.svg" alt="star"></div>
-            <div class="content__star"><img src="./src/images/icons/star.svg" alt="star"></div>
-            <div class="content__star"><img src="./src/images/icons/star.svg" alt="star"></div>
-            <div class="content__star"><img src="./src/images/icons/star.svg" alt="star"></div>
+
+      <div class="content__title--description">
+        <h1 class="content__title">Miód <span class="inline">rzepakowy</span></h1>
+        <div class="content__title-stars">
+          <div class="content__star">
+            <!-- <img src="./src/images/icons/star.svg" alt="star"> -->
+            <svg width="67" height="63" viewBox="0 0 67 63" xmlns="http://www.w3.org/2000/svg">
+              <path class="star"
+                d="M33.5 0L41.2457 23.8389H66.3114L46.0329 38.5722L53.7786 62.4111L33.5 47.6778L13.2214 62.4111L20.9671 38.5722L0.688549 23.8389H25.7543L33.5 0Z" />
+            </svg>
           </div>
+          <div class="content__star card__star--black"><svg width="67" height="63" viewBox="0 0 67 63"
+              xmlns="http://www.w3.org/2000/svg">
+              <path class="star"
+                d="M33.5 0L41.2457 23.8389H66.3114L46.0329 38.5722L53.7786 62.4111L33.5 47.6778L13.2214 62.4111L20.9671 38.5722L0.688549 23.8389H25.7543L33.5 0Z" />
+            </svg></div>
+          <div class="content__star"><svg width="67" height="63" viewBox="0 0 67 63" xmlns="http://www.w3.org/2000/svg">
+              <path class="star"
+                d="M33.5 0L41.2457 23.8389H66.3114L46.0329 38.5722L53.7786 62.4111L33.5 47.6778L13.2214 62.4111L20.9671 38.5722L0.688549 23.8389H25.7543L33.5 0Z" />
+            </svg></div>
+          <div class="content__star"><svg width="67" height="63" viewBox="0 0 67 63" xmlns="http://www.w3.org/2000/svg">
+              <path class="star"
+                d="M33.5 0L41.2457 23.8389H66.3114L46.0329 38.5722L53.7786 62.4111L33.5 47.6778L13.2214 62.4111L20.9671 38.5722L0.688549 23.8389H25.7543L33.5 0Z" />
+            </svg></div>
+          <div class="content__star"><svg width="67" height="63" viewBox="0 0 67 63" xmlns="http://www.w3.org/2000/svg">
+              <path class="star gray"
+                d="M33.5 0L41.2457 23.8389H66.3114L46.0329 38.5722L53.7786 62.4111L33.5 47.6778L13.2214 62.4111L20.9671 38.5722L0.688549 23.8389H25.7543L33.5 0Z" />
+            </svg></div>
         </div>
-    
-
-
+      </div>
       <div class="content__info-box">
-        <h2 class="content__info">Miód rzepakowy o jasnej barwie, łagodnym smaku oraz wyraźnym aromacie kwiatu rzepaku. Nasz miód rzepakowy ma kremową, miękką konsystencję, łatwą do rozsmarowania.</h2>
+        <h2 class="content__info">Miód rzepakowy o jasnej barwie, łagodnym smaku oraz wyraźnym aromacie kwiatu rzepaku.
+          Nasz miód rzepakowy ma kremową, miękką konsystencję, łatwą do rozsmarowania.</h2>
       </div>
 
-<div class="content__order">
-  <div class="content__order-left">
-    <form action="#" class="content__order-form">
-      <label for="capacity">Pojemność</label>
-      <select name="capacity" id="capacity">
-        <option value="900">900ml</option>
-        <option value="720">720ml</option>
-        <option value="350">350ml</option>
-      </select>   
+      <div class="content__order">
+        <div class="content__order-left">
+          <form action="#" class="content__order-form">
+            <div class="cap">
+              <label for="capacity">Pojemność</label>
+              <select name="capacity" id="capacity">
+                <option value="900">900ml</option>
+                <option value="720">720ml</option>
+                <option value="350">350ml</option>
+              </select>
+            </div>
+            <div class="qty">
+              <label for="quantity">Ilość</label>
+              <input type="number" id="quantity" name="quantity" min="1" max="10">
+            </div>
+            <button class="btn btn--form btn--submit" type="submit">Do koszyka</button>
+            <button class="btn btn--form btn--back">Wróć do sklepu</button>
+          </form>
+        </div>
+        <div class="content__order-right">
+          <!-- <div class="card__header"> -->
+            <div class="content__order-frame">
+              <div class="content__order-overlay">
+                <img src="./src/images/honeys/m_rzepakowy.png" alt="miód rzepakowy" class="content__order-img" />
+              </div>
+            </div>
 
-      <label for="quantity">Ilość</label>
-      <input type="number" id="quantity" name="quantity" min="1" max="10">
-      <button class="btn--white btn--submit" type="submit">Do koszyka</button>
-      <button class="btn--back">Wróć do sklepu</button>
-    </form>
-  </div>
-</div>
-
+          
+          <!-- </div> -->
+        </div>
+      </div>
 
       <!-- wrapper end -->
   </div>
