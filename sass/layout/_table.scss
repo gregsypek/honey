@@ -128,9 +128,13 @@ caption {
   font-size: 3.2rem;
   padding: 0.5rem;
   font-family: $font-primary;
-  color: $color-gray;
+  color: $color-honey;
   margin-bottom: 5rem;
   // background-color: $color-white;
+}
+caption#honey,
+caption#dispatch{
+font-size: 4.2rem;
 }
 
 th
@@ -150,7 +154,7 @@ tr:nth-child(odd) {
 }
 
 tr:nth-child(even) {
-  background-color: lighten($color-honey-3, 10%);
+  background-color: lighten($color-honey-3, 5%);
 }
 
 .hexagon-bg-3::before {

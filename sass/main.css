@@ -439,6 +439,21 @@ h3 {
   }
 }
 
+.navigation__buttons .btn--gallery-login {
+  margin-right: 2rem;
+  font-weight: lighter;
+  background-color: #d5b275;
+  color: #ffffff;
+}
+
+.navigation__buttons .btn--gallery-register {
+  border-width: 1px;
+  border-style: solid;
+  font-weight: lighter;
+  background-color: transparent;
+  color: #ffffff;
+}
+
 .info {
   display: -ms-grid;
   display: grid;
@@ -949,6 +964,102 @@ h3 {
   color: #333333;
 }
 
+.content h1 {
+  margin: 7rem 0 10rem 10vw;
+  font-size: 5rem;
+  color: #333333;
+}
+
+.content h1 span {
+  display: block;
+  color: #F2994A;
+}
+
+.content__info-box {
+  background: #EECF90;
+}
+
+.content__info {
+  color: #333333;
+  font-family: "Poppins", sans-serif;
+  font-size: 2.5rem;
+  padding: 3rem 10vw;
+}
+
+.content__content-box {
+  margin-top: 14rem;
+  position: relative;
+}
+
+.content__photos {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-line-pack: stretch;
+      align-content: stretch;
+  list-style: none;
+  margin: 0 4vw;
+}
+
+.content__photos li {
+  -ms-flex-preferred-size: 28vw;
+      flex-basis: 28vw;
+  margin-bottom: 14rem;
+}
+
+@media (max-width: 800px) {
+  .content__photos li {
+    -ms-flex-preferred-size: 44vw;
+        flex-basis: 44vw;
+  }
+}
+
+@media (max-width: 600px) {
+  .content__photos li {
+    -ms-flex-preferred-size: 92vw;
+        flex-basis: 92vw;
+  }
+}
+
+.content__photos img {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: 5px;
+  -webkit-filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.25));
+}
+
+.content__contact {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  font-size: 1.4rem;
+  margin-bottom: 14rem;
+  font-weight: bold;
+  background: #EECF90;
+  padding: 3rem 5vw;
+  color: #333333;
+  border-radius: 5px;
+}
+
+.content__contact a {
+  color: inherit;
+}
+
+.content__contact.white {
+  background: #ffffff;
+}
+
 /* round of applause to Chris Coyer: https://css-tricks.com/responsive-data-tables/
 and Adrian Roselli: http://adrianroselli.com/2017/11/a-responsive-accessible-table.html#Responsive
 */
@@ -1072,8 +1183,13 @@ caption {
   font-size: 3.2rem;
   padding: 0.5rem;
   font-family: "Bungee", cursive;
-  color: #333333;
+  color: #EECF90;
   margin-bottom: 5rem;
+}
+
+caption#honey,
+caption#dispatch {
+  font-size: 4.2rem;
 }
 
 th {
@@ -1090,7 +1206,7 @@ tr:nth-child(odd) {
 }
 
 tr:nth-child(even) {
-  background-color: #fbf6ed;
+  background-color: #f6ecd9;
 }
 
 .hexagon-bg-3::before {
@@ -1248,135 +1364,12 @@ section.offer {
   background-repeat: no-repeat;
 }
 
-.content h1 {
-  margin: 7rem 0 10rem 10vw;
-  font-size: 5rem;
-  color: #333333;
-}
-
-.content h1 span {
-  display: block;
-  color: #F2994A;
-}
-
-.content__info-box {
-  background: #EECF90;
-}
-
-.content__info {
-  color: #333333;
-  font-family: "Poppins", sans-serif;
-  font-size: 2.5rem;
-  padding: 3rem 10vw;
-}
-
-.content__content-box {
-  margin-top: 14rem;
-  position: relative;
-}
-
-.content__photos {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row wrap;
-          flex-flow: row wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-line-pack: stretch;
-      align-content: stretch;
-  list-style: none;
-  margin: 0 4vw;
-}
-
-.content__photos li {
-  -ms-flex-preferred-size: 28vw;
-      flex-basis: 28vw;
-  margin-bottom: 14rem;
-}
-
-@media (max-width: 800px) {
-  .content__photos li {
-    -ms-flex-preferred-size: 44vw;
-        flex-basis: 44vw;
-  }
-}
-
-@media (max-width: 600px) {
-  .content__photos li {
-    -ms-flex-preferred-size: 92vw;
-        flex-basis: 92vw;
-  }
-}
-
-.content__photos img {
-  width: 100%;
-  margin-bottom: 1rem;
-  border-radius: 5px;
-  -webkit-filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.25));
-          filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.25));
-}
-
-.content__contact {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  font-size: 1.4rem;
-  margin-bottom: 14rem;
-  font-weight: bold;
-  background: #EECF90;
-  padding: 3rem;
-  color: #333333;
-  border-radius: 5px;
-}
-
-.content__contact a {
-  color: inherit;
-}
-
-.content__contact > * {
-  -ms-flex-preferred-size: 28vw;
-      flex-basis: 28vw;
-}
-
-.navigation__buttons .btn--gallery-login {
-  margin-right: 2rem;
-  font-weight: lighter;
-  background-color: #d5b275;
-  color: #ffffff;
-}
-
-.navigation__buttons .btn--gallery-register {
-  border-width: 1px;
-  border-style: solid;
-  font-weight: lighter;
-  background-color: transparent;
-  color: #ffffff;
-}
-
 .wrapper-shopping {
   position: relative;
   background-image: linear-gradient(62deg, white 52%, rgba(213, 178, 117, 0.9) 52%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../../src/images/gallery/img1.jpg);
   background-size: contain;
   background-position: bottom right;
   background-repeat: no-repeat;
-}
-
-.content h1 {
-  margin: 7rem 0 10rem 10vw;
-  font-size: 5rem;
-  color: #333333;
-}
-
-.content h1 span {
-  display: block;
-  color: #F2994A;
 }
 
 .content__cards {
@@ -1558,6 +1551,10 @@ section.offer {
   margin-bottom: 1.5rem;
 }
 
+.card__star img {
+  width: 20px;
+}
+
 .card__star:not(:last-child) {
   margin-right: 1rem;
 }
@@ -1585,25 +1582,6 @@ section.offer {
   border-width: 1px;
   border-radius: 5%;
   text-transform: uppercase;
-}
-
-.navigation__buttons .btn--gallery-login {
-  margin-right: 2rem;
-  font-weight: lighter;
-  background-color: #d5b275;
-  color: #ffffff;
-}
-
-.navigation__buttons .btn--gallery-register {
-  border-width: 1px;
-  border-style: solid;
-  font-weight: lighter;
-  background-color: transparent;
-  color: #ffffff;
-}
-
-.card__star img {
-  width: 20px;
 }
 
 .wrapper-description {

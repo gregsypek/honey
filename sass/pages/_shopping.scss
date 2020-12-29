@@ -14,7 +14,7 @@
 }
 
 .content {
-  @include header(7rem 0 10rem 10vw);
+  // @include header(7rem 0 10rem 10vw);
 
 
 
@@ -62,14 +62,14 @@
   &__picture {
 
     &-frame {
-     
+
       width: 21.9rem;
       height: 25.3rem;
       top: -60px;
       right: -2px;
       @include hexagon;
       @include hexFrame;
-      
+
     }
 
     &-img {
@@ -153,6 +153,10 @@
     margin-bottom: 1.5rem;
   }
 
+  &__star img {
+    width: 20px;
+  }
+
   &__star:not(:last-child) {
     margin-right: 1rem;
   }
@@ -173,22 +177,4 @@
       text-transform: uppercase;
     }
   }
-}
-
-//change navigation background colors
-.navigation__buttons {
-  .btn--gallery-login {
-    @include btn--login;
-    background-color: $color-honey-2;
-    color: $color-white;
-  }
-
-  .btn--gallery-register {
-    @include btn--register;
-    color: $color-white;
-  }
-}
-
-.card__star img {
-  width: 20px;
 }
