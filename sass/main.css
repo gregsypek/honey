@@ -1298,6 +1298,15 @@ section.offer {
   }
 }
 
+.table-second--info {
+  width: 100%;
+  height: auto;
+  font-size: 1.4rem;
+  font-family: "Poppins", sans-serif;
+  margin-top: 4.66667rem;
+  text-transform: uppercase;
+}
+
 .footer {
   background: #4F4F4F;
 }
@@ -1447,7 +1456,7 @@ section.offer {
   left: -66px;
   -webkit-transform: rotate(88deg);
           transform: rotate(88deg);
-  opacity: .8;
+  opacity: 0.8;
 }
 
 .card__picture-overlay {

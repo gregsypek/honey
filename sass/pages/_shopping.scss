@@ -1,10 +1,12 @@
 .wrapper-shopping {
   position: relative;
-  background-image: linear-gradient(62deg,
+  background-image: linear-gradient(
+      62deg,
       rgba(255, 255, 255, 1) 52%,
       rgba($color-honey-2, 0.9) 52%,
       rgba($color-honey-2, 0.9) 100%,
-      transparent 50%),
+      transparent 50%
+    ),
     //Obraz Mabel Amber z Pixabay
     url(../../src/images/gallery/img1.jpg);
   background-size: contain;
@@ -15,8 +17,6 @@
 
 .content {
   // @include header(7rem 0 10rem 10vw);
-
-
 
   &__cards {
     margin-top: calc(#{$sectionMargin} + 4rem);
@@ -31,13 +31,11 @@
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 7rem;
   grid-row-gap: calc(#{$sectionMargin} + 4rem);
-  ;
-
-  @media (max-width:900px) {
+  @media (max-width: 900px) {
     grid-template-columns: repeat(2, 1fr);
   }
 
-  @media (max-width:700px) {
+  @media (max-width: 700px) {
     margin: 10rem auto;
     grid-template-columns: 1fr;
   }
@@ -60,24 +58,20 @@
   }
 
   &__picture {
-
     &-frame {
-
       width: 21.9rem;
       height: 25.3rem;
       top: -60px;
       right: -2px;
       @include hexagon;
       @include hexFrame;
-
     }
 
     &-img {
       position: relative;
       left: -66px;
       transform: rotate(88deg);
-      opacity: .8;
-
+      opacity: 0.8;
     }
 
     &-overlay {
@@ -103,7 +97,7 @@
       padding: 1.2rem 2rem;
       line-height: 1;
 
-      +span {
+      + span {
         z-index: 1;
       }
     }
