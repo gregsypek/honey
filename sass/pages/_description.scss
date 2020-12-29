@@ -43,17 +43,20 @@
   }
 
   &__star {
-    width: 4rem;
-    height: 5rem;
+
+    .star__title {
+      width: 7rem;
+      height: 6rem;
+
+      &--color {
+        fill: $color-grape4;
+      }
+    }
 
     &:not(:last-of-type) {
-      margin-right: 5rem;
+      margin-right: 3rem;
     }
-
-    .star {
-      fill: $color-grape4;
-    }
-
+    
     .gray {
       fill: $color-gray-3;
     }
@@ -127,14 +130,14 @@
     // &__picture {
 
     &-frame {
-     
+
       width: 47.9rem;
       height: 57.3rem;
       top: -118px;
       right: -145px;
       @include hexagon;
       @include hexFrame;
-     
+
     }
 
     &-img {
@@ -166,14 +169,14 @@
   }
 
   &__item {
-    @include item; 
+    @include item;
     color: $color-gray-3;
   }
 
   &__link {
     text-decoration: none;
     position: relative;
-    
+
     .active {
       position: relative;
       color: $color-gray;
@@ -181,9 +184,10 @@
       background-repeat: no-repeat;
       background-size: contain;
     }
-  
+
 
   }
-// section.table is formatted as  table.scss  in layout folder
+
+  // section.table is formatted as  table.scss  in layout folder
 
 }

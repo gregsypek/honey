@@ -9,10 +9,10 @@ and Adrian Roselli: http://adrianroselli.com/2017/11/a-responsive-accessible-tab
 }
 
 // .table__chosen {
-  // display: grid;
-  // grid-template-rows: repeat(3, 1fr);
-  // grid-column: 2/3;
-  // grid-row-gap: 3rem;
+// display: grid;
+// grid-template-rows: repeat(3, 1fr);
+// grid-column: 2/3;
+// grid-row-gap: 3rem;
 // }
 
 table {
@@ -132,13 +132,13 @@ caption {
   margin-bottom: 5rem;
   // background-color: $color-white;
 }
+
 caption#honey,
-caption#dispatch{
-font-size: 4.2rem;
+caption#dispatch {
+  font-size: 4.2rem;
 }
 
-th
-{
+th {
   padding: 1rem;
   font-family: $font-primary;
 }
@@ -217,9 +217,10 @@ section.offer {
     padding: 1em;
     font-size: 3.2rem;
   }
+
   td {
     font-size: 2.8rem;
-    color:$color-gray;
+    color: $color-gray;
 
   }
 
@@ -237,7 +238,7 @@ section.offer {
     font-size: 3.2rem;
     text-align: center;
     text-transform: lowercase;
- 
+
     line-height: 3rem;
   }
 
@@ -255,7 +256,7 @@ section.offer {
     justify-self: stretch;
   }
 
- 
+
 }
 
 
@@ -275,11 +276,55 @@ section.offer {
 //   }
 // }
 
-.table-second--info{
+.table-second--info {
   width: 100%;
   height: auto;
   font-size: 1.4rem;
   font-family: $font-secondary;
   margin-top: $sectionMargin/3;
   text-transform: uppercase;
+}
+
+// --------------------------STARS-------
+.table-fourth {
+  
+    &__stars {
+        display: flex;  
+          }
+
+    &__star {  
+
+      .star__table {
+        width: 3rem;
+        height: 4rem;
+        &--color{
+          fill: $color-grape4;
+
+        }
+      }
+
+      &:not(:last-of-type) {
+        margin-right: 3rem;
+      }    
+
+      .gray {
+        fill: $color-gray-3;
+      }
+    }
+
+    &__arrows {
+      display:flex;
+      justify-content: center;
+
+      a:first-of-type{
+margin-right:20rem;
+      }
+     
+    }
+    &__left:hover svg,
+    &__right:hover svg {
+      
+      fill: $color-honey;
+    }
+  
 }
