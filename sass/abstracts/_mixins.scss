@@ -111,9 +111,6 @@
 @mixin hexRotate {
   transform: rotate(-107.04deg);
 }
-
-
-
 //NAVIGATION
 
 
@@ -128,7 +125,7 @@
   width: 100%;
   justify-content: space-around;
   font-size: 2.4rem;
-  text-transform: uppercase;
+  // text-transform: uppercase;
 
 }
 

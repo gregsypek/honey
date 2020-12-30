@@ -181,7 +181,6 @@
       /* Undo positioning of off-canvas menu - remember this is hidden by default. Default position property is static, i.e. normal flow */
       position: static;
       display: block;
-
       .menu-close {
         display: none;
       }
@@ -216,11 +215,9 @@
     &__item {
       /* display the li's horizontally */
       @include item;
-
       /* CREATES A HEXAGON ELEMENT WITH SHADOW AND ROTATE IT ON HOVER
       START //////////////////////////////*/
       &:hover span::before {
-
         content: '';
         position: absolute;
         width: 75px;
@@ -234,7 +231,6 @@
       }
 
       &:active span::before {
-
         transform: rotate(-3deg);
       }
 
@@ -259,7 +255,6 @@
       &:first-of-type {
         border-top: none;
       }
-
 
       &:hover {
         background: none;

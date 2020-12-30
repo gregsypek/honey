@@ -1,84 +1,99 @@
 <!DOCTYPE html>
 <html lang="pl">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Miodek</title>
+    <script src="https://kit.fontawesome.com/fb7f6f30e4.js"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Bungee&family=Poppins:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="sass/main.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Miodek</title>
-  <script src="https://kit.fontawesome.com/fb7f6f30e4.js"></script>
-  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Poppins:wght@300;400;600&display=swap"
-    rel="stylesheet" />
-  <link rel="stylesheet" href="sass/main.css" />
-</head>
-
-<body>
-  <div class="wrapper">
-
-
-    <header class="navigation">
-      <div class="navigation__row navigation__row--first">
-        <a href="#main-menu" id="main-menu-toggle" class="menu-toggle" aria-label="Open main menu">
-          <span class="sr-only">Open main menu</span>
-          <span class="fa fa-bars" aria-hidden="true"></span>
-        </a>
-
-        <img src="./src/images/logo-miodek.svg" alt="logo" class="navigation__logo" />
-        <div class="navigation__buttons">
-          <button class="btn btn--login">zaloguj się</button>
-          <button class="btn btn--register">zarejestruj się</button>
-        </div>
-      </div>
-
-      <div class="navigation__row navigation__row--second">
-        <nav id="main-menu" class="navigation__nav" aria-label="Main menu">
-          <a href="#main-menu-toggle" id="main-menu-close" class="menu-close" aria-label="Close main menu">
-            <span class="sr-only">Close main menu</span>
-            <span class="fa fa-close" aria-hidden="true"></span>
+  <body>
+    <div class="wrapper">
+      <header class="navigation">
+        <div class="navigation__row navigation__row--first">
+          <a
+            href="#main-menu"
+            id="main-menu-toggle"
+            class="menu-toggle"
+            aria-label="Open main menu"
+          >
+            <span class="sr-only">Open main menu</span>
+            <span class="fa fa-bars" aria-hidden="true"></span>
           </a>
 
-          <ul class="navigation__list">
-            <li class="navigation__item">
-              <!-- span is for shadow effect -->
-              <span></span>
-              <a href="index.html" class="navigation__link">O nas</a>
-            </li>
-            <li class="navigation__item">
-              <span></span>
-              <a href="gallery.html" class="navigation__link">Galeria</a>
-            </li>
-            <li class="navigation__item">
-              <span></span>
-              <a href="shopping.html" class="navigation__link">Oferta</a>
-            </li>
-            <li class="navigation__item">
-              <span></span>
-              <a href="#" class="navigation__link">Kontakt</a>
-            </li>
-          </ul>
-        </nav>
-        <a href="#main-menu-toggle" class="backdrop" tabindex="-1" hidden></a>
+          <img
+            src="./src/images/logo-miodek.svg"
+            alt="logo"
+            class="navigation__logo"
+          />
+          <div class="navigation__buttons">
+            <button class="btn btn--login">zaloguj się</button>
+            <button class="btn btn--register">zarejestruj się</button>
+          </div>
+        </div>
+
+        <div class="navigation__row navigation__row--second">
+          <nav id="main-menu" class="navigation__nav" aria-label="Main menu">
+            <a
+              href="#main-menu-toggle"
+              id="main-menu-close"
+              class="menu-close"
+              aria-label="Close main menu"
+            >
+              <span class="sr-only">Close main menu</span>
+              <span class="fa fa-close" aria-hidden="true"></span>
+            </a>
+
+            <ul class="navigation__list">
+              <li class="navigation__item">
+                <!-- span is for shadow effect -->
+                <span></span>
+                <a href="index.html" class="navigation__link">O nas</a>
+              </li>
+              <li class="navigation__item">
+                <span></span>
+                <a href="gallery.html" class="navigation__link">Galeria</a>
+              </li>
+              <li class="navigation__item">
+                <span></span>
+                <a href="shopping.html" class="navigation__link">Oferta</a>
+              </li>
+              <li class="navigation__item">
+                <span></span>
+                <a href="#" class="navigation__link">Kontakt</a>
+              </li>
+            </ul>
+          </nav>
+          <a href="#main-menu-toggle" class="backdrop" tabindex="-1" hidden></a>
+        </div>
+      </header>
+      <div class="hexagons">
+        <div class="hexagon hexagon-1"></div>
+        <div class="hexagon hexagon-2"></div>
+        <div class="hexagon hexagon-3"></div>
       </div>
-    </header>
-    <div class="hexagons">
-      <div class="hexagon hexagon-1"></div>
-      <div class="hexagon hexagon-2"></div>
-      <div class="hexagon hexagon-3"></div>
+      <main class="hero">
+        <div class="hero__title-container">
+          <h1 class="hero__title">
+            Pozwól</br> nam <span>osłodzić</span> ci zycie.
+          </h1>
+          <!-- <h1 class="hero__title">miodek</h1> -->
+        </div>
+        <h2 class="hero__intro">
+          Mamy dla Ciebie naturalny miód, który starannie zbieramy prosto z
+          naszych pasiek.
+        </h2>
+        <h2 class="hero__intro">Miód, który smakuje jak żaden inny.</h2>
+        <h2 class="hero__intro">Miód tylko od naszych pszczółek.</h2>
+        <h2 class="hero__intro">Po prostu miód z którego jesteśmy dumni.</h2>
+        <button class="hero__btn btn">Kup teraz</button>
+      </main>
     </div>
-    <main class="hero">
-      <div class="hero__title-container">
-        <h1 class="hero__title">Pasieka</h1>
-        <h1 class="hero__title">miodek</h1>
-      </div>
-      <h2 class="hero__intro">
-        Mamy dla Ciebie naturalny miód, który starannie zbieramy prosto z
-        naszych pasiek.
-      </h2>
-      <h2 class="hero__intro">Miód, który smakuje jak żaden inny.</h2>
-      <h2 class="hero__intro">Miód tylko od naszych pszczółek.</h2>
-      <h2 class="hero__intro">Po prostu miód z którego jesteśmy dumni.</h2>
-      <button class="hero__btn btn ">Kup teraz</button>
-    </main>
-  </div>
     <section class="info">
       <div class="info__address">
         <h2 class="info__address--name">Jan Pszczelarz</h2>
@@ -86,123 +101,154 @@
         <h3 class="info__address--post">30-305 Miody</h3>
       </div>
       <div class="info__id">
-        <h3 class="info__id--nr">Nr Identyfikacji Weterynaryjnej: <span>12345678999</span></h3>
+        <h3 class="info__id--nr">
+          Nr Identyfikacji Weterynaryjnej: <span>12345678999</span>
+        </h3>
       </div>
     </section>
-  <section class="the-best">
-    <div class="the-best__box">
-      <h2 class="the-best__title">Oto co sparawia,
-        że jesteśmy <span>najlepsi:</span>
-      </h2>
-      <img src="../../src/images/the-best_bg.jpg" alt="" class="the-best__img">
-
-    </div>
-    <div class="the-best__box">
-      <p class="the-best__info info--1">Mamy duże doświadczenie w hodowli pszczół. Nasz miód wyróżnia się wysoką
-        jakością i znajduje spore uznanie wsród klientów.</p>
-      <p class="the-best__info info--2">Kupując u nas masz pewność, że miód pochodzi z naszych lokalnych, czystych
-        terenów</p>
-      <p class="the-best__info info--3">Nie słodzimy nie poprawiamy nie psujemy. Wszystko odbywa sie w naturalny sposób.
-        Pszczoły wiedzą co dobre!</p>
-    </div>
-  </section>
-  <section class="think_over">
-    <div class="think_over__left">
-      <h2 class="think_over__text">Jeszcze się <span>zastanawiasz?</span></h2>
-      <button class="think_over__btn btn ">Kup Teraz</button>
-    </div>
-    <div class="think_over__right">
-      <div class="think_over__box">
-        <div class="think_over__recommend">
-          <h4 class="think_over__recommended">"Polecam gorąco to naprawdę świetny miodek😀"</h4>
-          <p class="think_over__recommended--author">-Ania, 33, Rzeszów</p>
+    <section class="the-best">
+      <div class="the-best__box">
+        <h2 class="the-best__title">
+          Oto co sparawia, że jesteśmy <span>najlepsi:</span>
+        </h2>
+        <img
+          src="../../src/images/the-best_bg.jpg"
+          alt=""
+          class="the-best__img"
+        />
+      </div>
+      <div class="the-best__box">
+        <p class="the-best__info info--1">
+          Mamy duże doświadczenie w hodowli pszczół. Nasz miód wyróżnia się
+          wysoką jakością i znajduje spore uznanie wsród klientów.
+        </p>
+        <p class="the-best__info info--2">
+          Kupując u nas masz pewność, że miód pochodzi z naszych lokalnych,
+          czystych terenów
+        </p>
+        <p class="the-best__info info--3">
+          Nie słodzimy nie poprawiamy nie psujemy. Wszystko odbywa sie w
+          naturalny sposób. Pszczoły wiedzą co dobre!
+        </p>
+      </div>
+    </section>
+    <section class="think_over">
+      <div class="think_over__left">
+        <h2 class="think_over__text">Jeszcze się <span>zastanawiasz?</span></h2>
+        <button class="think_over__btn btn">Kup Teraz</button>
+      </div>
+      <div class="think_over__right">
+        <div class="think_over__box">
+          <div class="think_over__recommend">
+            <h4 class="think_over__recommended">
+              "Polecam gorąco to naprawdę świetny miodek😀"
+            </h4>
+            <p class="think_over__recommended--author">-Ania, 33, Rzeszów</p>
+          </div>
+        </div>
+        <div class="think_over__dots">
+          <span class="think_over__dot dot--1 dot-yellow"></span>
+          <span class="think_over__dot dot--2"></span>
+          <span class="think_over__dot dot--3"></span>
         </div>
       </div>
-      <div class="think_over__dots">
-        <span class="think_over__dot dot--1 dot-yellow"></span>
-        <span class="think_over__dot dot--2"></span>
-        <span class="think_over__dot dot--3"></span>
+    </section>
+    <section class="about">
+      <div class="about__triangle"></div>
+      <div class="about__header">
+        <h2 class="about__text">Trochę o <span>nas...</span></h2>
+        <div class="about__image">
+          <img
+            src="../../src/images/about_bg3.jpg"
+            alt="pancakes with honey"
+            class="about__image"
+          />
+        </div>
       </div>
-    </div>
-  </section>
-  <section class="about">
-    <div class="about__triangle"></div>
-    <div class="about__header">
-
-      <h2 class="about__text">Trochę o <span>nas...</span></h2>
-      <div class="about__image">
-        <img src="../../src/images/about_bg3.jpg" alt="pancakes with honey" class="about__image">
+      <div class="about__main">
+        <div class="about__paragraph paragraph--1">
+          <!-- span is for shadow effect -->
+          <span class="one"></span>
+          <p class="about__info about__info--1">
+            Prowadzimy gospodarstwo pszczelarskie od lat w gronie rodzinnym.
+            Obecnie posiadamy około 100 pasiek rozstawionych w kilku miejscach.
+          </p>
+        </div>
+        <div class="about__paragraph paragraph--2">
+          <span class="two"></span>
+          <p class="about__info about__info--2">
+            Stworzyliśmy pasiekę miodek bo wierzymy, że nasz miód to samo
+            zdrowie.
+          </p>
+        </div>
+        <div class="about__paragraph paragraph--3">
+          <span class="three"></span>
+          <p class="about__info about__info--3">
+            Wszystkie produkty, które sprzedajemy pochodzą wyłącznie od naszych
+            pszczół
+          </p>
+        </div>
+        <div class="about__paragraph paragraph--4">
+          <span class="four"></span>
+          <p class="about__info about__info--4">
+            Zapraszam do zapoznania się z naszą ofertą. Polecamy miód
+            wielokwiatowy oraz lipowy miody z których jesteśmy dumni.
+          </p>
+        </div>
       </div>
-    </div>
-    <div class="about__main">
-      <div class="about__paragraph paragraph--1">
-        <!-- span is for shadow effect -->
-        <span class="one"></span>
-        <p class="about__info about__info--1">
-          Prowadzimy gospodarstwo pszczelarskie od lat w gronie rodzinnym. Obecnie posiadamy około 100 pasiek
-          rozstawionych w kilku miejscach.
-        </p>
+      <div class="about__triangle2"></div>
+    </section>
+    <section class="questions">
+      <h2 class="questions__header">Pytanie <span>?</span></h2>
+      <div class="questions__container">
+        <div class="questions__box">
+          <p class="questions__text">
+            Masz pytanie? Śmiało - chętnie odpowiemy.
+          </p>
+          <button class="questions__btn btn btn-white">Przywitaj się</button>
+        </div>
+        <div class="questions__box">
+          <p class="questions__text">
+            Chcesz zobaczyć naszą ofertę? Zapraszamy
+          </p>
+          <button class="questions__btn btn btn-white">Oferta</button>
+        </div>
+        <div class="questions__box">
+          <p class="questions__text">
+            Skąd jesteśmy? Sprawdź gdzie można nas znaleźć
+          </p>
+          <button class="questions__btn btn btn--white">Mapa</button>
+        </div>
       </div>
-      <div class="about__paragraph paragraph--2">
-        <span class="two"></span>
-        <p class="about__info about__info--2">Stworzyliśmy pasiekę miodek bo wierzymy, że nasz miód to samo zdrowie.
-        </p>
+    </section>
+    <footer class="footer">
+      <div class="footer__container">
+        <div class="footer__logo">
+          <img
+            src="./src/images/logo_footer.svg"
+            alt="logo"
+            class="footer__logo"
+          />
+        </div>
+        <div class="footer__address">
+          <p class="footer__address--name">Pasieka Miodek</p>
+          <p class="footer__address--address">01-123 Łąki Polne</p>
+          <p class="footer__address--phone">tel. +48 1234567</p>
+        </div>
+        <div class="footer__copyright">copyright &copy;2020 by gregsypek</div>
+        <div class="footer__icons">
+          <img
+            src="./src/icons/facebook.svg"
+            alt="logo"
+            class="footer__icon--facebook"
+          />
+          <img
+            src="./src/icons/instagram.svg"
+            alt="logo"
+            class="footer__icon--instagram"
+          />
+        </div>
       </div>
-      <div class="about__paragraph paragraph--3">
-        <span class="three"></span>
-        <p class="about__info about__info--3">Wszystkie produkty, które sprzedajemy pochodzą wyłącznie od naszych
-          pszczół </p>
-      </div>
-      <div class="about__paragraph paragraph--4">
-        <span class="four"></span>
-        <p class="about__info about__info--4">Zapraszam do zapoznania się z naszą ofertą. Polecamy miód wielokwiatowy
-          oraz lipowy miody z których jesteśmy dumni. </p>
-      </div>
-
-    </div>
-    <div class="about__triangle2"></div>
-  </section>
-  <section class="questions">
-    <h2 class="questions__header">Pytanie <span>?</span></h2>
-    <div class="questions__container">
-      <div class="questions__box">
-        <p class="questions__text">Masz pytanie? Śmiało - chętnie odpowiemy.</p>
-        <button class="questions__btn btn btn-white">Przywitaj się</button>
-      </div>
-      <div class="questions__box">
-        <p class="questions__text">Chcesz zobaczyć naszą ofertę?
-          Zapraszamy</p>
-        <button class="questions__btn btn btn-white">Oferta</button>
-      </div>
-      <div class="questions__box">
-        <p class="questions__text">Skąd jesteśmy?
-          Sprawdź gdzie można nas znaleźć</p>
-        <button class="questions__btn btn btn--white">Mapa</button>
-      </div>
-    </div>
-  </section>
-  <footer class="footer">
-    <div class="footer__container">
-    <div class="footer__logo">
-      <img src="./src/images/logo_footer.svg" alt="logo" class="footer__logo" />
-    </div>
-    <div class="footer__address">
-      <p class="footer__address--name">Pasieka Miodek</p>
-      <p class="footer__address--address">01-123 Łąki Polne
-      </p>
-      <p class="footer__address--phone">tel. +48 1234567
-      </p>
-    </div>
-    <div class="footer__copyright">copyright &copy;2020 by gregsypek</div>
-    <div class="footer__icons">
-     
-        <img src="./src/icons/facebook.svg" alt="logo" class="footer__icon--facebook" />
-        <img src="./src/icons/instagram.svg" alt="logo" class="footer__icon--instagram" />
-    
-    </div>
-  </div>
-  </footer>
-
-</body>
-
+    </footer>
+  </body>
 </html>

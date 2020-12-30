@@ -20,6 +20,7 @@
 
   &__cards {
     margin-top: calc(#{$sectionMargin} + 4rem);
+    margin-bottom: $sectionMargin;
     position: relative; //for a triangle bg
   }
 }

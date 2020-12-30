@@ -44,10 +44,10 @@ h3 {
 
 .wrapper {
   position: relative;
-  background-image: linear-gradient(62deg, rgba(238, 207, 144, 0.9) 67%, white 60%, white 100%, transparent 50%);
+  background-image: linear-gradient(62deg, rgba(238, 207, 144, 0.9) 67%, white 60%, white 100%, transparent 50%), url(../../src/images/Vector1.png);
   background-size: 100%;
   background-size: cover;
-  background-position: bottom;
+  background-position: right;
   background-repeat: no-repeat;
 }
 
@@ -55,15 +55,16 @@ h3 {
   margin-top: 10rem;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 10% 35% 55%;
-      grid-template-columns: 10% 35% 55%;
+  -ms-grid-columns: 10% 40% 50%;
+      grid-template-columns: 10% 40% 50%;
   grid-row-gap: 11rem;
   justify-items: start;
 }
 
 .hero__title {
-  font-size: 7rem;
+  font-size: 6.5rem;
   line-height: 86px;
+  color: #333333;
 }
 
 .hero__title-container {
@@ -72,26 +73,8 @@ h3 {
   grid-column: 2/3;
 }
 
-.hero__title-container h1:first-of-type {
-  color: #333333;
-}
-
-.hero__title-container h1 + h1 {
-  margin-top: 1rem;
-  color: #d5b275;
-  position: relative;
-  z-index: 1;
-}
-
-.hero__title-container h1 + h1:before {
-  content: '';
-  position: absolute;
-  z-index: -2;
-  top: 0;
-  left: -20px;
-  bottom: 0;
-  background: #ffffff;
-  width: 60vw;
+.hero__title-container span {
+  color: #ffffff;
 }
 
 .hero__intro {
@@ -320,7 +303,6 @@ h3 {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   font-size: 2.4rem;
-  text-transform: uppercase;
   display: block;
   background-color: #333333;
   width: 200px;
@@ -569,6 +551,19 @@ h3 {
   z-index: -1;
 }
 
+.the-best .info--1::after,
+.the-best .info--3::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: #ffffff;
+  border-radius: 5px;
+}
+
 .the-best .info--2 {
   width: 100%;
   height: 100%;
@@ -582,6 +577,18 @@ h3 {
   right: -216px;
   top: -123px;
   z-index: -1;
+}
+
+.the-best .info--2::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: #FADEA4;
+  border-radius: 5px;
 }
 
 .the-best .info--3 {
@@ -1424,6 +1431,7 @@ section.offer {
 
 .content__cards {
   margin-top: calc(14rem + 4rem);
+  margin-bottom: 14rem;
   position: relative;
 }
 
@@ -1636,7 +1644,7 @@ section.offer {
 
 .wrapper-description {
   position: relative;
-  background-image: linear-gradient(62deg, white 52%, rgba(213, 178, 117, 0.9) 52%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../../src/images/description_bg.jpg);
+  background-image: linear-gradient(62deg, white 62%, rgba(213, 178, 117, 0.9) 62%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../../src/images/description_bg.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1837,7 +1845,6 @@ section.offer {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   font-size: 2.4rem;
-  text-transform: uppercase;
   margin-bottom: 14rem;
   border-bottom: 2px solid #EECF90;
 }
