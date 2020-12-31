@@ -11,7 +11,7 @@
   <link rel="stylesheet" href="sass/main.css" />
 </head>
 <body>
-  <div class="wrapper--content">
+  <div class="wrapper--contact">
 
 
     <header class="navigation">
@@ -51,79 +51,65 @@
             </li>
             <li class="navigation__item">
               <span></span>
-              <a href="contact.html" class="navigation__link">Kontakt</a>
+              <a href="#" class="navigation__link">Kontakt</a>
             </li>
           </ul>
         </nav>
         <a href="#main-menu-toggle" class="backdrop" tabindex="-1" hidden></a>
       </div>
     </header>    
+
+
+
     <main class="content">
-    <h1 class="content__title">Zapraszamy do <span>galerii</span></h1>
+    <h1 class="content__title">Napisz do nas <span class="honey">wiadomość</span></h1>
     <div class="content__info-box">
-      <h2 class="content__info">Zdjęcia przedstawiają naszą prace oraz zespół który czuwa nad pszczółkami aby te mogły nam produkować nasze słodkości</h2>
+      <h2 class="content__info">W celu skontaktowania się prosimy wypełnić poniższy formularz lub wybrać odpowieni odnośnik na dole strony. Zachęcamy również do założenia konta, co znacznie ułatwia dokonywanie zakupów.</h2>
     </div>
     <!-- wrapper end -->
   </div>  
-    <div class="content__content-box">
-      <!-- <div class="content__triangle"></div> -->
-      <ul class="content__photos">
-        <li>
-          <figure>
-            <img src="../../src/images/gallery/img1.jpg" alt="" class="content__photo content__photo--1">  
-            <figcaption>
-              <p><strong>photo</strong>
-          </figcaption>
-          </figure>
-        </li>
-        <li>
-          <figure>
-            <img src="../../src/images/gallery/img2.jpg" alt="" class="content__photo content__photo--2">  
-            <figcaption>
-              <p><strong>photo</strong>
-          </figcaption>
-          </figure>
-        </li>
-        <li>
-          <figure>
-            <img src="../../src/images/gallery/img3.jpg" alt="" class="content__photo content__photo--3">  
-            <figcaption>
-              <p><strong>photo</strong>
-          </figcaption>
-          </figure>
-        </li>
-        <li>
-          <figure>
-            <img src="../../src/images/gallery/img4.jpg" alt="" class="content__photo content__photo--3">  
-            <figcaption>
-              <p><strong>photo</strong>
-          </figcaption>
-          </figure>
-        </li>
-        <li>
-          <figure>
-            <img src="../../src/images/gallery/img5.jpg" alt="" class="content__photo content__photo--3">  
-            <figcaption>
-              <p><strong>photo</strong>
-          </figcaption>
-          </figure>
-        </li>
-        <li>
-          <figure>
-            <img src="../../src/images/gallery/img6.jpg" alt="" class="content__photo content__photo--3">  
-            <figcaption>
-              <p><strong>photo</strong>
-          </figcaption>
-          </figure>
-        </li>
+    
+<section id="contact" class="contact" aria-labelledby="contact-section">
+    <div id="contact-section" hidden >Formularz kontaktowy</div>  
+      
+    
+ 
+      <div class="contact__box">
+    <form class="contact__form" action="index.html" method="POST">
+      <fieldset>
+        <legend>Masz pytanie?</legend>
+        <div class=" contact__input-group">
+          <label for="name">Imię:</label>
+          <input type="text" name="name" id="name" required>
+        </div>
+          <div class="contact__input-group">
+            <label for="email">Email:</label>
+            <input type="text" name="email" id="email" required>
+           
+          </div>
+          <div class="contact__input-group">
+            <label for="message">Treść wiadomości:</label>
+            <textarea rows="10" name="message" id="message"></textarea>
+           
+          </div>
+          <div class="contact__input-group">
+            <input type="submit" name="submit" class="btn-form btn" value="Wyślij">
 
-      </ul>
-    </div>
+          </div>
+      </fieldset>
+    </form>
+  </div>
+   
+      <!-- </div> -->
+  </section>
+
+
     <div class="content__contact">
       <a href="#"class="content_contact--phone">telefon: +48 123 456 789</a>
       <p href="#"class="content_contact--info">Kontakt tel. moźliwy od pon. do pt. w godzinach 07:30 - 16: 00</p>
       <a href="#"class="content_contact--social-media">facebook: Pasieka Miodek</a>
     </div>
+
    
     </main>  
 
