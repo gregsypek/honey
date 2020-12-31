@@ -1,16 +1,32 @@
 .wrapper-description {
+  // position: relative;
+  // background-image: linear-gradient(62deg,
+  //     rgba(255, 255, 255, 1) 62%,
+  //     rgba($color-honey-2, 0.9) 62%,
+  //     rgba($color-honey-2, 0.9) 100%,
+  //     transparent 50%),
+  //   //Obraz Mabel Amber z Pixabay
+  //   url(../../src/images/description_bg.jpg);
+
+  // background-size: cover;
+  // background-position: center;
+  // background-repeat: no-repeat;
+
+
+
   position: relative;
-  background-image: linear-gradient(62deg,
+  background-image: linear-gradient(58deg,
       rgba(255, 255, 255, 1) 62%,
       rgba($color-honey-2, 0.9) 62%,
       rgba($color-honey-2, 0.9) 100%,
       transparent 50%),
     //Obraz Mabel Amber z Pixabay
     url(../../src/images/description_bg.jpg);
-
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  padding-bottom: 100vh; // for spreading the area of this background
+
 
   @media (min-width: 800px) {
     .navigation {
@@ -56,7 +72,7 @@
     &:not(:last-of-type) {
       margin-right: 3rem;
     }
-    
+
     .gray {
       fill: $color-gray-3;
     }
@@ -71,7 +87,7 @@
     }
 
     padding: 0 10vw;
-    margin-top: $sectionMargin;
+    // margin-top: $sectionMargin;
 
     display: flex;
     justify-content: space-around;
@@ -161,28 +177,43 @@
 
 .navigation-info {
   display: flex;
+  margin-top: $sectionMargin;
 
   &__list {
     @include list;
+    // margin-top: -1rem;
     margin-bottom: $sectionMargin;
-    border-bottom: 2px solid $color-honey;
+    border-bottom: 5px solid $color-honey;
+    // border-top: 5px solid $color-honey;
+  
+    // background-color: $color-white-2;
+   
   }
 
   &__item {
     @include item;
-    color: $color-gray-3;
+    color: $color-gray;
   }
 
   &__link {
     text-decoration: none;
     position: relative;
 
+
     .active {
       position: relative;
-      color: $color-gray;
-      background: url(../../src/icons/emptyHex.svg);
-      background-repeat: no-repeat;
-      background-size: contain;
+     font-weight: bold;  
+      z-index: 3;
+
+      &::before {
+        position: absolute;
+        top: -31px;
+        left: -29px;
+        z-index: -1;
+        content: url(../../src/icons/emptyHex.svg);
+      }
+
+    
     }
 
 
