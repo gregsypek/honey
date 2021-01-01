@@ -37,67 +37,6 @@
 }
 
 
-//----------------BUTTONS-----------------
-@mixin btn {
-  border: none;
-  border-radius: 5%;
-  font-weight: bold;
-  text-transform: uppercase;
-  cursor: pointer;
-
-  transition: all 0.2s ease;
-  padding: 1.6rem 3rem;
-}
-
-@mixin btn--small {
-  // width: 15rem;
-  // height: 3.5rem;
-  border-radius: 5%;
-  font-size: 1.2rem;
-  padding: .8rem 2rem;
-  color: $color-gray-2;
-
-}
-
-@mixin btn--tiny {
-  // width: 15rem;
-  // height: 3.5rem;
-  border-radius: 5%;
-  font-size: 1.2rem;
-  padding: .3rem 1.2rem;
-  color: $color-gray-2;
-
-}
-
-@mixin btn--yellow {
-  background-color: $color-yellow;
-  font-size: 2rem;
-  color: $color-gray;
-  border: 2px solid $color-gray;
-}
-
-@mixin btn--white {
-  background-color: $color-white;
-  // font-size: 1.6rem;
-  color: $color-gray;
-  border: 2px solid $color-gray;
-}
-
-@mixin btn--login {
-  margin-right: 2rem;
-  font-weight: lighter;
-
-
-}
-
-@mixin btn--register {
-  border-width: 1px;
-  border-style: solid;
-  font-weight: lighter;
-
-
-  background-color: transparent;
-}
 
 //----------------SHADOWS-----------------
 @mixin shadow2 {

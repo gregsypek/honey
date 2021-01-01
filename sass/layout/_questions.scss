@@ -53,11 +53,15 @@ justify-content: space-between;
   }
   &__btn{
     margin-top:4rem;
+    
+    @include btn;
     @include btn--white;
-    // @include btn--small;
-    font-size: 1.6rem;      
-    padding: 1rem 2.5rem;
+    font-size: 1.4rem;
     color: $color-gray;
+    // @include btn--small;
+    // font-size: 1.6rem;      
+    // padding: 1rem 2.5rem;
+    // color: $color-gray;
   }
 }
 

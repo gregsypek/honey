@@ -55,9 +55,18 @@
       margin: 15px;
       position: relative;
       z-index: 2;
-      // font-family: inherit;
       @include btn;
       @include btn--small;
+
+      a {
+        display: inline-block;
+        outline: none;
+        text-decoration: none;
+        border: none;
+        color:inherit;
+        // font-family: inherit;
+
+      }
     }
 
     .btn--login {
@@ -67,7 +76,6 @@
     }
 
     .btn--register {
-
       @include btn--register
     }
   }
@@ -181,6 +189,7 @@
       /* Undo positioning of off-canvas menu - remember this is hidden by default. Default position property is static, i.e. normal flow */
       position: static;
       display: block;
+
       .menu-close {
         display: none;
       }
@@ -215,6 +224,7 @@
     &__item {
       /* display the li's horizontally */
       @include item;
+
       /* CREATES A HEXAGON ELEMENT WITH SHADOW AND ROTATE IT ON HOVER
       START //////////////////////////////*/
       &:hover span::before {
