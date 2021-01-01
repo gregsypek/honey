@@ -92,7 +92,7 @@
       color: inherit;
       border-radius: 5px;
       border: 1px solid $color-honey;
-      padding: 1rem;
+      padding: 1.5rem;
     }
 
     input.btn-form {
@@ -131,10 +131,12 @@
     width: 100%;
     max-width: 52rem;
     @include btn;
+    
     @include btn--tiny;
     a {
       text-decoration: none;
-      color: $color-gray;
+      color: $color-gray-3;
+ 
       cursor: pointer;
       &:hover {
         color:darken($color-gray,20%);

@@ -46,7 +46,6 @@ h3 {
   transition: -webkit-transform .2s;
   transition: transform .2s;
   transition: transform .2s, -webkit-transform .2s;
-  color: inherit;
   border-radius: 5%;
   outline: none;
   cursor: pointer;
@@ -2008,7 +2007,7 @@ section.offer {
   color: inherit;
   border-radius: 5px;
   border: 1px solid #EECF90;
-  padding: 1rem;
+  padding: 1.5rem;
 }
 
 .contact__input-group input.btn-form {
@@ -2067,7 +2066,7 @@ section.offer {
 
 .contact__btns a {
   text-decoration: none;
-  color: #333333;
+  color: #828282;
   cursor: pointer;
 }
 
@@ -2106,6 +2105,35 @@ section.offer {
 
 .contact__link:not(:last-child) {
   margin-bottom: 3rem;
+}
+
+.wrapper-login {
+  position: relative;
+  background-image: linear-gradient(58deg, white 62%, rgba(213, 178, 117, 0.9) 62%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../../src/images/contact_bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-bottom: calc(100vh + 186px);
+}
+
+@media (min-width: 800px) {
+  .hidden {
+    visibility: hidden;
+  }
+}
+
+.contact--login {
+  position: absolute;
+  top: 70vh;
+  left: 0;
+  right: 0;
+}
+
+.contact--login fieldset {
+  padding: 1rem;
+  margin: 0;
+  border: 0;
+  min-width: 0;
 }
 
 .content article {
