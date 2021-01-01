@@ -71,6 +71,11 @@
     &:last-child {
       margin-bottom: 0;
     }
+    .privacy {
+      color: $color-white;
+      padding: .3rem .2rem;
+      text-decoration: none;
+    }
 
     label {
       margin: 1.2rem 0 0.8rem 0;
@@ -112,7 +117,7 @@
       background-color: $color-honey-3;
     }
     input[type='submit'] {
-      margin: 4rem 0 0 0;
+      margin: 2rem 0 0 0;
     }
   }
 

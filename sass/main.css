@@ -1966,6 +1966,12 @@ section.offer {
   margin-bottom: 0;
 }
 
+.contact__input-group .privacy {
+  color: #ffffff;
+  padding: .3rem .2rem;
+  text-decoration: none;
+}
+
 .contact__input-group label {
   margin: 1.2rem 0 0.8rem 0;
   font-family: "Poppins", sans-serif;
@@ -2006,7 +2012,7 @@ section.offer {
 }
 
 .contact__input-group input[type='submit'] {
-  margin: 4rem 0 0 0;
+  margin: 2rem 0 0 0;
 }
 
 .contact__title h1 {
@@ -2084,5 +2090,11 @@ section.offer {
 
 .contact__link:not(:last-child) {
   margin-bottom: 3rem;
+}
+
+.content article {
+  font-size: 1.8rem;
+  padding: 0 10vw;
+  margin-bottom: 14rem;
 }
 /*# sourceMappingURL=main.css.map */
