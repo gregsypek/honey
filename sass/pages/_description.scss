@@ -1,17 +1,4 @@
 .wrapper-description {
-  // position: relative;
-  // background-image: linear-gradient(62deg,
-  //     rgba(255, 255, 255, 1) 62%,
-  //     rgba($color-honey-2, 0.9) 62%,
-  //     rgba($color-honey-2, 0.9) 100%,
-  //     transparent 50%),
-  //   //Obraz Mabel Amber z Pixabay
-  //   url(../../src/images/description_bg.jpg);
-
-  // background-size: cover;
-  // background-position: center;
-  // background-repeat: no-repeat;
-
 
 
   position: relative;
@@ -39,22 +26,23 @@
 
 .content {
   &__title {
-    &--description {
-      background-color: $color-white;
-      display: flex;
-      align-items: baseline;
-      justify-content: space-between;
-      @include header(8rem 10vw);
-
-      span.inline {
-        display: inline-block;
-        color: $color-honey-2;
-      }
-    }
 
     &-stars {
       display: flex;
       margin-right: 10vw;
+    }
+  }
+
+  &__description {
+    background-color: $color-white;
+    display: flex;
+    align-items: baseline;
+    justify-content: space-between;
+    @include header(8rem 10vw);
+
+    span.inline {
+      display: inline-block;
+      color: $color-honey-2;
     }
   }
 
@@ -185,9 +173,9 @@
     margin-bottom: $sectionMargin;
     border-bottom: 5px solid $color-honey;
     // border-top: 5px solid $color-honey;
-  
+
     // background-color: $color-white-2;
-   
+
   }
 
   &__item {
@@ -202,7 +190,7 @@
 
     .active {
       position: relative;
-     font-weight: bold;  
+      font-weight: bold;
       z-index: 3;
 
       &::before {
@@ -213,7 +201,7 @@
         content: url(../../src/icons/emptyHex.svg);
       }
 
-    
+
     }
 
 

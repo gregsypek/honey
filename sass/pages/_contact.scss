@@ -1,16 +1,18 @@
-.wrapper--contact {
+.wrapper-contact {
   position: relative;
-  background-image: linear-gradient(58deg,
+  background-image: linear-gradient(
+      58deg,
       rgba(255, 255, 255, 1) 62%,
       rgba($color-honey-2, 0.9) 62%,
       rgba($color-honey-2, 0.9) 100%,
-      transparent 50%),
+      transparent 50%
+    ),
     //Obraz Mabel Amber z Pixabay
     url(../../src/images/contact_bg.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding-bottom: 100vh;// for spreading the area of this background
+  padding-bottom: 100vh; // for spreading the area of this background
 }
 
 .content {
@@ -25,24 +27,26 @@
   // display: flex;
   margin-top: calc(-100vh + #{$sectionMargin});
 
-
   &__box {
     display: flex;
     justify-content: center;
+    align-items: center;
+    margin-bottom: $sectionMargin;
+    flex-direction: column;
   }
 
   &__form {
     background-color: $color-dark;
-    width: 55rem;
-    max-width: 55rem;
-    padding: 3rem;
+    width: 52rem;
+    max-width: 52rem;
+    padding: 2rem;
     border-radius: 5px;
-    margin: 2rem;
+    margin: 1rem;
     @include shadow;
   }
 
   fieldset {
-    padding: 2rem;
+    padding: 1rem;
     margin: 0;
     border: 0;
     min-width: 0;
@@ -52,15 +56,15 @@
     display: block;
     width: 100%;
     padding: 0;
-    margin-bottom: 2rem;
-    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-size: 2rem;
     line-height: inherit;
     color: $color-white;
     border: 0;
   }
 
   &__input-group {
-    margin-bottom: 1.5rem;
+    margin-bottom: 1rem;
     display: flex;
     flex-direction: column;
 
@@ -69,7 +73,7 @@
     }
 
     label {
-      margin: 1.5rem 0 .8rem 0;
+      margin: 1.2rem 0 0.8rem 0;
       font-family: $font-secondary;
       color: $color-white;
       font-size: 1.5rem;
@@ -89,6 +93,7 @@
     input.btn-form {
       background: $color-honey-2;
       color: $color-gray;
+      cursor: pointer;
       width: 100%;
       border: none;
       font-size: 2rem;
@@ -106,5 +111,57 @@
     textarea:focus {
       background-color: $color-honey-3;
     }
+    input[type='submit'] {
+      margin: 4rem 0 0 0;
+    }
+  }
+
+  &__title {
+    @include header(7rem 10vw);
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 52rem;
+    @include btn;
+    @include btn--tiny;
+    a {
+      text-decoration: none;
+      color: $color-gray;
+      cursor: pointer;
+      &:hover {
+        color:darken($color-gray,20%);
+      }
+    }
+  }
+  &__links {
+    padding: $sectionMargin/2 10vw;
+    color: $color-gray;
+    font-size: 1.8rem;
+    background-color: $color-honey-3;
+  }
+  
+  &__link {
+    display:flex;
+    // align-items: baseline;
+    svg {
+      width: 3rem;
+      height: 4rem;
+      margin-right: 5rem;
+    }
+    a{
+      padding: .5rem;
+      text-decoration: none;
+      color:$color-gray;
+      &:hover{
+        color: darken($color-gray, 20%);
+      }
+    }
+  }
+  &__link:not(:last-child){
+    margin-bottom:3rem;
+
   }
 }
