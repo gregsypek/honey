@@ -24,7 +24,7 @@
 
         <img src="./src/images/logo-miodek.svg" alt="logo" class="navigation__logo" />
         <div class="navigation__buttons">
-          <a href="shopping.html"class="btn btn--register2" href="register.html">wróć do sklepu</a>
+          <a href="shopping.html"class="btn btn--register2 btn--back" href="register.html">wróć do sklepu</a>
         </div>
       </div>
 
@@ -60,7 +60,7 @@
     </header>
     <main class="content">
       <h1 class="content__title login">
-       Zaloguj się do swojego <span class="honey">konta</span>
+       załóż <span class="honey">konto</span>
       </h1>
       <!-- <div class=" content__info-box">
         <h2 class="content__info"> W celu skontaktowania się prosimy wypełnić poniższy formularz lub
@@ -76,21 +76,37 @@
          <form class="contact__form" action="index.html" method="POST">
         <fieldset>        
           <div class="contact__input-group">
+            <label for="name">Imię:</label>
+            <input type="text" name="name" id="name" required />
+          </div>
+          <div class="contact__input-group">
+            <label for="last_name">Nazwisko:</label>
+            <input type="text" name="last_name" id="last_name" required />
+          </div>
+          <div class="contact__input-group">
             <label for="email">Twój email:</label>
-            <input type="text" name="email" id="email" required />
+          <input type="email" name="email" id="email" required />
           </div>
           <div class="contact__input-group">
             <label for="password">Hasło:</label>
           <input type="password" name="password" id="password" required />
-          </div>          
+          </div>
           <div class="contact__input-group">
-            <input type="submit" name="submit" class="btn-form btn" value="Zaloguj się" />
+            <label for="privacy">
+            <input type="checkbox"name="privacy" id="privacy"checked /> 
+            <span class="privacy--register">Zapoznałem się z <a href="terms_of_use.html">Regulaminem Sklepu</a> oraz <a href="privacy_policy.html">Polityką Prywatności</a> i akceptuję treść w nich zawartą.
+            </span>
+            </label>
+          </div>
+          
+          <div class="contact__input-group">
+            <input type="submit" name="submit" class="btn-form btn" value="Zarejestruj się" />
           </div>
         </fieldset>
       </form>
       <div class="contact__btns">
-       <a href="shopping.html" class="btn contact__btn ">Odzyskaj hasło</a>
-        <a href="register.html" class="btn contact__btn">Nie mam konta</a>
+       <a href="shopping.html" class="btn contact__btn ">Wróć do sklepu</a>
+        <a href="login.html" class="btn contact__btn">Posiadam juz konto</a>
       </div>
     </div>
 
