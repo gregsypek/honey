@@ -1,8 +1,13 @@
 .contact {
-  margin: $sectionMargin auto;
-  position: relative;
-  // display: flex;
-  margin-top: calc(-100vh + #{$sectionMargin});
+  //contact-margin is only for contact.html
+  &-margin{
+
+    margin: $sectionMargin auto 0 auto;
+    position: relative;
+    // display: flex;
+    margin-top: calc(-100vh + #{$sectionMargin});
+    // justify-content: center;
+  }
 
   &__box {
     display: flex;
@@ -23,10 +28,7 @@
   }
 
   fieldset {
-    padding: 1rem;
-    margin: 0;
-    border: 0;
-    min-width: 0;
+   @include fieldset;
   }
 
   legend {
@@ -170,18 +172,12 @@
 
     // settings for login.html
 
-    &--login {
-      //this is for keeping the slice background in the same place
-      position: absolute;
-      top: 70vh;
-      left: 0;
-      right: 0;
+    &--login {     
+      
 
       fieldset {
-        padding: 1rem;
-        margin: 0;
-        border: 0;
-        min-width: 0;
+        //mixins.scss
+       @include fieldset;
       }
     }
   }

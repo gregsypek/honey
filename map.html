@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Miodek</title>
+  <script src="https://kit.fontawesome.com/fb7f6f30e4.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="sass/main.css" />
+</head>
+
+<body>
+  <div class="wrapper-map">
+
+
+    <header class="navigation">
+      <div class="navigation__row navigation__row--first">
+        <a href="#main-menu" id="main-menu-toggle" class="menu-toggle" aria-label="Open main menu">
+          <span class="sr-only">Open main menu</span>
+          <span class="fa fa-bars" aria-hidden="true"></span>
+        </a>
+
+        <img src="./src/images/logo-miodek.svg" alt="logo" class="navigation__logo" />
+        <div class="navigation__buttons">
+          <a href="index.html"class="btn btn--register2" href="register.html">wróć do strony głównej</a>
+        </div>
+      </div>
+
+      <div class="navigation__row navigation__row--second">
+        <nav id="main-menu" class="navigation__nav" aria-label="Main menu">
+          <a href="#main-menu-toggle" id="main-menu-close" class="menu-close" aria-label="Close main menu">
+            <span class="sr-only">Close main menu</span>
+            <span class="fa fa-close" aria-hidden="true"></span>
+          </a>
+
+          <ul class="navigation__list hidden">
+            <li class="navigation__item">
+              <!-- span is for shadow effect -->
+              <span></span>
+              <a href="index.html" class="navigation__link">O nas</a>
+            </li>
+            <li class="navigation__item">
+              <span></span>
+              <a href="gallery.html" class="navigation__link">Galeria</a>
+            </li>
+            <li class="navigation__item">
+              <span></span>
+              <a href="shopping.html" class="navigation__link">Oferta</a>
+            </li>
+            <li class="navigation__item">
+              <span></span>
+              <a href="contact.html" class="navigation__link">Kontakt</a>
+            </li>
+          </ul>
+        </nav>
+        <a href="#main-menu-toggle" class="backdrop" tabindex="-1" hidden></a>
+      </div>
+    </header>
+    <main class="content">
+      <h1 class="content__title login">
+       Zobacz gdzie <span class="honey">jesteśmy</span>
+      </h1>
+     
+  </div><!-- wrapper end -->
+
+
+<!-- ther rest of this page must be positioned absolutely (background) so I wrap this into container  -->
+  <div  class="special-wrapper">    
+
+<div class="map">  
+      <div class="map-box">       
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d36091.741337392035!2d19.969637754797713!3d50.06983901804432!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4716451be258d0e9%3A0x20dc010f89ef18eb!2zxYHEhWtpIE5vd29odWNraWU!5e0!3m2!1spl!2spl!4v1591547613375!5m2!1spl!2spl"
+          allowfullscreen="" aria-hidden="false" tabindex="0" class="map-google"></iframe>
+     
+    </div>
+  
+  </div>
+
+   <footer class="footer footer--login">
+    <div class="footer__container">
+      <div class="footer__logo">
+        <img src="./src/images/logo_footer.svg" alt="logo" class="footer__logo" />
+      </div>
+      <div class="footer__address">
+        <p class="footer__address--name">Pasieka Miodek</p>
+        <p class="footer__address--address">01-123 Łąki Polne
+        </p>
+        <p class="footer__address--phone">tel. +48 1234567
+        </p>
+      </div>
+      <div class="footer__copyright">copyright &copy;2021 by gregsypek</div>
+      <div class="footer__icons" style="display: none;">
+
+        <img src="./src/icons/facebook.svg" alt="logo" class="footer__icon--facebook" />
+        <img src="./src/icons/instagram.svg" alt="logo" class="footer__icon--instagram" />
+
+      </div>
+    </div>
+  </footer>
+
+   </div> <!-- the end of contact-login -->
+ 
+
+</body>
+
+</html>

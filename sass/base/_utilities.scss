@@ -1,0 +1,8 @@
+
+//pages like login.html, register.html or map.html don't have nav bar on the top page 
+
+@media (min-width: 800px) {
+  .hidden {
+    visibility: hidden;
+  }
+}

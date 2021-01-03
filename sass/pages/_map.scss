@@ -1,0 +1,45 @@
+.wrapper-map {
+  position: relative;
+  background-image: linear-gradient(58deg,
+      rgba(255, 255, 255, 1) 62%,
+      rgba($color-honey-2, 0.9) 62%,
+      rgba($color-honey-2, 0.9) 100%,
+      transparent 50%),
+    //Obraz Mabel Amber z Pixabay
+    url(../../src/images/map_bg.jpg);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding-bottom: calc(100vh + 186px); //186 px is the height of the .content__info-box 
+}
+
+
+.map {
+  /* position:relative; */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: $sectionMargin;
+
+
+&-box {
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+
+.map-google {
+  width: 70vw;
+  max-width: 800px;
+  height: 50vw;
+  max-height: 600px;
+@include shadow;
+  border-radius: 5px;
+}
+}
+
+}
+

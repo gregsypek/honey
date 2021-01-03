@@ -13,3 +13,11 @@ h3 {
   font-weight: normal;
   margin: 0;
 }
+
+//this is for keeping the slice background in the same place
+.special-wrapper {
+  position: absolute;
+  top: 70vh;
+  left: 0;
+  right: 0;
+}

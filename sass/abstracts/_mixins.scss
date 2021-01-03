@@ -50,6 +50,7 @@
 @mixin hexRotate {
   transform: rotate(-107.04deg);
 }
+
 //NAVIGATION
 
 
@@ -75,4 +76,11 @@
   color: $color-gray;
   background: none;
   text-decoration: none;
+}
+//created for different types of forms
+@mixin fieldset {
+  padding: 1rem;
+  margin: 0;
+  border: 0;
+  min-width: 0;
 }

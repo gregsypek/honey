@@ -38,6 +38,19 @@ h3 {
   margin: 0;
 }
 
+.special-wrapper {
+  position: absolute;
+  top: 70vh;
+  left: 0;
+  right: 0;
+}
+
+@media (min-width: 800px) {
+  .hidden {
+    visibility: hidden;
+  }
+}
+
 .btn, .btn:link, .btn:visited {
   text-transform: uppercase;
   text-decoration: none;
@@ -1313,8 +1326,8 @@ section.offer {
   fill: #EECF90;
 }
 
-.contact {
-  margin: 14rem auto;
+.contact-margin {
+  margin: 14rem auto 0 auto;
   position: relative;
   margin-top: calc(-100vh + 14rem);
 }
@@ -1507,13 +1520,6 @@ section.offer {
 
 .contact__link:not(:last-child) {
   margin-bottom: 3rem;
-}
-
-.contact--login {
-  position: absolute;
-  top: 70vh;
-  left: 0;
-  right: 0;
 }
 
 .contact--login fieldset {
@@ -2138,10 +2144,57 @@ section.offer {
   padding-bottom: calc(100vh + 186px);
 }
 
-@media (min-width: 800px) {
-  .hidden {
-    visibility: hidden;
-  }
+.wrapper-map {
+  position: relative;
+  background-image: linear-gradient(58deg, white 62%, rgba(213, 178, 117, 0.9) 62%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../../src/images/map_bg.jpg);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+  padding-bottom: calc(100vh + 186px);
+}
+
+.map {
+  /* position:relative; */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 14rem;
+}
+
+.map-box {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.map-box .map-google {
+  width: 70vw;
+  max-width: 800px;
+  height: 50vw;
+  max-height: 600px;
+  -webkit-filter: drop-shadow(-4px 2px 5px rgba(79, 79, 79, 0.8));
+          filter: drop-shadow(-4px 2px 5px rgba(79, 79, 79, 0.8));
+  border-radius: 5px;
 }
 
 .content article {
