@@ -76,10 +76,10 @@ h3 {
 
 .wrapper {
   position: relative;
-  background-image: linear-gradient(62deg, rgba(238, 207, 144, 0.9) 67%, white 60%, white 100%, transparent 50%), url(../../src/images/Vector1.png);
+  background-image: linear-gradient(58deg, rgba(238, 207, 144, 0.8) 62%, rgba(242, 242, 242, 0.8) 62%, rgba(242, 242, 242, 0.8) 100%, transparent 50%), url(../../src/images/hero_bg.jpg);
   background-size: 100%;
   background-size: cover;
-  background-position: right;
+  background-position: bottom;
   background-repeat: no-repeat;
 }
 
@@ -137,39 +137,6 @@ h3 {
   -webkit-filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.25));
   margin-bottom: 14rem;
-}
-
-.hexagons {
-  position: relative;
-  -webkit-filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.25));
-          filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.25));
-}
-
-.hexagons .hexagon {
-  position: absolute;
-  z-index: -3;
-  width: 463.26px;
-  height: 542.19px;
-  -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-          clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-  -webkit-transform: rotate(-107.04deg);
-          transform: rotate(-107.04deg);
-  background: #ffffff;
-}
-
-.hexagons .hexagon-1 {
-  right: -217.28px;
-  bottom: -225px;
-}
-
-.hexagons .hexagon-2 {
-  right: 131.28px;
-  bottom: -585px;
-}
-
-.hexagons .hexagon-3 {
-  right: -12.72px;
-  bottom: -1059px;
 }
 
 .navigation__row {
@@ -397,7 +364,6 @@ h3 {
     z-index: -2;
     width: 100%;
     height: 5rem;
-    background-color: #ffffff;
   }
   .navigation__item {
     /* display the li's horizontally */
@@ -458,9 +424,12 @@ h3 {
   }
 }
 
-.navigation__link.active:hover .navigation__link.active::before {
-  -webkit-transform: rotate(-3deg);
-          transform: rotate(-3deg);
+.navigation__list--honey::before {
+  background-color: #EDD6A3;
+}
+
+.navigation__list--white::before {
+  background-color: #ffffff;
 }
 
 .navigation__buttons .btn--login2 {
@@ -1589,7 +1558,7 @@ section.offer {
 
 .wrapper--content {
   position: relative;
-  background-image: linear-gradient(58deg, white 62%, rgba(213, 178, 117, 0.9) 62%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../../src/images/gallery_bg.png);
+  background-image: linear-gradient(58deg, white 62%, rgba(213, 178, 117, 0.9) 62%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../../src/images/gallery_bg.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1667,7 +1636,7 @@ section.offer {
 
 .wrapper-shopping {
   position: relative;
-  background-image: linear-gradient(58deg, white 62%, rgba(213, 178, 117, 0.9) 62%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../../src/images/gallery/img1.jpg);
+  background-image: linear-gradient(58deg, white 62%, rgba(213, 178, 117, 0.9) 62%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../../src/images/shopping_bg.png);
   background-size: cover;
   background-position: left;
   background-repeat: no-repeat;

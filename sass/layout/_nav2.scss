@@ -1,13 +1,1 @@
-//change navigation background colors
-.navigation__buttons {
-  .btn--login2 {
-    @include btn--login;
-    background-color: $color-honey-2;
-    color: $color-white;
-  }
 
-  .btn--register2 {
-    @include btn--register;
-    color: $color-white;
-  }
-}
