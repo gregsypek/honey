@@ -38,12 +38,13 @@
     display: flex;
     align-items: baseline;
     justify-content: space-between;
-    @include header(8rem 10vw);
+    // @include header(8rem 10vw);
 
-    span.inline {
-      display: inline-block;
-      color: $color-honey-2;
-    }
+    // span.inline {
+    //   display: inline-block;
+    //   color: $color-honey-2;
+    // }
+    @include header(8rem 10vw, $color-gray, $color-honey-2, inline-block)
   }
 
   &__star {

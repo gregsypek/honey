@@ -1,35 +1,29 @@
 .info {
-  h3 {
-    font-family: $font-secondary;
-    color: $color-honey-3;
-    font-size: 2.5rem;
-  }
-  display: grid;
-  grid-template-columns: 3fr 2fr;
-  grid-row-gap: 10rem;
-  // margin-top: $sectionMargin;
-  min-height: 600px;
+  display: flex;
+  padding: $sectionMargin;
+  // min-height: 600px;
+  height: auto;
   text-transform: none;
   //Photo by Annie Spratt on Unsplash
-  background: linear-gradient(0deg, rgba(235, 99, 73, 0.902)),
-    url(../../src/images/id_bg.jpeg);
+  // background: linear-gradient(0deg, rgba(235, 99, 73, 0.902)),
+  //   url(../../src/images/id_bg.jpeg);
+  background: linear-gradient(0deg, rgba(235, 99, 73, 0.902));
 
+  &__hello {
+    @include header(0, $color-honey, $color-white, block);   
+  }
   &__address {
-    grid-column: 2/3;
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-end;
-    margin-top: $sectionMargin;
+margin-top: $sectionMargin;
+    color: $color-honey-3;
+
+    h3 {
+      font-family: $font-secondary;
+      font-size: 2.5rem;
+    }
+
     &--name {
-      font-size: 4.2rem;
-      color: $color-orange;
+      font-size: 3.2rem;
     }
   }
-  &__id {
-    grid-column: 2/3;
-    margin-bottom: $sectionMargin;
-    span {
-      display: block;
-    }
-  }
+
 }

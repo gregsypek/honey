@@ -113,7 +113,8 @@
     }
 
     &__title {
-      @include header(7rem 10vw);
+      // @include header(7rem 10vw);
+      @include header($sectionMargin 10vw, $color-gray,$color-honey, block);
     }
 
     &__btns {

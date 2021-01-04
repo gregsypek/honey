@@ -13,21 +13,17 @@
     grid-template-columns: repeat(10, 1fr);
     grid-row-gap: 20rem;
     color: $color-gray;
+    @include header($sectionMargin 0 , $color-gray, $color-honey, block);
 
   }
 
   &__title {
     position: relative;
-    margin-top: $sectionMargin;
-    z-index: 1;
-    font-size: 5rem;
-    grid-column: 2/6;
-    line-height: 77px;
-    margin-bottom: $sectionMargin;
 
-    span {
-      @include span;
-    }
+    z-index: 1;
+    grid-column: 2/6;
+    color: red;
+  
   }
 
   &__img {

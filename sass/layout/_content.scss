@@ -2,7 +2,8 @@
 
 
 .content {
-  @include header(7rem 0 10rem 10vw);
+
+  @include header($sectionMargin, $color-gray, $color-honey, block);
 
   &__info-box {
     // width: 100vw;
@@ -26,6 +27,5 @@
     position: relative; //for a triangle bg
     margin-top: calc(-100vh + #{$sectionMargin});
   }
-
 
 }
