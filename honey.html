@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Miodek</title>
+  <script src="https://kit.fontawesome.com/fb7f6f30e4.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="sass/main.css" />
+</head>
+
+<body>
+  <div class="wrapper-honey">
+
+
+    <header class="navigation">
+      <div class="navigation__row navigation__row--first">
+        <a href="#main-menu" id="main-menu-toggle" class="menu-toggle" aria-label="Open main menu">
+          <span class="sr-only">Open main menu</span>
+          <span class="fa fa-bars" aria-hidden="true"></span>
+        </a>
+
+        <img src="./src/images/logo-miodek.svg" alt="logo" class="navigation__logo" />
+        <div class="navigation__buttons">
+          <a href="index.html" class="btn btn--register2" href="register.html">wróć do strony głównej</a>
+        </div>
+      </div>
+
+      <div class="navigation__row navigation__row--second">
+        <nav id="main-menu" class="navigation__nav navigation__nav--hidden" aria-label="Main menu">
+          <a href="#main-menu-toggle" id="main-menu-close" class="menu-close" aria-label="Close main menu">
+            <span class="sr-only">Close main menu</span>
+            <span class="fa fa-close" aria-hidden="true"></span>
+          </a>
+
+          <ul class="navigation__list hidden">
+            <li class="navigation__item">
+              <!-- span is for shadow effect -->
+              <span></span>
+              <a href="index.html" class="navigation__link">O nas</a>
+            </li>
+            <li class="navigation__item">
+              <span></span>
+              <a href="gallery.html" class="navigation__link">Galeria</a>
+            </li>
+            <li class="navigation__item">
+              <span></span>
+              <a href="shopping.html" class="navigation__link">Oferta</a>
+            </li>
+            <li class="navigation__item">
+              <span></span>
+              <a href="contact.html" class="navigation__link">Kontakt</a>
+            </li>
+          </ul>
+        </nav>
+        <a href="#main-menu-toggle" class="backdrop" tabindex="-1" hidden></a>
+      </div>
+    </header>
+    <main class="content">
+      <h1 class="content__title login">
+        Dlaczego warto uzywać <span class="honey">miodu</span>
+      </h1>
+
+ 
+
+
+  <!-- ther rest of this page must be positioned absolutely (background) so I wrap this into container  -->
+  <!-- <div class="special-wrapper"> -->
+
+    <section class="slider">
+      <div class="slide slide--1" style="transform: translateX(0%);">
+        <div class="tip">
+          <blockquote class="tip__text">
+           Miód wzmacnia serce, koi nerwy, ożywia mózg, goi rany. Ma właściwości antybakteryjne - niektóre bakterie zwalcza lepiej niż antybiotyki.
+          </blockquote>
+          <address class="tip__author">
+            <a href="https://poradnikzdrowie.pl" class="tip__address">poradnikzdrowie.pl</a>
+          </address>
+        </div>
+      </div>
+      <div class="slide slide--2" style="transform: translateX(100%);">
+        <div class="tip">
+          <blockquote class="tip__text">
+            Zawarta w miodzie acetylocholina wzmacnia wydolność mięśnia sercowego. Także obecny w nim potas zbawiennie działa na serce.
+          </blockquote>
+          <address class="tip__author">
+            <a href="www.poradnikzdrowie.pl" class="tip__address">poradnikzdrowie.pl</a>
+          </address>
+        </div>
+      </div>
+      <div class="slide slide--3" style="transform: translateX(200%);">
+        <div class="tip">
+          <blockquote class="tip__text">
+           W Polsce najczęściej kupowany jest miód lipowy. Jest produktem bardzo łatwo przyswajalnym, całkowicie trawi się w ciągu niepełnych 2 godzin (dla porównania: szynka w 4 godziny).
+          </blockquote>
+          <address class="tip__author">
+            <a href="www.poradnikzdrowie.pl" class="tip__address">poradnikzdrowie.pl</a>
+          </address>
+        </div>
+      </div>
+      <div class="slide slide--4" style="transform: translateX(300%);">
+        <div class="tip">
+          <blockquote class="tip__text">
+          Miód od dawna służył pielęgnacji urody. Znane są jego właściwości nawilżające, rozjaśniające i uelastyczniające skórę.
+          </blockquote>
+          <address class="tip__author">
+            <a href="www.poradnikzdrowie.pl" class="tip__address">poradnikzdrowie.pl</a>
+          </address>
+        </div>
+      </div>
+      <div class="slide slide--5" style="transform: translateX(400%);">
+        <div class="tip">
+          <blockquote class="tip__text">
+          Jeżeli zamknięty słoiczek będziemy przechowywać w chłodnym miejscu (najwłaściwsza jest temperatura 6-10 st. Celsjusza), nie straci swych wartości przez 23 lata.
+          </blockquote>
+          <address class="tip__author">
+            <a href="www.poradnikzdrowie.pl" class="tip__address">poradnikzdrowie.pl</a>
+          </address>
+        </div>
+      </div>
+      <button class="slider__btn slider__btn--left">←</button>
+      <button class="slider__btn slider__btn--right">→</button>
+      <div class="dots">
+        <div class="dots__dot dots__dot--active" data-slide="0"></div>
+        <div class="dots__dot" data-slide="1"></div>
+        <div class="dots__dot" data-slide="2"></div>
+      </div>
+    </section>
+  
+
+    <footer class="footer footer--login">
+      <div class="footer__container">
+        <div class="footer__logo">
+          <img src="./src/images/logo_footer.svg" alt="logo" class="footer__logo" />
+        </div>
+        <div class="footer__address">
+          <p class="footer__address--name">Pasieka Miodek</p>
+          <p class="footer__address--address">01-123 Łąki Polne
+          </p>
+          <p class="footer__address--phone">tel. +48 1234567
+          </p>
+        </div>
+        <div class="footer__copyright">copyright &copy;2021 by gregsypek</div>
+        <div class="footer__icons" style="display: none;">
+
+          <img src="./src/icons/facebook.svg" alt="logo" class="footer__icon--facebook" />
+          <img src="./src/icons/instagram.svg" alt="logo" class="footer__icon--instagram" />
+
+        </div>
+      </div>
+    </footer>
+   </div><!-- wrapper end -->
+  <!-- </div> the end of contact-login -->
+
+
+</body>
+
+</html>

@@ -201,6 +201,10 @@
       .menu-close {
         display: none;
       }
+      // pages like honey.html, login.html or register.html
+      &--hidden {
+        display: none;
+      }
     }
 
     &__list {
