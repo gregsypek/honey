@@ -734,11 +734,10 @@ h3 {
 
 .about {
   position: relative;
-  margin-top: 7rem;
 }
 
 .about__header h1 {
-  margin: calc(14rem - 7rem) 10vw;
+  margin: 14rem 10vw;
   font-size: 5rem;
   color: #333333;
   line-height: 140%;
@@ -746,16 +745,15 @@ h3 {
 
 .about__header h1 span {
   display: block;
-  color: #B75A60;
+  color: #d5b275;
 }
 
 .about__triangle {
   position: absolute;
   width: 400px;
   height: 600px;
-  top: calc(-7rem);
   left: 0;
-  background-color: #EECF90;
+  background-color: #eecf90;
   -webkit-clip-path: polygon(0% 0px, 0px 62%, 38.55% 0%);
           clip-path: polygon(0% 0px, 0px 62%, 38.55% 0%);
   z-index: 1;
@@ -767,7 +765,7 @@ h3 {
   height: 500px;
   bottom: 0;
   right: 0;
-  background-color: #EECF90;
+  background-color: #eecf90;
   -webkit-clip-path: polygon(0% 0px, 0px 62%, 38.55% 0%);
   clip-path: polygon(100% 0px, 175px 120%, 100.55% 100%);
   z-index: 1;
@@ -780,8 +778,7 @@ h3 {
 
 .about__image {
   position: relative;
-  min-height: 70vh;
-  overflow: hidden;
+  min-height: 75vh;
   opacity: 1;
 }
 
@@ -794,22 +791,15 @@ h3 {
 .about__image img {
   position: absolute;
   z-index: -1;
-  top: 60%;
-  left: 40%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   min-width: 100%;
   min-height: 100%;
 }
 
 @media only screen and (min-width: 800px) {
   .about__image img {
-    -webkit-transform: translate(-13%, -36%);
-            transform: translate(-13%, -36%);
-    top: 156px;
-    left: 200px;
-    -o-object-fit: contain;
-       object-fit: contain;
+    width: 100%;
+    -o-object-fit: cover;
+       object-fit: cover;
   }
 }
 
@@ -818,8 +808,8 @@ h3 {
   display: grid;
   -ms-grid-columns: (1fr)[12];
       grid-template-columns: repeat(12, 1fr);
-  -ms-grid-rows: 14rem (minmax(auto, 1fr))[2] 0 14rem;
-      grid-template-rows: 14rem repeat(2, minmax(auto, 1fr)) 0 14rem;
+  -ms-grid-rows: 1rem (minmax(auto, 1fr))[2] 0 14rem;
+      grid-template-rows: 1rem repeat(2, minmax(auto, 1fr)) 0 14rem;
   grid-column-gap: 2rem;
   grid-row-gap: 5rem;
   color: #333333;
@@ -888,6 +878,7 @@ h3 {
 
 .about__info::first-letter {
   font-size: 5rem;
+  color: #ffffff;
 }
 
 .questions {
@@ -2104,7 +2095,7 @@ section.offer {
   padding-bottom: calc(100vh + 186px);
 }
 
-.wrapper-map {
+.wrapper--map {
   position: relative;
   background-image: linear-gradient(58deg, white 62%, rgba(213, 178, 117, 0.9) 62%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../../src/images/map_bg.jpg);
   background-size: cover;
