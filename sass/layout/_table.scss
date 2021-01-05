@@ -4,22 +4,18 @@ and Adrian Roselli: http://adrianroselli.com/2017/11/a-responsive-accessible-tab
 
 
 .table {
-  margin: 0 5vw $sectionMargin 5vw;
-  // height: auto;
+  padding: 5rem 5vw;
+  // background-color: $color-honey-3;
+
 }
 
-// .table__chosen {
-// display: grid;
-// grid-template-rows: repeat(3, 1fr);
-// grid-column: 2/3;
-// grid-row-gap: 3rem;
-// }
 
 table {
   border-collapse: separate;
-  border: 1px solid $color-honey;
-  background-color: transparent;
+  background-color: $color-red-3;
   border-spacing: 0 3rem;
+  padding: 0 5rem 5rem 5rem;
+
 }
 
 th {
@@ -39,7 +35,7 @@ th,
 tr,
 td {
   display: block;
-  padding: 0.3rem;
+
 
 }
 
@@ -126,10 +122,10 @@ caption {
   text-align: left;
   font-weight: bold;
   font-size: 3.2rem;
-  padding: 0.5rem;
+  // padding: 0.5rem;
   font-family: $font-primary;
   color: $color-honey;
-  margin-bottom: 5rem;
+  margin-bottom: 10rem;
   // background-color: $color-white;
 }
 
@@ -150,7 +146,7 @@ td {
 }
 
 tr:nth-child(odd) {
-  background-color: $color-honey-3;
+  background-color: $color-white;
 }
 
 tr:nth-child(even) {
@@ -168,16 +164,6 @@ tr:nth-child(even) {
 }
 
 
-/* @media (min-width: 300px) {
-section.offer {
-  position: relative;
-  height: 190vh;
-  grid-template-columns: 1fr 7fr 1fr;
-  grid-template-rows: 5% 90% 5%;
-  display: grid;
-  justify-content: center;
-}
-} */
 
 
 /* For wider dimensions, change our layout so the table can take the full width of the screen. */
@@ -186,13 +172,17 @@ section.offer {
   td {
     justify-content: start;
   }
+
 }
 
 @media (min-width: 950px) {
   /* section.offer {
     height: 150vh;
   } */
-
+  table {
+  max-width: 1000px;
+  margin: 0 auto;
+  }
   /* td:before is not specific enough to override the original declarations, thus this method */
   #table-first td:nth-of-type(odd):before,
   #table-first td:nth-of-type(even):before,
@@ -214,12 +204,12 @@ section.offer {
   th,
   td {
     display: table-cell;
-    padding: 1em;
-    font-size: 3.2rem;
+    padding: 1rem;
+    font-size: 2.8rem;
   }
 
   td {
-    font-size: 2.8rem;
+    font-size: 2rem;
     color: $color-gray;
 
   }
@@ -260,22 +250,6 @@ section.offer {
 }
 
 
-// @media (min-width: 1200px) {
-//   section.offer {
-//     display: flex;
-//     flex-direction: column;
-//     align-items: center;
-
-//     height: auto;
-
-
-//   }
-
-//   .table-third {
-//     margin-bottom: 4rem;
-//   }
-// }
-
 .table-second--info {
   width: 100%;
   height: auto;
@@ -287,44 +261,46 @@ section.offer {
 
 // --------------------------STARS-------
 .table-fourth {
-  
-    &__stars {
-        display: flex;  
-          }
 
-    &__star {  
+  &__stars {
+    display: flex;
+  }
 
-      .star__table {
-        width: 3rem;
-        height: 4rem;
-        &--color{
-          fill: $color-grape4;
+  &__star {
 
-        }
-      }
+    .star__table {
+      width: 3rem;
+      height: 4rem;
 
-      &:not(:last-of-type) {
-        margin-right: 3rem;
-      }    
+      &--color {
+        fill: $color-grape4;
 
-      .gray {
-        fill: $color-gray-3;
       }
     }
 
-    &__arrows {
-      display:flex;
-      justify-content: center;
+    &:not(:last-of-type) {
+      margin-right: 3rem;
+    }
 
-      a:first-of-type{
-margin-right:20rem;
-      }
-     
+    .gray {
+      fill: $color-gray-3;
     }
-    &__left:hover svg,
-    &__right:hover svg {
-      
-      fill: $color-honey;
+  }
+
+  &__arrows {
+    display: flex;
+    justify-content: center;
+
+    a:first-of-type {
+      margin-right: 20rem;
     }
-  
+
+  }
+
+  &__left:hover svg,
+  &__right:hover svg {
+
+    fill: $color-honey;
+  }
+
 }

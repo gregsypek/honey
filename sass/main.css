@@ -996,14 +996,14 @@ h3 {
 and Adrian Roselli: http://adrianroselli.com/2017/11/a-responsive-accessible-table.html#Responsive
 */
 .table {
-  margin: 0 5vw 14rem 5vw;
+  padding: 5rem 5vw;
 }
 
 table {
   border-collapse: separate;
-  border: 1px solid #EECF90;
-  background-color: transparent;
+  background-color: #ED806B;
   border-spacing: 0 3rem;
+  padding: 0 5rem 5rem 5rem;
 }
 
 th {
@@ -1023,7 +1023,6 @@ th,
 tr,
 td {
   display: block;
-  padding: 0.3rem;
 }
 
 /* Hide table headers (but not display: none;, for accessibility -- sighted users will see labels below) */
@@ -1113,10 +1112,9 @@ caption {
   text-align: left;
   font-weight: bold;
   font-size: 3.2rem;
-  padding: 0.5rem;
   font-family: "Bungee", cursive;
   color: #EECF90;
-  margin-bottom: 5rem;
+  margin-bottom: 10rem;
 }
 
 caption#honey,
@@ -1134,7 +1132,7 @@ td {
 }
 
 tr:nth-child(odd) {
-  background-color: #F1E2C4;
+  background-color: #ffffff;
 }
 
 tr:nth-child(even) {
@@ -1150,16 +1148,6 @@ tr:nth-child(even) {
   z-index: -1;
 }
 
-/* @media (min-width: 300px) {
-section.offer {
-  position: relative;
-  height: 190vh;
-  grid-template-columns: 1fr 7fr 1fr;
-  grid-template-rows: 5% 90% 5%;
-  display: grid;
-  justify-content: center;
-}
-} */
 /* For wider dimensions, change our layout so the table can take the full width of the screen. */
 /* table MQ's */
 @media (min-width: 768px) {
@@ -1174,6 +1162,10 @@ section.offer {
   /* section.offer {
     height: 150vh;
   } */
+  table {
+    max-width: 1000px;
+    margin: 0 auto;
+  }
   /* td:before is not specific enough to override the original declarations, thus this method */
   #table-first td:nth-of-type(odd):before,
   #table-first td:nth-of-type(even):before,
@@ -1192,11 +1184,11 @@ section.offer {
   th,
   td {
     display: table-cell;
-    padding: 1em;
-    font-size: 3.2rem;
+    padding: 1rem;
+    font-size: 2.8rem;
   }
   td {
-    font-size: 2.8rem;
+    font-size: 2rem;
     color: #333333;
   }
   tr {
@@ -1841,7 +1833,6 @@ section.offer {
 }
 
 .wrapper-description {
-  position: relative;
   background-image: linear-gradient(58deg, white 62%, rgba(213, 178, 117, 0.9) 62%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../../src/images/description_bg.jpg);
   background-size: cover;
   background-position: center;
@@ -2025,7 +2016,6 @@ section.offer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-top: 14rem;
 }
 
 .navigation-info__list {
@@ -2040,8 +2030,9 @@ section.offer {
   -ms-flex-pack: distribute;
       justify-content: space-around;
   font-size: 2.4rem;
-  margin-bottom: 14rem;
-  border-bottom: 5px solid #EECF90;
+  margin-top: 5em;
+  padding-top: 0;
+  background-color: #FADEA4;
 }
 
 .navigation-info__item {
@@ -2282,6 +2273,19 @@ section.offer {
 
 .slider .tip__author a:hover {
   color: #333333;
+}
+
+.wrapper--map {
+  position: relative;
+  background-image: linear-gradient(58deg, white 62%, rgba(213, 178, 117, 0.9) 62%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../../src/images/description_bg.jpg);
+  background-size: cover;
+  background-position: top center;
+  background-repeat: no-repeat;
+}
+
+.navigation-info__item {
+  padding: 1rem;
+  line-height: 100%;
 }
 
 .content article {

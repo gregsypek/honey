@@ -1,7 +1,7 @@
 .wrapper-description {
 
 
-  position: relative;
+  // position: relative;
   background-image: linear-gradient(58deg,
       rgba(255, 255, 255, 1) 62%,
       rgba($color-honey-2, 0.9) 62%,
@@ -13,6 +13,7 @@
   background-position: center;
   background-repeat: no-repeat;
   padding-bottom: 100vh; // for spreading the area of this background
+  // height: 1657px;
 
 
   @media (min-width: 800px) {
@@ -69,17 +70,16 @@
 
   &__order {
     font-family: $font-secondary;
+    padding: 0 10vw;
+    // margin-top: $sectionMargin;
+    display: flex;
+    justify-content: space-around;
 
     &-left {
       position: relative;
       z-index: 3;
     }
 
-    padding: 0 10vw;
-    // margin-top: $sectionMargin;
-
-    display: flex;
-    justify-content: space-around;
 
     &-form {
       // font-weight: bold;
@@ -166,16 +166,18 @@
 
 .navigation-info {
   display: flex;
-  margin-top: $sectionMargin;
+  // margin-top: $sectionMargin;
 
   &__list {
     @include list;
     // margin-top: -1rem;
-    margin-bottom: $sectionMargin;
-    border-bottom: 5px solid $color-honey;
-    // border-top: 5px solid $color-honey;
+    // margin-bottom: $sectionMargin;
+    // border-bottom: 2px solid $color-gray;
+    margin-top:5em;
+    padding-top:0;
+    // border-top: 2px solid $color-gray;
 
-    // background-color: $color-white-2;
+    background-color: $color-honey-4;
 
   }
 
