@@ -1,47 +1,53 @@
-.footer{
+.footer {
   // padding-top:$sectionMargin;
   // height: 25vh;
-  background:$color-dark;
+  height: auto;
+  background: $color-dark;
+  padding: 5rem 5vw 1rem 5vw;
+  color: $color-white-2;
+
   // padding: 2rem;
-  &__container{
-    display: grid;
-    justify-items: center;
-    grid-template-columns: repeat(2, 2fr) 4fr 2fr;
-    grid-column-gap: 5rem;
-    padding: ($sectionMargin/2 ) 0 3rem 0;
-  }
-  &__logo{
-    align-self:start;
-    margin-top: -2rem;
-    width: 80%;
-  }
-  &__address{
-    color: $color-white;
-    font-size: 1.6rem;
-    align-self: center;
-  }
-  &__copyright{
-    color: $color-gray-2;
-    font-size: 1.2rem;
-    align-self: end;
-  }
-  &__icons{
-    align-self: start;
+  &__container {
     display: flex;
   }
-   &__icon{ 
-    &--facebook,
-    &--instagram {
-      
-      align-items: baseline;
-      width: 3rem;
-      height: auto;
-      
+ 
+
+  &__column {
+    flex-basis: 22vw;
+    display: flex;
+    flex-direction: column;
+
+
+    >* {
+      color: inherit;
     }
-      &--facebook
-      {
-        margin-right:2rem;
-      }
+
+    a {
+      font-size: 1.4rem;
+      text-decoration: none;
+      padding: 1rem 0;
+     &:hover {
+       color: darken($color-gray-2, 5%);
+       cursor: pointer;
+     }
+
+    }
+  }
+
+
+  &__address {
+    color: $color-white;
+    font-size: 1.6rem;
+    // align-self: center;
+  }
+
+  &__copyright {
+    margin: 2rem 0;
+    color: $color-gray-2;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: flex-end;
+
   }
 }
 

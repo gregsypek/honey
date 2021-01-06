@@ -1480,61 +1480,60 @@ tr:nth-child(even) {
 }
 
 .footer {
+  height: auto;
   background: #4F4F4F;
+  padding: 5rem 5vw 1rem 5vw;
+  color: #f2f2f2;
 }
 
 .footer__container {
-  display: -ms-grid;
-  display: grid;
-  justify-items: center;
-  -ms-grid-columns: (2fr)[2] 4fr 2fr;
-      grid-template-columns: repeat(2, 2fr) 4fr 2fr;
-  grid-column-gap: 5rem;
-  padding: 7rem 0 3rem 0;
-}
-
-.footer__logo {
-  -ms-flex-item-align: start;
-      -ms-grid-row-align: start;
-      align-self: start;
-  margin-top: -2rem;
-  width: 80%;
-}
-
-.footer__address {
-  color: #ffffff;
-  font-size: 1.6rem;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-}
-
-.footer__copyright {
-  color: #BDBDBD;
-  font-size: 1.2rem;
-  -ms-flex-item-align: end;
-      -ms-grid-row-align: end;
-      align-self: end;
-}
-
-.footer__icons {
-  -ms-flex-item-align: start;
-      align-self: start;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-.footer__icon--facebook, .footer__icon--instagram {
-  -webkit-box-align: baseline;
-      -ms-flex-align: baseline;
-          align-items: baseline;
-  width: 3rem;
-  height: auto;
+.footer__column {
+  -ms-flex-preferred-size: 22vw;
+      flex-basis: 22vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
 
-.footer__icon--facebook {
-  margin-right: 2rem;
+.footer__column > * {
+  color: inherit;
+}
+
+.footer__column a {
+  font-size: 1.4rem;
+  text-decoration: none;
+  padding: 1rem 0;
+}
+
+.footer__column a:hover {
+  color: #b0b0b0;
+  cursor: pointer;
+}
+
+.footer__address {
+  color: #ffffff;
+  font-size: 1.6rem;
+}
+
+.footer__copyright {
+  margin: 2rem 0;
+  color: #BDBDBD;
+  font-size: 1.2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
 }
 
 .wrapper--content {
