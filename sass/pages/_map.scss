@@ -1,15 +1,7 @@
 .wrapper--map {
-  position: relative;
-  background-image: linear-gradient(58deg,
-      rgba(255, 255, 255, 1) 62%,
-      rgba($color-honey-2, 0.9) 62%,
-      rgba($color-honey-2, 0.9) 100%,
-      transparent 50%),
-    //Obraz Mabel Amber z Pixabay
-    url(../../src/images/map_bg.jpg);
-  background-size: cover;
-  background-position: top center;
-  background-repeat: no-repeat;
+  //   //Obraz Mabel Amber z Pixabay
+  @include layout(url(../../src/images/map_bg.jpg), cover, top center);
+
 }
 
 
@@ -22,24 +14,23 @@
   margin-bottom: $sectionMargin;
 
 
-&-box {
+  &-box {
 
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
 
 
-.map-google {
-  width: 70vw;
-  max-width: 800px;
-  height: 50vw;
-  max-height: 600px;
-  border:2px solid $color-honey;
-// @include shadow;
-  // border-radius: 5px;
+    .map-google {
+      width: 70vw;
+      max-width: 800px;
+      height: 50vw;
+      max-height: 600px;
+      border: 2px solid $color-honey;
+      // @include shadow;
+      // border-radius: 5px;
+    }
+  }
+
 }
-}
-
-}
-

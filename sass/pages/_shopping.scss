@@ -1,23 +1,13 @@
-.wrapper-shopping {
+.wrapper--shopping {
+  @include layout(url(../../src/images/shopping_bg.png), cover, left);
 
-  position: relative;
-  background-image: linear-gradient(58deg,
-      rgba(255, 255, 255, 1) 62%,
-      rgba($color-honey-2, 0.9) 62%,
-      rgba($color-honey-2, 0.9) 100%,
-      transparent 50%),
-    //Obraz Mabel Amber z Pixabay
-    url(../../src/images/shopping_bg.png);
-  background-size: cover;
-  background-position: left;
-  background-repeat: no-repeat;
   padding-bottom: 100vh; // for spreading the area of this background
 
 }
 
 .content {
   // @include header(7rem 0 10rem 10vw);
- 
+
   &__cards {
     // margin-top: calc(#{$sectionMargin} + 4rem); 
 

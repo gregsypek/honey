@@ -1533,12 +1533,13 @@ tr:nth-child(even) {
           justify-content: flex-end;
 }
 
-.wrapper--content {
+.wrapper--gallery {
   position: relative;
   background-image: linear-gradient(58deg, white 62%, rgba(213, 178, 117, 0.9) 62%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../../src/images/gallery_bg.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  height: calc(200vh - 5px);
   padding-bottom: 100vh;
 }
 
@@ -1611,12 +1612,13 @@ tr:nth-child(even) {
   background: #ffffff;
 }
 
-.wrapper-shopping {
+.wrapper--shopping {
   position: relative;
   background-image: linear-gradient(58deg, white 62%, rgba(213, 178, 117, 0.9) 62%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../../src/images/shopping_bg.png);
   background-size: cover;
   background-position: left;
   background-repeat: no-repeat;
+  height: calc(200vh - 5px);
   padding-bottom: 100vh;
 }
 
@@ -2120,12 +2122,13 @@ tr:nth-child(even) {
   transition: all .5s ease;
 }
 
-.wrapper-contact {
+.wrapper--contact {
   position: relative;
   background-image: linear-gradient(58deg, white 62%, rgba(213, 178, 117, 0.9) 62%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../../src/images/contact_bg.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  height: calc(200vh - 5px);
   padding-bottom: 100vh;
 }
 
@@ -2140,6 +2143,7 @@ tr:nth-child(even) {
   background-position: center;
   background-repeat: no-repeat;
   height: calc(200vh - 5px);
+  height: calc(200vh - 5px);
 }
 
 .wrapper--map {
@@ -2148,6 +2152,7 @@ tr:nth-child(even) {
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
+  height: calc(200vh - 5px);
 }
 
 .map {
@@ -2337,6 +2342,7 @@ tr:nth-child(even) {
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
+  height: calc(200vh - 5px);
 }
 
 .navigation-info__item {

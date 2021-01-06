@@ -1,15 +1,6 @@
 .wrapper--login {
-  position: relative;
-  background-image: linear-gradient(58deg,
-      rgba(255, 255, 255, 1) 62%,
-      rgba($color-honey-2, 0.9) 62%,
-      rgba($color-honey-2, 0.9) 100%,
-      transparent 50%),
-    //Obraz Mabel Amber z Pixabay
-    url(../../src/images/contact_bg.jpg);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  height: calc(200vh - 5px);// this help to keep slice background in the same place
+  @include layout(url(../../src/images/contact_bg.jpg), cover, center);
+
+  height: calc(200vh - 5px); // this help to keep slice background in the same place
 
 }
