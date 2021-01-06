@@ -1,3 +1,4 @@
+
 @mixin hexagon {
   clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
 }
@@ -5,11 +6,6 @@
 @mixin shadow {
   filter: drop-shadow(-4px 2px 5px rgba(79, 79, 79, 0.8));
 }
-
-// @mixin span {
-//   display: block;
-//   color: $color-honey;
-// }
 
 //--------------------HEXAGON WITH WHITE BORDER
 @mixin hexFrame {
@@ -77,6 +73,7 @@
   background: none;
   text-decoration: none;
 }
+
 //created for different types of forms
 @mixin fieldset {
   padding: 1rem;

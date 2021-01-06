@@ -42,13 +42,6 @@ h3 {
   margin: 0;
 }
 
-.special-wrapper {
-  position: absolute;
-  top: 70vh;
-  left: 0;
-  right: 0;
-}
-
 @media (min-width: 800px) {
   .hidden {
     visibility: hidden;
@@ -2064,7 +2057,7 @@ tr:nth-child(even) {
 }
 
 .table-nav {
-  background-color: #EECF90;
+  background-color: #D7B57A;
 }
 
 .table-nav__list {
@@ -2140,13 +2133,13 @@ tr:nth-child(even) {
   color: #EECF90;
 }
 
-.wrapper-login {
+.wrapper--login {
   position: relative;
   background-image: linear-gradient(58deg, white 62%, rgba(213, 178, 117, 0.9) 62%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../../src/images/contact_bg.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding-bottom: calc(100vh + 186px);
+  height: calc(200vh - 5px);
 }
 
 .wrapper--map {
@@ -2353,6 +2346,19 @@ tr:nth-child(even) {
 
 .table-nav--blank {
   margin-top: 7rem;
+}
+
+.wrapper--register {
+  position: relative;
+  background-image: linear-gradient(58deg, white 62%, rgba(213, 178, 117, 0.9) 62%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../../src/images/contact_bg.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: calc(200vh - 5px);
+}
+
+.wrapper--register .content span.inline {
+  display: inline-block;
 }
 
 .content article {

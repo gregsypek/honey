@@ -1,15 +1,5 @@
 //----------------HEADERS-----------------
 
-// @mixin header($margin) {
-//   h1 {
-//     margin:$margin; 
-//     font-size: 5rem;
-//     color: $color-gray;
-//     span {
-//       @include span;
-//   }
-// }
-// }
 @mixin header($margin, $color1, $color2, $span) {
   h1 {
     margin: $margin;
@@ -22,4 +12,21 @@
       color: $color2;
     }
   }
+}
+
+//----------------LAYOUT-----------------
+
+@mixin layout($path, $bc-size, $bc-pos) {
+  position: relative;
+  background-image: linear-gradient(58deg,
+      rgba(255, 255, 255, 1) 62%,
+      rgba($color-honey-2, 0.9) 62%,
+      rgba($color-honey-2, 0.9) 100%,
+      transparent 50%),
+    //Obraz Mabel Amber z Pixabay
+    $path;
+  background-size: $bc-size;
+  background-position: $bc-pos;
+  background-repeat: no-repeat;
+  height: calc(200vh - 5px); // this help to keep slice background in the same place
 }

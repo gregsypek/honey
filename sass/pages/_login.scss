@@ -1,4 +1,4 @@
-.wrapper-login {
+.wrapper--login {
   position: relative;
   background-image: linear-gradient(58deg,
       rgba(255, 255, 255, 1) 62%,
@@ -10,26 +10,6 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding-bottom: calc(100vh + 186px); //186 px is the height of the .content__info-box 
+  height: calc(200vh - 5px);// this help to keep slice background in the same place
+
 }
-
-
-
-
-// .contact {
-//   &--login {
-//     //this is for keeping the slice background in the same place
-//     position: absolute;
-//     top: 70vh;
-//     left: 0;
-//     right: 0;
-
-//     fieldset {
-//       padding: 1rem;
-//       margin: 0;
-//       border: 0;
-//       min-width: 0;
-//     }
-//   }
-
-// }

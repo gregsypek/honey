@@ -1,6 +1,4 @@
 // CONTENT IS A COMMON PART OF PAGES: GALLERY, DESCRIPTION, SHOPPING
-
-
 .content {
 
   @include header($sectionMargin, $color-gray, $color-honey, block);

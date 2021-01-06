@@ -1,13 +1,10 @@
+.wrapper--register {
+  @include layout(url(../../src/images/contact_bg.jpg), cover, center);
 
 
-// .privacy {
-//   margin-left: 1rem;
-//   padding: .3rem .2rem;
-//   text-decoration: none;
-//   font-size: 1.2rem;
-
-//   a {
-//     color: darken($color-white, 20%);
-//   }
-
-// }
+.content {
+span.inline {
+  display: inline-block;
+}
+}
+}
