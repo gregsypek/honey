@@ -1,4 +1,4 @@
-.wrapper--map {
+.wrapper--table {
   position: relative;
   background-image: linear-gradient(58deg,
       rgba(255, 255, 255, 1) 62%,
@@ -14,12 +14,14 @@
 }
 
 .navigation-info{
-  // height: 5rem;
-  &__list{
-    // height: 5rem;
-  }
+
+  
   &__item {
     padding: 1rem;
     line-height: 100%;
   }
+}
+
+.table-nav--blank {
+  margin-top: $sectionMargin/2;
 }

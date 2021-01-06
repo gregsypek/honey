@@ -12,7 +12,7 @@
 </head>
 
 <body>
-  <div class="wrapper--map">
+  <div class="wrapper--table">
     <header class="navigation">
       <div class="navigation__row navigation__row--first">
         <a href="#main-menu" id="main-menu-toggle" class="menu-toggle" aria-label="Open main menu">
@@ -26,35 +26,223 @@
         </div>
       </div>
 
-      <div class="navigation__row">
-        <nav id="main-menu" class="navigation__nav" aria-label="Main menu">
-          <a href="#main-menu-toggle" id="main-menu-close" class="menu-close" aria-label="Close main menu">
-            <span class="sr-only">Close main menu</span>
-            <span class="fa fa-close" aria-hidden="true"></span>
-          </a>
-          <ul class="navigation__list navigation__list--white">
+    <nav class="table-nav table-nav--blank">
+        <ul class="table-nav__list">
+          <li class="table-nav__item">
+            <span></span>
+            <a href="#" class="table-nav__link active">Oferta</a>
+          </li>
+          <li class="table-nav__item">
+            <span></span>
+            <a href="#" class="table-nav__link">Wpłaty</a>
+          </li>
+          <li class="table-nav__item">
+            <span></span>
+            <a href="#" class="table-nav__link">Wysyłka</a>
+          </li>
+          <li class="table-nav__item">
+            <span></span>
+            <a href="#" class="table-nav__link">Opinie</a>
+          </li>
+        </ul>
+      </nav>
 
-            <li class="navigation__item">
-              <span></span>
-              <a href="gallery.html" class="navigation__link active">Oferta</a>
-            </li>
-            <li class="navigation__item">
-              <span></span>
-              <a href="shopping.html" class="navigation__link">Wpłaty</a>
-            </li>
-            <li class="navigation__item">
-              <span></span>
-              <a href="contact.html" class="navigation__link">Wysyłka</a>
-            </li>
-            <li class="navigation__item">
-              <span></span>
-              <a href="contact.html" class="navigation__link">Opinie</a>
-            </li>
-          </ul>
+      <section class="table">
+        <div class="table__chosen">
+          <div
+            class="table-first tablescroll table"
+            role="region"
+            aria-labelledby="honey"
+            tabindex="0"
+          >
+            <table id="table-first">
+              <caption>
+                Oferta
+              </caption>
+              <thead>
+                <tr class="dark">
+                  <th scope="col">Rodzaj</th>
+                  <th scope="col">900 ml</th>
+                  <th scope="col">720 ml</th>
+                  <th scope="col">320 ml</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>M. rzepakowy</td>
+                  <td>40zł</td>
+                  <td>30zł</td>
+                  <td>15zł</td>
+                </tr>
+                <tr>
+                  <td>M. rzepakowy-kremowany</td>
+                  <td>40zł</td>
+                  <td>30zł</td>
+                  <td>15zł</td>
+                </tr>
+                <tr>
+                  <td>M. wielokwiatowy</td>
+                  <td>40zł</td>
+                  <td>30zł</td>
+                  <td>15zł</td>
+                </tr>
+                <tr>
+                  <td>M. malinowy</td>
+                  <td>40zł</td>
+                  <td>30zł</td>
+                  <td>15zł</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
 
-        </nav>
-        <a href="#main-menu-toggle" class="backdrop" tabindex="-1" hidden></a>
-      </div>
+        <!-- ---- ---------------2------------------- -->
+        <!-- <div class="table-second tablescroll table" role="region" aria-labelledby="dispatch" tabindex="0">
+    <table id="table-second">
+      <caption id="dispatch">
+        Wysyłka
+      </caption>
+      <thead>
+        <tr class="dark">
+          <th scope="col">Waga</th>
+          <th scope="col">Ilość słoików</th>
+          <th scope="col">Ekonomiczna</th>
+          <th scope="col">Priorytet</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>do 2kg</td>
+          <td>1</td>
+          <td>15 zł</td>
+          <td>20 zł</td>
+        </tr>
+        <tr>
+          <td>do 5kg</td>
+          <td>2</td>
+          <td>20 zł</td>
+          <td>25 zł</td>
+        </tr>
+        <tr>
+          <td>do 10kg</td>
+          <td>3-5</td>
+          <td>26 zł</td>
+          <td>30 zł</td>
+        </tr>
+      </tbody>
+    </table>
+
+    <h3 class="table-second--info">
+      Zamówienia WYŁĄCZNIE na terenie Polski
+    </h3>
+    <h3 class="table-second--info">
+      CZAS REALIZACJI: 2 - 5 DNI ROBOCZE + CZAS DOSTAWY
+    </h3>
+  </div> -->
+
+        <!-- ---- ---------------3------------------- -->
+        <!-- <div class="table-third tablescroll table" role="region" aria-labelledby="deposit-info" tabindex="0">
+    <table id="table-third">
+      <caption id="deposit-info">
+        Wpłaty
+      </caption>
+
+      <tr>
+        <th class="dark">Uwaga</th>
+        <td>
+          Prosimy dokonywać wpłat po uprzednim kontakcie mailowym lub
+          telefonicznym
+        </td>
+      </tr>
+      <tr>
+        <th class="dark">Informacja</th>
+        <td>Towar wysyłamy w godzinach od 8 - 16</td>
+      </tr>
+      <tr>
+        <th class="dark">Nr konta</th>
+        <td>15154512135156464654151</td>
+      </tr>
+      <tr>
+        <th class="dark">Telefon</th>
+        <td>123456789</td>
+      </tr>
+    </table>
+  </div> -->
+        <!-- ---- ---------------4------------------- -->
+
+        <!-- <div class="table-fourth tablescroll table" role="region" aria-labelledby="dispatch" tabindex="0">
+    <table id="table-second">
+      <caption id="dispatch">
+        Opinie
+      </caption>
+      <thead>
+        <tr class="dark">
+          <th scope="col">Opinia</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>“Polecam gorąco to naprawdę świetny miodek”</td>
+        </tr>
+        <tr>
+          <td>Joann 8 listopada 2020</td>
+        </tr>
+        <tr>
+          <td>
+            <div class="table-fourth__stars">
+              <div class="table-fourth__star">             
+                <svg width="67" height="63" viewBox="0 0 67 63" xmlns="http://www.w3.org/2000/svg" class="star__table">
+                  <path class="star__table--color"
+                    d="M33.5 0L41.2457 23.8389H66.3114L46.0329 38.5722L53.7786 62.4111L33.5 47.6778L13.2214 62.4111L20.9671 38.5722L0.688549 23.8389H25.7543L33.5 0Z" />
+                </svg>
+              </div>
+              <div class="table-fourth__star">
+                <svg width="67" height="63" viewBox="0 0 67 63" xmlns="http://www.w3.org/2000/svg" class="star__table">
+                  <path class="star__table--color"
+                    d="M33.5 0L41.2457 23.8389H66.3114L46.0329 38.5722L53.7786 62.4111L33.5 47.6778L13.2214 62.4111L20.9671 38.5722L0.688549 23.8389H25.7543L33.5 0Z" />
+                </svg>
+              </div>
+              <div class="table-fourth__star">
+                <svg width="67" height="63" viewBox="0 0 67 63" xmlns="http://www.w3.org/2000/svg" class="star__table">
+                  <path class="star__table--color"
+                    d="M33.5 0L41.2457 23.8389H66.3114L46.0329 38.5722L53.7786 62.4111L33.5 47.6778L13.2214 62.4111L20.9671 38.5722L0.688549 23.8389H25.7543L33.5 0Z" />
+                </svg>
+              </div>
+              <div class="table-fourth__star">
+                <svg width="67" height="63" viewBox="0 0 67 63" xmlns="http://www.w3.org/2000/svg" class="star__table">
+                  <path class="star__table--color"
+                    d="M33.5 0L41.2457 23.8389H66.3114L46.0329 38.5722L53.7786 62.4111L33.5 47.6778L13.2214 62.4111L20.9671 38.5722L0.688549 23.8389H25.7543L33.5 0Z" />
+                </svg>
+              </div>
+              <div class="table-fourth__star">
+                <svg width="67" height="63" viewBox="0 0 67 63" xmlns="http://www.w3.org/2000/svg" class="star__table">
+                  <path class="star__table--color gray"
+                    d="M33.5 0L41.2457 23.8389H66.3114L46.0329 38.5722L53.7786 62.4111L33.5 47.6778L13.2214 62.4111L20.9671 38.5722L0.688549 23.8389H25.7543L33.5 0Z" />
+                </svg>
+              </div>
+            </div>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+    <div class="table-fourth__arrows">
+      <a href="#" class="table-fourth__left">
+        <svg width="66" height="66" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+          <path class="left-arrow"
+            d="M33 3.72852C49.14 3.72852 62.271 16.8595 62.271 32.9995C62.271 49.1395 49.14 62.2695 33 62.2695C16.86 62.2695 3.729 49.1395 3.729 32.9995C3.729 16.8595 16.86 3.72852 33 3.72852ZM33 0.728516C15.178 0.728516 0.729004 15.1775 0.729004 32.9995C0.729004 50.8215 15.178 65.2705 33 65.2705C50.822 65.2705 65.271 50.8235 65.271 33.0005C65.271 15.1775 50.822 0.728516 33 0.728516ZM37.676 42.7615L27.914 32.9995L37.677 23.2385L36.616 22.1775L25.793 32.9995L36.615 43.8215L37.676 42.7615Z" />
+        </svg>
+      </a>
+      <a href="#" class="table-fourth__right">
+        <svg width="66" height="66" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+          <path class="right-arrow"
+            d="M33 3.72852C49.14 3.72852 62.271 16.8595 62.271 32.9995C62.271 49.1395 49.14 62.2695 33 62.2695C16.86 62.2695 3.729 49.1395 3.729 32.9995C3.729 16.8595 16.86 3.72852 33 3.72852ZM33 0.728516C15.178 0.728516 0.729004 15.1775 0.729004 32.9995C0.729004 50.8215 15.178 65.2705 33 65.2705C50.822 65.2705 65.271 50.8235 65.271 33.0005C65.271 15.1775 50.822 0.728516 33 0.728516ZM40.207 32.9995L29.384 22.1785L28.323 23.2395L38.086 32.9995L28.324 42.7615L29.385 43.8225L40.207 32.9995Z" />
+        </svg>
+      </a>
+    </div>
+  </div> -->
+      </section>
+    </div>
     </header>
 
 
