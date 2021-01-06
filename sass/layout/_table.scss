@@ -12,9 +12,11 @@ and Adrian Roselli: http://adrianroselli.com/2017/11/a-responsive-accessible-tab
 
 table {
   border-collapse: separate;
-  background-color: $color-red-3;
+  background-color: $color-honey-6;
   border-spacing: 0 3rem;
-  padding: 0 5rem 5rem 5rem;
+  // padding: 0 5rem 5rem 5rem;
+  border-radius: 5px;
+  height: auto;
 
 }
 
@@ -124,8 +126,8 @@ caption {
   font-size: 3.2rem;
   // padding: 0.5rem;
   font-family: $font-primary;
-  color: $color-honey;
-  margin-bottom: 10rem;
+  color: $color-white;
+  margin-bottom: 5rem;
   // background-color: $color-white;
 }
 
@@ -173,16 +175,29 @@ tr:nth-child(even) {
     justify-content: start;
   }
 
+  caption {
+    display: none;
+  }
+
+  table {
+
+    padding: 0 5rem 5rem 5rem;
+
+
+  }
+
 }
 
 @media (min-width: 950px) {
+
   /* section.offer {
     height: 150vh;
   } */
   table {
-  max-width: 1000px;
-  margin: 0 auto;
+    max-width: 1000px;
+    margin: 0 auto;
   }
+
   /* td:before is not specific enough to override the original declarations, thus this method */
   #table-first td:nth-of-type(odd):before,
   #table-first td:nth-of-type(even):before,
@@ -234,7 +249,7 @@ tr:nth-child(even) {
 
   .dark,
   thead tr.dark {
-    background-color: $color-red-3;
+    background-color: $color-honey-6;
     color: $color-white;
     font-weight: bold;
     font-family: $font-primary;
@@ -273,7 +288,7 @@ tr:nth-child(even) {
       height: 4rem;
 
       &--color {
-        fill: $color-grape4;
+        fill: $color-gray-2;
 
       }
     }

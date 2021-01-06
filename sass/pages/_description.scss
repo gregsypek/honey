@@ -1,7 +1,4 @@
-.wrapper-description {
-
-
-  // position: relative;
+.wrapper--description {
   background-image: linear-gradient(58deg,
       rgba(255, 255, 255, 1) 62%,
       rgba($color-honey-2, 0.9) 62%,
@@ -12,50 +9,45 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  padding-bottom: 100vh; // for spreading the area of this background
+  // padding-bottom: 100vh; // for spreading the area of this background
   // height: 1657px;
-
-
-  @media (min-width: 800px) {
-    .navigation {
-      &__list {
-        margin-bottom: $sectionMargin;
-      }
-    }
-  }
 }
 
 .content {
-  &__title {
-
-    &-stars {
-      display: flex;
-      margin-right: 10vw;
-    }
+  &--description {
+    position: relative;
+    padding: 0 10vw 10rem 10vw;
+    background-color: $color-white;
+    // height: 100vh;
   }
 
   &__description {
-    background-color: $color-white;
-    display: flex;
-    align-items: baseline;
-    justify-content: space-between;
-    // @include header(8rem 10vw);
+    @include header(5rem 0, $color-gray, $color-honey, inline-block);
+    display: grid;
+    grid-template-areas:
+      'h1 h1 img '
+      'star star img '
+      'h4 h4 img '
+      'h4 h4 img ';
+  }
 
-    // span.inline {
-    //   display: inline-block;
-    //   color: $color-honey-2;
-    // }
-    @include header(8rem 10vw, $color-gray, $color-honey-2, inline-block)
+  &__title {
+    margin-left: 0;
+    grid-area: h1;
+
+    &-stars {
+      display: flex;
+      grid-area: star;
+    }
   }
 
   &__star {
-
     .star__title {
-      width: 7rem;
-      height: 6rem;
+      width: 5rem;
+      height: 4rem;
 
       &--color {
-        fill: $color-grape4;
+        fill: $color-yellow;
       }
     }
 
@@ -68,81 +60,32 @@
     }
   }
 
-  &__order {
-    font-family: $font-secondary;
-    padding: 0 10vw;
-    // margin-top: $sectionMargin;
-    display: flex;
-    justify-content: space-around;
+  &__short-info {
+    font-size: 2rem;
+    width: 40vw;
+    font-weight: normal;
+    margin: 5rem 0;
+    color: $color-gray;
+    grid-area: h4;
+  }
 
-    &-left {
-      position: relative;
-      z-index: 3;
-    }
-
-
-    &-form {
-      // font-weight: bold;
-      font-size: 2.5rem;
-      text-transform: uppercase;
-      display: flex;
-      flex-direction: column;
-
-      >* {
-        padding: 2rem 5rem;
-        width: 50rem;
-      }
-
-      >*:not(:last-child) {
-        margin-bottom: 2rem;
-      }
-
-      .cap,
-      .qty {
-        background-color: $color-red-3;
-        color: $color-white;
-        display: flex;
-        justify-content: space-between;
-      }
-
-      // .qty {}
-
-      .btn {
-        color: inherit;
-        font-family: inherit;
-        text-transform: uppercase;
-        font-size: inherit;
-        font-weight: bold;
-
-      }
-
-      .btn--submit {
-        @include btn--white;
-      }
-
-      .btn--back {
-        border: none;
-        background: transparent;
-        color: $color-red-2;
-      }
-    }
-
-    &-right {
-      position: relative;
-      @include shadow2;
-    }
-
-    // &__picture {
+  &__picture {
+    position: relative;
+    grid-area: img;
+    @include shadow2;
 
     &-frame {
-
-      width: 47.9rem;
-      height: 57.3rem;
-      top: -118px;
-      right: -145px;
+      // position: absolute;
+      width: 41rem;
+      height: 49rem;
+      top: 0;
+      right: 0;
       @include hexagon;
       @include hexFrame;
+    }
 
+    &-overlay {
+      @include overlay;
     }
 
     &-img {
@@ -150,66 +93,212 @@
       width: 100%;
       height: 100%;
       left: 32px;
-      top: 41px;
+      top: 0;
       transform: rotate(88deg);
-      opacity: .8;
+      opacity: 0.8;
+    }
+  }
 
+  &__form {
+    width: 80vw;
+    font-size: 2.5rem;
+    text-transform: uppercase;
+    display: grid;
+    grid-template-columns: 1f 1fr;
+    grid-row-gap: 2rem;
+    margin-top: 5rem;
+
+    >* {
+      padding: 1rem 5rem;
     }
 
-    &-overlay {
-      @include overlay;
+    .cap,
+    .qty {
+      background-color: $color-red-3;
+      color: $color-white;
+      justify-self: start;
+      grid-column: 1/2;
+      @include shadow2;
+      border-radius: 5px;
+      width: 35rem;
     }
 
+    .qty {
+      grid-column: 1/2;
+    }
+
+    .btn {
+      color: inherit;
+      font-family: inherit;
+      text-transform: uppercase;
+      font-size: inherit;
+      font-weight: bold;
+    }
+
+    .btn--submit {
+      @include btn--white;
+      grid-column: 2/3;
+      grid-row: 1/2;
+      justify-self: center;
+      @include shadow;
+    }
+
+    h5 {
+      padding: 0;
+      grid-column: 2/3;
+      justify-self: center;
+      font-size: 1.2rem;
+      font-weight: normal;
+      align-self: end;
+      text-transform: none;
+    }
   }
 }
 
+//this style works only for description.html
+// @media (min-width: 800px) {
+.navigation {
 
-.navigation-info {
-  display: flex;
-  // margin-top: $sectionMargin;
+  &--description {
+    .navigation__row--first {
+      margin-bottom: 0;
+    }
 
+
+    .navigation__nav {
+      padding: 0;
+      // overflow-y:clip;
+      overflow-y: visible;
+    }
+
+    .navigation__list {
+      height: 5rem;
+
+      // overflow-y: hidden;
+      &::before {
+        height: 5rem;
+      }
+    }
+  }
+}
+
+// }
+
+// only for table-nav 
+
+.table-nav {
+  // width
+  background-color: $color-honey;
+
+  //ul
   &__list {
-    @include list;
-    // margin-top: -1rem;
-    // margin-bottom: $sectionMargin;
-    // border-bottom: 2px solid $color-gray;
-    margin-top:5em;
-    padding-top:0;
-    // border-top: 2px solid $color-gray;
-
-    background-color: $color-honey-4;
+    // @include list;
+    display: flex;
+    list-style: none;
+    width: 100vw;
+    margin: 0;
+    min-height: 100%;
+    padding-top: 0;
+    height: 8rem;
+    justify-content: center;
+    font-size: 1.8rem;
+    font-weight: normal;
 
   }
 
+  //li
   &__item {
-    @include item;
-    color: $color-gray;
+    text-transform: uppercase;
+    width: calc(80vw / 4);
+
+
   }
 
+  a {
+    display: inline-block;
+    height: 8rem;
+    padding: 2.5rem 5rem;
+  }
+
+  //a
   &__link {
+
+    color: $color-gray;
+    background: none;
     text-decoration: none;
+    height: 5rem;
+    padding: 1rem 2rem;
+    // for hexagon
     position: relative;
+    z-index: 3;
 
 
-    .active {
+
+    &.active {
       position: relative;
+      width: 100%;
+      height: 100%;
+      z-index: 2;
+      @include shadow2;
+      transition: hover .5s ease;
       font-weight: bold;
-      z-index: 3;
 
       &::before {
-        position: absolute;
-        top: -31px;
-        left: -29px;
-        z-index: -1;
         content: url(../../src/icons/emptyHex.svg);
+        position: absolute;
+        z-index: -4;
+        // width: 65px;
+        // height: 74.8px;
+        top: -30px;
+        left: 23px;
+        // @include hexagon;
+        // background: $color-white;
+        // @include rotate;
+        transition: all .5s ease;
+
       }
 
-
     }
+  }
+}
 
 
+/*
+    
+   
+
+&__item {
+
+  @include item;
+
+  //  
+}
+
+&__item:not(:last-child) {
+  margin-right: 1.8rem;
+}
+
+&__link {
+  color: $color-gray;
+  display: inline;
+  font-size: 2rem;
+  border-bottom: none;
+  position: relative;
+  z-index: 3;
+
+
+  
   }
 
-  // section.table is formatted as  table.scss  in layout folder
+  &:first-of-type {
+    border-top: none;
+  }
 
+  &:hover {
+    background: none;
+    text-decoration: none;
+  }
 }
+}
+
+*/

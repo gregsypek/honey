@@ -1,0 +1,382 @@
+<!DOCTYPE html>
+<html lang="pl">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Miodek</title>
+  <script src="https://kit.fontawesome.com/fb7f6f30e4.js"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Poppins:wght@300;400;600&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="sass/main.css" />
+</head>
+
+<body>
+  <div class="wrapper-description">
+    <header class="navigation">
+      <div class="navigation__row navigation__row--first">
+        <a href="#main-menu" id="main-menu-toggle" class="menu-toggle" aria-label="Open main menu">
+          <span class="sr-only">Open main menu</span>
+          <span class="fa fa-bars" aria-hidden="true"></span>
+        </a>
+
+        <img src="./src/images/logo-miodek.svg" alt="logo" class="navigation__logo" />
+        <div class="navigation__buttons">
+          <a href="login.html"class="btn  btn--login2">zaloguj się</a>
+          <a href="register.html" class="btn  btn--register2">zarejestruj się</a>
+        </div>
+      </div>
+
+      <div class="navigation__row navigation__row--second">
+        <nav id="main-menu" class="navigation__nav" aria-label="Main menu">
+          <a href="#main-menu-toggle" id="main-menu-close" class="menu-close" aria-label="Close main menu">
+            <span class="sr-only">Close main menu</span>
+            <span class="fa fa-close" aria-hidden="true"></span>
+          </a>
+
+          <ul class="navigation__list navigation__list--white">
+            <li class="navigation__item">
+              <!-- span is for shadow effect -->
+              <span></span>
+              <a href="index.html" class="navigation__link">O nas</a>
+            </li>
+            <li class="navigation__item">
+              <span></span>
+              <a href="gallery.html" class="navigation__link">Galeria</a>
+            </li>
+            <li class="navigation__item">
+              <span></span>
+              <a href="shopping.html" class="navigation__link">Oferta</a>
+            </li>
+            <li class="navigation__item">
+              <span></span>
+              <a href="contact.html" class="navigation__link">Kontakt</a>
+            </li>
+          </ul>
+        </nav>
+        <a href="#main-menu-toggle" class="backdrop" tabindex="-1" hidden></a>
+      </div>
+    </header>
+    <main class="content">
+
+      <div class="content__description">
+        <h1 class="content__title">Miód <span class="inline">rzepakowy</span></h1>
+        <div class="content__title-stars">
+          <div class="content__star">
+            <!-- <img src="./src/images/icons/star.svg" alt="star"> -->
+            <svg width="67" height="63" viewBox="0 0 67 63" xmlns="http://www.w3.org/2000/svg" class="star__title">
+              <path class="star__title--color"
+                d="M33.5 0L41.2457 23.8389H66.3114L46.0329 38.5722L53.7786 62.4111L33.5 47.6778L13.2214 62.4111L20.9671 38.5722L0.688549 23.8389H25.7543L33.5 0Z" />
+            </svg>
+          </div>
+          <div class="content__star card__star--black"><svg width="67" height="63" viewBox="0 0 67 63"
+              xmlns="http://www.w3.org/2000/svg" class="star__title">
+              <path class="star__title--color"
+                d="M33.5 0L41.2457 23.8389H66.3114L46.0329 38.5722L53.7786 62.4111L33.5 47.6778L13.2214 62.4111L20.9671 38.5722L0.688549 23.8389H25.7543L33.5 0Z" />
+            </svg></div>
+          <div class="content__star"><svg width="67" height="63" viewBox="0 0 67 63" xmlns="http://www.w3.org/2000/svg"
+              class="star__title">
+              <path class="star__title--color"
+                d="M33.5 0L41.2457 23.8389H66.3114L46.0329 38.5722L53.7786 62.4111L33.5 47.6778L13.2214 62.4111L20.9671 38.5722L0.688549 23.8389H25.7543L33.5 0Z" />
+            </svg></div>
+          <div class="content__star"><svg width="67" height="63" viewBox="0 0 67 63" xmlns="http://www.w3.org/2000/svg"
+              class="star__title">
+              <path class="star__title--color"
+                d="M33.5 0L41.2457 23.8389H66.3114L46.0329 38.5722L53.7786 62.4111L33.5 47.6778L13.2214 62.4111L20.9671 38.5722L0.688549 23.8389H25.7543L33.5 0Z" />
+            </svg></div>
+          <div class="content__star"><svg width="67" height="63" viewBox="0 0 67 63" xmlns="http://www.w3.org/2000/svg"
+              class="star__title">
+              <path class="star__title--color gray"
+                d="M33.5 0L41.2457 23.8389H66.3114L46.0329 38.5722L53.7786 62.4111L33.5 47.6778L13.2214 62.4111L20.9671 38.5722L0.688549 23.8389H25.7543L33.5 0Z" />
+            </svg></div>
+        </div>
+      </div>
+      <div class="content__info-box">
+        <h2 class="content__info">Miód rzepakowy o jasnej barwie, łagodnym smaku oraz wyraźnym aromacie kwiatu rzepaku.
+          Nasz miód rzepakowy ma kremową, miękką konsystencję, łatwą do rozsmarowania.</h2>
+      </div>
+
+        </div> <!-- wrapper end -->
+
+      <div class="content__content-box content__order">
+        <div class="content__order-left">
+          <form action="#" class="content__order-form">
+            <div class="cap">
+              <label for="capacity">Pojemność</label>
+              <select name="capacity" id="capacity">
+                <option value="900">900ml</option>
+                <option value="720">720ml</option>
+                <option value="350">350ml</option>
+              </select>
+            </div>
+            <div class="qty">
+              <label for="quantity">Ilość</label>
+              <input type="number" id="quantity" name="quantity" min="1" max="10">
+            </div>
+            <button class="btn btn--form btn--submit" type="submit">Do koszyka</button>
+            <button class="btn btn--form btn--back">Wróć do sklepu</button>
+          </form>
+        </div>
+        <div class="content__order-right">
+
+          <div class="content__order-frame">
+            <div class="content__order-overlay">
+              <img src="./src/images/honeys/m_rzepakowy.png" alt="miód rzepakowy" class="content__order-img" />
+            </div>
+          </div>
+        </div>
+      </div>
+
+
+
+  <nav class="navigation-info">
+    <ul class=" navigation-info__list">
+  
+      <li class="navigation-info__link "><a href="#" class="navigation-info__item active">Opis</a></li>
+      <li class="navigation-info__link  "><a href="#" class="navigation-info__item ">Oferta</a></li>
+      <li class="navigation-info__link"><a href="#" class="navigation-info__item">Wpłaty</a></li>
+      <li class="navigation-info__link"><a href="#" class="navigation-info__item ">Wysyłka</a></li>
+      <li class="navigation-info__link"><a href="#" class="navigation-info__item">Opinie</a></li>
+    </ul>
+        <!-- <hr> -->
+  </nav>
+
+  <section class="table">
+    <!-- ---- --------------0-------------------- -->
+
+     <div class="table__chosen">
+
+      <div class="table-zero tablescroll table" role="region" aria-labelledby="honey" tabindex="0">
+        <table id="table-first">
+          <caption id="honey">Opis</caption>
+          <thead>
+            <tr class="dark">
+              <th scope="col">Miód rzepakowy</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Ze względu na dużą zawartość glukozy i innych cukrów prostych, miód rzepakowy stanowi dobrą odżywkę regeneracyjną w stanach wyczerpania organizmu. Wzmacnia serce oraz zapobiega miażdżycy. Wspomaga przy infekcjach gardła, nosa i oskrzeli łagodzi kaszel oraz stymuluje układ odpornościowy. Miód z rzepaku zmniejsza odczyn zapalny towarzyszący wrzodom żołądka i dwunastnicy. Pomaga w chorobach zapalnych i infekcyjnych nerek, pęcherza i cewki moczowej</td>
+
+            </tr>
+          </tbody>
+        </table>
+      </div> 
+    <!-- ---- --------------1-------------------- -->
+
+    <div class="table-first tablescroll table" role="region" aria-labelledby="honey" tabindex="0">
+        <table id="table-first">
+          <caption id="honey">Miody</caption>
+          <thead>
+            <tr class="dark">
+              <th scope="col">Rodzaj</th>
+              <th scope="col">900 ml</th>
+              <th scope="col">720 ml</th>
+              <th scope="col">320 ml</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>M. rzepakowy</td>
+              <td>40zł</td>
+              <td>30zł</td>
+              <td>15zł</td>
+            </tr>
+            <tr>
+              <td>M. rzepakowy-kremowany</td>
+              <td>40zł</td>
+              <td>30zł</td>
+              <td>15zł</td>
+            </tr>
+            <tr>
+              <td>M. wielokwiatowy</td>
+              <td>40zł</td>
+              <td>30zł</td>
+              <td>15zł</td>
+            </tr>
+            <tr>
+              <td>M. malinowy</td>
+              <td>40zł</td>
+              <td>30zł</td>
+              <td>15zł</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+
+    <!-- ---- ---------------2------------------- -->
+     <div class="table-second tablescroll table" role="region" aria-labelledby="dispatch" tabindex="0"> 
+        <table id="table-second">
+          <caption id="dispatch">Wysyłka</caption>
+          <thead>
+            <tr class="dark">
+              <th scope="col">Waga</th>
+              <th scope="col">Ilość słoików</th>
+              <th scope="col">Ekonomiczna</th>
+              <th scope="col">Priorytet</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>do 2kg</td>
+              <td>1</td>
+              <td>15 zł</td>
+              <td>20 zł</td>
+            </tr>
+            <tr>
+              <td>do 5kg</td>
+              <td>2</td>
+              <td>20 zł</td>
+              <td>25 zł</td>
+            </tr>
+            <tr>
+              <td>do 10kg</td>
+              <td>3-5</td>
+              <td>26 zł</td>
+              <td>30 zł</td>
+            </tr>
+          </tbody>
+        </table>
+
+        <h3 class="table-second--info">Zamówienia WYŁĄCZNIE na terenie Polski</h3>
+        <h3 class="table-second--info">CZAS REALIZACJI: 2 - 5 DNI ROBOCZE + CZAS DOSTAWY</h3>
+      </div> 
+
+    <!-- ---- ---------------3------------------- -->
+     <div class="table-third tablescroll table" role="region" aria-labelledby="deposit-info" tabindex="0">
+        <table id="table-third">
+          <caption id="deposit-info">Wpłaty</caption>
+
+          <tr>
+            <th class="dark">Uwaga</th>
+            <td>Prosimy dokonywać wpłat po uprzednim kontakcie mailowym lub telefonicznym </td>
+          </tr>
+          <tr>
+            <th class="dark">Informacja</th>
+            <td>Towar wysyłamy w godzinach od 8 - 16</td>
+          </tr>
+          <tr>
+            <th class="dark">Nr konta</th>
+            <td>15154512135156464654151</td>
+          </tr>
+          <tr>
+            <th class="dark">Telefon</th>
+            <td>123456789</td>
+          </tr>
+        </table>
+      </div> 
+    <!-- ---- ---------------4------------------- -->
+   
+
+
+     <div class="table-fourth tablescroll table" role="region" aria-labelledby="dispatch" tabindex="0">
+      <table id="table-second">
+        <caption id="dispatch">Opinie</caption>
+        <thead>
+          <tr class="dark">
+            <th scope="col">Opinia</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>“Polecam gorąco to naprawdę świetny miodek”
+            </td>
+
+          </tr>
+          <tr>
+            <td>Joann 8 listopada 2020</td>
+
+          </tr>
+          <tr>
+            <td>
+              <div class="table-fourth__stars">
+                <div class="table-fourth__star">
+                   <!-- <img src="./src/images/icons/star.svg" alt="star">  -->
+                  <svg width="67" height="63" viewBox="0 0 67 63" xmlns="http://www.w3.org/2000/svg"
+                    class="star__table">
+                    <path class="star__table--color"
+                      d="M33.5 0L41.2457 23.8389H66.3114L46.0329 38.5722L53.7786 62.4111L33.5 47.6778L13.2214 62.4111L20.9671 38.5722L0.688549 23.8389H25.7543L33.5 0Z" />
+                  </svg>
+                </div>
+                <div class="table-fourth__star "><svg width="67" height="63" viewBox="0 0 67 63"
+                    xmlns="http://www.w3.org/2000/svg" class="star__table">
+                    <path class="star__table--color"
+                      d="M33.5 0L41.2457 23.8389H66.3114L46.0329 38.5722L53.7786 62.4111L33.5 47.6778L13.2214 62.4111L20.9671 38.5722L0.688549 23.8389H25.7543L33.5 0Z" />
+                  </svg></div>
+                <div class="table-fourth__star"><svg width="67" height="63" viewBox="0 0 67 63"
+                    xmlns="http://www.w3.org/2000/svg" class="star__table">
+                    <path class="star__table--color"
+                      d="M33.5 0L41.2457 23.8389H66.3114L46.0329 38.5722L53.7786 62.4111L33.5 47.6778L13.2214 62.4111L20.9671 38.5722L0.688549 23.8389H25.7543L33.5 0Z" />
+                  </svg></div>
+                <div class="table-fourth__star"><svg width="67" height="63" viewBox="0 0 67 63"
+                    xmlns="http://www.w3.org/2000/svg" class="star__table">
+                    <path class="star__table--color"
+                      d="M33.5 0L41.2457 23.8389H66.3114L46.0329 38.5722L53.7786 62.4111L33.5 47.6778L13.2214 62.4111L20.9671 38.5722L0.688549 23.8389H25.7543L33.5 0Z" />
+                  </svg></div>
+                <div class="table-fourth__star"><svg width="67" height="63" viewBox="0 0 67 63"
+                    xmlns="http://www.w3.org/2000/svg" class="star__table">
+                    <path class="star__table--color gray"
+                      d="M33.5 0L41.2457 23.8389H66.3114L46.0329 38.5722L53.7786 62.4111L33.5 47.6778L13.2214 62.4111L20.9671 38.5722L0.688549 23.8389H25.7543L33.5 0Z" />
+                  </svg></div>
+              </div>
+            </td>
+
+          </tr>
+        </tbody>
+      </table>
+      <div class="table-fourth__arrows">
+        <a href="#" class="table-fourth__left">
+         <!-- Arrow Right by DANT from the Noun Project  -->
+          <svg width="66" height="66" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+            <path class="left-arrow"
+              d="M33 3.72852C49.14 3.72852 62.271 16.8595 62.271 32.9995C62.271 49.1395 49.14 62.2695 33 62.2695C16.86 62.2695 3.729 49.1395 3.729 32.9995C3.729 16.8595 16.86 3.72852 33 3.72852ZM33 0.728516C15.178 0.728516 0.729004 15.1775 0.729004 32.9995C0.729004 50.8215 15.178 65.2705 33 65.2705C50.822 65.2705 65.271 50.8235 65.271 33.0005C65.271 15.1775 50.822 0.728516 33 0.728516ZM37.676 42.7615L27.914 32.9995L37.677 23.2385L36.616 22.1775L25.793 32.9995L36.615 43.8215L37.676 42.7615Z" />
+          </svg>
+        </a>
+        <a href="#" class="table-fourth__right">
+        <svg width="66" height="66" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+          <path class="right-arrow"
+            d="M33 3.72852C49.14 3.72852 62.271 16.8595 62.271 32.9995C62.271 49.1395 49.14 62.2695 33 62.2695C16.86 62.2695 3.729 49.1395 3.729 32.9995C3.729 16.8595 16.86 3.72852 33 3.72852ZM33 0.728516C15.178 0.728516 0.729004 15.1775 0.729004 32.9995C0.729004 50.8215 15.178 65.2705 33 65.2705C50.822 65.2705 65.271 50.8235 65.271 33.0005C65.271 15.1775 50.822 0.728516 33 0.728516ZM40.207 32.9995L29.384 22.1785L28.323 23.2395L38.086 32.9995L28.324 42.7615L29.385 43.8225L40.207 32.9995Z" />
+          </svg>
+        </a>
+
+      </div>
+
+    </div>
+   
+
+
+    </div>
+  </section>
+
+  <div class="content__contact white">
+    <a href="#" class="content_contact--phone">telefon: +48 123 456 789</a>
+    <p href="#" class="content_contact--info">Kontakt tel. moźliwy od pon. do pt. w godzinach 07:30 - 16: 00</p>
+    <a href="#" class="content_contact--social-media">facebook: Pasieka Miodek</a>
+  </div>
+
+
+  </main>
+  <footer class="footer">
+    <div class="footer__container">
+      <div class="footer__logo">
+        <img src="./src/images/logo_footer.svg" alt="logo" class="footer__logo" />
+      </div>
+      <div class="footer__address">
+        <p class="footer__address--name">Pasieka Miodek</p>
+        <p class="footer__address--address">01-123 Łąki Polne
+        </p>
+        <p class="footer__address--phone">tel. +48 1234567
+        </p>
+      </div>
+      <div class="footer__copyright">copyright &copy;2020 by gregsypek</div>
+      <div class="footer__icons">
+
+        <img src="./src/icons/facebook.svg" alt="logo" class="footer__icon--facebook" />
+        <img src="./src/icons/instagram.svg" alt="logo" class="footer__icon--instagram" />
+
+      </div>
+    </div>
+  </footer>
+</body>
+
+</html>

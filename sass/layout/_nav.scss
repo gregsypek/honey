@@ -239,11 +239,7 @@
 
     &__item {
       /* display the li's horizontally */
-      @include item;
-
-      &:active span::before {
-        transform: rotate(-3deg);
-      }
+      @include item;      
 
       //  
     }
