@@ -121,6 +121,13 @@
       @include shadow2;
       border-radius: 5px;
       width: 35rem;
+      display: flex;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+    }
+    .cap {
+      display: flex;
+      justify-content: space-between;
     }
 
     .qty {

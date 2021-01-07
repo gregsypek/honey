@@ -1,0 +1,23 @@
+/* round of applause to Chris Coyer: https://css-tricks.com/the-current-state-of-styling-selects-in-2019/
+*/
+
+
+
+/* class applies to select element itself, not a wrapper element */
+.input-css {
+  display: inline-block;
+  font-size: 1.8rem;
+  font-family: inherit;
+  font-weight: 700;
+  color: $color-gray;
+  line-height: 1.3;
+  padding: .6em 1.4em .5em .8em;
+  padding: .5rem 1rem;
+  width: 45rem;
+  max-width: 40%;
+  margin: 0;
+  border: 1px solid $color-dark;
+  // box-shadow: 0 1px 0 1px rgba(0, 0, 0, .04);
+  border-radius: .3em; 
+}
+
