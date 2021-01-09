@@ -188,8 +188,9 @@ h3 {
 
 .navigation__row .menu-toggle {
   color: #333333;
-  margin-right: 1rem;
+  margin-left: 1rem;
   font-size: 3rem;
+  margin-left: 1rem;
 }
 
 .navigation__row .menu-close {
@@ -244,6 +245,27 @@ h3 {
   background-color: transparent;
 }
 
+.navigation__icon {
+  border-top: 1px solid #333333;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin: 0;
+  padding: 3rem;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+}
+
+.navigation__icon img {
+  width: 2.5rem;
+  height: 2.5rem;
+}
+
+.navigation__icon img:not(last-of-type) {
+  margin-right: 2rem;
+}
+
 .navigation__nav {
   /*
    Mobile first - this is the mobile menu, positioned offscreen to start 
@@ -251,7 +273,7 @@ h3 {
   /* set the menu in a fixed position occupying 100% of the screen height, so you can't scroll away from it. Have nav scrollbars appear when needed. Any long nav names should be fully visible. */
   position: fixed;
   display: none;
-  left: -200px;
+  left: -300px;
   top: 0;
   height: 100%;
   overflow-y: auto;
@@ -264,8 +286,7 @@ h3 {
 .navigation__nav .menu-close {
   /* "close" button is positioned in the upper right corner. Button is the X / fa-close button from FontAwesome. If you want it bigger, do it here */
   position: absolute;
-  right: 0;
-  top: 0;
+  left: 1rem;
   font-size: 3rem;
 }
 
@@ -300,11 +321,10 @@ h3 {
   width: 100%;
   height: 100%;
   z-index: 998;
-  background: rgba(0, 0, 0, 0.85);
   cursor: default;
 }
 
-.navigation__list {
+.navigation__list, .navigation__description {
   /* turn off bullets, set width and background color of flyout menu. Width here and "left" property on main-menu should be the same absolute number */
   list-style: none;
   margin: 0;
@@ -318,30 +338,36 @@ h3 {
       justify-content: space-around;
   font-size: 2.4rem;
   display: block;
-  background-color: #333333;
-  width: 200px;
+  background-color: #EECF90;
+  width: 300px;
+  padding: 4rem;
+}
+
+.navigation__list li, .navigation__description li {
+  margin-bottom: 2rem;
+}
+
+.navigation__description {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.navigation a {
+  text-decoration: none;
 }
 
 .navigation__link {
   /* Make links block to make them fully clickable on mobile. Remember this is finger navigation, so include plenty of clickable area. All links get a bottom border */
   padding: 3rem;
   text-decoration: none;
-  color: #fff;
-  border-bottom: 1px solid #F2994A;
-}
-
-.navigation__link:first-of-type {
-  border-top: 1px solid #383838;
+  color: #333333;
 }
 
 .navigation__link:hover, .navigation__link:focus {
-  text-decoration: underline;
+  color: #666666;
 }
 
 @media (min-width: 800px) {
-  .navigation__row--first {
-    margin-bottom: -2rem;
-  }
   .navigation__row .menu-toggle {
     /* fa-bars and fa-close not needed on desktop so hide them */
     display: none;
@@ -358,7 +384,7 @@ h3 {
   .navigation__nav--hidden {
     display: none;
   }
-  .navigation__list {
+  .navigation__list, .navigation__description {
     /* Undo off-canvas styling */
     position: relative;
     z-index: 3;
@@ -376,8 +402,12 @@ h3 {
     width: 100vw;
     max-width: 100%;
     height: 10rem;
+    padding: 0;
   }
-  .navigation__list::before {
+  .navigation__list li, .navigation__description li {
+    margin-bottom: 0rem;
+  }
+  .navigation__list::before, .navigation__description::before {
     content: '';
     position: absolute;
     z-index: -2;
@@ -395,6 +425,9 @@ h3 {
   }
   .navigation__item:not(:last-child) {
     margin-right: 1.8rem;
+  }
+  .navigation__icon {
+    display: none;
   }
   .navigation__link {
     color: #333333;
@@ -436,6 +469,10 @@ h3 {
   .navigation__link:hover {
     background: none;
     text-decoration: none;
+  }
+  .navigation__description {
+    margin-top: 2rem;
+    margin-bottom: -2rem;
   }
 }
 
@@ -2112,11 +2149,11 @@ tr:nth-child(even) {
   overflow-y: visible;
 }
 
-.navigation--description .navigation__list {
+.navigation--description .navigation__list, .navigation--description .navigation__description {
   height: 5rem;
 }
 
-.navigation--description .navigation__list::before {
+.navigation--description .navigation__list::before, .navigation--description .navigation__description::before {
   height: 5rem;
 }
 

@@ -1,4 +1,3 @@
-
 // FOR ALL PAGES
 
 .navigation {
@@ -30,8 +29,11 @@
     /* Hamburger button styling. "Button" is the bars icon from FontAwesome. */
     .menu-toggle {
       color: $color-gray;
-      margin-right: 1rem;
+      // margin-top: 3rem;
+      margin-left: 1rem;
       font-size: 3rem;
+      margin-left: 1rem;
+
     }
 
     .menu-close {
@@ -83,6 +85,25 @@
     }
   }
 
+  &__icon {
+    border-top: 1px solid $color-gray;
+    display: flex;
+    margin: 0;
+    padding: 3rem;
+    justify-content: flex-start;
+
+    // width: 100%;
+    // height: 3rem;;
+    img {
+      width: 2.5rem;
+      height: 2.5rem;
+    }
+
+    img:not(last-of-type) {
+      margin-right: 2rem;
+    }
+  }
+
 
 
   &__nav {
@@ -94,7 +115,7 @@
 
     position: fixed;
     display: none;
-    left: -200px;
+    left: -300px;
     top: 0;
     height: 100%;
     overflow-y: auto;
@@ -105,8 +126,8 @@
     .menu-close {
       /* "close" button is positioned in the upper right corner. Button is the X / fa-close button from FontAwesome. If you want it bigger, do it here */
       position: absolute;
-      right: 0;
-      top: 0;
+      left: 1rem;
+      // top: 1rem;
       font-size: 3rem;
     }
 
@@ -140,7 +161,7 @@
         width: 100%;
         height: 100%;
         z-index: 998;
-        background: rgba(0, 0, 0, 0.85);
+        // background: rgba($color-honey, .85);
         cursor: default;
       }
     }
@@ -149,29 +170,47 @@
   &__list {
     /* turn off bullets, set width and background color of flyout menu. Width here and "left" property on main-menu should be the same absolute number */
     @include list;
+    // padding-top: 7rem;
     display: block;
-    background-color: $color-gray;
-    width: 200px;
+    background-color: $color-honey;
+    width: 300px;
+    padding: 4rem;
+
+    li {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__description {
+    @extend .navigation__list;
+    //reset style for min-width 800px where I want to have 
+    margin-top: 0;
+    margin-bottom: 0;
+  }
+
+
+  a {
+    text-decoration: none;
   }
 
   &__link {
     /* Make links block to make them fully clickable on mobile. Remember this is finger navigation, so include plenty of clickable area. All links get a bottom border */
 
     padding: 3rem;
+
     text-decoration: none;
-    color: #fff;
+    color: $color-gray;
 
-    border-bottom: 1px solid $color-orange;
+    // border-bottom: 1px solid $color-orange;
 
-    //MOZE NIE DZIALAC
-    &:first-of-type {
-      border-top: 1px solid #383838;
-    }
+
+
 
     &:hover,
     &:focus {
       // background: #333;
-      text-decoration: underline;
+      // text-decoration: underline;
+      color: lighten($color-gray, 20%);
     }
   }
 }
@@ -180,11 +219,7 @@
 
 @media (min-width: 800px) {
   .navigation {
-    &__row {
-
-      &--first {
-        margin-bottom: -2rem;
-      }
+    &__row {    
 
       .menu-toggle {
         /* fa-bars and fa-close not needed on desktop so hide them */
@@ -201,6 +236,7 @@
       .menu-close {
         display: none;
       }
+
       // pages like honey.html, login.html or register.html
       &--hidden {
         display: none;
@@ -220,10 +256,15 @@
       background: transparent;
       width: 100vw;
       max-width: 100%;
-
       height: 10rem;
+// reset padding which was given to burger nav
+      padding: 0;
       // overflow-y: hidden;
       // height: 5rem;
+      li {
+        margin-bottom: 0rem;
+
+      }
 
       &::before {
         content: '';
@@ -237,15 +278,21 @@
 
     }
 
+
+
     &__item {
       /* display the li's horizontally */
-      @include item;      
-
+      @include item;
       //  
     }
 
     &__item:not(:last-child) {
       margin-right: 1.8rem;
+    }
+
+    // icons shows only on small devices
+    &__icon {
+      display: none;
     }
 
     &__link {
@@ -290,7 +337,15 @@
         text-decoration: none;
       }
     }
+
+    &__description {   
+      margin-top: 2rem;
+      margin-bottom: -2rem;
+    }
   }
+
+
+
 }
 
 //FOR INDEX.HTML
@@ -315,6 +370,7 @@
     background-color: $color-honey-2;
     color: $color-white;
   }
+
   .btn--register2 {
     @include btn--register;
     color: $color-white;
