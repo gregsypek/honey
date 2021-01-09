@@ -500,7 +500,24 @@ h3 {
 }
 
 .the-best {
-  background-image: linear-gradient(109deg, rgba(255, 255, 255, 0.9) 69%, #eecf90 69%, #eecf90 100%, transparent 50%);
+  background-image: linear-gradient(109deg, rgba(255, 255, 255, 0.9) 69%, rgba(238, 207, 144, 0.9) 69%, rgba(238, 207, 144, 0.9) 100%, transparent 50%);
+  background-size: 100%;
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+}
+
+.the-best__beater {
+  -webkit-transform: rotate(77.95deg);
+          transform: rotate(77.95deg);
+}
+
+.the-best__beater img {
+  position: absolute;
+  bottom: -60px;
+  left: 0;
+  opacity: .8;
+  width: 400px;
 }
 
 .the-best__box {
@@ -510,6 +527,7 @@ h3 {
       grid-template-columns: repeat(10, 1fr);
   grid-row-gap: 20rem;
   color: #333333;
+  position: relative;
 }
 
 .the-best__box h1 {
@@ -547,15 +565,20 @@ h3 {
   -ms-grid-column: 3;
   -ms-grid-column-span: 6;
   grid-column: 3/9;
+  max-width: 60vw;
   font-family: "Poppins", sans-serif;
-  font-size: 2.5rem;
+  font-size: 2rem;
   font-weight: 400;
-  letter-spacing: 6%;
-  padding: 2.5rem;
+  padding: 3rem;
   z-index: 3;
   position: relative;
   -webkit-transform: rotate(-2deg);
           transform: rotate(-2deg);
+}
+
+.the-best .info--1,
+.the-best .info--3 {
+  padding-left: 15rem;
 }
 
 .the-best .info--1::before,
@@ -564,7 +587,7 @@ h3 {
   position: absolute;
   left: -140px;
   top: -58px;
-  z-index: -1;
+  z-index: 1;
 }
 
 .the-best .info--1::after,
@@ -576,11 +599,12 @@ h3 {
   z-index: -1;
   width: 100%;
   height: 100%;
-  background: #ffffff;
+  background: #FADEA4;
   border-radius: 5px;
 }
 
 .the-best .info--2 {
+  padding-right: 15rem;
   width: 100%;
   height: 100%;
   padding-top: 4rem;
@@ -592,7 +616,7 @@ h3 {
   position: absolute;
   right: -148px;
   top: -59px;
-  z-index: -1;
+  z-index: 1;
 }
 
 .the-best .info--2::after {
@@ -603,12 +627,13 @@ h3 {
   z-index: -1;
   width: 100%;
   height: 100%;
-  background: #FADEA4;
+  background: #f2f2f2;
   border-radius: 5px;
 }
 
 .the-best .info--3 {
-  margin-bottom: 14rem;
+  margin-bottom: calc(14rem + 4rem);
+  position: relative;
 }
 
 .think_over {

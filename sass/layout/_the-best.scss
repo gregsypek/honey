@@ -2,18 +2,51 @@
 
 .the-best {
   // height: 240vh;
+  // background-image: linear-gradient(109deg,
+  //     rgba(255, 255, 255, 0.9) 69%,
+  //     rgba(238, 207, 144, 1) 69%,
+  //     rgba(238, 207, 144, 1) 100%,
+  //     transparent 50%);
+
+
+  // background-image: linear-gradient(109deg,
+  //     rgba($color-white, 0.9) 69%,
+  //     rgba($color-honey-3, 0.9) 69%,
+  //     rgba($color-honey-3, 0.9) 100%, url(../img/hero.jpg));
+
+  // height: 95vh;
   background-image: linear-gradient(109deg,
-      rgba(255, 255, 255, 0.9) 69%,
-      rgba(238, 207, 144, 1) 69%,
-      rgba(238, 207, 144, 1) 100%,
+      rgba($color-white, .9) 69%,
+      rgba(238, 207, 144, .9) 69%,
+      rgba(238, 207, 144, .9) 100%,
       transparent 50%);
+  background-size: 100%;
+  background-size: cover;
+  background-position: bottom;
+  background-repeat: no-repeat;
+
+
+  &__beater {
+
+    img {
+      position: absolute;
+      bottom: -60px;
+      left: 0;
+      opacity: .8;
+      width: 400px;
+
+    }
+
+    transform: rotate(77.95deg);
+  }
 
   &__box {
     display: grid;
     grid-template-columns: repeat(10, 1fr);
     grid-row-gap: 20rem;
     color: $color-gray;
-    @include header($sectionMargin 0 , $color-gray, $color-honey, block);
+    @include header($sectionMargin 0, $color-gray, $color-honey, block);
+    position: relative;
 
   }
 
@@ -23,7 +56,7 @@
     z-index: 1;
     grid-column: 2/6;
     color: red;
-  
+
   }
 
   &__img {
@@ -39,14 +72,16 @@
 
   &__info {
     grid-column: 3/9;
+    max-width: 60vw;
     font-family: $font-secondary;
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: 400;
-    letter-spacing: 6%;
-    padding: 2.5rem;
+    // letter-spacing: 6%;
+    padding: 3rem;
     z-index: 3;
     position: relative;
     transform: rotate(-2deg);
+
   }
 
   .info--1,
@@ -54,6 +89,7 @@
     // position: relative;
     // z-index: 3;
     // transform: rotate(-2deg);
+    padding-left: 15rem;
 
     //  BEFORE IS A HEXAGON
     &::before {
@@ -61,7 +97,7 @@
       position: absolute;
       left: -140px;
       top: -58px;
-      z-index: -1;
+      z-index: 1;
     }
 
     // AFTER IS A BACKGROUND RECTANGLE
@@ -73,13 +109,14 @@
       z-index: -1;
       width: 100%;
       height: 100%;
-      background: $color-white;
+      background: $color-honey-4;
       border-radius: 5px;
 
     }
   }
 
   .info--2 {
+    padding-right: 15rem;
     width: 100%;
     height: 100%;
     padding-top: 4rem;
@@ -95,7 +132,7 @@
       position: absolute;
       right: -148px;
       top: -59px;
-      z-index: -1;
+      z-index: 1;
     }
 
     &::after {
@@ -106,13 +143,14 @@
       z-index: -1;
       width: 100%;
       height: 100%;
-      background: $color-honey-4;
+      background: $color-white-2;
       border-radius: 5px;
 
     }
   }
 
   .info--3 {
-    margin-bottom: $sectionMargin;
+    margin-bottom: calc(#{$sectionMargin} + 4rem);
+    position: relative;
   }
 }
