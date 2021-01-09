@@ -266,6 +266,13 @@ h3 {
   margin-right: 2rem;
 }
 
+.navigation__item--burger a {
+  display: inline-block;
+  width: 100%;
+  margin-top: 3rem;
+  border-top: 1px solid #333333;
+}
+
 .navigation__nav {
   /*
    Mobile first - this is the mobile menu, positioned offscreen to start 
@@ -426,7 +433,7 @@ h3 {
   .navigation__item:not(:last-child) {
     margin-right: 1.8rem;
   }
-  .navigation__icon {
+  .navigation__icon, .navigation__item--burger {
     display: none;
   }
   .navigation__link {

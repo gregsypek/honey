@@ -91,17 +91,27 @@
     margin: 0;
     padding: 3rem;
     justify-content: flex-start;
-
+    
     // width: 100%;
     // height: 3rem;;
     img {
       width: 2.5rem;
       height: 2.5rem;
     }
-
+    
     img:not(last-of-type) {
       margin-right: 2rem;
     }
+  }
+  //item burger is visiblo only on burger nav 
+  &__item--burger{
+    a {
+      display: inline-block;
+      width: 100%;   
+      margin-top: 3rem;
+    border-top: 1px solid $color-gray;
+    }
+
   }
 
 
@@ -212,7 +222,10 @@
       // text-decoration: underline;
       color: lighten($color-gray, 20%);
     }
+
   }
+  
+  
 }
 
 //////////////////////////////////////////////////
@@ -291,9 +304,11 @@
     }
 
     // icons shows only on small devices
-    &__icon {
+    &__icon,
+    &__item--burger {
       display: none;
     }
+   
 
     &__link {
       color: $color-gray;
