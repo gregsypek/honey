@@ -755,24 +755,16 @@ h3 {
 .think_over__box {
   background: #ffffff;
   height: 25rem;
+  width: 40vw;
   border-radius: 20px;
   -webkit-filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.25));
 }
 
 .think_over__recommend {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
   height: 100%;
+  display: none;
   font-family: "Poppins", sans-serif;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   padding: 3rem;
 }
 
@@ -789,6 +781,19 @@ h3 {
   font-size: 1.6rem;
 }
 
+.think_over .recommend--active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
 .think_over__dots {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -799,6 +804,8 @@ h3 {
 }
 
 .think_over__dot {
+  cursor: pointer;
+  border: none;
   width: 3rem;
   height: 3rem;
   border-radius: 50%;
@@ -809,7 +816,7 @@ h3 {
   margin-right: 3rem;
 }
 
-.think_over .dot-yellow {
+.think_over .dot--active {
   background-color: #F6C768;
 }
 

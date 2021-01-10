@@ -10,6 +10,7 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="sass/main.css" />
+    <script defer src="./js/think_over.js"></script>
   </head>
 
   <body>
@@ -181,17 +182,32 @@
       </div>
       <div class="think_over__right">
         <div class="think_over__box">
-          <div class="think_over__recommend">
+          <div class="think_over__recommend recommend--1 recommend--active">
             <h4 class="think_over__recommended">
               "Polecam gorąco to naprawdę świetny miodek😀"
             </h4>
             <p class="think_over__recommended--author">-Ania, 33, Rzeszów</p>
           </div>
+          <div class="think_over__recommend recommend--2">
+            <h4 class="think_over__recommended">
+              "Odkąd zaczęłam kupować Wasz miód moje dzieci nie jedzą czekolady"
+            </h4>
+            <p class="think_over__recommended--author">-Jadwiga, 26, Rydzów</p>
+          </div>
+          <div class="think_over__recommend recommend--3">
+            <h4 class="think_over__recommended">
+              "Dobrze się smaruje ale niestety szybko się kończy!"
+            </h4>
+            <p class="think_over__recommended--author">-Józek, 55, Kraków</p>
+          </div>
         </div>
         <div class="think_over__dots">
-          <span class="think_over__dot dot--1 dot-yellow"></span>
-          <span class="think_over__dot dot--2"></span>
-          <span class="think_over__dot dot--3"></span>
+          <button
+            class="think_over__dot dot--1 dot--active"
+            data-tab="1"
+          ></button>
+          <button class="think_over__dot dot--2" data-tab="2"></button>
+          <button class="think_over__dot dot--3" data-tab="3"></button>
         </div>
       </div>
     </section>

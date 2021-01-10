@@ -42,16 +42,15 @@
   &__box {
     background: $color-white;
     height: 25rem;
+    width: 40vw;
     border-radius: 20px;
-    @include shadow2;  
+    @include shadow2;
   }
 
   &__recommend {
-    display: flex;
-    flex-direction: column;
     height: 100%;
+    display: none;
     font-family: $font-secondary;
-    justify-content: space-between;
     padding: 3rem;
 
     h4 {
@@ -67,25 +66,31 @@
     }
   }
 
+  .recommend--active {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
   &__dots {
     display: flex;
     justify-content: center;
   }
 
   &__dot {
-    // display:inline-block;
+    cursor: pointer;
+    border: none;
     width: 3rem;
     height: 3rem;
     border-radius: 50%;
-    background-color: $color-white;
-    // margin: 0 auto;
+    background-color: $color-white;   
   }
 
   &__dot:not(:last-of-type) {
     margin-right: 3rem;
   }
 
-  .dot-yellow {
+  .dot--active {
     background-color: $color-yellow;
   }
 }
