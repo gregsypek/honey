@@ -20,6 +20,7 @@ dotsContainer.addEventListener('click', function (e) {
     .classList.add('recommend--active');
 });
 
+////////////////////////////////////////////
 //sticky navigation starting in hero section
 // const navFirst = document.querySelector('.navigation__row--first');
 // const nav = document.querySelector('.navigation__row--second');
@@ -59,3 +60,26 @@ const headerObserver = new IntersectionObserver(stickyNav, {
   rootMargin: `-${navHeight}px`,
 });
 headerObserver.observe(header);
+
+////////////////////////////////////////////
+//REVEAL SECTIONS
+
+const allSections = document.querySelectorAll('.hide');
+
+const revealSection = function (entries, observer) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) return;
+
+  entry.target.classList.remove('section--hidden');
+  observer.unobserve(entry.target);
+};
+
+const sectionObserver = new IntersectionObserver(revealSection, {
+  root: null,
+  threshold: 0.25,
+});
+
+allSections.forEach(function (section) {
+  sectionObserver.observe(section);
+  section.classList.add('section--hidden');
+});

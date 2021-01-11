@@ -1,4 +1,18 @@
 @charset "UTF-8";
+section.the-best,
+section.about {
+  -webkit-transition: opacity 1s, -webkit-transform 1s;
+  transition: opacity 1s, -webkit-transform 1s;
+  transition: transform 1s, opacity 1s;
+  transition: transform 1s, opacity 1s, -webkit-transform 1s;
+}
+
+.section--hidden {
+  opacity: 0;
+  -webkit-transform: translateY(8rem);
+          transform: translateY(8rem);
+}
+
 *,
 *::after,
 *::before {
@@ -382,7 +396,7 @@ h3 {
   .navigation__row--second.sticky {
     position: fixed;
     top: -3rem;
-    background-color: #eecf90;
+    background-color: white;
     z-index: 999;
     height: 8rem;
   }
