@@ -379,11 +379,28 @@ h3 {
     /* fa-bars and fa-close not needed on desktop so hide them */
     display: none;
   }
+  .navigation__row--second.sticky {
+    position: fixed;
+    top: -3rem;
+    background-color: #eecf90;
+    z-index: 999;
+    height: 8rem;
+  }
+  .navigation__row--second.sticky ::before {
+    content: '';
+    background-image: url(../src/images/logo_footer.svg);
+    width: 15rem;
+    height: 5rem;
+    left: 15px;
+    top: 18px;
+    background-repeat: no-repeat;
+  }
   .navigation__nav {
     padding: 0.3rem 0;
     /* Undo positioning of off-canvas menu - remember this is hidden by default. Default position property is static, i.e. normal flow */
     position: static;
     display: block;
+    overflow-y: visible;
   }
   .navigation__nav .menu-close {
     display: none;
@@ -481,10 +498,6 @@ h3 {
     margin-top: 2rem;
     margin-bottom: -2rem;
   }
-}
-
-.navigation__list--honey::before {
-  background-color: #EDD6A3;
 }
 
 .navigation__list--white::before {

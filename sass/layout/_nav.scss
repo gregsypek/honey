@@ -91,25 +91,26 @@
     margin: 0;
     padding: 3rem;
     justify-content: flex-start;
-    
+
     // width: 100%;
     // height: 3rem;;
     img {
       width: 2.5rem;
       height: 2.5rem;
     }
-    
+
     img:not(last-of-type) {
       margin-right: 2rem;
     }
   }
+
   //item burger is visiblo only on burger nav 
-  &__item--burger{
+  &__item--burger {
     a {
       display: inline-block;
-      width: 100%;   
+      width: 100%;
       margin-top: 3rem;
-    border-top: 1px solid $color-gray;
+      border-top: 1px solid $color-gray;
     }
 
   }
@@ -224,19 +225,42 @@
     }
 
   }
-  
-  
+
+
 }
 
 //////////////////////////////////////////////////
 
 @media (min-width: 800px) {
   .navigation {
-    &__row {    
+    &__row {
 
       .menu-toggle {
         /* fa-bars and fa-close not needed on desktop so hide them */
         display: none;
+      }
+
+      &--second.sticky {
+        position: fixed;
+        top: -3rem; // for reseting padding added on navigation_list
+        background-color: rgba($color-honey, 1);
+        z-index: 999;
+        height: 8rem;
+
+
+        ::before {
+          content: '';
+          background-image: url(../src/images/logo_footer.svg);
+          width: 15rem;
+          height: 5rem;
+          left: 15px;
+          top: 18px;
+          background-repeat: no-repeat;
+
+        }
+
+        //sticky navigation starting in hero section
+
       }
     }
 
@@ -245,6 +269,10 @@
       /* Undo positioning of off-canvas menu - remember this is hidden by default. Default position property is static, i.e. normal flow */
       position: static;
       display: block;
+
+
+      overflow-y: visible; // without this fixed nav have scroll
+
 
       .menu-close {
         display: none;
@@ -270,8 +298,9 @@
       width: 100vw;
       max-width: 100%;
       height: 10rem;
-// reset padding which was given to burger nav
+      // reset padding which was given to burger nav
       padding: 0;
+
       // overflow-y: hidden;
       // height: 5rem;
       li {
@@ -308,7 +337,7 @@
     &__item--burger {
       display: none;
     }
-   
+
 
     &__link {
       color: $color-gray;
@@ -353,7 +382,7 @@
       }
     }
 
-    &__description {   
+    &__description {
       margin-top: 2rem;
       margin-bottom: -2rem;
     }
@@ -366,9 +395,9 @@
 //FOR INDEX.HTML
 
 // change  background for navigation list
-.navigation__list--honey::before {
-  background-color: $color-honey-5;
-}
+// .navigation__list--honey::before {
+//   background-color: $color-honey-5;
+// }
 
 
 //FOR REST OF THE PAGES 
