@@ -31,7 +31,8 @@
       color: $color-gray;
       // margin-top: 3rem;
       margin-left: 1rem;
-      font-size: 3rem;
+      // font-size: 3rem;
+      font-size: var(--h3);
       margin-left: 1rem;
 
     }
@@ -39,7 +40,7 @@
     .menu-close {
       color: $color-white;
       margin-right: 1rem;
-      font-size: 3rem;
+      font-size: var(--h3);
     }
 
     .menu-toggle:hover,
@@ -52,7 +53,7 @@
 
   &__logo {
     padding: 5px 0 0 10px;
-    font-size: 1.8rem;
+    font-size: var(--p);
   }
 
   &__buttons {
@@ -139,7 +140,7 @@
       position: absolute;
       left: 1rem;
       // top: 1rem;
-      font-size: 3rem;
+      font-size: var(--h3);
     }
 
     &:target {
@@ -240,6 +241,11 @@
         display: none;
       }
 
+      &--second {
+        display: flex;
+        justify-content: flex-end;
+      }
+
       &--second.sticky {
         position: fixed;
         top: -3rem; // for reseting padding added on navigation_list
@@ -269,6 +275,8 @@
       /* Undo positioning of off-canvas menu - remember this is hidden by default. Default position property is static, i.e. normal flow */
       position: static;
       display: block;
+      width: 1000px;
+      // max-width: 900px;
 
 
       overflow-y: visible; // without this fixed nav have scroll
@@ -342,7 +350,7 @@
     &__link {
       color: $color-gray;
       display: inline;
-      font-size: 2rem;
+      font-size: var(--h5);
       border-bottom: none;
       position: relative;
       z-index: 3;

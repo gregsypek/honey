@@ -9,21 +9,26 @@
   //   url(../../src/images/id_bg.jpeg);
   background: linear-gradient(0deg, rgba(235, 99, 73, 0.902));
 
-  &__hello {
-    @include header(0, $color-honey, $color-white, block);   
+
+  @media (min-width: 768px) {
+    flex-direction: column;
   }
+
+  &__hello {
+    @include header(0, $color-honey, $color-white, block);
+  }
+
   &__address {
-margin-top: $sectionMargin;
+    margin-top: $sectionMargin;
     color: $color-honey-3;
 
     h3 {
       font-family: $font-secondary;
-      font-size: 2.5rem;
+      // font-size: 2.5rem;
     }
 
     &--name {
       font-size: 3.2rem;
     }
   }
-
 }

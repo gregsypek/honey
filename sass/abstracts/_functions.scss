@@ -3,10 +3,9 @@
 @mixin header($margin, $color1, $color2, $span) {
   h1 {
     margin: $margin;
-    font-size: 5rem;
+    // font-size: 5rem;
     color: $color1;
     line-height: 140%;
-
     span {
       display: $span;
       color: $color2;

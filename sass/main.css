@@ -107,7 +107,6 @@ h3 {
 .wrapper {
   position: relative;
   background-image: linear-gradient(58deg, rgba(238, 207, 144, 0.8) 62%, rgba(242, 242, 242, 0.8) 62%, rgba(242, 242, 242, 0.8) 100%, transparent 50%), url(../../src/images/hero_bg.jpg);
-  background-size: 100%;
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
@@ -124,8 +123,7 @@ h3 {
 }
 
 .hero__title {
-  font-size: 6.5rem;
-  line-height: 86px;
+  line-height: 130%;
   color: #333333;
 }
 
@@ -145,11 +143,7 @@ h3 {
   grid-column: 2/3;
   font-family: "Poppins", sans-serif;
   color: #333333;
-  letter-spacing: 5%;
-  font-size: 2.4rem;
   font-weight: 400;
-  line-height: 36px;
-  letter-spacing: 0.05em;
 }
 
 .hero__btn {
@@ -159,9 +153,9 @@ h3 {
   border: none;
   font-weight: bold;
   cursor: pointer;
-  padding: .8rem 3rem;
+  padding: .5rem 2.5rem;
   background-color: #F6C768;
-  font-size: 2rem;
+  font-size: var(--h5);
   color: #333333;
   border: 2px solid #333333;
   -webkit-filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.25));
@@ -203,14 +197,14 @@ h3 {
 .navigation__row .menu-toggle {
   color: #333333;
   margin-left: 1rem;
-  font-size: 3rem;
+  font-size: var(--h3);
   margin-left: 1rem;
 }
 
 .navigation__row .menu-close {
   color: #ffffff;
   margin-right: 1rem;
-  font-size: 3rem;
+  font-size: var(--h3);
 }
 
 .navigation__row .menu-toggle:hover,
@@ -222,7 +216,7 @@ h3 {
 
 .navigation__logo {
   padding: 5px 0 0 10px;
-  font-size: 1.8rem;
+  font-size: var(--p);
 }
 
 .navigation__buttons .btn {
@@ -232,8 +226,7 @@ h3 {
   border: none;
   font-weight: bold;
   cursor: pointer;
-  padding: .8rem 3rem;
-  font-size: 1.2rem;
+  padding: .5rem 2.5rem;
   padding: .5rem 2rem;
   color: #828282;
 }
@@ -308,7 +301,7 @@ h3 {
   /* "close" button is positioned in the upper right corner. Button is the X / fa-close button from FontAwesome. If you want it bigger, do it here */
   position: absolute;
   left: 1rem;
-  font-size: 3rem;
+  font-size: var(--h3);
 }
 
 .navigation__nav:target {
@@ -393,6 +386,14 @@ h3 {
     /* fa-bars and fa-close not needed on desktop so hide them */
     display: none;
   }
+  .navigation__row--second {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
   .navigation__row--second.sticky {
     position: fixed;
     top: -3rem;
@@ -414,6 +415,7 @@ h3 {
     /* Undo positioning of off-canvas menu - remember this is hidden by default. Default position property is static, i.e. normal flow */
     position: static;
     display: block;
+    width: 1000px;
     overflow-y: visible;
   }
   .navigation__nav .menu-close {
@@ -470,7 +472,7 @@ h3 {
   .navigation__link {
     color: #333333;
     display: inline;
-    font-size: 2rem;
+    font-size: var(--h5);
     border-bottom: none;
     position: relative;
     z-index: 3;
@@ -544,9 +546,17 @@ h3 {
   background: linear-gradient(0deg, rgba(235, 99, 73, 0.902));
 }
 
+@media (min-width: 768px) {
+  .info {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .info__hello h1 {
   margin: 0;
-  font-size: 5rem;
   color: #EECF90;
   line-height: 140%;
 }
@@ -563,7 +573,6 @@ h3 {
 
 .info__address h3 {
   font-family: "Poppins", sans-serif;
-  font-size: 2.5rem;
 }
 
 .info__address--name {
@@ -603,7 +612,6 @@ h3 {
 
 .the-best__box h1 {
   margin: 14rem 0;
-  font-size: 5rem;
   color: #333333;
   line-height: 140%;
 }
@@ -737,7 +745,6 @@ h3 {
 
 .think_over__left h1 {
   margin: 0;
-  font-size: 5rem;
   color: #EECF90;
   line-height: 140%;
 }
@@ -757,9 +764,9 @@ h3 {
   border: none;
   font-weight: bold;
   cursor: pointer;
-  padding: .8rem 3rem;
+  padding: .5rem 2.5rem;
   background-color: #F6C768;
-  font-size: 2rem;
+  font-size: var(--h5);
   color: #333333;
   border: 2px solid #333333;
   -webkit-filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.25));
@@ -853,7 +860,6 @@ h3 {
 
 .about__header h1 {
   margin: 14rem 10vw;
-  font-size: 5rem;
   color: #333333;
   line-height: 140%;
 }
@@ -1005,7 +1011,6 @@ h3 {
 
 .questions h1 {
   margin: 0;
-  font-size: 5rem;
   color: #EECF90;
   line-height: 140%;
 }
@@ -1058,11 +1063,10 @@ h3 {
   border: none;
   font-weight: bold;
   cursor: pointer;
-  padding: .8rem 3rem;
+  padding: .5rem 2.5rem;
   background-color: #ffffff;
   color: #333333;
   border: 2px solid #333333;
-  font-size: 1.2rem;
   font-size: 1.2rem;
   padding: .5rem 2rem;
   color: #828282;
@@ -1071,7 +1075,6 @@ h3 {
 
 .content h1 {
   margin: 14rem;
-  font-size: 5rem;
   color: #333333;
   line-height: 140%;
 }
@@ -1523,7 +1526,6 @@ tr:nth-child(even) {
 
 .contact__title h1 {
   margin: 14rem 10vw;
-  font-size: 5rem;
   color: #333333;
   line-height: 140%;
 }
@@ -1545,7 +1547,7 @@ tr:nth-child(even) {
   border: none;
   font-weight: bold;
   cursor: pointer;
-  padding: .8rem 3rem;
+  padding: .5rem 2.5rem;
   font-size: 1.2rem;
   padding: .3rem 1.2rem;
   color: #BDBDBD;
@@ -1979,7 +1981,6 @@ tr:nth-child(even) {
 
 .content__description h1 {
   margin: 5rem 0;
-  font-size: 5rem;
   color: #333333;
   line-height: 140%;
 }
