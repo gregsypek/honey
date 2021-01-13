@@ -1,6 +1,6 @@
 .info {
   display: flex;
-  padding: $sectionMargin;
+  padding: $sectionMargin 10vw;
   // min-height: 600px;
   height: auto;
   text-transform: none;
@@ -10,25 +10,29 @@
   background: linear-gradient(0deg, rgba(235, 99, 73, 0.902));
 
 
-  @media (min-width: 768px) {
+  @media (max-width: 996px) {
     flex-direction: column;
   }
 
   &__hello {
-    @include header(0, $color-honey, $color-white, block);
+    @include header(0 4rem 0 0, $color-honey, $color-white, block);
+
+    @media (max-width: 996px) {
+     h1 { margin: 0;}
+    }
   }
 
   &__address {
     margin-top: $sectionMargin;
     color: $color-honey-3;
 
-    h3 {
+    p {
       font-family: $font-secondary;
       // font-size: 2.5rem;
     }
 
-    &--name {
-      font-size: 3.2rem;
-    }
+    // &--name {
+    //   font-size: var;
+    // }
   }
 }

@@ -56,6 +56,11 @@ h3 {
   margin: 0;
 }
 
+h4,
+h5 {
+  font-weight: 400;
+}
+
 @media (min-width: 800px) {
   .hidden {
     visibility: hidden;
@@ -110,6 +115,15 @@ h3 {
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
+}
+
+@media (max-width: 996px) {
+  .wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 
 .hero {
@@ -400,6 +414,7 @@ h3 {
     background-color: white;
     z-index: 999;
     height: 8rem;
+    max-width: 1440px;
   }
   .navigation__row--second.sticky ::before {
     content: '';
@@ -415,7 +430,6 @@ h3 {
     /* Undo positioning of off-canvas menu - remember this is hidden by default. Default position property is static, i.e. normal flow */
     position: static;
     display: block;
-    width: 1000px;
     overflow-y: visible;
   }
   .navigation__nav .menu-close {
@@ -539,14 +553,14 @@ h3 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 14rem;
+  padding: 14rem 10vw;
   height: auto;
   text-transform: none;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(235, 99, 73, 0.902)));
   background: linear-gradient(0deg, rgba(235, 99, 73, 0.902));
 }
 
-@media (min-width: 768px) {
+@media (max-width: 996px) {
   .info {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -556,7 +570,7 @@ h3 {
 }
 
 .info__hello h1 {
-  margin: 0;
+  margin: 0 4rem 0 0;
   color: #EECF90;
   line-height: 140%;
 }
@@ -566,17 +580,19 @@ h3 {
   color: #ffffff;
 }
 
+@media (max-width: 996px) {
+  .info__hello h1 {
+    margin: 0;
+  }
+}
+
 .info__address {
   margin-top: 14rem;
   color: #F1E2C4;
 }
 
-.info__address h3 {
+.info__address p {
   font-family: "Poppins", sans-serif;
-}
-
-.info__address--name {
-  font-size: 3.2rem;
 }
 
 .the-best {
@@ -892,6 +908,12 @@ h3 {
   z-index: 1;
 }
 
+@media only screen and (max-width: 992px) {
+  .about__triangle2 {
+    display: none;
+  }
+}
+
 .about__text {
   position: absolute;
   z-index: 3;
@@ -912,16 +934,10 @@ h3 {
 .about__image img {
   position: absolute;
   z-index: -1;
-  min-width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  max-width: 100vw;
   min-height: 100%;
-}
-
-@media only screen and (min-width: 800px) {
-  .about__image img {
-    width: 100%;
-    -o-object-fit: cover;
-       object-fit: cover;
-  }
 }
 
 .about__main {
@@ -932,15 +948,35 @@ h3 {
   -ms-grid-rows: 1rem (minmax(auto, 1fr))[2] 0 14rem;
       grid-template-rows: 1rem repeat(2, minmax(auto, 1fr)) 0 14rem;
   grid-column-gap: 2rem;
-  grid-row-gap: 5rem;
+  grid-row-gap: 10rem;
   color: #333333;
 }
 
+@media only screen and (max-width: 992px) {
+  .about__main {
+    margin: 0 10vw 14rem 10vw;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+
 .about__paragraph {
-  font-size: 2.6rem;
-  font-weight: lighter;
   position: relative;
   z-index: 3;
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.about__paragraph:not(:last-of-type) {
+  margin-bottom: 7rem;
 }
 
 .about__paragraph span {
@@ -955,8 +991,8 @@ h3 {
   position: absolute;
   width: 75px;
   height: 86px;
-  top: -10px;
-  left: -25px;
+  top: -29px;
+  left: -20px;
   -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
           clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
   background: #eecf90;
@@ -1000,6 +1036,7 @@ h3 {
 .about__info::first-letter {
   font-size: 5rem;
   color: #ffffff;
+  line-height: 100%;
 }
 
 .questions {

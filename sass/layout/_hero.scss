@@ -11,8 +11,10 @@
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
- 
- 
+
+  @media (max-width: 996px) {
+    flex-direction: column;
+  }
 }
 
 .hero {
@@ -34,7 +36,7 @@
     span {
       color: $color-white;
     }
-    
+
   }
 
   &__intro {
@@ -57,4 +59,3 @@
     margin-bottom: $sectionMargin;
   }
 }
-
