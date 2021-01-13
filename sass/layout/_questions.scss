@@ -11,6 +11,11 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
+
+    @media (max-width: 624px) {
+     justify-content: center;
+
+    }
   }
 
   &__box {
@@ -24,7 +29,7 @@
 
     p {
       color: $color-white;
-      font-size: 2.1rem;
+      // font-size: 2.1rem;
       text-align: center;
       width: 25rem;
     }

@@ -44,13 +44,18 @@
   }
 
   &__beater {
+    display: none;
+  
+    transform: rotate(77.95deg);
+    overflow-x: hidden;
 
     img {
       position: absolute;
       bottom: -60px;
       left: 0;
       opacity: .8;
-      width: 400px;
+      // width: 400px;
+
 
       @media (max-width: $small) {
         width: 280px;
@@ -62,7 +67,6 @@
 
     }
 
-    transform: rotate(77.95deg);
   }
 
   &__box {
