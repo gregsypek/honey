@@ -117,7 +117,7 @@ h5 {
   background-repeat: no-repeat;
 }
 
-@media (max-width: 996px) {
+@media (max-width: 992px) {
   .wrapper {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -732,7 +732,6 @@ h5 {
 }
 
 .think_over {
-  min-height: 600px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -742,6 +741,24 @@ h5 {
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(235, 99, 73, 0.902)));
   background: linear-gradient(0deg, rgba(235, 99, 73, 0.902));
   padding: 14rem 10vw;
+}
+
+@media (max-width: 992px) {
+  .think_over {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .think_over *:not(.think_over__dots) {
+    margin-bottom: 5rem;
+  }
+  .think_over .think_over__right {
+    margin-bottom: 0;
+  }
 }
 
 .think_over__left {
@@ -757,6 +774,7 @@ h5 {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  margin-right: 5rem;
 }
 
 .think_over__left h1 {
@@ -768,6 +786,14 @@ h5 {
 .think_over__left h1 span {
   display: block;
   color: #ffffff;
+}
+
+@media (max-width: 992px) {
+  .think_over__left {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .think_over__text {
@@ -805,10 +831,11 @@ h5 {
 .think_over__box {
   background: #ffffff;
   height: 25rem;
-  width: 40vw;
+  max-width: 600px;
   border-radius: 20px;
   -webkit-filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.25));
+  margin-bottom: 3rem;
 }
 
 .think_over__recommend {
@@ -851,6 +878,12 @@ h5 {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media (max-width: 992px) {
+  .think_over__dots {
+    height: 3rem;
+  }
 }
 
 .think_over__dot {
@@ -945,16 +978,14 @@ h5 {
   display: grid;
   -ms-grid-columns: (1fr)[12];
       grid-template-columns: repeat(12, 1fr);
-  -ms-grid-rows: 1rem (minmax(auto, 1fr))[2] 0 14rem;
-      grid-template-rows: 1rem repeat(2, minmax(auto, 1fr)) 0 14rem;
   grid-column-gap: 2rem;
   grid-row-gap: 10rem;
   color: #333333;
+  padding: 0 10vw 14rem 10vw;
 }
 
 @media only screen and (max-width: 992px) {
   .about__main {
-    margin: 0 10vw 14rem 10vw;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -971,7 +1002,7 @@ h5 {
 .about__paragraph {
   position: relative;
   z-index: 3;
-  max-width: 500px;
+  max-width: 400px;
   margin: 0 auto;
 }
 

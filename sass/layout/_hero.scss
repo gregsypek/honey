@@ -12,7 +12,7 @@
   background-position: bottom;
   background-repeat: no-repeat;
 
-  @media (max-width: 996px) {
+  @media (max-width: $large) {
     flex-direction: column;
   }
 }
