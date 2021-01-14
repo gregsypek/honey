@@ -109,16 +109,23 @@ h5 {
   border-radius: .3em;
 }
 
-.wrapper {
+.wrapper--hero {
   position: relative;
-  background-image: linear-gradient(58deg, rgba(238, 207, 144, 0.8) 62%, rgba(242, 242, 242, 0.8) 62%, rgba(242, 242, 242, 0.8) 100%, transparent 50%), url(../../src/images/hero_bg.jpg);
+  position: relative;
+  background-image: linear-gradient(58deg, rgba(238, 207, 144, 0.8) 62%, rgba(255, 255, 255, 0.8) 62%, rgba(255, 255, 255, 0.8) 100%, transparent 50%), url(../../src/images/hero_bg.jpg);
   background-size: cover;
   background-position: bottom;
   background-repeat: no-repeat;
 }
 
 @media (max-width: 992px) {
-  .wrapper {
+  .wrapper--hero {
+    background-image: linear-gradient(72deg, rgba(238, 207, 144, 0.8) 72%, rgba(255, 255, 255, 0.8) 72%, rgba(255, 255, 255, 0.8) 100%, transparent 50%), url(../../src/images/hero_bg.jpg);
+  }
+}
+
+@media (max-width: 992px) {
+  .wrapper--hero {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -197,6 +204,29 @@ h5 {
           justify-content: space-between;
 }
 
+.navigation__row .fa,
+.navigation__row .fas {
+  margin-top: 10px;
+}
+
+.navigation__row svg.logo--double {
+  width: 12rem;
+  height: auto;
+  margin: 10px 15px;
+}
+
+@media (max-width: 400px) {
+  .navigation__row svg.logo--double {
+    height: 4rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .navigation__row svg.logo--double {
+    width: 9rem;
+  }
+}
+
 .navigation__row .sr-only {
   position: absolute;
   width: 1px;
@@ -211,14 +241,14 @@ h5 {
 .navigation__row .menu-toggle {
   color: #333333;
   margin-left: 1rem;
-  font-size: var(--h3);
+  font-size: var(--h2);
   margin-left: 1rem;
 }
 
 .navigation__row .menu-close {
   color: #ffffff;
   margin-right: 1rem;
-  font-size: var(--h3);
+  font-size: var(--h2);
 }
 
 .navigation__row .menu-toggle:hover,
@@ -226,11 +256,6 @@ h5 {
 .navigation__row .menu-close:hover,
 .navigation__row .menu-close:focus {
   color: #F2994A;
-}
-
-.navigation__logo {
-  padding: 5px 0 0 10px;
-  font-size: var(--p);
 }
 
 .navigation__buttons .btn {
@@ -243,6 +268,20 @@ h5 {
   padding: .5rem 2.5rem;
   padding: .5rem 2rem;
   color: #828282;
+}
+
+@media (max-width: 768px) {
+  .navigation__buttons .btn {
+    padding: 2px 10px;
+  }
+}
+
+@media (max-width: 400px) {
+  .navigation__buttons .btn {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 
 .navigation__buttons .btn a {
@@ -278,11 +317,6 @@ h5 {
           justify-content: flex-start;
 }
 
-.navigation__icon img {
-  width: 2.5rem;
-  height: 2.5rem;
-}
-
 .navigation__icon img:not(last-of-type) {
   margin-right: 2rem;
 }
@@ -301,7 +335,7 @@ h5 {
   /* set the menu in a fixed position occupying 100% of the screen height, so you can't scroll away from it. Have nav scrollbars appear when needed. Any long nav names should be fully visible. */
   position: fixed;
   display: none;
-  left: -300px;
+  left: -250px;
   top: 0;
   height: 100%;
   overflow-y: auto;
@@ -315,7 +349,7 @@ h5 {
   /* "close" button is positioned in the upper right corner. Button is the X / fa-close button from FontAwesome. If you want it bigger, do it here */
   position: absolute;
   left: 1rem;
-  font-size: var(--h3);
+  font-size: var(--h2);
 }
 
 .navigation__nav:target {
@@ -367,7 +401,7 @@ h5 {
   font-size: 2.4rem;
   display: block;
   background-color: #EECF90;
-  width: 300px;
+  width: 250px;
   padding: 4rem;
 }
 
@@ -1808,7 +1842,6 @@ tr:nth-child(even) {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: calc(200vh - 5px);
   padding-bottom: 100vh;
 }
 
@@ -1887,7 +1920,6 @@ tr:nth-child(even) {
   background-size: cover;
   background-position: left;
   background-repeat: no-repeat;
-  height: calc(200vh - 5px);
   padding-bottom: 100vh;
 }
 
@@ -2411,7 +2443,6 @@ tr:nth-child(even) {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: calc(200vh - 5px);
   padding-bottom: 100vh;
 }
 
@@ -2426,7 +2457,6 @@ tr:nth-child(even) {
   background-position: center;
   background-repeat: no-repeat;
   height: calc(200vh - 5px);
-  height: calc(200vh - 5px);
 }
 
 .wrapper--map {
@@ -2435,7 +2465,6 @@ tr:nth-child(even) {
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
-  height: calc(200vh - 5px);
 }
 
 .map {
@@ -2625,7 +2654,6 @@ tr:nth-child(even) {
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
-  height: calc(200vh - 5px);
 }
 
 .navigation-info__item {
@@ -2643,7 +2671,6 @@ tr:nth-child(even) {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  height: calc(200vh - 5px);
 }
 
 .wrapper--register .content span.inline {

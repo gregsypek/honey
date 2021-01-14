@@ -13,6 +13,28 @@
 
     &--first {
       justify-content: space-between;
+
+
+    }
+    //for icon burger and X
+    .fa, 
+    .fas {
+      margin-top:10px;
+    }
+
+    svg.logo--double {
+      width: 12rem;
+      height: auto;
+      margin: 10px 15px;
+
+      @media (max-width: 400px) {
+        height: 4rem;
+      }
+      @media (max-width: $big) {
+        width: 9rem;
+      }
+
+
     }
 
     .sr-only {
@@ -29,10 +51,10 @@
     /* Hamburger button styling. "Button" is the bars icon from FontAwesome. */
     .menu-toggle {
       color: $color-gray;
-      // margin-top: 3rem;
+      // margin-top:10px;
       margin-left: 1rem;
       // font-size: 3rem;
-      font-size: var(--h3);
+      font-size: var(--h2);
       margin-left: 1rem;
 
     }
@@ -40,7 +62,7 @@
     .menu-close {
       color: $color-white;
       margin-right: 1rem;
-      font-size: var(--h3);
+      font-size: var(--h2);
     }
 
     .menu-toggle:hover,
@@ -51,10 +73,10 @@
     }
   }
 
-  &__logo {
-    padding: 5px 0 0 10px;
-    font-size: var(--p);
-  }
+  // &__logo {
+  //   padding: 5px 0 0 10px;
+  //   font-size: var(--p);
+  // }
 
   &__buttons {
     .btn {
@@ -63,6 +85,13 @@
       z-index: 2;
       @include btn;
       @include btn--small;
+
+      @media (max-width: $big) {
+        padding: 2px 10px;
+      }
+      @media (max-width: 400px) {
+        display: flex;
+      }
 
       a {
         display: inline-block;
@@ -93,12 +122,7 @@
     padding: 3rem;
     justify-content: flex-start;
 
-    // width: 100%;
-    // height: 3rem;;
-    img {
-      width: 2.5rem;
-      height: 2.5rem;
-    }
+
 
     img:not(last-of-type) {
       margin-right: 2rem;
@@ -127,7 +151,7 @@
 
     position: fixed;
     display: none;
-    left: -300px;
+    left: -250px;
     top: 0;
     height: 100%;
     overflow-y: auto;
@@ -140,7 +164,7 @@
       position: absolute;
       left: 1rem;
       // top: 1rem;
-      font-size: var(--h3);
+      font-size: var(--h2);
     }
 
     &:target {
@@ -185,7 +209,7 @@
     // padding-top: 7rem;
     display: block;
     background-color: $color-honey;
-    width: 300px;
+    width: 250px;
     padding: 4rem;
 
     li {
@@ -207,16 +231,11 @@
 
   &__link {
     /* Make links block to make them fully clickable on mobile. Remember this is finger navigation, so include plenty of clickable area. All links get a bottom border */
-
     padding: 3rem;
 
     text-decoration: none;
     color: $color-gray;
-
     // border-bottom: 1px solid $color-orange;
-
-
-
 
     &:hover,
     &:focus {
