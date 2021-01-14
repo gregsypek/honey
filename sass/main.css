@@ -867,19 +867,34 @@ h5 {
 }
 
 .think_over {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(235, 99, 73, 0.902)));
   background: linear-gradient(0deg, rgba(235, 99, 73, 0.902));
   padding: 14rem 10vw;
 }
 
+.think_over h1 {
+  margin: 0;
+  color: #EECF90;
+  line-height: 140%;
+}
+
+.think_over h1 span {
+  display: block;
+  color: #ffffff;
+}
+
+.think_over__container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  width: 100%;
+  margin-top: 7rem;
+}
+
 @media (max-width: 992px) {
-  .think_over {
+  .think_over__container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -888,53 +903,18 @@ h5 {
         -ms-flex-align: center;
             align-items: center;
   }
-  .think_over *:not(.think_over__dots) {
-    margin-bottom: 5rem;
-  }
-  .think_over .think_over__right {
-    margin-bottom: 0;
-  }
 }
 
-.think_over__left {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  margin-right: 5rem;
-}
-
-.think_over__left h1 {
-  margin: 0;
-  color: #EECF90;
-  line-height: 140%;
-}
-
-.think_over__left h1 span {
-  display: block;
-  color: #ffffff;
+.think_over__right {
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
 }
 
 @media (max-width: 992px) {
-  .think_over__left {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+  .think_over__right {
+    margin-top: 7rem;
   }
-}
-
-.think_over__text {
-  -webkit-box-pack: end;
-      -ms-flex-pack: end;
-          justify-content: flex-end;
 }
 
 .think_over__btn {
@@ -956,7 +936,7 @@ h5 {
   }
 }
 
-.think_over__right {
+.think_over__left {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -972,11 +952,23 @@ h5 {
 .think_over__box {
   background: #ffffff;
   height: 25rem;
-  max-width: 600px;
+  width: 600px;
   border-radius: 20px;
   -webkit-filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.25));
   margin-bottom: 3rem;
+}
+
+@media (max-width: 768px) {
+  .think_over__box {
+    width: 70vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .think_over__box {
+    width: 80vw;
+  }
 }
 
 .think_over__recommend {

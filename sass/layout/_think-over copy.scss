@@ -16,22 +16,24 @@
   }
 
 
-  &__right {
+  &__left {
     align-self: center;
      @media(max-width: $large) {
-      // order:2;
+      order:2;
       margin-top: $sectionMargin/2;
     }
   }
+
  
 
   &__btn {
+
     @include btn;
     @include btn--yellow;
     @include shadow2;
   }
 
-  &__left {
+  &__right {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
@@ -47,9 +49,6 @@
 
     @media (max-width: $big) {
       width: 70vw;
-    }
-    @media (max-width: $small) {
-      width: 80vw;
     }
   }
 
