@@ -69,7 +69,7 @@
     .menu-toggle:focus,
     .menu-close:hover,
     .menu-close:focus {
-      color: $color-orange;
+      color: $color-gray-3;
     }
   }
 
@@ -324,7 +324,7 @@
       // margin:3rem 0;
       background: transparent;
       width: 100vw;
-      max-width: 100%;
+      max-width: 1440px;
       height: 10rem;
       // reset padding which was given to burger nav
       padding: 0;
@@ -358,6 +358,10 @@
 
     &__item:not(:last-child) {
       margin-right: 1.8rem;
+
+      @media(max-width: $large){
+        margin-right: 0.5rem;
+      }
     }
 
     // icons shows only on small devices

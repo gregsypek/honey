@@ -111,7 +111,6 @@ h5 {
 
 .wrapper--hero {
   position: relative;
-  position: relative;
   background-image: linear-gradient(58deg, rgba(238, 207, 144, 0.8) 62%, rgba(255, 255, 255, 0.8) 62%, rgba(255, 255, 255, 0.8) 100%, transparent 50%), url(../../src/images/hero_bg.jpg);
   background-size: cover;
   background-position: bottom;
@@ -141,6 +140,14 @@ h5 {
       grid-template-columns: 10% 40% 50%;
   grid-row-gap: 11rem;
   justify-items: start;
+}
+
+@media (max-width: 768px) {
+  .hero {
+    -ms-grid-columns: 10% 50% 40%;
+        grid-template-columns: 10% 50% 40%;
+    grid-row-gap: 6rem;
+  }
 }
 
 .hero__title {
@@ -182,6 +189,12 @@ h5 {
   -webkit-filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.25));
   margin-bottom: 14rem;
+}
+
+@media (max-width: 576px) {
+  .hero__btn {
+    padding: .2rem 1.5rem;
+  }
 }
 
 .navigation__row {
@@ -255,7 +268,7 @@ h5 {
 .navigation__row .menu-toggle:focus,
 .navigation__row .menu-close:hover,
 .navigation__row .menu-close:focus {
-  color: #F2994A;
+  color: #828282;
 }
 
 .navigation__buttons .btn {
@@ -268,6 +281,12 @@ h5 {
   padding: .5rem 2.5rem;
   padding: .5rem 2rem;
   color: #828282;
+}
+
+@media (max-width: 576px) {
+  .navigation__buttons .btn {
+    padding: .2rem 1.5rem;
+  }
 }
 
 @media (max-width: 768px) {
@@ -488,7 +507,7 @@ h5 {
     padding-top: 0;
     background: transparent;
     width: 100vw;
-    max-width: 100%;
+    max-width: 1440px;
     height: 10rem;
     padding: 0;
   }
@@ -511,9 +530,27 @@ h5 {
     background: none;
     text-decoration: none;
   }
+}
+
+@media (min-width: 800px) and (max-width: 992px) {
+  .navigation__item {
+    width: 14rem;
+  }
+}
+
+@media (min-width: 800px) {
   .navigation__item:not(:last-child) {
     margin-right: 1.8rem;
   }
+}
+
+@media (min-width: 800px) and (max-width: 992px) {
+  .navigation__item:not(:last-child) {
+    margin-right: 0.5rem;
+  }
+}
+
+@media (min-width: 800px) {
   .navigation__icon, .navigation__item--burger {
     display: none;
   }
@@ -913,6 +950,12 @@ h5 {
           filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.25));
 }
 
+@media (max-width: 576px) {
+  .think_over__btn {
+    padding: .2rem 1.5rem;
+  }
+}
+
 .think_over__right {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1244,6 +1287,12 @@ h5 {
   padding: .5rem 2rem;
   color: #828282;
   color: #333333;
+}
+
+@media (max-width: 576px) {
+  .questions__btn {
+    padding: .2rem 1.5rem;
+  }
 }
 
 .content h1 {
@@ -1726,6 +1775,12 @@ tr:nth-child(even) {
   color: #BDBDBD;
 }
 
+@media (max-width: 576px) {
+  .contact__btns {
+    padding: .2rem 1.5rem;
+  }
+}
+
 .contact__btns a {
   text-decoration: none;
   color: #828282;
@@ -1837,7 +1892,6 @@ tr:nth-child(even) {
 }
 
 .wrapper--gallery {
-  position: relative;
   background-image: linear-gradient(58deg, white 62%, rgba(213, 178, 117, 0.9) 62%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../../src/images/gallery_bg.jpg);
   background-size: cover;
   background-position: center;
@@ -1915,7 +1969,6 @@ tr:nth-child(even) {
 }
 
 .wrapper--shopping {
-  position: relative;
   background-image: linear-gradient(58deg, white 62%, rgba(213, 178, 117, 0.9) 62%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../../src/images/shopping_bg.png);
   background-size: cover;
   background-position: left;
@@ -2438,7 +2491,6 @@ tr:nth-child(even) {
 }
 
 .wrapper--contact {
-  position: relative;
   background-image: linear-gradient(58deg, white 62%, rgba(213, 178, 117, 0.9) 62%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../../src/images/contact_bg.jpg);
   background-size: cover;
   background-position: center;
@@ -2451,7 +2503,6 @@ tr:nth-child(even) {
 }
 
 .wrapper--login {
-  position: relative;
   background-image: linear-gradient(58deg, white 62%, rgba(213, 178, 117, 0.9) 62%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../../src/images/contact_bg.jpg);
   background-size: cover;
   background-position: center;
@@ -2460,7 +2511,6 @@ tr:nth-child(even) {
 }
 
 .wrapper--map {
-  position: relative;
   background-image: linear-gradient(58deg, white 62%, rgba(213, 178, 117, 0.9) 62%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../../src/images/map_bg.jpg);
   background-size: cover;
   background-position: top center;
@@ -2649,7 +2699,6 @@ tr:nth-child(even) {
 }
 
 .wrapper--table {
-  position: relative;
   background-image: linear-gradient(58deg, white 62%, rgba(213, 178, 117, 0.9) 62%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../../src/images/description_bg.jpg);
   background-size: cover;
   background-position: top center;
@@ -2666,7 +2715,6 @@ tr:nth-child(even) {
 }
 
 .wrapper--register {
-  position: relative;
   background-image: linear-gradient(58deg, white 62%, rgba(213, 178, 117, 0.9) 62%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../../src/images/contact_bg.jpg);
   background-size: cover;
   background-position: center;

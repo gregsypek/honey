@@ -3,9 +3,9 @@
   // <a href="https://www.freepik.com">designed by Racool_Studio - Freepik.com</a>
   @include layoutHero(url(../../src/images/hero_bg.jpg), cover, bottom);
 
-//TODO fix problem with ipad pro resolution
-  @media (max-width: $large)  {
-    @include backImage(72deg, 72%, 72%, url(../../src/images/hero_bg.jpg));
+
+  @media (max-width: $large) {
+    @include backImageHero(url(../../src/images/hero_bg.jpg), 72deg, 72%, 72%);
   }
 
   @media (max-width: $large) {
@@ -19,6 +19,12 @@
   grid-template-columns: 10% 40% 50%;
   grid-row-gap: 11rem;
   justify-items: start;
+
+  @media (max-width: $big) {
+    grid-template-columns: 10% 50% 40%;
+    grid-row-gap: 6rem;
+
+  }
 
   &__title {
     line-height: 130%;
