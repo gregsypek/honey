@@ -1,11 +1,12 @@
 .wrapper--gallery {
 
-  @include layout(url(../../src/images/gallery_bg.jpg), cover, center); 
- 
+  @include layout(url(../../src/images/gallery_bg.jpg), cover, center);
+
   padding-bottom: 100vh; // for spreading the area of this background
 }
 
 .content {
+
 
   &__photos {
 
@@ -37,30 +38,5 @@
       @include shadow2;
     }
   }
-
-  &__contact {
-    display: flex;
-    justify-content: space-evenly;
-    font-size: 1.4rem;
-    margin-bottom: $sectionMargin;
-    font-weight: bold;
-    background: $color-honey;
-    padding: 3rem 5vw;
-    color: $color-gray;
-    border-radius: 5px;
-
-    a {
-      color: inherit;
-
-    }
-
-    &.white {
-      background: $color-white;
-    }
-
-    // >* {
-    //   flex-basis: 28vw;
-    // }
-
-  }
+  
 }

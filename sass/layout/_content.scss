@@ -1,7 +1,7 @@
 // CONTENT IS A COMMON PART OF PAGES: GALLERY, DESCRIPTION, SHOPPING
 .content {
 
-  @include header($sectionMargin, $color-gray, $color-honey, block);
+  @include header(calc(#{$sectionMargin} - 5px) 10vw, $color-gray, $color-honey, block);
 
   &__info-box {
     // width: 100vw;
@@ -9,15 +9,15 @@
   }
 
   &__info {
-    // width: 100vw;
+
     color: $color-gray;
     font-family: $font-secondary;
-    font-size: 2.5rem;
-    padding: 3rem 10vw;
+ 
+    padding: 2rem 10vw;
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 186px;
+    min-height: 186px;
   }
 
   &__content-box {

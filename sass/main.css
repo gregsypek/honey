@@ -1,4 +1,8 @@
 @charset "UTF-8";
+.content__title {
+  font-size: var(--h1);
+}
+
 section.the-best,
 section.about {
   -webkit-transition: opacity 1s, -webkit-transform 1s;
@@ -1288,7 +1292,7 @@ h5 {
 }
 
 .content h1 {
-  margin: 14rem;
+  margin: calc(14rem - 5px) 10vw;
   color: #333333;
   line-height: 140%;
 }
@@ -1305,8 +1309,7 @@ h5 {
 .content__info {
   color: #333333;
   font-family: "Poppins", sans-serif;
-  font-size: 2.5rem;
-  padding: 3rem 10vw;
+  padding: 2rem 10vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1316,7 +1319,7 @@ h5 {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  height: 186px;
+  min-height: 186px;
 }
 
 .content__content-box {
@@ -1934,30 +1937,6 @@ tr:nth-child(even) {
   border-radius: 5px;
   -webkit-filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.25));
-}
-
-.content__contact {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  font-size: 1.4rem;
-  margin-bottom: 14rem;
-  font-weight: bold;
-  background: #EECF90;
-  padding: 3rem 5vw;
-  color: #333333;
-  border-radius: 5px;
-}
-
-.content__contact a {
-  color: inherit;
-}
-
-.content__contact.white {
-  background: #ffffff;
 }
 
 .wrapper--shopping {
