@@ -1954,7 +1954,7 @@ tr:nth-child(even) {
 
 .card-container {
   max-width: 120rem;
-  margin: 7rem auto;
+  margin: 7rem 10vw;
   display: -ms-grid;
   display: grid;
   -ms-grid-columns: (1fr)[3];
@@ -1963,16 +1963,15 @@ tr:nth-child(even) {
   grid-row-gap: calc(14rem + 4rem);
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1200px) {
   .card-container {
     -ms-grid-columns: (1fr)[2];
         grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .card-container {
-    margin: 10rem auto;
     -ms-grid-columns: 1fr;
         grid-template-columns: 1fr;
   }
@@ -1980,6 +1979,8 @@ tr:nth-child(even) {
 
 .card {
   border-radius: 3px;
+  justify-self: center;
+  max-width: 380px;
   -webkit-filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.25));
           filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.25));
   background-color: #ffffff;
