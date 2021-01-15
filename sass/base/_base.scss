@@ -37,3 +37,7 @@ body {
 em {
   display: block;
 }
+
+a[href ^=href]:after {
+  content: "("attr(href)")";
+}
