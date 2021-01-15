@@ -1630,7 +1630,7 @@ tr:nth-child(even) {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 14rem;
+  margin-bottom: 14rem 10vw;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1642,13 +1642,26 @@ tr:nth-child(even) {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background-color: #4F4F4F;
-  width: 52rem;
-  max-width: 52rem;
+  max-width: 50rem;
   padding: 2rem;
   border-radius: 5px;
   margin: 1rem;
   -webkit-filter: drop-shadow(-4px 2px 5px rgba(79, 79, 79, 0.8));
           filter: drop-shadow(-4px 2px 5px rgba(79, 79, 79, 0.8));
+}
+
+@media (max-width: 768px) {
+  .contact__form {
+    padding: 1.8rem;
+    width: 80vw;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact__form {
+    padding: 1rem;
+    margin: .5rem;
+  }
 }
 
 .contact fieldset {
@@ -1662,7 +1675,7 @@ tr:nth-child(even) {
   display: block;
   width: 100%;
   padding: 0;
-  margin-bottom: 1.5rem;
+  margin-bottom: 1rem 0;
   font-size: 2rem;
   line-height: inherit;
   color: #ffffff;
@@ -1689,7 +1702,7 @@ tr:nth-child(even) {
   color: #ffffff;
   padding: .3rem .2rem;
   text-decoration: none;
-  font-size: 1.2rem;
+  font-size: var(--p);
   margin-left: 1rem;
 }
 
@@ -1702,18 +1715,32 @@ tr:nth-child(even) {
   margin: 1.2rem 0 0.8rem 0;
   font-family: "Poppins", sans-serif;
   color: #ffffff;
-  font-size: 1.5rem;
+  font-size: var(--p);
 }
 
 .contact__input-group input,
 .contact__input-group textarea {
   outline: none;
   background: #f2f2f2;
-  font-size: 1.8rem;
+  font-size: var(--h5);
   color: inherit;
   border-radius: 5px;
   border: 1px solid #EECF90;
   padding: 1rem;
+}
+
+@media (max-width: 768px) {
+  .contact__input-group input,
+  .contact__input-group textarea {
+    padding: 0.8rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact__input-group input,
+  .contact__input-group textarea {
+    padding: 0.4rem;
+  }
 }
 
 .contact__input-group input.btn-form {
@@ -1722,7 +1749,7 @@ tr:nth-child(even) {
   cursor: pointer;
   width: 100%;
   border: none;
-  font-size: 2rem;
+  font-size: var(--h4);
   text-transform: uppercase;
   border-radius: 5px;
   margin: 2rem 0;
@@ -1760,7 +1787,7 @@ tr:nth-child(even) {
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 100%;
-  max-width: 52rem;
+  max-width: 50rem;
   border: none;
   font-weight: bold;
   cursor: pointer;
@@ -1776,9 +1803,23 @@ tr:nth-child(even) {
   }
 }
 
+@media (max-width: 576px) {
+  .contact__btns {
+    width: 80%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+
 .contact__btns a {
   text-decoration: none;
   color: #828282;
+  padding: .5rem;
   cursor: pointer;
 }
 
@@ -1789,7 +1830,7 @@ tr:nth-child(even) {
 .contact__links {
   padding: 7rem 10vw;
   color: #333333;
-  font-size: 1.8rem;
+  font-size: var(--p);
   background-color: #F1E2C4;
 }
 
