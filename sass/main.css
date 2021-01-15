@@ -1642,6 +1642,7 @@ tr:nth-child(even) {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background-color: #4F4F4F;
+  width: 50rem;
   max-width: 50rem;
   padding: 2rem;
   border-radius: 5px;
@@ -1749,7 +1750,7 @@ tr:nth-child(even) {
   cursor: pointer;
   width: 100%;
   border: none;
-  font-size: var(--h4);
+  font-size: var(--h5);
   text-transform: uppercase;
   border-radius: 5px;
   margin: 2rem 0;
@@ -1765,7 +1766,7 @@ tr:nth-child(even) {
 }
 
 .contact__input-group input[type='submit'] {
-  margin: 2rem 0 0 0;
+  margin: 3rem 0 0 0;
 }
 
 .contact__title h1 {
@@ -1830,8 +1831,9 @@ tr:nth-child(even) {
 .contact__links {
   padding: 7rem 10vw;
   color: #333333;
-  font-size: var(--p);
+  font-size: 16px;
   background-color: #F1E2C4;
+  font-size: 16px;
 }
 
 .contact__link {
@@ -2732,6 +2734,7 @@ tr:nth-child(even) {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  height: calc(200vh - 5px);
 }
 
 .wrapper--register .content span.inline {

@@ -20,10 +20,9 @@
   }
 
   &__form {
-
     justify-content: space-between;
     background-color: $color-dark;
-    // min-width: 40rem;
+    width: 50rem;
     max-width: 50rem;
     padding: 2rem;
     border-radius: 5px;
@@ -116,7 +115,7 @@
       cursor: pointer;
       width: 100%;
       border: none;
-      font-size: var(--h4);
+      font-size: var(--h5);
       text-transform: uppercase;
       border-radius: 5px;
       margin: 2rem 0;
@@ -133,7 +132,7 @@
     }
 
     input[type='submit'] {
-      margin: 2rem 0 0 0;
+      margin: 3rem 0 0 0;
     }
   }
 
@@ -174,8 +173,9 @@
   &__links {
     padding: $sectionMargin/2 10vw;
     color: $color-gray;
-    font-size: var(--p);
+    font-size: 16px;
     background-color: $color-honey-3;
+    font-size: 16px;
   }
 
   &__link {

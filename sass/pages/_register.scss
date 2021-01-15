@@ -1,5 +1,6 @@
 .wrapper--register {
   @include layout(url(../../src/images/contact_bg.jpg), cover, center);
+  height: calc(200vh - 5px);
 
 
 .content {
