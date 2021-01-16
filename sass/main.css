@@ -127,7 +127,7 @@ h5 {
 
 @media (max-width: 992px) {
   .wrapper--hero {
-    background-image: linear-gradient(72deg, rgba(238, 207, 144, 0.8) 72%, rgba(255, 255, 255, 0.8) 72%, rgba(255, 255, 255, 0.8) 100%, transparent 50%), url(../src/images/hero-bg.jpg);
+    background-image: linear-gradient(72deg, rgba(238, 207, 144, 0.8) 72%, rgba(255, 255, 255, 0.8) 72%, rgba(255, 255, 255, 0.8) 100%, transparent 50%), url(../src/images/hero-bg-medium.jpg);
   }
 }
 
@@ -137,6 +137,12 @@ h5 {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+  }
+}
+
+@media (max-width: 768px) {
+  .wrapper--hero {
+    background-image: linear-gradient(72deg, rgba(238, 207, 144, 0.8) 72%, rgba(255, 255, 255, 0.8) 72%, rgba(255, 255, 255, 0.8) 100%, transparent 50%), url(../src/images/hero-bg-small.jpg);
   }
 }
 
@@ -1095,7 +1101,7 @@ h5 {
 
 .about__image {
   position: relative;
-  min-height: 75vh;
+  min-height: 440px;
   opacity: 1;
 }
 
@@ -1942,6 +1948,18 @@ tr:nth-child(even) {
   padding-bottom: 100vh;
 }
 
+@media (max-width: 992px) {
+  .wrapper--gallery {
+    background-image: linear-gradient(72deg, white 72%, rgba(213, 178, 117, 0.9) 72%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../src/images/gallery-bg-medium.jpg);
+  }
+}
+
+@media (max-width: 576px) {
+  .wrapper--gallery {
+    background-image: linear-gradient(72deg, white 72%, rgba(213, 178, 117, 0.9) 72%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../src/images/gallery-bg-small.jpg);
+  }
+}
+
 .content__photos {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1993,6 +2011,18 @@ tr:nth-child(even) {
   background-position: left;
   background-repeat: no-repeat;
   padding-bottom: 100vh;
+}
+
+@media (max-width: 992px) {
+  .wrapper--shopping {
+    background-image: linear-gradient(72deg, white 72%, rgba(213, 178, 117, 0.9) 72%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../src/images/shopping-bg-medium.jpg);
+  }
+}
+
+@media (max-width: 576px) {
+  .wrapper--shopping {
+    background-image: linear-gradient(72deg, white 72%, rgba(213, 178, 117, 0.9) 72%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../src/images/shopping-bg-small.jpg);
+  }
 }
 
 .content__cards {
@@ -2516,6 +2546,18 @@ tr:nth-child(even) {
   background-position: center;
   background-repeat: no-repeat;
   padding-bottom: 100vh;
+}
+
+@media (max-width: 992px) {
+  .wrapper--contact {
+    background-image: linear-gradient(72deg, white 72%, rgba(213, 178, 117, 0.9) 72%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../src/images/contact-bg-medium.jpg);
+  }
+}
+
+@media (max-width: 576px) {
+  .wrapper--contact {
+    background-image: linear-gradient(72deg, white 72%, rgba(213, 178, 117, 0.9) 72%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../src/images/contact-bg-small.jpg);
+  }
 }
 
 .content .honey {

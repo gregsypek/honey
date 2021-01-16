@@ -5,11 +5,14 @@
 
 
   @media (max-width: $large) {
-    @include backImageHero(url(../src/images/hero-bg.jpg), 72deg, 72%, 72%);
+    @include backImageHero(url(../src/images/hero-bg-medium.jpg), 72deg, 72%, 72%);
   }
-
+  
   @media (max-width: $large) {
     flex-direction: column;
+  }
+  @media (max-width: $big) {
+    @include backImageHero(url(../src/images/hero-bg-small.jpg), 72deg, 72%, 72%);
   }
 }
 

@@ -3,6 +3,13 @@
   @include layout(url(../src/images/gallery-bg.jpg), cover, center);
 
   padding-bottom: 100vh; // for spreading the area of this background
+
+  @media (max-width: $large) {
+    @include backImage(url(../src/images/gallery-bg-medium.jpg), 72deg, 72%, 72%);
+  }
+  @media (max-width: $small) {
+    @include backImage(url(../src/images/gallery-bg-small.jpg), 72deg, 72%, 72%);
+  }
 }
 
 .content {
@@ -38,5 +45,5 @@
       @include shadow2;
     }
   }
-  
+
 }
