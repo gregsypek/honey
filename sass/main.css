@@ -1935,7 +1935,7 @@ tr:nth-child(even) {
 }
 
 .wrapper--gallery {
-  background-image: linear-gradient(58deg, white 62%, rgba(213, 178, 117, 0.9) 62%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../../src/images/gallery_bg.jpg);
+  background-image: linear-gradient(58deg, white 62%, rgba(213, 178, 117, 0.9) 62%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../src/images/gallery-bg.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1988,7 +1988,7 @@ tr:nth-child(even) {
 }
 
 .wrapper--shopping {
-  background-image: linear-gradient(58deg, white 62%, rgba(213, 178, 117, 0.9) 62%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../../src/images/shopping_bg.png);
+  background-image: linear-gradient(58deg, white 62%, rgba(213, 178, 117, 0.9) 62%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../src/images/shopping-bg.png);
   background-size: cover;
   background-position: left;
   background-repeat: no-repeat;
@@ -2208,7 +2208,7 @@ tr:nth-child(even) {
 }
 
 .wrapper--description {
-  background-image: linear-gradient(58deg, white 62%, rgba(213, 178, 117, 0.9) 62%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../../src/images/description_bg.jpg);
+  background-image: linear-gradient(58deg, white 62%, rgba(213, 178, 117, 0.9) 62%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../src/images/description-bg.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2511,7 +2511,7 @@ tr:nth-child(even) {
 }
 
 .wrapper--contact {
-  background-image: linear-gradient(58deg, white 62%, rgba(213, 178, 117, 0.9) 62%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../../src/images/contact_bg.jpg);
+  background-image: linear-gradient(58deg, white 62%, rgba(213, 178, 117, 0.9) 62%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../src/images/contact-bg.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2523,7 +2523,7 @@ tr:nth-child(even) {
 }
 
 .wrapper--login {
-  background-image: linear-gradient(58deg, white 62%, rgba(213, 178, 117, 0.9) 62%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../../src/images/contact_bg.jpg);
+  background-image: linear-gradient(58deg, white 62%, rgba(213, 178, 117, 0.9) 62%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../src/images/contact-bg.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2531,7 +2531,7 @@ tr:nth-child(even) {
 }
 
 .wrapper--map {
-  background-image: linear-gradient(58deg, white 62%, rgba(213, 178, 117, 0.9) 62%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../../src/images/map_bg.jpg);
+  background-image: linear-gradient(58deg, white 62%, rgba(213, 178, 117, 0.9) 62%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../src/images/map-bg.jpg);
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
@@ -2581,7 +2581,7 @@ tr:nth-child(even) {
 
 .wrapper-honey {
   position: relative;
-  background-image: linear-gradient(58deg, white 62%, rgba(213, 178, 117, 0.9) 62%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../../src/images/honey_bg.jpg);
+  background-image: linear-gradient(58deg, white 62%, rgba(213, 178, 117, 0.9) 62%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../src/images/honey-bg.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -2719,7 +2719,7 @@ tr:nth-child(even) {
 }
 
 .wrapper--table {
-  background-image: linear-gradient(58deg, white 62%, rgba(213, 178, 117, 0.9) 62%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../../src/images/description_bg.jpg);
+  background-image: linear-gradient(58deg, white 62%, rgba(213, 178, 117, 0.9) 62%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../src/images/description-bg.jpg);
   background-size: cover;
   background-position: top center;
   background-repeat: no-repeat;
@@ -2735,7 +2735,7 @@ tr:nth-child(even) {
 }
 
 .wrapper--register {
-  background-image: linear-gradient(58deg, white 62%, rgba(213, 178, 117, 0.9) 62%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../../src/images/contact_bg.jpg);
+  background-image: linear-gradient(58deg, white 62%, rgba(213, 178, 117, 0.9) 62%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../src/images/contact-bg.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

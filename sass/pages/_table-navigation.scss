@@ -1,5 +1,5 @@
 .wrapper--table {
-  @include layout(url(../../src/images/description_bg.jpg), cover, top center); 
+  @include layout(url(../src/images/description-bg.jpg), cover, top center); 
 }
 
 .navigation-info {

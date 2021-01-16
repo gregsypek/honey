@@ -1,6 +1,6 @@
 .wrapper--map {
   //   //Obraz Mabel Amber z Pixabay
-  @include layout(url(../../src/images/map_bg.jpg), cover, top center);
+  @include layout(url(../src/images/map-bg.jpg), cover, top center);
 
 }
 

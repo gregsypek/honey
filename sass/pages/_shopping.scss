@@ -1,5 +1,5 @@
 .wrapper--shopping {
-  @include layout(url(../../src/images/shopping_bg.png), cover, left);
+  @include layout(url(../src/images/shopping-bg.png), cover, left);
 
   padding-bottom: 100vh; // for spreading the area of this background
 
