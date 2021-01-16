@@ -1065,17 +1065,6 @@ h5 {
   color: #d5b275;
 }
 
-.about__triangle {
-  position: absolute;
-  width: 400px;
-  height: 600px;
-  left: 0;
-  background-color: #eecf90;
-  -webkit-clip-path: polygon(0% 0px, 0px 62%, 38.55% 0%);
-          clip-path: polygon(0% 0px, 0px 62%, 38.55% 0%);
-  z-index: 1;
-}
-
 .about__triangle2 {
   position: absolute;
   width: 400px;

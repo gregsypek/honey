@@ -6,15 +6,15 @@
   }
 
   // small triangles as a background in corners
-  &__triangle {
-    position: absolute;
-    width: 400px;
-    height: 600px;
-    left: 0;
-    background-color: #eecf90;
-    clip-path: polygon(0% 0px, 0px 62%, 38.55% 0%);
-    z-index: 1;
-  }
+  // &__triangle {
+  //   position: absolute;
+  //   width: 400px;
+  //   height: 600px;
+  //   left: 0;
+  //   background-color: #eecf90;
+  //   clip-path: polygon(0% 0px, 0px 62%, 38.55% 0%);
+  //   z-index: 1;
+  // }
 
   &__triangle2 {
     position: absolute;

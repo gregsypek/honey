@@ -144,11 +144,30 @@
         <div class="about__image">
           <!-- Photo by Ioana Motoc from Pexels
  -->
-          <img
+          <picture>
+            <source
+              srcset="./src/images/about-bg-small.jpg"
+              alt="pancakes with honey"
+              media="(max-width: 576px)"
+            />
+            <source
+              srcset="./src/images/about-bg-medium.jpg"
+              alt="pancakes with honey"
+              media="(max-width: 768px)"
+            />
+
+            <img
+              class="about__image"
+              src="./src/images/about-bg.jpg"
+              alt="pancakes with honey"
+            />
+          </picture>
+
+          <!-- <img
             src="./src/images/about-bg.jpg"
             alt="pancakes with honey"
-            class="about__image"
-          />
+            
+          /> -->
         </div>
       </div>
       <div class="about__main">
@@ -232,7 +251,25 @@
         Oto co sparawia,<br />
         że jesteśmy <span>najlepsi:</span>
       </h1>
-      <img src="./src/images/the-best-bg.jpg" alt="" class="the-best__img" />
+
+      <picture>
+        <source
+          srcset="./src/images/the-best-bg-small.jpg"
+          alt="pancakes with honey"
+          media="(max-width: 576px)"
+        />
+        <source
+          srcset="./src/images/the-best-bg-medium.jpg"
+          alt="pancakes with honey"
+          media="(max-width: 768px)"
+        />
+
+        <img
+          class="the-best__img"
+          src="./src/images/the-best-bg.jpg"
+          alt="two bees flies over the vessel"
+        />
+      </picture>
 
       <div class="the-best__box">
         <p class="the-best__info info--1">
