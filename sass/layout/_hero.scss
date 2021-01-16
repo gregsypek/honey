@@ -1,11 +1,11 @@
 .wrapper--hero {
   position: relative;
   // <a href="https://www.freepik.com">designed by Racool_Studio - Freepik.com</a>
-  @include layoutHero(url(../src/images/hero_bg.jpg), cover, bottom);
+  @include layoutHero(url(../src/images/hero-bg.jpg), cover, bottom);
 
 
   @media (max-width: $large) {
-    @include backImageHero(url(../src/images/hero_bg.jpg), 72deg, 72%, 72%);
+    @include backImageHero(url(../src/images/hero-bg.jpg), 72deg, 72%, 72%);
   }
 
   @media (max-width: $large) {
