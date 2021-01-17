@@ -1,10 +1,15 @@
-section.the-best,
-section.about{
+section.hide,
+p.hide {
   transition: transform 1s, opacity 1s;
 }
 
 .section--hidden {
   opacity: 0;
-  transform: translateY(8rem);
+  transform: translateY(5rem);
 }
 
+//animated text in section the-best
+// .text--hidden {
+//   opacity: 0;
+//   transform: translateX(20rem)
+// }

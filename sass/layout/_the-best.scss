@@ -91,17 +91,19 @@
     grid-column: 3/9;
     max-width: 800px;
     font-family: $font-secondary;
-    font-size: 2rem;
+    font-size: var(--h5);
     font-weight: 400;
     // letter-spacing: 6%;
     padding: 3rem;
     z-index: 3;
     position: relative;
-    transform: rotate(-2deg);
-
+    // transform: rotate(-2deg);
+    
     @media (max-width: $large) {
+      
       grid-column: 2/10;
       padding-left: 5rem;
+      padding: 2rem;
     }
 
   }
@@ -158,7 +160,7 @@
     }
 
     &::before {
-      content: url(../../src/images/hexWhite3.svg);
+      content: url(../src/images/hexWhite3.svg);
       position: absolute;
       right: -148px;
       top: -59px;

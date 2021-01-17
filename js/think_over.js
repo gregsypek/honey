@@ -72,7 +72,7 @@ const revealSection = function (entries, observer) {
   if (!entry.isIntersecting) return;
 
   entry.target.classList.remove('section--hidden');
-  observer.unobserve(entry.target);
+  // observer.unobserve(entry.target);
 };
 
 const sectionObserver = new IntersectionObserver(revealSection, {
@@ -84,3 +84,25 @@ allSections.forEach(function (section) {
   sectionObserver.observe(section);
   section.classList.add('section--hidden');
 });
+
+// REVEAL TEXT
+// const allText = document.querySelectorAll('.animate');
+// console.log(allText);
+
+// const revealText = function (entries, observer) {
+//   const [entry] = entries;
+//   if (!entry.isIntersecting) return;
+
+//   entry.target.classList.remove('text--hidden');
+//   observer.unobserve(entry.target);
+// };
+
+// const textObserver = new IntersectionObserver(revealText, {
+//   root: null,
+//   threshold: 0.2,
+// });
+
+// allText.forEach(function (text) {
+//   textObserver.observe(text);
+//   text.classList.add('text--hidden');
+// });

@@ -3,8 +3,8 @@
   font-size: var(--h1);
 }
 
-section.the-best,
-section.about {
+section.hide,
+p.hide {
   -webkit-transition: opacity 1s, -webkit-transform 1s;
   transition: opacity 1s, -webkit-transform 1s;
   transition: transform 1s, opacity 1s;
@@ -13,8 +13,8 @@ section.about {
 
 .section--hidden {
   opacity: 0;
-  -webkit-transform: translateY(8rem);
-          transform: translateY(8rem);
+  -webkit-transform: translateY(5rem);
+          transform: translateY(5rem);
 }
 
 *,
@@ -784,13 +784,11 @@ img.lazyload.loaded {
   grid-column: 3/9;
   max-width: 800px;
   font-family: "Poppins", sans-serif;
-  font-size: 2rem;
+  font-size: var(--h5);
   font-weight: 400;
   padding: 3rem;
   z-index: 3;
   position: relative;
-  -webkit-transform: rotate(-2deg);
-          transform: rotate(-2deg);
 }
 
 @media (max-width: 992px) {
@@ -799,6 +797,7 @@ img.lazyload.loaded {
     -ms-grid-column-span: 8;
     grid-column: 2/10;
     padding-left: 5rem;
+    padding: 2rem;
   }
 }
 
@@ -859,7 +858,7 @@ img.lazyload.loaded {
 }
 
 .the-best .info--2::before {
-  content: url(../../src/images/hexWhite3.svg);
+  content: url(../src/images/hexWhite3.svg);
   position: absolute;
   right: -148px;
   top: -59px;
