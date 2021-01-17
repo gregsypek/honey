@@ -816,7 +816,7 @@ img.lazyload.loaded {
 
 .the-best .info--1::before,
 .the-best .info--3::before {
-  content: url(../../src/images/hexWhite3.svg);
+  content: url(../src/images/hexWhite3.svg);
   position: absolute;
   left: -140px;
   top: -58px;
@@ -826,7 +826,7 @@ img.lazyload.loaded {
 @media (max-width: 992px) {
   .the-best .info--1::before,
   .the-best .info--3::before {
-    content: url(../../src/images/hexWhite4.svg);
+    content: url(../src/images/hexWhite4.svg);
     left: -80px;
   }
 }

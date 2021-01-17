@@ -117,14 +117,14 @@
 
     //  BEFORE IS A HEXAGON
     &::before {
-      content: url(../../src/images/hexWhite3.svg);
+      content: url(../src/images/hexWhite3.svg);
       position: absolute;
       left: -140px;
       top: -58px;
       z-index: 1;
 
       @media (max-width: $large) {
-        content: url(../../src/images/hexWhite4.svg);
+        content: url(../src/images/hexWhite4.svg);
         left: -80px;
       }
 
