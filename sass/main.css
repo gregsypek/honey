@@ -867,7 +867,7 @@ img.lazyload.loaded {
 
 @media (max-width: 992px) {
   .the-best .info--2::before {
-    content: url(../../src/images/hexWhite4.svg);
+    content: url(../src/images/hexWhite4.svg);
     right: -80px;
   }
 }
@@ -2668,7 +2668,7 @@ tr:nth-child(even) {
   border-radius: 50%;
   height: 5.5rem;
   width: 5.5rem;
-  font-size: 3.25rem;
+  font-size: var(--h2);
   cursor: pointer;
 }
 
@@ -2725,20 +2725,8 @@ tr:nth-child(even) {
   padding: 5rem;
 }
 
-.slider .tip:before {
-  content: '\201C';
-  position: absolute;
-  top: -5.7rem;
-  left: -6.8rem;
-  line-height: 1;
-  font-size: 20rem;
-  font-family: inherit;
-  color: #EECF90;
-  z-index: -1;
-}
-
 .slider .tip__text {
-  font-size: 1.7rem;
+  font-size: var(--h5);
   margin-bottom: 3.5rem;
   color: #666;
 }
