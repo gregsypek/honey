@@ -7,4 +7,12 @@
   }
 }
 
+img.lazyload {
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+img.lazyload.loaded {
+  opacity: 1;
+}
+
 

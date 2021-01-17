@@ -1,5 +1,6 @@
 //this code changed recommendations by clicking into dot
 const dotsContainer = document.querySelector('.think_over__dots');
+
 const dots = document.querySelectorAll('.think_over__dot');
 const dotsContent = document.querySelectorAll('.think_over__recommend');
 

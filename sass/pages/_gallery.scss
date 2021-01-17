@@ -7,6 +7,7 @@
   @media (max-width: $large) {
     @include backImage(url(../src/images/gallery-bg-medium.jpg), 72deg, 72%, 72%);
   }
+
   @media (max-width: $small) {
     @include backImage(url(../src/images/gallery-bg-small.jpg), 72deg, 72%, 72%);
   }
@@ -28,6 +29,7 @@
       flex-basis: 28vw;
       margin-bottom: $sectionMargin;
 
+
       @media (max-width: 800px) {
         flex-basis: 44vw;
       }
@@ -43,6 +45,7 @@
       margin-bottom: 1rem;
       border-radius: 5px;
       @include shadow2;
+
     }
   }
 
