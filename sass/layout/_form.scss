@@ -170,40 +170,6 @@
     }
   }
 
-  &__links {
-    padding: $sectionMargin/2 10vw;
-    color: $color-gray;
-    font-size: 16px;
-    background-color: $color-honey-3;
-    font-size: 16px;
-  }
-
-  &__link {
-    display: flex;
-
-    // align-items: baseline;
-    svg {
-      width: 3rem;
-      height: 4rem;
-      margin-right: 5rem;
-    }
-
-    a {
-      padding: .5rem;
-      text-decoration: none;
-      color: $color-gray;
-
-      &:hover {
-        color: darken($color-gray, 20%);
-      }
-    }
-  }
-
-  &__link:not(:last-child) {
-    margin-bottom: 3rem;
-
-  }
-
   // settings for login.html
 
   &--login {
@@ -214,4 +180,6 @@
       @include fieldset;
     }
   }
+
+
 }

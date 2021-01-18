@@ -1,0 +1,50 @@
+.contact {
+  &__links {
+    padding: $sectionMargin/2 10vw;
+    color: $color-gray;
+    font-size: var(--h5);
+    background-color: $color-honey-3; 
+
+    @media (max-width:$small) {
+      font-size: var(--p);
+    }
+
+  }
+
+  &__link {
+    display: flex;
+    align-items: center;
+    svg.contact__icon {
+      width: 4rem;
+      height: 4rem;
+      margin-right: 5rem;
+      
+      @media (max-width:$small) {
+        width: 2.5rem;
+        height: 2.5rem;
+        margin-right: 3rem;
+      }
+    }
+
+    a {
+      display: inline-block;
+      // margin: auto 0;
+      // padding: .5rem;
+
+      text-decoration: none;
+      color: $color-gray;
+
+      &:hover {
+        color: darken($color-gray, 20%);
+      }
+    }
+
+  }
+
+  &__link:not(:last-child) {
+    margin-bottom: 3rem;
+
+  }
+
+
+}
