@@ -283,7 +283,7 @@ img.lazyload.loaded {
 }
 
 .navigation__row .menu-close {
-  color: #ffffff;
+  color: #4F4F4F;
   margin-right: 1rem;
   font-size: var(--h2);
 }
@@ -367,7 +367,7 @@ img.lazyload.loaded {
 .navigation__item--burger a {
   display: inline-block;
   width: 100%;
-  margin-top: 3rem;
+  margin-bottom: -2rem;
   border-top: 1px solid #333333;
 }
 
