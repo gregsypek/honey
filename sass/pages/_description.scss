@@ -1,9 +1,11 @@
 .wrapper--description {
-  background-image: linear-gradient(58deg,
+  background-image: linear-gradient(
+      58deg,
       rgba(255, 255, 255, 1) 62%,
       rgba($color-honey-2, 0.9) 62%,
       rgba($color-honey-2, 0.9) 100%,
-      transparent 50%),
+      transparent 50%
+    ),
     //Obraz Mabel Amber z Pixabay
     url(../src/images/description-bg.jpg);
   background-size: cover;
@@ -16,12 +18,13 @@
 .content {
   &--description {
     position: relative;
-    padding: 0 10vw 10rem 10vw;
+    padding: $sectionMargin 10vw;
     background-color: $color-white;
     // height: 100vh;
   }
 
   &__description {
+    //  max-width: calc(1440px - 20vw);
     @include header(5rem 0, $color-gray, $color-honey, inline-block);
     display: grid;
     grid-template-areas:
@@ -29,6 +32,19 @@
       'star star img '
       'h4 h4 img '
       'h4 h4 img ';
+
+    @media (max-width: $large) {
+      grid-template-areas:
+        'h1 h1 h1 '
+        'img img img '
+        'star star star '
+        'h4 h4 h4 ';
+
+      //all children center
+      & > * {
+        justify-self: center;
+      }
+    }
   }
 
   &__title {
@@ -43,11 +59,11 @@
 
   &__star {
     .star__title {
-      width: 5rem;
-      height: 4rem;
+      width: var(--h2);
+      height: var(--h3);
 
       &--color {
-        fill: $color-yellow;
+        fill: $color-gray;
       }
     }
 
@@ -61,12 +77,24 @@
   }
 
   &__short-info {
-    font-size: 2rem;
-    width: 40vw;
-    font-weight: normal;
+    font-size: var(--h4);
+    max-width: 600px;
+
     margin: 5rem 0;
     color: $color-gray;
     grid-area: h4;
+
+    @media (max-width: $huge) {
+      max-width: 480px;
+    }
+
+    @media (max-width: $large) {
+      text-align: center;
+    }
+
+    h4 {
+      font-weight: 400;
+    }
   }
 
   &__picture {
@@ -74,14 +102,34 @@
     grid-area: img;
     @include shadow2;
 
+    @media (max-width: $large) {
+      position: static;
+      height: 40rem;
+    }
+
     &-frame {
       // position: absolute;
       width: 41rem;
       height: 49rem;
-      top: 0;
-      right: 0;
+      top: 48px;
+      right: 95px;
       @include hexagon;
       @include hexFrame;
+
+      @media (max-width: $huge) {
+        width: 32rem;
+        height: 40rem;
+      }
+
+      @media (max-width: $large) {
+        position: static;
+        margin: 0 auto;
+      }
+
+      @media (max-width: $small) {
+        width: 29rem;
+        height: 33rem;
+      }
     }
 
     &-overlay {
@@ -100,7 +148,8 @@
   }
 
   &__form {
-    width: 80vw;
+    width: 90vw;
+    max-width: 1200px;
     font-size: 2.5rem;
     text-transform: uppercase;
     display: grid;
@@ -108,8 +157,18 @@
     grid-row-gap: 2rem;
     margin-top: 5rem;
 
-    >* {
+    @media (max-width: $large) {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    > * {
       padding: 1rem 5rem;
+    }
+
+    > *:not(:last-child) {
+      margin-bottom: 3rem;
     }
 
     .cap,
@@ -118,13 +177,18 @@
       color: $color-white;
       justify-self: start;
       grid-column: 1/2;
-      @include shadow2;
+      @include shadow;
       border-radius: 5px;
       width: 35rem;
       display: flex;
       justify-content: space-between;
       padding: 1rem 2rem;
+
+      @media (max-width: $large) {
+        width: 30rem;
+      }
     }
+
     .cap {
       display: flex;
       justify-content: space-between;
@@ -148,16 +212,31 @@
       grid-row: 1/2;
       justify-self: center;
       @include shadow;
+      width: 350px;
+
+      @media (max-width: $large) {
+        width: 30rem;
+      }
     }
 
     h5 {
       padding: 0;
       grid-column: 2/3;
       justify-self: center;
-      font-size: 1.2rem;
+      font-size: var(--h5);
       font-weight: normal;
       align-self: end;
       text-transform: none;
+
+      @media (max-width: $large) {
+        order: -1;
+        align-self: center;
+      }
+
+      @media (max-width: $small) {
+        padding: 0 2rem;
+        text-align: center;
+      }
     }
   }
 }
@@ -165,12 +244,10 @@
 //this style works only for description.html
 // @media (min-width: 800px) {
 .navigation {
-
   &--description {
     .navigation__row--first {
       margin-bottom: 0;
     }
-
 
     .navigation__nav {
       padding: 0;
@@ -188,49 +265,33 @@
     }
   }
 }
-
-// }
-
-// only for table-nav 
+// only for table-nav
 
 .table-nav {
-  // width
-  background-color: $color-honey-7;
-
-  //ul
+  background-color: $color-gray-3;
   &__list {
     // @include list;
     display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
     list-style: none;
-    width: 100vw;
-    margin: 0;
+    max-width: 1440px;
     min-height: 100%;
-    padding-top: 0;
-    height: 7rem;
-    justify-content: center;
-    font-size: 1.8rem;
+    font-size: var(--h5);
     font-weight: normal;
-
   }
 
-  //li
   &__item {
     text-transform: uppercase;
-    width: calc(80vw / 4);
-
-
   }
 
   a {
     display: inline-block;
-    height: 8rem;
-    padding: 2.5rem 5rem;
+    height: 5rem;
   }
 
-  //a
   &__link {
-
-    color: $color-gray;
+    color: $color-white;
     background: none;
     text-decoration: none;
     height: 5rem;
@@ -239,33 +300,20 @@
     position: relative;
     z-index: 3;
 
-
-
     &.active {
       position: relative;
       width: 100%;
       height: 100%;
       z-index: 2;
+      // top: -15px;
       @include shadow2;
-      transition: hover .5s ease;
-      font-weight: bold;
+      transition: hover 0.5s ease;
+      font-weight: 400;
+      color: $color-gray;
+      // letter-spacing: 3px;
 
-      &::before {
-        content: url(../../src/icons/emptyHex.svg);
-        position: absolute;
-        z-index: -4;
-        // width: 65px;
-        // height: 74.8px;
-        top: -30px;
-        left: 23px;
-        // @include hexagon;
-        // background: $color-white;
-        // @include rotate;
-        transition: all .5s ease;
-
-      }
+      background-color: $color-white;
 
     }
   }
 }
-

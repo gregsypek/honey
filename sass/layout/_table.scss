@@ -4,25 +4,28 @@ and Adrian Roselli: http://adrianroselli.com/2017/11/a-responsive-accessible-tab
 
 
 .table {
-  padding: 5rem 5vw;
+  padding: 7rem 5vw;
   // background-color: $color-honey-3;
+  border-radius: 5%;
 
 }
 
 
 table {
   border-collapse: separate;
-  background-color: $color-honey-6;
+  background-color: rgba($color-white, 0.9);
   border-spacing: 0 3rem;
   // padding: 0 5rem 5rem 5rem;
   border-radius: 5px;
   height: auto;
+  @include shadow2;
 
 }
 
 th {
   text-align: left;
   font-weight: normal;
+  color: $color-gray;
 }
 
 .dark {
@@ -47,6 +50,7 @@ thead tr {
   top: -9999px;
   left: -9999px;
   font-family: $font-primary;
+  
 }
 
 /* tr {border: 1px solid black;} */
@@ -123,18 +127,18 @@ caption {
   width: 100%;
   text-align: left;
   font-weight: bold;
-  font-size: 3.2rem;
+  font-size: var(--h3);
   // padding: 0.5rem;
   font-family: $font-primary;
-  color: $color-white;
+  color: $color-gray;
   margin-bottom: 5rem;
   // background-color: $color-white;
 }
 
-caption#honey,
-caption#dispatch {
-  font-size: 4.2rem;
-}
+// caption#honey,
+// caption#dispatch {
+//   font-size: 4.2rem;
+// }
 
 th {
   padding: 1rem;
@@ -148,11 +152,12 @@ td {
 }
 
 tr:nth-child(odd) {
-  background-color: $color-white;
+  // background-color: $color-white;
+  background-color: transparent;
 }
 
 tr:nth-child(even) {
-  background-color: lighten($color-honey-3, 5%);
+  background-color: $color-honey-3;
 }
 
 .hexagon-bg-3::before {
@@ -175,9 +180,9 @@ tr:nth-child(even) {
     justify-content: start;
   }
 
-  caption {
-    display: none;
-  }
+  // caption {
+  //   display: none;
+  // }
 
   table {
 
@@ -219,38 +224,47 @@ tr:nth-child(even) {
   th,
   td {
     display: table-cell;
-    padding: 1rem;
-    font-size: 2.8rem;
+    // padding: 1rem;
+    font-size: var(--h4);
   }
 
   td {
-    font-size: 2rem;
+    // font-size: 2rem;
     color: $color-gray;
-
+    
+    padding: 1.5rem 3rem;
+    
   }
 
+  //add a border only in table body
+  tbody tr {
+    outline: 2px solid;
+  }
+  
   tr {
     display: table-row;
+    border-radius: 5px;
+
   }
 
   table {
     display: table;
     width: 100%;
-    border: none;
+    // border: none;
   }
 
   caption {
-    font-size: 3.2rem;
+    font-size: var(--h3);
     text-align: center;
     text-transform: lowercase;
-
+display: none;
     line-height: 3rem;
   }
 
   .dark,
   thead tr.dark {
-    background-color: $color-honey-6;
-    color: $color-white;
+    background-color: $color-white;
+    color: $color-gray;
     font-weight: bold;
     font-family: $font-primary;
     text-transform: uppercase;
