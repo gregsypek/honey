@@ -2260,12 +2260,31 @@ tr:nth-child(even) {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  overflow-x: hidden;
+}
+
+@media (max-width: 992px) {
+  .wrapper--description {
+    background-image: linear-gradient(72deg, white 72%, rgba(213, 178, 117, 0.9) 72%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../src/images/description-bg-medium.jpg);
+  }
+}
+
+@media (max-width: 576px) {
+  .wrapper--description {
+    background-image: linear-gradient(72deg, white 72%, rgba(213, 178, 117, 0.9) 72%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../src/images/description-bg-small.jpg);
+  }
 }
 
 .content--description {
   position: relative;
-  padding: 14rem 10vw;
+  padding: 4rem 10vw 14rem 10vw;
   background-color: #ffffff;
+}
+
+@media (max-width: 768px) {
+  .content--description {
+    padding: 4rem 5vw 14rem 5vw;
+  }
 }
 
 .content__description {
@@ -2351,6 +2370,7 @@ tr:nth-child(even) {
 @media (max-width: 992px) {
   .content__short-info {
     text-align: center;
+    font-size: var(--h5);
   }
 }
 
@@ -2407,8 +2427,8 @@ tr:nth-child(even) {
 
 @media (max-width: 576px) {
   .content__picture-frame {
-    width: 29rem;
-    height: 33rem;
+    width: 27rem;
+    height: 31rem;
   }
 }
 
@@ -2472,7 +2492,7 @@ tr:nth-child(even) {
 }
 
 .content__form > *:not(:last-child) {
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 
 .content__form .cap,
@@ -2499,7 +2519,7 @@ tr:nth-child(even) {
 @media (max-width: 992px) {
   .content__form .cap,
   .content__form .qty {
-    width: 30rem;
+    width: 27rem;
   }
 }
 
@@ -2545,7 +2565,7 @@ tr:nth-child(even) {
 
 @media (max-width: 992px) {
   .content__form .btn--submit {
-    width: 30rem;
+    width: 27rem;
   }
 }
 
@@ -2949,11 +2969,8 @@ tr:nth-child(even) {
   color: #333333;
 }
 
-.wrapper--table {
-  background-image: linear-gradient(58deg, white 62%, rgba(213, 178, 117, 0.9) 62%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../src/images/description-bg.jpg);
-  background-size: cover;
-  background-position: top center;
-  background-repeat: no-repeat;
+.wrapper--table .table {
+  padding: 0rem 5vw;
 }
 
 .navigation-info__item {
@@ -2962,7 +2979,7 @@ tr:nth-child(even) {
 }
 
 .table-nav--blank {
-  margin-top: 7rem;
+  margin-top: 4rem;
 }
 
 .wrapper--register {

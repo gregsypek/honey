@@ -1,5 +1,8 @@
 .wrapper--table {
-  @include layout(url(../src/images/description-bg.jpg), cover, top center); 
+  // @include layout(url(../src/images/description-bg.jpg), cover, top center); 
+  .table {
+    padding: 0rem 5vw;
+  }
 }
 
 .navigation-info {
@@ -12,5 +15,5 @@
 }
 
 .table-nav--blank {
-  margin-top: $sectionMargin/2;
+  margin-top: 4rem;
 }
