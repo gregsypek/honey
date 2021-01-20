@@ -4,9 +4,7 @@ and Adrian Roselli: http://adrianroselli.com/2017/11/a-responsive-accessible-tab
 
 
 .table {
-  padding: 7rem 5vw;
-  // background-color: $color-honey-3;
-  border-radius: 5%;
+  margin: 7rem 7vw;
 
 }
 
@@ -268,11 +266,6 @@ display: none;
     font-weight: bold;
     font-family: $font-primary;
     text-transform: uppercase;
-  }
-
-  .table__chosen {
-    grid-column: 2/3;
-    justify-self: stretch;
   }
 
 

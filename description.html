@@ -11,6 +11,7 @@
     />
     <link rel="stylesheet" href="css/type.css" />
     <link rel="stylesheet" href="sass/main.css" />
+     <script defer src="./js/table-nav.js"></script>
   </head>
 
   <body>
@@ -232,71 +233,31 @@
         </div>
       </main>
 
-      <nav class="table-nav">
+     <nav class="table-nav table-nav--blank">
         <ul class="table-nav__list">
           <li class="table-nav__item">
             <span></span>
-            <a href="#" class="table-nav__link">Opis</a>
+            <button class="table-nav__link " data-nav="1">Oferta</button>
           </li>
           <li class="table-nav__item">
             <span></span>
-            <a href="#" class="table-nav__link active">Oferta</a>
+            <button class="table-nav__link " data-nav="2">Wysyłka</button>
           </li>
           <li class="table-nav__item">
             <span></span>
-            <a href="#" class="table-nav__link">Wpłaty</a>
+            <button class="table-nav__link active" data-nav="3">Płatności</button>
           </li>
           <li class="table-nav__item">
             <span></span>
-            <a href="#" class="table-nav__link">Wysyłka</a>
-          </li>
-          <li class="table-nav__item">
-            <span></span>
-            <a href="#" class="table-nav__link">Opinie</a>
+            <button class="table-nav__link" data-nav="4">Opinie</button>
           </li>
         </ul>
       </nav>
 
-      <section class="table">
-        <div class="table__chosen">
-          <!-- ---- ---------------0------------------- -->
-
-          <!-- <div
-            class="table-zero tablescroll table"
-            role="region"
-            aria-labelledby="honey"
-            tabindex="0"
-          >
-            <table id="table-first">
-              <caption>
-                Opis
-              </caption>
-              <thead>
-                <tr class="dark">
-                  <th scope="col">Miód rzepakowy</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>
-                    Ze względu na dużą zawartość glukozy i innych cukrów
-                    prostych, miód rzepakowy stanowi dobrą odżywkę regeneracyjną
-                    w stanach wyczerpania organizmu. Wzmacnia serce oraz
-                    zapobiega miażdżycy. Wspomaga przy infekcjach gardła, nosa i
-                    oskrzeli łagodzi kaszel oraz stymuluje układ odpornościowy.
-                    Miód z rzepaku zmniejsza odczyn zapalny towarzyszący wrzodom
-                    żołądka i dwunastnicy. Pomaga w chorobach zapalnych i
-                    infekcyjnych nerek, pęcherza i cewki moczowej
-                  </td>
-                </tr>
-              </tbody>
-            </table>
-          </div> -->
-          <!-- ---- ---------------0------------------- -->
-
-          <!-- ---- ---------------1------------------- -->
-          <div
-            class="table-first tablescroll table"
+        <section class="table table--blank" >
+       
+         <div
+            class="table-first tablescroll table table--1 "         
             role="region"
             aria-labelledby="honey"
             tabindex="0"
@@ -306,7 +267,7 @@
                 Oferta
               </caption>
               <thead>
-                <tr>
+                <tr class="dark">
                   <th scope="col">Rodzaj</th>
                   <th scope="col">900 ml</th>
                   <th scope="col">720 ml</th>
@@ -340,14 +301,14 @@
                 </tr>
               </tbody>
             </table>
-          </div>
-          <!-- ---- ---------------1------------------- -->
-        </div>
+          </div> 
+      
 
         <!-- ---- ---------------2------------------- -->
-        <!-- <div class="table-second tablescroll table" role="region" aria-labelledby="dispatch" tabindex="0">
+
+      <div class="table-second tablescroll table  table--2" role="region" aria-labelledby="dispatch" tabindex="0">
     <table id="table-second">
-      <caption >
+      <caption id="dispatch">
         Wysyłka
       </caption>
       <thead>
@@ -386,13 +347,14 @@
     <h3 class="table-second--info">
       CZAS REALIZACJI: 2 - 5 DNI ROBOCZE + CZAS DOSTAWY
     </h3>
-  </div> -->
+  </div> 
 
         <!-- ---- ---------------3------------------- -->
-        <!-- <div class="table-third tablescroll table" role="region" aria-labelledby="deposit-info" tabindex="0">
+
+        <div class="table-third tablescroll table table--active table--3" role="region" aria-labelledby="deposit-info" tabindex="0">
     <table id="table-third">
       <caption id="deposit-info">
-        Wpłaty
+        Płatności
       </caption>
 
       <tr>
@@ -415,12 +377,12 @@
         <td>123456789</td>
       </tr>
     </table>
-  </div> -->
+  </div> 
         <!-- ---- ---------------4------------------- -->
 
-        <!-- <div class="table-fourth tablescroll table" role="region" aria-labelledby="dispatch" tabindex="0">
+        <div class="table-fourth tablescroll table table--4" role="region" aria-labelledby="dispatch" tabindex="0">
     <table id="table-second">
-      <caption >
+      <caption id="dispatch">
         Opinie
       </caption>
       <thead>
@@ -487,8 +449,14 @@
         </svg>
       </a>
     </div>
-  </div> -->
+  </div> 
       </section>
+
+    
+    </div>
+    </header>
+
+    
     </div>
     <!-- wrapper end -->
 

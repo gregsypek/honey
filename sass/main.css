@@ -1345,8 +1345,7 @@ img.lazyload.loaded {
 and Adrian Roselli: http://adrianroselli.com/2017/11/a-responsive-accessible-table.html#Responsive
 */
 .table {
-  padding: 7rem 5vw;
-  border-radius: 5%;
+  margin: 7rem 7vw;
 }
 
 table {
@@ -1567,13 +1566,6 @@ tr:nth-child(even) {
     font-weight: bold;
     font-family: "Bungee", cursive;
     text-transform: uppercase;
-  }
-  .table__chosen {
-    -ms-grid-column: 2;
-    -ms-grid-column-span: 1;
-    grid-column: 2/3;
-    -ms-grid-column-align: stretch;
-        justify-self: stretch;
   }
 }
 
@@ -1896,6 +1888,62 @@ tr:nth-child(even) {
 
 .contact__link:not(:last-child) {
   margin-bottom: 3rem;
+}
+
+.table-nav {
+  background-color: #828282;
+}
+
+.table-nav__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  list-style: none;
+  max-width: 1440px;
+  min-height: 100%;
+  font-size: var(--h5);
+  font-weight: normal;
+}
+
+.table-nav__item {
+  text-transform: uppercase;
+}
+
+.table-nav button {
+  text-transform: uppercase;
+  border: none;
+  outline: none;
+  margin: 0;
+  font-size: inherit;
+}
+
+.table-nav__link {
+  color: #ffffff;
+  background: none;
+  text-decoration: none;
+  height: 5rem;
+  padding: 1rem 2rem;
+  position: relative;
+  z-index: 3;
+}
+
+.table-nav__link.active {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
+  -webkit-filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.25));
+          filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.25));
+  -webkit-transition: hover 0.5s ease;
+  transition: hover 0.5s ease;
+  font-weight: 400;
+  color: #333333;
+  background-color: #ffffff;
 }
 
 .footer {
@@ -2619,59 +2667,6 @@ tr:nth-child(even) {
   height: 5rem;
 }
 
-.table-nav {
-  background-color: #828282;
-}
-
-.table-nav__list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  list-style: none;
-  max-width: 1440px;
-  min-height: 100%;
-  font-size: var(--h5);
-  font-weight: normal;
-}
-
-.table-nav__item {
-  text-transform: uppercase;
-}
-
-.table-nav a {
-  display: inline-block;
-  height: 5rem;
-}
-
-.table-nav__link {
-  color: #ffffff;
-  background: none;
-  text-decoration: none;
-  height: 5rem;
-  padding: 1rem 2rem;
-  position: relative;
-  z-index: 3;
-}
-
-.table-nav__link.active {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  z-index: 2;
-  -webkit-filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.25));
-          filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.25));
-  -webkit-transition: hover 0.5s ease;
-  transition: hover 0.5s ease;
-  font-weight: 400;
-  color: #333333;
-  background-color: #ffffff;
-}
-
 .wrapper--contact {
   background-image: linear-gradient(58deg, white 62%, rgba(213, 178, 117, 0.9) 62%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../src/images/contact-bg.jpg);
   background-size: cover;
@@ -2969,17 +2964,20 @@ tr:nth-child(even) {
   color: #333333;
 }
 
-.wrapper--table .table {
-  padding: 0rem 5vw;
-}
-
 .navigation-info__item {
   padding: 1rem;
   line-height: 100%;
 }
 
-.table-nav--blank {
-  margin-top: 4rem;
+.table--1,
+.table--2,
+.table--3,
+.table--4 {
+  display: none;
+}
+
+.table--active {
+  display: block;
 }
 
 .wrapper--register {
