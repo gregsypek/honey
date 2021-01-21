@@ -86,22 +86,22 @@
     }
 
       &--left {
-        left: 20%;
+        left: 14%;
         transform: translate(-50%, -50%);
 
         @media (max-width: $big) {
-          left: 15%;
+          left: 10%;
 
 
         }
       }
 
       &--right {
-        right: 20%;
+        right: 14%;
         transform: translate(50%, -50%);
 
         @media (max-width: $big) {
-          right: 15%;
+          right: 10%;
 
 
         }
@@ -140,7 +140,7 @@
 
     // /* tips */
     .tip {
-      width: 50%;
+      width: 80%;
       height: 50rem;
       position: relative;
       background-color: rgba($color-white, 1);
@@ -167,7 +167,7 @@
 
         @media (max-width: $big) {
           font-size: 15px;
-          width: 70%;
+          width: 90%;
           margin: 0 auto;
 
         }

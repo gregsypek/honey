@@ -57,11 +57,12 @@
   }
 
   &__main {
+  
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     // grid-template-rows: 1rem repeat(2, minmax(auto, 1fr)) 0$sectionMargin;
     grid-column-gap: 2rem;
-    grid-row-gap: 10rem;
+    grid-row-gap: 8rem;
     color: $color-gray;
     padding: 0 10vw $sectionMargin 10vw;
 
@@ -93,8 +94,8 @@
       &::before {
         content: '';
         position: absolute;
-        width: 75px;
-        height: 86px;
+        width: 65px;
+        height: 76px;
         top: -29px;
         left: -20px;
         @include hexagon;

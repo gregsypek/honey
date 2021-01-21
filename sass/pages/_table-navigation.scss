@@ -9,17 +9,23 @@
   }
 }
 
-// .table-nav--blank {
-//   margin-top: 4rem;
-// }
+.table-box {
+  height: 700px;
+  @media(max-width: $large) {
+    height: auto;
+  }
+}
 
 .table--1, 
 .table--2, 
 .table--3, 
 .table--4 {
 display: none;
+
 }
+
 
   .table--active {
     display: block;
+    
   }

@@ -6,6 +6,9 @@
     @include backImage(url(../src/images/description-bg-medium.jpg), 72deg, 72%, 72%);
   }
 
+
+
+
   @media (max-width: $small) {
     @include backImage(url(../src/images/description-bg-small.jpg), 72deg, 72%, 72%);
   }
@@ -217,6 +220,7 @@
       justify-self: center;
       @include shadow;
       width: 350px;
+      height: 6.2rem;
 
       @media (max-width: $large) {
         width: 27rem;

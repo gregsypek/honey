@@ -112,6 +112,7 @@
   .info--3 {
 
     padding-left: 15rem;
+    text-align: right;
 
     @media (max-width: $large) {
       padding-left: 5rem;
@@ -127,7 +128,7 @@
 
       @media (max-width: $large) {
         content: url(../src/images/hexWhite4.svg);
-        left: -80px;
+        left: -40px;
       }
 
 
@@ -168,7 +169,7 @@
 
       @media (max-width: $large) {
         content: url(../src/images/hexWhite4.svg);
-        right: -80px;
+        right: -40px;
       }
 
     }
