@@ -1,6 +1,6 @@
 .wrapper--description {
-
-  @include layout(url(../src/images/description-bg.jpg), cover, center);
+ 
+   @include layout(url(../src/images/description-bg.jpg), cover, center);
 
   @media (max-width: $large) {
     @include backImage(url(../src/images/description-bg-medium.jpg), 72deg, 72%, 72%);

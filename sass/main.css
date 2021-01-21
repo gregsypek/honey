@@ -1456,11 +1456,6 @@ td:before {
 }
 
 /* third table is not necessary because of different html structure */
-/* let the table scroll as a backup */
-.tablescroll {
-  overflow-x: auto;
-}
-
 caption {
   width: 100%;
   text-align: left;
@@ -1609,15 +1604,6 @@ tr:nth-child(even) {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-}
-
-.table-fourth__arrows a:first-of-type {
-  margin-right: 20rem;
-}
-
-.table-fourth__left:hover svg,
-.table-fourth__right:hover svg {
-  fill: #EECF90;
 }
 
 .contact-margin {
@@ -1891,6 +1877,14 @@ tr:nth-child(even) {
   margin-bottom: 3rem;
 }
 
+.table--1, .table--2, .table--3, .table--4 {
+  display: none;
+}
+
+.table--active {
+  display: block;
+}
+
 .table-nav {
   background-color: #828282;
 }
@@ -1945,6 +1939,22 @@ tr:nth-child(even) {
   font-weight: 400;
   color: #333333;
   background-color: #ffffff;
+}
+
+.table-fourth {
+  position: relative;
+}
+
+.table__btn--left {
+  left: -5%;
+  -webkit-transform: translate(-50%, 0);
+          transform: translate(-50%, 0);
+}
+
+.table__btn--right {
+  right: -5%;
+  -webkit-transform: translate(50%, 0);
+          transform: translate(50%, 0);
 }
 
 .footer {
@@ -2815,7 +2825,7 @@ tr:nth-child(even) {
   }
 }
 
-.slider__btn {
+.slider__btn, .table__btn {
   position: absolute;
   top: 50%;
   z-index: 10;
@@ -2831,7 +2841,7 @@ tr:nth-child(even) {
 }
 
 @media (max-width: 768px) {
-  .slider__btn {
+  .slider__btn, .table__btn {
     font-size: 2rem;
     height: 4.5rem;
     width: 4.5rem;
@@ -2840,7 +2850,7 @@ tr:nth-child(even) {
 }
 
 @media (max-width: 576px) {
-  .slider__btn {
+  .slider__btn, .table__btn {
     top: 70%;
   }
 }
@@ -2964,32 +2974,6 @@ tr:nth-child(even) {
 
 .slider .tip__author a:hover {
   color: #333333;
-}
-
-.navigation-info__item {
-  padding: 1rem;
-  line-height: 100%;
-}
-
-.table-box {
-  height: 700px;
-}
-
-@media (max-width: 992px) {
-  .table-box {
-    height: auto;
-  }
-}
-
-.table--1,
-.table--2,
-.table--3,
-.table--4 {
-  display: none;
-}
-
-.table--active {
-  display: block;
 }
 
 .wrapper--register {

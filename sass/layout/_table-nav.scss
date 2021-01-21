@@ -1,58 +1,101 @@
 // only for table-nav
+.table {
 
-.table-nav {
-  background-color: $color-gray-3;
+  &--1,
+  &--2,
+  &--3,
+  &--4 {
+    display: none;
 
-  &__list {
-    // @include list;
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    list-style: none;
-    max-width: 1440px;
-    min-height: 100%;
-    font-size: var(--h5);
-    font-weight: normal;
   }
 
-  &__item {
-    text-transform: uppercase;
+
+  &--active {
+    display: block;
+
   }
 
-  button {
-    text-transform: uppercase;
-    
-    border: none;
-    outline:none;
-    margin:0;
-    font-size: inherit;
-    // padding: 0;
-  }
 
-  &__link {
-    color: $color-white;
-    background: none;
-    text-decoration: none;
-    height: 5rem;
-    padding: 1rem 2rem;
-    // for hexagon
-    position: relative;
-    z-index: 3;
 
-    &.active {
+
+  &-nav {
+    background-color: $color-gray-3;
+
+    &__list {
+      // @include list;
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+      list-style: none;
+      max-width: 1440px;
+      min-height: 100%;
+      font-size: var(--h5);
+      font-weight: normal;
+    }
+
+    &__item {
+      text-transform: uppercase;
+    }
+
+    button {
+      text-transform: uppercase;
+
+      border: none;
+      outline: none;
+      margin: 0;
+      font-size: inherit;
+      // padding: 0;
+    }
+
+    &__link {
+      color: $color-white;
+      background: none;
+      text-decoration: none;
+      height: 5rem;
+      padding: 1rem 2rem;
+      // for hexagon
       position: relative;
-      width: 100%;
-      height: 100%;
-      z-index: 2;
-      // top: -15px;
-      @include shadow2;
-      transition: hover 0.5s ease;
-      font-weight: 400;
-      color: $color-gray;
-      // letter-spacing: 3px;
+      z-index: 3;
 
-      background-color: $color-white;
+      &.active {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        z-index: 2;
+        // top: -15px;
+        @include shadow2;
+        transition: hover 0.5s ease;
+        font-weight: 400;
+        color: $color-gray;
+        // letter-spacing: 3px;
+
+        background-color: $color-white;
+
+      }
+    }
+  }
+
+  // IMPLEMENT ARROW BTNS FOR TABLE WITH OPINIONS
+  &-fourth {
+
+    position: relative;   
+  }
+
+  &__btn {
+    @extend .slider__btn;
+
+    &--left {
+      left: -5%;
+      transform: translate(-50%, 0);
+
+    }
+
+    &--right {
+      right: -5%;
+      transform: translate(50%, 0);
 
     }
   }
+
+
 }

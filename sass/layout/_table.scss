@@ -6,6 +6,8 @@ and Adrian Roselli: http://adrianroselli.com/2017/11/a-responsive-accessible-tab
 .table {
   margin: 7rem 7vw;
 
+  
+
 }
 
 
@@ -48,7 +50,7 @@ thead tr {
   top: -9999px;
   left: -9999px;
   font-family: $font-primary;
-  
+
 }
 
 /* tr {border: 1px solid black;} */
@@ -115,11 +117,11 @@ td:before {
 
 /* third table is not necessary because of different html structure */
 
-/* let the table scroll as a backup */
-.tablescroll {
-  overflow-x: auto;
-  // max-height: 500px;
-}
+// /* let the table scroll as a backup */
+// .tablescroll {
+//   overflow-x: auto;
+//   // max-height: 500px;
+// }
 
 caption {
   width: 100%;
@@ -229,16 +231,16 @@ tr:nth-child(even) {
   td {
     // font-size: 2rem;
     color: $color-gray;
-    
+
     padding: 1.5rem 3rem;
-    
+
   }
 
   //add a border only in table body
   tbody tr {
     outline: 2px solid;
   }
-  
+
   tr {
     display: table-row;
     border-radius: 5px;
@@ -255,7 +257,7 @@ tr:nth-child(even) {
     font-size: var(--h3);
     text-align: center;
     text-transform: lowercase;
-display: none;
+    display: none;
     line-height: 3rem;
   }
 
@@ -310,19 +312,11 @@ display: none;
   }
 
   &__arrows {
+
     display: flex;
     justify-content: center;
 
-    a:first-of-type {
-      margin-right: 20rem;
-    }
-
   }
 
-  &__left:hover svg,
-  &__right:hover svg {
-
-    fill: $color-honey;
-  }
 
 }
