@@ -3,8 +3,7 @@
   font-size: var(--h1);
 }
 
-section.hide,
-p.hide {
+section.hide {
   -webkit-transition: opacity 1s, -webkit-transform 1s;
   transition: opacity 1s, -webkit-transform 1s;
   transition: transform 1s, opacity 1s;
@@ -598,8 +597,8 @@ img.lazyload.loaded {
     z-index: 2;
     -webkit-filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.25));
             filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.25));
-    -webkit-transition: hover .5s ease;
-    transition: hover .5s ease;
+    -webkit-transition: hover 0.5s ease;
+    transition: hover 0.5s ease;
   }
   .navigation__link.active::before {
     content: '';
@@ -614,8 +613,8 @@ img.lazyload.loaded {
     background: #ffffff;
     -webkit-transform: rotate(-134deg);
             transform: rotate(-134deg);
-    -webkit-transition: all .5s ease;
-    transition: all .5s ease;
+    -webkit-transition: all 0.5s ease;
+    transition: all 0.5s ease;
   }
   .navigation__link:first-of-type {
     border-top: none;
@@ -715,31 +714,22 @@ img.lazyload.loaded {
 }
 
 .the-best h1 {
-  padding: 14rem 10vw;
+  padding: 14rem 10vw 4rem 10vw;
+}
+
+.the-best img.the-best__img {
+  width: 100%;
+  max-width: 600px;
+  height: auto;
 }
 
 .the-best__img {
   background: #ffffff;
-  width: 58rem;
-  margin-top: -30rem;
-  margin-left: 30rem;
+  display: block;
+  margin: 0 auto;
+  overflow-x: hidden;
   height: auto;
   opacity: 0.6;
-}
-
-@media (max-width: 992px) {
-  .the-best__img {
-    margin-top: -20rem;
-    margin-left: 18rem;
-  }
-}
-
-@media (max-width: 768px) {
-  .the-best__img {
-    width: 100vw;
-    margin-top: -20rem;
-    margin-left: 0;
-  }
 }
 
 .the-best__beater {
@@ -1105,14 +1095,9 @@ img.lazyload.loaded {
 
 .about__image {
   position: relative;
+  width: 100%;
   min-height: 440px;
   opacity: 1;
-}
-
-@media only screen and (min-width: 800px) {
-  .about__image {
-    min-height: 80vh;
-  }
 }
 
 .about__image img {
@@ -2221,10 +2206,11 @@ tr:nth-child(even) {
 
 .card__picture-img {
   position: relative;
-  left: -66px;
   -webkit-transform: rotate(88deg);
           transform: rotate(88deg);
   opacity: 0.8;
+  width: 100%;
+  height: 100%;
 }
 
 .card__picture-overlay {
@@ -2330,6 +2316,7 @@ tr:nth-child(even) {
 
 .card__star img {
   width: 20px;
+  height: 20px;
 }
 
 .card__star:not(:last-child) {
@@ -2555,8 +2542,6 @@ tr:nth-child(even) {
 
 .content__picture-img {
   position: relative;
-  width: 100%;
-  height: 100%;
   left: 32px;
   top: 0;
   -webkit-transform: rotate(88deg);

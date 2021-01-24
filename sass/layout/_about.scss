@@ -39,12 +39,14 @@
 
   &__image {
     position: relative;
+    // height: auto;
+    width:100%;
     min-height: 440px;
     opacity: 1;
 
-    @media only screen and (min-width: 800px) {
-      min-height: 80vh;
-    }
+    // @media only screen and (min-width: 800px) {
+    //   min-height: 80vh;
+    // }
 
     img {
       position: absolute;
@@ -52,6 +54,7 @@
       object-fit: cover;
       max-width: 1440px;
       width: 100%;
+      // height: auto;
       min-height: 600px;
     }
   }

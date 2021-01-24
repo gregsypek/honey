@@ -15,37 +15,32 @@
 
   //padding replace a margin because of the background
   h1 {
-    padding: $sectionMargin 10vw;
+    padding: $sectionMargin 10vw 4rem 10vw;
+  }
+
+  img.the-best__img {
+    width: 100%;
+    max-width: 600px;
+    height: auto;
   }
 
   &__img {
     background: $color-white;
 
-    width: 58rem;
-    margin-top: -30rem;
-    margin-left: 30rem;
+    display: block;
+    // height: 500px;
+    // margin-top: -30rem;
+    margin: 0 auto;
+    overflow-x: hidden;
 
     height: auto;
     opacity: 0.6;
 
-
-    @media (max-width: $large) {
-      margin-top: -20rem;
-      margin-left: 18rem;
-
-    }
-
-    @media (max-width: $big) {
-      width: 100vw;
-      margin-top: -20rem;
-      margin-left: 0;
-
-    }
   }
 
   &__beater {
     display: none;
-  
+
     transform: rotate(77.95deg);
     overflow-x: hidden;
 
@@ -98,9 +93,9 @@
     z-index: 3;
     position: relative;
     // transform: rotate(-2deg);
-    
+
     @media (max-width: $large) {
-      
+
       grid-column: 2/10;
       padding-left: 5rem;
       padding: 2rem;

@@ -93,10 +93,18 @@
 
               <li class="navigation__icon">
                 <a href="contact.html" class="icon-facebook"
-                  ><img src="./src/icons/facebookB.svg" alt="logo"
+                  ><img
+                    src="./src/icons/facebookB.svg"
+                    width="24"
+                    height="24"
+                    alt="facebook logo"
                 /></a>
                 <a href="contact.html" class="icon-instagram">
-                  <img src="./src/icons/instagramB.svg" alt="logo"
+                  <img
+                    src="./src/icons/instagramB.svg"
+                    width="24"
+                    height="24"
+                    alt=" instagram logo"
                 /></a>
               </li>
             </ul>
@@ -122,7 +130,7 @@
         <a href="shopping.html" class="hero__btn btn">Kup teraz</a>
       </main>
     </div>
-    <section class="info">
+    <section class="info hide">
       <div class="info__hello">
         <h1 class="content__title">
           witam na stronie pasieki miodek i <span>zapraszam</span>
@@ -137,14 +145,14 @@
         </h4>
       </div>
     </section>
-    <section class="about hide">
+    <section class="about">
       <div class="about__triangle"></div>
       <div class="about__header">
         <h1 class="about__text">Trochę o <span class="grape">nas...</span></h1>
         <div class="about__image">
           <!-- Photo by Ioana Motoc from Pexels
  -->
-          <picture>
+          <!-- <picture>
             <source
               srcset="./src/images/about-bg-small.jpg"
               alt="pancakes with honey"
@@ -161,13 +169,17 @@
               src="./src/images/about-bg.jpg"
               alt="pancakes with honey"
             />
-          </picture>
-
-          <!-- <img
+          </picture> -->
+          <img
             src="./src/images/about-bg.jpg"
             alt="pancakes with honey"
-            
-          /> -->
+            srcset="
+              ./src/images/about-bg-small.jpg  576w,
+              ./src/images/about-bg-medium.jpg 768w,
+              ./src/images/about-bg.jpg
+            "
+            sizes="(max-width: 576px) 100vw, (max-width: 768px) 100vw, 1400px"
+          />
         </div>
       </div>
       <div class="about__main">
@@ -204,7 +216,7 @@
       <div class="about__triangle2"></div>
     </section>
 
-    <section class="think_over">
+    <section class="think_over hide">
       <h1 class="think_over__text">Jeszcze się <span>zastanawiasz?</span></h1>
       <div class="think_over__container">
         <div class="think_over__left">
@@ -246,13 +258,12 @@
         </div>
       </div>
     </section>
-    <section class="the-best hide">
+    <section class="the-best">
       <h1 class="the-best__title">
         Oto co sparawia,<br />
         że jesteśmy <span>najlepsi:</span>
       </h1>
-
-      <picture>
+      <!-- <picture>
         <source
           srcset="./src/images/the-best-bg-small.jpg"
           alt="pancakes with honey"
@@ -263,24 +274,35 @@
           alt="pancakes with honey"
           media="(max-width: 768px)"
         />
-
         <img
           class="the-best__img"
           src="./src/images/the-best-bg.jpg"
           alt="two bees flies over the vessel"
         />
-      </picture>
+      </picture> -->
+
+      <img
+        src="./src/images/the-best-bg-medium.jpg"
+        alt="two bees flies over the
+      vessel"
+        srcset="
+          ./src/images/the-best-bg-small.jpg  576w,
+          ./src/images/the-best-bg-medium.jpg 768w
+        "
+        sizes="(max-width: 576px) 90vw, (max-width: 992px) 60vw, 600px"
+        class="the-best__img"
+      />
 
       <div class="the-best__box">
-        <p class="the-best__info info--1 hide">
+        <p class="the-best__info info--1">
           Mamy duże doświadczenie w hodowli pszczół. Nasz miód wyróżnia się
           wysoką jakością i znajduje spore uznanie wsród klientów.
         </p>
-        <p class="the-best__info info--2 hide">
+        <p class="the-best__info info--2">
           Kupując u nas masz pewność, że miód pochodzi z naszych lokalnych,
           czystych terenów
         </p>
-        <p class="the-best__info info--3 hide">
+        <p class="the-best__info info--3">
           Nie słodzimy nie poprawiamy nie psujemy. Wszystko odbywa sie w
           naturalny sposób. Pszczoły wiedzą co dobre!
         </p>
@@ -290,7 +312,7 @@
       </div>
     </section>
 
-    <section class="questions">
+    <section class="questions hide">
       <h1 class="questions__header">Pytania<span>?</span></h1>
       <div class="questions__container">
         <div class="questions__box">

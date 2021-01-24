@@ -1,9 +1,7 @@
 // FOR ALL PAGES
 
 .navigation {
-
   &__row {
-
     /* places hamburger button and logo next to each other */
     display: flex;
     flex-flow: row nowrap;
@@ -13,13 +11,11 @@
 
     &--first {
       justify-content: space-between;
-
-
     }
     //for icon burger and X
-    .fa, 
+    .fa,
     .fas {
-      margin-top:10px;
+      margin-top: 10px;
     }
 
     svg.logo--double {
@@ -33,8 +29,6 @@
       @media (max-width: $big) {
         width: 9rem;
       }
-
-
     }
 
     .sr-only {
@@ -56,7 +50,6 @@
       // font-size: 3rem;
       font-size: var(--h2);
       margin-left: 1rem;
-
     }
 
     .menu-close {
@@ -100,18 +93,16 @@
         border: none;
         color: inherit;
         // font-family: inherit;
-
       }
     }
 
     .btn--login {
       @include btn--login;
       background-color: $color-white-2;
-
     }
 
     .btn--register {
-      @include btn--register
+      @include btn--register;
     }
   }
 
@@ -121,27 +112,23 @@
     margin: 0;
     padding: 3rem;
     justify-content: flex-start;
-
-
+   
 
     img:not(last-of-type) {
       margin-right: 2rem;
     }
   }
 
-  //item burger is visiblo only on burger nav 
+  //item burger is visiblo only on burger nav
   &__item--burger {
     a {
       display: inline-block;
       width: 100%;
       // margin-top: 3rem;
-      margin-bottom:-2rem;
+      margin-bottom: -2rem;
       border-top: 1px solid $color-gray;
     }
-
   }
-
-
 
   &__nav {
     /*
@@ -190,7 +177,7 @@
         z-index: 1000;
       }
 
-      +.backdrop {
+      + .backdrop {
         position: fixed;
         display: block;
         left: 0;
@@ -220,11 +207,10 @@
 
   &__description {
     @extend .navigation__list;
-    //reset style for min-width 800px where I want to have 
+    //reset style for min-width 800px where I want to have
     margin-top: 0;
     margin-bottom: 0;
   }
-
 
   a {
     text-decoration: none;
@@ -244,10 +230,7 @@
       // text-decoration: underline;
       color: lighten($color-gray, 20%);
     }
-
   }
-
-
 }
 
 //////////////////////////////////////////////////
@@ -255,7 +238,6 @@
 @media (min-width: 800px) {
   .navigation {
     &__row {
-
       .menu-toggle {
         /* fa-bars and fa-close not needed on desktop so hide them */
         display: none;
@@ -274,7 +256,6 @@
         height: 8rem;
         max-width: 1440px;
 
-
         ::before {
           content: '';
           background-image: url(../src/images/logo_footer.svg);
@@ -283,11 +264,9 @@
           left: 15px;
           top: 18px;
           background-repeat: no-repeat;
-
         }
 
         //sticky navigation starting in hero section
-
       }
     }
 
@@ -299,9 +278,7 @@
       // width: 1000px;
       // max-width: 900px;
 
-
       overflow-y: visible; // without this fixed nav have scroll
-
 
       .menu-close {
         display: none;
@@ -334,7 +311,6 @@
       // height: 5rem;
       li {
         margin-bottom: 0rem;
-
       }
 
       &::before {
@@ -346,21 +322,18 @@
         // background-color: $color-white;
         // background-color: $color-honey-5;
       }
-
     }
-
-
 
     &__item {
       /* display the li's horizontally */
       @include item;
-      //  
+      //
     }
 
     &__item:not(:last-child) {
       margin-right: 1.8rem;
 
-      @media(max-width: $large){
+      @media (max-width: $large) {
         margin-right: 0.5rem;
       }
     }
@@ -371,7 +344,6 @@
       display: none;
     }
 
-
     &__link {
       color: $color-gray;
       display: inline;
@@ -380,14 +352,13 @@
       position: relative;
       z-index: 3;
 
-
       &.active {
         position: relative;
         width: 100%;
         height: 100%;
         z-index: 2;
         @include shadow2;
-        transition: hover .5s ease;
+        transition: hover 0.5s ease;
 
         &::before {
           content: '';
@@ -400,8 +371,7 @@
           @include hexagon;
           background: $color-white;
           @include rotate;
-          transition: all .5s ease;
-
+          transition: all 0.5s ease;
         }
       }
 
@@ -420,9 +390,6 @@
       margin-bottom: -2rem;
     }
   }
-
-
-
 }
 
 //FOR INDEX.HTML
@@ -432,8 +399,7 @@
 //   background-color: $color-honey-5;
 // }
 
-
-//FOR REST OF THE PAGES 
+//FOR REST OF THE PAGES
 
 // change  background for navigation list
 .navigation__list--white::before {
