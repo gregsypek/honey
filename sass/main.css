@@ -92,7 +92,7 @@ img.lazyload.loaded {
   transition: -webkit-transform .2s;
   transition: transform .2s;
   transition: transform .2s, -webkit-transform .2s;
-  border-radius: 5%;
+  border-radius: 5px;
   outline: none;
   cursor: pointer;
 }
@@ -1302,6 +1302,18 @@ img.lazyload.loaded {
   color: #EECF90;
 }
 
+@media (max-width: 576px) {
+  .content h1 {
+    margin: calc(14rem - 5rem) 10vw 14rem 10vw;
+    color: #333333;
+    line-height: 140%;
+  }
+  .content h1 span {
+    display: block;
+    color: #EECF90;
+  }
+}
+
 .content__info-box {
   background: #EECF90;
 }
@@ -1331,7 +1343,7 @@ img.lazyload.loaded {
 and Adrian Roselli: http://adrianroselli.com/2017/11/a-responsive-accessible-table.html#Responsive
 */
 .table {
-  margin: 7rem 7vw;
+  margin: 10rem 7vw 14rem 7vw;
 }
 
 table {
@@ -2488,8 +2500,8 @@ tr:nth-child(even) {
 }
 
 .content__picture-frame {
-  width: 41rem;
-  height: 49rem;
+  width: 38rem;
+  height: 45rem;
   top: 48px;
   right: 95px;
   -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
@@ -2538,11 +2550,13 @@ tr:nth-child(even) {
   -webkit-clip-path: polygon(53% 9px, 97% 29%, 94% 74%, 48% 95%, 6px 71%, 12px 25%);
           clip-path: polygon(53% 9px, 97% 29%, 94% 74%, 48% 95%, 6px 71%, 12px 25%);
   background: #ffffff;
+  background: none;
 }
 
 .content__picture-img {
   position: relative;
-  left: 32px;
+  width: 100%;
+  height: 100%;
   top: 0;
   -webkit-transform: rotate(88deg);
           transform: rotate(88deg);

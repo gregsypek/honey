@@ -2,6 +2,11 @@
 .content {
 
   @include header(calc(#{$sectionMargin} - 5px) 10vw, $color-gray, $color-honey, block);
+  
+  @media(max-width: $small) {
+    
+    @include header(calc(#{$sectionMargin} - 5rem) 10vw $sectionMargin 10vw, $color-gray, $color-honey, block);
+  }
 
   &__info-box {
     // width: 100vw;
@@ -12,7 +17,6 @@
 
     color: $color-gray;
     font-family: $font-secondary;
- 
     padding: 2rem 10vw;
     display: flex;
     justify-content: center;
