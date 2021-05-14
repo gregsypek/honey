@@ -1,15 +1,29 @@
-section.hide
- {
+// section.hide
+//  {
+//   transition: transform 1s, opacity 1s;
+// }
+.hide {
   transition: transform 1s, opacity 1s;
+}
+.animate {
+  transition: transform 2s, opacity 2s;
+}
+.rotate {
+  transition: transform 2s;
 }
 
 .section--hidden {
   opacity: 0;
-  transform: translateY(5rem);
+  transform: translateY(3rem);
 }
 
 //animated text in section the-best
-// .text--hidden {
-//   opacity: 0;
-//   transform: translateX(20rem)
-// }
+.text--hidden {
+  opacity: 0;
+  transform: translateX(20rem);
+}
+.hex--hidden {
+  // opacity: 0;
+  transform: rotate(88deg);
+  transform-origin: center;
+}

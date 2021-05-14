@@ -40,7 +40,7 @@
   &__image {
     position: relative;
     // height: auto;
-    width:100%;
+    width: 100%;
     min-height: 440px;
     opacity: 1;
 
@@ -60,7 +60,6 @@
   }
 
   &__main {
-  
     display: grid;
     grid-template-columns: repeat(12, 1fr);
     // grid-template-rows: 1rem repeat(2, minmax(auto, 1fr)) 0$sectionMargin;
@@ -99,7 +98,7 @@
         position: absolute;
         width: 65px;
         height: 76px;
-        top: -29px;
+        top: -19px;
         left: -20px;
         @include hexagon;
         background: rgba($color-honey, 1);
@@ -128,6 +127,7 @@
   .paragraph--1,
   .paragraph--3 {
     grid-column: 3/7;
+    margin-top: -8rem;
   }
 
   .paragraph--2,
@@ -137,7 +137,8 @@
 
   &__info::first-letter {
     font-size: 5rem;
-    color: $color-white;
+    color: $color-white-2;
     line-height: 100%;
+    font-weight: bold;
   }
 }

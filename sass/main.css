@@ -3,17 +3,44 @@
   font-size: var(--h1);
 }
 
-section.hide {
+.hide {
   -webkit-transition: opacity 1s, -webkit-transform 1s;
   transition: opacity 1s, -webkit-transform 1s;
   transition: transform 1s, opacity 1s;
   transition: transform 1s, opacity 1s, -webkit-transform 1s;
 }
 
+.animate {
+  -webkit-transition: opacity 2s, -webkit-transform 2s;
+  transition: opacity 2s, -webkit-transform 2s;
+  transition: transform 2s, opacity 2s;
+  transition: transform 2s, opacity 2s, -webkit-transform 2s;
+}
+
+.rotate {
+  -webkit-transition: -webkit-transform 2s;
+  transition: -webkit-transform 2s;
+  transition: transform 2s;
+  transition: transform 2s, -webkit-transform 2s;
+}
+
 .section--hidden {
   opacity: 0;
-  -webkit-transform: translateY(5rem);
-          transform: translateY(5rem);
+  -webkit-transform: translateY(3rem);
+          transform: translateY(3rem);
+}
+
+.text--hidden {
+  opacity: 0;
+  -webkit-transform: translateX(20rem);
+          transform: translateX(20rem);
+}
+
+.hex--hidden {
+  -webkit-transform: rotate(88deg);
+          transform: rotate(88deg);
+  -webkit-transform-origin: center;
+          transform-origin: center;
 }
 
 *,
@@ -1159,7 +1186,7 @@ img.lazyload.loaded {
   position: absolute;
   width: 65px;
   height: 76px;
-  top: -29px;
+  top: -19px;
   left: -20px;
   -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
           clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
@@ -1192,6 +1219,7 @@ img.lazyload.loaded {
   -ms-grid-column: 3;
   -ms-grid-column-span: 4;
   grid-column: 3/7;
+  margin-top: -8rem;
 }
 
 .about .paragraph--2,
@@ -1203,8 +1231,9 @@ img.lazyload.loaded {
 
 .about__info::first-letter {
   font-size: 5rem;
-  color: #ffffff;
+  color: #f2f2f2;
   line-height: 100%;
+  font-weight: bold;
 }
 
 .questions {

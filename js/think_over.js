@@ -72,12 +72,12 @@ const revealSection = function (entries, observer) {
   if (!entry.isIntersecting) return;
 
   entry.target.classList.remove('section--hidden');
-  // observer.unobserve(entry.target);
+  observer.unobserve(entry.target);
 };
 
 const sectionObserver = new IntersectionObserver(revealSection, {
   root: null,
-  threshold: 0.2,
+  threshold: 0.1,
 });
 
 allSections.forEach(function (section) {
@@ -99,10 +99,30 @@ allSections.forEach(function (section) {
 
 // const textObserver = new IntersectionObserver(revealText, {
 //   root: null,
-//   threshold: 0.2,
+//   threshold: 0.1,
 // });
 
 // allText.forEach(function (text) {
 //   textObserver.observe(text);
 //   text.classList.add('text--hidden');
 // });
+// ROTATE HEX
+const allHex = document.querySelectorAll('.rotate');
+
+const rotateHex = function (entries, observer) {
+  const [entry] = entries;
+  if (!entry.isIntersecting) return;
+
+  entry.target.classList.remove('hex--hidden');
+  observer.unobserve(entry.target);
+};
+
+const hexObserver = new IntersectionObserver(rotateHex, {
+  root: null,
+  threshold: 0.1,
+});
+
+allHex.forEach(function (hex) {
+  hexObserver.observe(hex);
+  hex.classList.add('hex--hidden');
+});
