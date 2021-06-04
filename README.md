@@ -1,10 +1,10 @@
 # Miodek v3
 
-![alt tag](./src/images/logo-miodek-white.png)
+![alt tag](./src/images/logo-miodek.png)
 
 **Miodek v3** is my biggest website - containing 14 pages. Write for a real company with honey for sale. Including lazy loading images and slider components. Fully responsive with an easy to manage SCSS structure.
 
-just visit [gregsypek.github.io/wordsApp](http://gregsypek.github.io/honey)!
+just visit [gregsypek.github.io/honey](http://gregsypek.github.io/honey)!
 
 ![alt tag](./src/screenshots/miodekv3-1.png)
 

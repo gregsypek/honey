@@ -272,8 +272,7 @@ img.lazyload.loaded {
           justify-content: space-between;
 }
 
-.navigation__row .fa,
-.navigation__row .fas {
+.navigation__row .iconify {
   margin-top: 10px;
 }
 

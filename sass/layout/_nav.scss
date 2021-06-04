@@ -13,8 +13,7 @@
       justify-content: space-between;
     }
     //for icon burger and X
-    .fa,
-    .fas {
+    .iconify {
       margin-top: 10px;
     }
 
@@ -112,7 +111,6 @@
     margin: 0;
     padding: 3rem;
     justify-content: flex-start;
-   
 
     img:not(last-of-type) {
       margin-right: 2rem;
