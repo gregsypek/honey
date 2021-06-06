@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Miodek</title>
-    <script src="https://kit.fontawesome.com/fb7f6f30e4.js"></script>
+    <script src="https://code.iconify.design/1/1.0.6/iconify.min.js"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Bungee&family=Poppins:wght@300;400;600&display=swap"
       rel="stylesheet"
@@ -23,7 +23,12 @@
           aria-label="Open main menu"
         >
           <span class="sr-only">Open main menu</span>
-          <span class="fa fa-bars" aria-hidden="true"></span>
+          <span
+            class="iconify"
+            data-inline="false"
+            data-icon="eva:menu-fill"
+            aria-hidden="true"
+          ></span>
         </a>
 
         <a href="index.html">
@@ -58,7 +63,12 @@
             aria-label="Close main menu"
           >
             <span class="sr-only">Close main menu</span>
-            <span class="fa fa-close" aria-hidden="true"></span>
+           <span
+                class="iconify iconify__close"
+                data-inline="false"
+                data-icon="eva:close-fill"
+                aria-hidden="true"
+              ></span>
           </a>
 
           <ul class="navigation__list">
@@ -84,21 +94,21 @@
             </li>
 
             <li class="navigation__icon">
-                <a href="contact.html" class="icon-facebook"
-                  ><img
-                    src="./src/icons/facebookB.svg"
-                    width="24"
-                    height="24"
-                    alt="facebook logo"
-                /></a>
-                <a href="contact.html" class="icon-instagram">
-                  <img
-                    src="./src/icons/instagramB.svg"
-                    width="24"
-                    height="24"
-                    alt=" instagram logo"
-                /></a>
-              </li>
+              <a href="contact.html" class="icon-facebook"
+                ><img
+                  src="./src/icons/facebookB.svg"
+                  width="24"
+                  height="24"
+                  alt="facebook logo"
+              /></a>
+              <a href="contact.html" class="icon-instagram">
+                <img
+                  src="./src/icons/instagramB.svg"
+                  width="24"
+                  height="24"
+                  alt=" instagram logo"
+              /></a>
+            </li>
           </ul>
         </nav>
         <a href="#main-menu-toggle" class="backdrop" tabindex="-1" hidden></a>
@@ -175,7 +185,7 @@
         </div>
         <div class="footer__column column--2">
           <h5>Informacje</h5>
-           <a href="about_us.html">O nas</a>
+          <a href="about_us.html">O nas</a>
           <a href="honey.html">O miodzie</a>
           <a href="help.html">Pomoc</a>
         </div>

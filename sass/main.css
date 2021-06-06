@@ -259,8 +259,8 @@ img.lazyload.loaded {
   display: flex;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+      -ms-flex-flow: row;
+          flex-flow: row;
   /* Screen reader only 
     https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html for more info */
   /* Hamburger button styling. "Button" is the bars icon from FontAwesome. */
@@ -270,10 +270,22 @@ img.lazyload.loaded {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .navigation__row .iconify {
   margin-top: 10px;
+}
+
+.navigation__row svg.iconify {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+}
+
+.navigation__row svg.iconify.iconify__close {
+  margin-left: 195px;
 }
 
 .navigation__row svg.logo--double {
@@ -323,6 +335,19 @@ img.lazyload.loaded {
 .navigation__row .menu-close:hover,
 .navigation__row .menu-close:focus {
   color: #828282;
+}
+
+@media (max-width: 800px) {
+  .navigation__buttons {
+    -ms-flex-preferred-size: 100%;
+        flex-basis: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
 }
 
 .navigation__buttons .btn {

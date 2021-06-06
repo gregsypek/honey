@@ -4,23 +4,34 @@
   &__row {
     /* places hamburger button and logo next to each other */
     display: flex;
-    flex-flow: row nowrap;
+    flex-flow: row;
 
     /* Screen reader only 
     https://www.scottohara.me/blog/2017/04/14/inclusively-hidden.html for more info */
 
     &--first {
       justify-content: space-between;
+      flex-wrap: wrap;
     }
     //for icon burger and X
     .iconify {
       margin-top: 10px;
+    }
+    svg.iconify {
+      position: fixed;
+      top: 10px;
+      left: 10px;
+      //for specificity
+      &.iconify__close {
+        margin-left: 195px;
+      }
     }
 
     svg.logo--double {
       width: 12rem;
       height: auto;
       margin: 10px 15px;
+      // margin-left: auto;
 
       @media (max-width: 400px) {
         height: 4rem;
@@ -71,6 +82,11 @@
   // }
 
   &__buttons {
+    @media (max-width: 800px) {
+      flex-basis: 100%;
+      display: flex;
+      justify-content: flex-end;
+    }
     .btn {
       margin: 15px;
       position: relative;
