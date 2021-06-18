@@ -17,10 +17,21 @@
   },
   "homepage": "https://github.com/gregsypek/honey#readme",
   "dependencies": {
-    "eslint": "^7.15.0",
-    "prettier": "^2.2.1"
+    "dotenv": "^10.0.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.12.14",
+    "morgan": "^1.10.0"
   },
   "devDependencies": {
-    "node": "^15.3.0"
+    "eslint": "^7.28.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^3.4.0",
+    "eslint-plugin-react": "^7.24.0",
+    "node": "^15.3.0",
+    "prettier": "^2.3.1"
   }
 }
