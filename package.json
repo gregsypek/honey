@@ -4,6 +4,8 @@
   "description": "landing page for \"miodek\"",
   "main": "index.js",
   "scripts": {
+    "start": "nodemon server.js",
+    "start:prod": "NODE_ENV=production nodemon server.js",
     "compile:sass": "node-sass sass/main.scss css/style.css -w"
   },
   "repository": {
@@ -32,6 +34,7 @@
     "eslint-plugin-prettier": "^3.4.0",
     "eslint-plugin-react": "^7.24.0",
     "node": "^15.3.0",
+    "nodemon": "^2.0.7",
     "prettier": "^2.3.1"
   }
 }
