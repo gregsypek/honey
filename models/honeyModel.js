@@ -67,7 +67,6 @@ const honeySchema = new mongoose.Schema(
       type: String,
       required: [true, 'A honey must have a cover image'],
     },
-    images: [String],
     createdAt: {
       type: Date,
       default: Date.now(),
