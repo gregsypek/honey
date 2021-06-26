@@ -1,6 +1,7 @@
 const Honey = require('../models/honeyModel');
 const APIFeatures = require('../utils/apiFeatures');
 const catchAsync = require('../utils/catchAsync');
+const AppError = require('../utils/appError');
 
 exports.getAllHoney = catchAsync(async (req, res, next) => {
   const features = new APIFeatures(Honey.find(), req.query)
@@ -22,6 +23,11 @@ exports.getAllHoney = catchAsync(async (req, res, next) => {
 
 exports.getHoney = catchAsync(async (req, res, next) => {
   const honey = await Honey.findById(req.params.id);
+
+  if (!honey) {
+    //return and not go to the code below
+    return next(new AppError('No honey found with that ID', 404));
+  }
   res.status(200).json({
     status: 'success',
     data: honey,
@@ -43,6 +49,11 @@ exports.updateHoney = catchAsync(async (req, res, next) => {
     new: true,
     runValidators: true,
   });
+
+  if (!honey) {
+    return next(new AppError('No honey found with that ID', 404));
+  }
+
   res.status(200).json({
     status: 'success',
     data: {
@@ -52,7 +63,11 @@ exports.updateHoney = catchAsync(async (req, res, next) => {
 });
 
 exports.deleteHoney = catchAsync(async (req, res, next) => {
-  await Honey.findByIdAndDelete(req.params.id);
+  const honey = await Honey.findByIdAndDelete(req.params.id);
+
+  if (!honey) {
+    return next(new AppError('No honey found with that ID', 404));
+  }
   res.status(204).json({
     status: 'success',
     data: null,
