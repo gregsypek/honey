@@ -1,5 +1,5 @@
 const express = require('express');
-const honeyController = require('../controllers/honeyController');
+const userController = require('../controllers/userController');
 const authController = require('../controllers/authController');
 
 const router = express.Router();
@@ -8,13 +8,13 @@ router.post('/signup', authController.signup);
 
 router
   .route('/')
-  .get(honeyController.getAllHoney)
-  .post(honeyController.createHoney);
+  .get(userController.getAllUsers)
+  .post(userController.createUser);
 
 router
   .route('/:id')
-  .get(honeyController.getHoney)
-  .patch(honeyController.updateHoney)
-  .delete(honeyController.deleteHoney);
+  .get(userController.getUser)
+  .patch(userController.updateUser)
+  .delete(userController.deleteUser);
 
 module.exports = router;
