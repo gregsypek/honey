@@ -8,7 +8,7 @@ router.post('/signup', authController.signup);
 
 router
   .route('/')
-  .get(honeyController.getAllHoney)
+  .get(authController.protect, honeyController.getAllHoney)
   .post(honeyController.createHoney);
 
 router
