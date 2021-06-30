@@ -15,6 +15,10 @@ router
   .route('/:id')
   .get(honeyController.getHoney)
   .patch(honeyController.updateHoney)
-  .delete(honeyController.deleteHoney);
+  .delete(
+    authController.protect,
+    authController.restrictTo('admin'),
+    honeyController.deleteHoney
+  );
 
 module.exports = router;
