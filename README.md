@@ -1,12 +1,12 @@
 # Miodek v3
 
-![alt tag](./src/images/logo-miodek.png)
+![alt tag](./public/src/images/logo-miodek.png)
 
 **Miodek v3** is my biggest website - containing 14 pages. Write for a real company with honey for sale. Including lazy loading images and slider components. Fully responsive with an easy to manage SCSS structure.
 
 just visit [gregsypek.github.io/honey](http://gregsypek.github.io/honey)!
 
-![alt tag](./src/screenshots/miodekv3-1.png)
+![alt tag](./public/src/screenshots/miodekv3-1.png)
 
 ### Features
 
@@ -19,7 +19,7 @@ just visit [gregsypek.github.io/honey](http://gregsypek.github.io/honey)!
 - no external libraries
 - etc.
 
-![alt tag](./src/screenshots/miodekv3-2.png)
+![alt tag](./public/src/screenshots/miodekv3-2.png)
 
 #### Under the hood
 
@@ -29,7 +29,7 @@ Technologies being used under the hood:
 - Vanillia JS
 - Sass
 
-![alt tag](./src/screenshots/miodekv3-3.png)
+![alt tag](./public/src/screenshots/miodekv3-3.png)
 
 #### Future plans
 
@@ -38,7 +38,7 @@ Technologies being used under the hood:
 - add backend with express
 - add administration panel
 
-![alt tag](./src/screenshots/miodekv3-4.png)
+![alt tag](./public/src/screenshots/miodekv3-4.png)
 
 ### License
 
