@@ -32,19 +32,18 @@ p {
   font-size: var(--base-size);
 }
 
-
 .text_small {
   font-size: calc(var(--base-size) / var(--type-scale));
 }
 
 .h1_big {
-  font-size: calc(var(--h1) *  var(--type-scale));
+  font-size: calc(var(--h1) * var(--type-scale));
 }
 
-  @media (min-width: 200px) {
-    :root {
-      --type-scale: 1.125;
-    }
+@media (min-width: 200px) {
+  :root {
+    --type-scale: 1.125;
+  }
 }
 
 @media (min-width: 480px) {

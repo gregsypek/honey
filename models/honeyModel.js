@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+// const User = require('./userModel');
 
 const honeySchema = new mongoose.Schema(
   {
@@ -72,12 +73,26 @@ const honeySchema = new mongoose.Schema(
       default: Date.now(),
       select: false,
     },
+    guides: [
+      {
+        type: mongoose.Schema.ObjectId,
+        ref: 'User',
+      },
+    ],
   },
   {
     toJSON: { virtuals: true },
     toObject: { virtuals: true },
   }
 );
+honeySchema.pre(/^find/, function (next) {
+  this.populate({
+    path: 'guides',
+    select: '-__v -passwordChangedAt',
+  });
+  next();
+});
+
 const Honey = mongoose.model('Honey', honeySchema);
 
 module.exports = Honey;
