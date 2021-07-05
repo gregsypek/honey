@@ -85,6 +85,14 @@ const honeySchema = new mongoose.Schema(
     toObject: { virtuals: true },
   }
 );
+
+//Virtual populate
+honeySchema.virtual('reviews', {
+  ref: 'Review',
+  foreignField: 'honey', //where local fields are equal
+  localField: '_id', // to foreign field
+});
+
 honeySchema.pre(/^find/, function (next) {
   this.populate({
     path: 'guides',

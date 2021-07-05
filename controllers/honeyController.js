@@ -23,7 +23,7 @@ exports.getAllHoney = catchAsync(async (req, res, next) => {
 
 exports.getHoney = catchAsync(async (req, res, next) => {
   //'populate' will fill with actual data but only in query not in a database!
-  const honey = await Honey.findById(req.params.id);
+  const honey = await Honey.findById(req.params.id).populate('reviews');
 
   if (!honey) {
     //return and not go to the code below
