@@ -1,5 +1,6 @@
 const Review = require('../models/reviewModel');
 const catchAsync = require('../utils/catchAsync');
+const factory = require('./handlerFactory');
 
 exports.getAllReviews = catchAsync(async (req, res, next) => {
   let filter = {};
@@ -16,17 +17,15 @@ exports.getAllReviews = catchAsync(async (req, res, next) => {
   });
 });
 
-exports.createReview = catchAsync(async (req, res, next) => {
+exports.setHoneyUserIds = (req, res, next) => {
   //Allow neste routes
   //define if they are not in body
+  // req.user is from protect midlleware};
+  if (!req.body.user) req.body.user = req.user.id;
   if (!req.body.honey) req.body.honey = req.params.honeyId;
-  if (!req.body.user) req.body.user = req.user.id; // req.user is from protect midlleware
-  const newReview = await Review.create(req.body);
+  next();
+};
 
-  res.status(201).json({
-    status: 'success',
-    data: {
-      review: newReview,
-    },
-  });
-});
+exports.createReview = factory.createOne(Review);
+exports.deleteReview = factory.deleteOne(Review);
+exports.updateReview = factory.updateOne(Review);

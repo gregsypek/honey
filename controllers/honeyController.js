@@ -2,6 +2,7 @@ const Honey = require('../models/honeyModel');
 const APIFeatures = require('../utils/apiFeatures');
 const catchAsync = require('../utils/catchAsync');
 const AppError = require('../utils/appError');
+const factory = require('./handlerFactory');
 
 exports.getAllHoney = catchAsync(async (req, res, next) => {
   const features = new APIFeatures(Honey.find(), req.query)
@@ -35,42 +36,6 @@ exports.getHoney = catchAsync(async (req, res, next) => {
   });
 });
 
-exports.createHoney = catchAsync(async (req, res, next) => {
-  const newHoney = await Honey.create(req.body);
-  res.status(201).json({
-    status: 'success',
-    data: {
-      honey: newHoney,
-    },
-  });
-});
-
-exports.updateHoney = catchAsync(async (req, res, next) => {
-  const honey = await Honey.findByIdAndUpdate(req.params.id, req.body, {
-    new: true,
-    runValidators: true,
-  });
-
-  if (!honey) {
-    return next(new AppError('No honey found with that ID', 404));
-  }
-
-  res.status(200).json({
-    status: 'success',
-    data: {
-      honey,
-    },
-  });
-});
-
-exports.deleteHoney = catchAsync(async (req, res, next) => {
-  const honey = await Honey.findByIdAndDelete(req.params.id);
-
-  if (!honey) {
-    return next(new AppError('No honey found with that ID', 404));
-  }
-  res.status(204).json({
-    status: 'success',
-    data: null,
-  });
-});
+exports.createHoney = factory.createOne(Honey);
+exports.updateHoney = factory.updateOne(Honey);
+exports.deleteHoney = factory.deleteOne(Honey);
