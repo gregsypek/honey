@@ -1,6 +1,7 @@
 const express = require('express');
 const honeyController = require('../controllers/honeyController');
 const authController = require('../controllers/authController');
+const reviewRouter = require('./reviewRoutes');
 
 const router = express.Router();
 
@@ -20,5 +21,7 @@ router
     authController.restrictTo('admin'),
     honeyController.deleteHoney
   );
+
+router.use('/:honeyId/reviews', reviewRouter);
 
 module.exports = router;
