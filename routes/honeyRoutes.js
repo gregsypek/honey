@@ -5,6 +5,8 @@ const reviewRouter = require('./reviewRoutes');
 
 const router = express.Router();
 
+router.use('/:honeyId/reviews', reviewRouter);
+
 router.post('/signup', authController.signup);
 
 router
@@ -21,7 +23,5 @@ router
     authController.restrictTo('admin'),
     honeyController.deleteHoney
   );
-
-router.use('/:honeyId/reviews', reviewRouter);
 
 module.exports = router;
