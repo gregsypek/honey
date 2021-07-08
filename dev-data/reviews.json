@@ -1,0 +1,23 @@
+[
+  {
+    "_id": "60e734be2bcb771362ed32cd",
+    "review": "Polecam gorąco to naprawdę świetny miodek😀",
+    "rating": 5,
+    "honey": "60e71a9f5640f90f604bb91e",
+    "user": "60e712bfc8e01e0c346dd5f2"
+  },
+  {
+    "_id": "60e73519a335ab13717f16b2",
+    "review": "Odkąd zaczęłam kupować Wasz miód moje dzieci nie jedzą czekolady",
+    "rating": 4,
+    "honey": "60e71a9f5640f90f604bb91f",
+    "user": "60e71306c8e01e0c346dd5f4"
+  },
+  {
+    "_id": "60e734335a601513537c62be",
+    "review": "Dobrze się smaruje ale niestety szybko się kończy!",
+    "rating": 5,
+    "honey": "60e71a9f5640f90f604bb91d",
+    "user": "60e71298c8e01e0c346dd5f0"
+  }
+]

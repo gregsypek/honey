@@ -1,11 +1,11 @@
 [
   {
-    "id": 0,
+    "_id": "60e71a9f5640f90f604bb91d",
     "name": "Miód rzepakowy",
     "shortDescription": "Miód rzepakowy jest łatwo przyswajalny. Polecany jest osobom z nadciśnieniem oraz z problemami układu trawiennego",
     "longDescription": "Miód rzepakowy o jasnej barwie, łagodnym smaku oraz wyraźnym aromacie kwiatu rzepaku. Nasz miód rzepakowy ma kremową, miękką konsystencję, łatwą do rozsmarowania.",
     "ratingsAverage": 4.7,
-    "ratingsQuantity": 12,    
+    "ratingsQuantity": 12,
     "price350": 15,
     "price720": 30,
     "price900": 40,
@@ -13,7 +13,7 @@
     "available": true
   },
   {
-    "id": 1,
+    "_id": "60e71a9f5640f90f604bb91e",
     "name": "Miód wielokwiatowy",
     "shortDescription": "Drobnoziarnisty miód wielokwiatowy o wyrazistym kwiatowym, słodkim smaku i aromacie",
     "longDescription": "W stanie płynnym jest jasny, ma przyjemny delikatny zapach kwiatowy i łagodny smak. Natomiast miód pochodzący z nektaru kwiatów letnich jest znacznie ciemniejszy oraz odznacza się zdecydowanym smakiem i zapachem. W późniejszym etapie, po skrystalizowaniu zmienia nieco zabarwienie na jasnoszare lub jasnobrązowe. Skład roślin z jakich został zebrany nektar ma wpływ na jego walory odżywcze. Zapach miodu wielokwiatowego jest zwyczajowo silny, przebijający inne zapachy, przypomina zapach wosku. W smaku jest bardzo zróżnicowany, zależnie od składu nektaru, na ogół jednak jest łagodny, słodki.",
@@ -26,7 +26,7 @@
     "available": true
   },
   {
-    "id": 2,
+    "_id": "60e71a9f5640f90f604bb91f",
     "name": "Miód malinowy",
     "shortDescription": "W chwili pozyskania miód malinowy ma słomkową, złocistą barwę. Szybko krystalizuje się i jaśnieje, uzyskując niemal biały kolor i mazistą strukturę.",
     "longDescription": "Ze względu na dużą zawartość dobrze przyswajalnych cukrów, które – w zależności od bieżących potrzeb – przetwarzane są na energię lub odkładane w postaci m.in. glikogenu, miód malinowy ma doskonałe właściwości wzmacniające. Odżywia i regeneruje organizm, dodaje sił, poprawia samopoczucie. Dlatego jest dobrą propozycją dla osób, które wykonują duży wysiłek fizyczny lub umysłowy albo cierpią na przewlekłe zmęczenie. Regularne spożywanie miodu malinowego zalecane jest dzieciom",
@@ -39,7 +39,7 @@
     "available": true
   },
   {
-    "id": 3,
+    "_id": "60e71a9f5640f90f604bb920",
     "name": "Miód akacjowy",
     "shortDescription": "Miód z powodzeniem stosować można, jako środek łagodzący na dolegliwości żołądkowe oraz układu pokarmowego, przy schorzeniach dróg oddechowych, oraz problemach skórnych.",
     "longDescription": "Miód akacjowy ma także wiele cennych witamin wzmacniających nasz układ odpornościowy oraz duże ilości węglowodanów prostych, dodających energii i sił. Stąd też polecany jest nie tylko osobom, które walczą z przeziębieniem, ale także sportowcom, osobom uczącym się oraz narażonym na duży wysiłek fizyczny.",

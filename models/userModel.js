@@ -48,22 +48,23 @@ const userSchema = new mongoose.Schema({
   },
 });
 
-userSchema.pre('save', async function (next) {
-  //Only run if password was actually modified
-  if (!this.isModified('password')) return next();
+// userSchema.pre('save', async function (next) {
+//   //Only run if password was actually modified
+//   if (!this.isModified('password')) return next();
 
-  //Hash the password
-  this.password = await bcrypt.hash(this.password, 12);
+//   //Hash the password
+//   this.password = await bcrypt.hash(this.password, 12);
 
-  //Delete passwordConfirm field
-  this.passwordConfirm = undefined;
-  next();
-});
-userSchema.pre('save', function (next) {
-  if (!this.isModified('password') || this.isNew) return next();
-  this.passwordChangedAt = Date.now() - 1000; // to make sure that token is created after the password has been changed
-  next();
-});
+//   //Delete passwordConfirm field
+//   this.passwordConfirm = undefined;
+//   next();
+// });
+// userSchema.pre('save', function (next) {
+//   if (!this.isModified('password') || this.isNew) return next();
+//   this.passwordChangedAt = Date.now() - 1000; // to make sure that token is created after the password has been changed
+//   next();
+// });
+
 userSchema.pre(/^find/, function (next) {
   //this points to the current query (don't use arrow function)
   this.find({ active: { $ne: false } });

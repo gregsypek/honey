@@ -1,0 +1,38 @@
+[
+  {
+    "_id": "60e71298c8e01e0c346dd5f0",
+    "name": "Józek Dzięcioł",
+    "email": "jozek@gmail.com",
+    "role": "user",
+    "active": true,
+    "photo": "user-1.jpg",
+    "password": "$2a$12$cxC1FV0AicRrQpvOtaCxnOcm8W60aUcIFp.kSPobpspmFWynGWybO"
+  },
+  {
+    "_id": "60e712bfc8e01e0c346dd5f2",
+    "name": "Ania Ładna",
+    "email": "ania@gmail.com",
+    "role": "user",
+    "active": true,
+    "photo": "user-2.jpg",
+    "password": "$2a$12$zjtd.kDX39OdWfvltwcS.Onu3AXLqd.PqdtgugPbj8tqqLrTHuv7S"
+  },
+  {
+    "_id": "60e71306c8e01e0c346dd5f4",
+    "name": "Jadwiga Skoczylas",
+    "email": "jadzia@gmail.com",
+    "role": "user",
+    "active": true,
+    "photo": "user-3.jpg",
+    "password": "$2a$12$rJisuuCytCAK8vcK2gtF3ONYfooP1/Pf48Y3bn24jiexqD5Y4iuD."
+  },
+  {
+    "_id": "60e7138ec8e01e0c346dd5fb",
+    "name": "Adam Ważny",
+    "email": "admin@gmail.com",
+    "role": "admin",
+    "active": true,
+    "photo": "user-4.jpg",
+    "password": "$2a$12$6wglsZInl0IeEFKC7DOR/.CpZpuEzu0lrPEn9U2nVey8Wi6H5WOVa"
+  }
+]
