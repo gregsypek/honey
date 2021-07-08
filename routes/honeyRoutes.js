@@ -11,13 +11,21 @@ router.post('/signup', authController.signup);
 
 router
   .route('/')
-  .get(authController.protect, honeyController.getAllHoney)
-  .post(honeyController.createHoney);
+  .get(honeyController.getAllHoney)
+  .post(
+    authController.protect,
+    authController.restrictTo('admin'),
+    honeyController.createHoney
+  );
 
 router
   .route('/:id')
   .get(honeyController.getHoney)
-  .patch(honeyController.updateHoney)
+  .patch(
+    authController.protect,
+    authController.restrictTo('admin'),
+    honeyController.updateHoney
+  )
   .delete(
     authController.protect,
     authController.restrictTo('admin'),
