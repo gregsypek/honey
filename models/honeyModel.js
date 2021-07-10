@@ -38,15 +38,12 @@ const honeySchema = new mongoose.Schema(
         'A honey long description must have more or equal then 100 characters',
       ],
     },
-    rating: {
-      type: Number,
-      default: 4.5,
-    },
     ratingsAverage: {
       type: Number,
       default: 4.5,
       min: [1, 'Rating must be above 1.0'],
       max: [5, 'Rating must be below 5.0'],
+      set: val => Math.round(val * 10) / 10, //set runs each time when there is new value
     },
     ratingsQuantity: {
       type: Number,
