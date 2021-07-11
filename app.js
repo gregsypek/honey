@@ -1,3 +1,4 @@
+const path = require('path');
 const express = require('express');
 const morgan = require('morgan');
 const rateLimit = require('express-rate-limit');
@@ -14,19 +15,13 @@ const reviewRouter = require('./routes/reviewRoutes');
 
 const app = express();
 
-// const honey = JSON.parse(fs.readFileSync(`${__dirname}/dev-data/honey.json`));
-
-// app.get('/api/v1/honey', (req, res) => {
-//   res.status(200).json({
-//     status: 'success',
-//     results: honey.length,
-//     data: {
-//       honey,
-//     },
-//   });
-// });
+app.set('view engine', 'pug');
+app.set('views', path.join(__dirname, 'views'));
 
 // 1. Global middlewares
+//serving static files
+app.use(express.static(path.join(__dirname, 'public')));
+
 //set security http headers
 app.use(helmet());
 
@@ -62,16 +57,21 @@ app.use(
   })
 );
 
-//serving static files
-app.use(express.static(`${__dirname}/public`));
 //test middleware
 app.use((req, res, next) => {
   req.requestTime = new Date().toISOString();
-  console.log(req.headers);
+  // console.log(req.headers);
   next();
 });
 
 // 3) ROUTES
+app.get('/', (req, res) => {
+  res.status(200).render('base', {
+    honey: 'Miód rzepakowy',
+    user: 'Greg',
+  });
+});
+
 app.use('/api/v1/honey', honeyRouter);
 app.use('/api/v1/users', userRouter);
 app.use('/api/v1/reviews', reviewRouter);
