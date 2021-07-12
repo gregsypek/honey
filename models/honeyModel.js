@@ -1,4 +1,5 @@
 const mongoose = require('mongoose');
+const slugify = require('slugify');
 // const User = require('./userModel');
 
 const honeySchema = new mongoose.Schema(
@@ -16,6 +17,7 @@ const honeySchema = new mongoose.Schema(
         'A honey name must have more or equal then 10 characters',
       ],
     },
+    slug: String,
     shortDescription: {
       type: String,
       trim: true,
@@ -49,18 +51,20 @@ const honeySchema = new mongoose.Schema(
       type: Number,
       default: 0,
     },
-    price350: {
-      type: Number,
-      required: [true, 'A 350ml honey jar must have a price'],
-    },
-    price720: {
-      type: Number,
-      required: [true, 'A 720ml honey jar must have a price'],
-    },
-    price900: {
-      type: Number,
-      required: [true, 'A 900ml honey jar must have a price'],
-    },
+    jarSizes: [Number],
+    prices: [Number],
+    // price350: {
+    //   type: Number,
+    //   required: [true, 'A 350ml honey jar must have a price'],
+    // },
+    // price720: {
+    //   type: Number,
+    //   required: [true, 'A 720ml honey jar must have a price'],
+    // },
+    // price900: {
+    //   type: Number,
+    //   required: [true, 'A 900ml honey jar must have a price'],
+    // },
     image: {
       type: String,
       required: [true, 'A honey must have a cover image'],
@@ -82,12 +86,18 @@ const honeySchema = new mongoose.Schema(
     toObject: { virtuals: true },
   }
 );
+// honeySchema.index({ slug: 1 });
 
 //Virtual populate
 honeySchema.virtual('reviews', {
   ref: 'Review',
   foreignField: 'honey', //where local fields are equal
   localField: '_id', // to foreign field
+});
+
+honeySchema.pre('save', function (next) {
+  this.slug = slugify(this.name, { lower: true });
+  next();
 });
 
 honeySchema.pre(/^find/, function (next) {

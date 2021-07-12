@@ -1,7 +1,7 @@
 const Honey = require('../models/honeyModel');
 const catchAsync = require('../utils/catchAsync');
 
-exports.getOverview = catchAsync(async (req, res) => {
+exports.getOverview = catchAsync(async (req, res, next) => {
   // Get honey data from collection
   const honey = await Honey.find();
   //Build template
@@ -11,6 +11,7 @@ exports.getOverview = catchAsync(async (req, res) => {
     title: 'Wszystkie miody',
     honey,
   });
+  // next();
 });
 exports.getHoney = (req, res) => {
   res.status(200).render('honey', {

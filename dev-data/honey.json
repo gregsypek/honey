@@ -6,10 +6,9 @@
     "longDescription": "Miód rzepakowy o jasnej barwie, łagodnym smaku oraz wyraźnym aromacie kwiatu rzepaku. Nasz miód rzepakowy ma kremową, miękką konsystencję, łatwą do rozsmarowania.",
     "ratingsAverage": 4.7,
     "ratingsQuantity": 12,
-    "price350": 15,
-    "price720": 30,
-    "price900": 40,
-    "image": "m-rzepakowy.png",
+    "jarSizes": [900, 720, 350],
+    "prices": [40, 34, 15],
+    "image": "honey-1-cover.jpg",
     "available": true
   },
   {
@@ -19,10 +18,9 @@
     "longDescription": "W stanie płynnym jest jasny, ma przyjemny delikatny zapach kwiatowy i łagodny smak. Natomiast miód pochodzący z nektaru kwiatów letnich jest znacznie ciemniejszy oraz odznacza się zdecydowanym smakiem i zapachem. W późniejszym etapie, po skrystalizowaniu zmienia nieco zabarwienie na jasnoszare lub jasnobrązowe. Skład roślin z jakich został zebrany nektar ma wpływ na jego walory odżywcze. Zapach miodu wielokwiatowego jest zwyczajowo silny, przebijający inne zapachy, przypomina zapach wosku. W smaku jest bardzo zróżnicowany, zależnie od składu nektaru, na ogół jednak jest łagodny, słodki.",
     "ratingsAverage": 4.5,
     "ratingsQuantity": 8,
-    "price350": 15,
-    "price720": 30,
-    "price900": 40,
-    "image": "m-wielokwiatowy.png",
+    "jarSizes": [900, 720, 350],
+    "prices": [39, 35, 17],
+    "image": "honey-2-cover.jpg",
     "available": true
   },
   {
@@ -32,10 +30,9 @@
     "longDescription": "Ze względu na dużą zawartość dobrze przyswajalnych cukrów, które – w zależności od bieżących potrzeb – przetwarzane są na energię lub odkładane w postaci m.in. glikogenu, miód malinowy ma doskonałe właściwości wzmacniające. Odżywia i regeneruje organizm, dodaje sił, poprawia samopoczucie. Dlatego jest dobrą propozycją dla osób, które wykonują duży wysiłek fizyczny lub umysłowy albo cierpią na przewlekłe zmęczenie. Regularne spożywanie miodu malinowego zalecane jest dzieciom",
     "ratingsAverage": 4.9,
     "ratingsQuantity": 20,
-    "price350": 15,
-    "price720": 30,
-    "price900": 40,
-    "image": "m-malinowy.png",
+    "jarSizes": [900, 720, 350],
+    "prices": [41, 30, 13],
+    "image": "honey-3-cover.jpg",
     "available": true
   },
   {
@@ -45,10 +42,9 @@
     "longDescription": "Miód akacjowy ma także wiele cennych witamin wzmacniających nasz układ odpornościowy oraz duże ilości węglowodanów prostych, dodających energii i sił. Stąd też polecany jest nie tylko osobom, które walczą z przeziębieniem, ale także sportowcom, osobom uczącym się oraz narażonym na duży wysiłek fizyczny.",
     "ratingsAverage": 4.9,
     "ratingsQuantity": 21,
-    "price350": 15,
-    "price720": 30,
-    "price900": 40,
-    "image": "m-akacjowy.png",
+    "jarSizes": [900, 720, 350],
+    "prices": [40, 32, 15],
+    "image": "honey-4-cover.jpg",
     "available": true
   }
 ]

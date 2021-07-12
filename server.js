@@ -23,6 +23,7 @@ mongoose
   .connect(DB, {
     useNewUrlParser: true,
     useCreateIndex: true,
+    // useUnifiedTopology: true,
     useFindAndModify: false,
   })
   .then(() => {
