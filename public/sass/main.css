@@ -1397,6 +1397,7 @@ and Adrian Roselli: http://adrianroselli.com/2017/11/a-responsive-accessible-tab
 */
 .table {
   margin: 10rem 7vw 14rem 7vw;
+  min-height: 650px;
 }
 
 table {
@@ -1473,36 +1474,36 @@ td:before {
 
 /* first table only for small screen */
 #table-first td:nth-of-type(1)::before {
-  content: "";
+  content: '';
 }
 
 #table-first td:nth-of-type(2)::before {
-  content: "900 ml";
+  content: '900 ml';
 }
 
 #table-first td:nth-of-type(3)::before {
-  content: "720 ml";
+  content: '720 ml';
 }
 
 #table-first td:nth-of-type(4)::before {
-  content: "320 ml";
+  content: '320 ml';
 }
 
 /* second table  only for small screen*/
 #table-second td:nth-of-type(1)::before {
-  content: "";
+  content: '';
 }
 
 #table-second td:nth-of-type(2)::before {
-  content: "Ilość słoików";
+  content: 'Ilość słoików';
 }
 
 #table-second td:nth-of-type(3)::before {
-  content: "Ekonomiczna";
+  content: 'Ekonomiczna';
 }
 
 #table-second td:nth-of-type(4)::before {
-  content: "Priorytet";
+  content: 'Priorytet';
 }
 
 /* third table is not necessary because of different html structure */
@@ -1510,7 +1511,7 @@ caption {
   width: 100%;
   text-align: left;
   font-weight: bold;
-  font-size: var(--h3);
+  font-size: var(--h4);
   font-family: "Bungee", cursive;
   color: #333333;
   margin-bottom: 5rem;
@@ -1534,7 +1535,7 @@ tr:nth-child(even) {
 }
 
 .hexagon-bg-3::before {
-  content: "";
+  content: '';
   position: absolute;
   /* left: -78.97%; */
   left: -50.97%;
@@ -1568,7 +1569,7 @@ tr:nth-child(even) {
   #table-first td:nth-of-type(even):before,
   #table-second td:nth-of-type(odd):before,
   #table-second td:nth-of-type(even):before {
-    content: "";
+    content: '';
     margin-right: 0;
   }
   thead tr {
@@ -1581,14 +1582,11 @@ tr:nth-child(even) {
   th,
   td {
     display: table-cell;
-    font-size: var(--h4);
+    font-size: var(--h5);
   }
   td {
     color: #333333;
     padding: 1.5rem 3rem;
-  }
-  tbody tr {
-    outline: 2px solid;
   }
   tr {
     display: table-row;
@@ -1599,7 +1597,7 @@ tr:nth-child(even) {
     width: 100%;
   }
   caption {
-    font-size: var(--h3);
+    font-size: var(--h4);
     text-align: center;
     text-transform: lowercase;
     display: none;
@@ -1607,7 +1605,6 @@ tr:nth-child(even) {
   }
   .dark,
   thead tr.dark {
-    background-color: #ffffff;
     color: #333333;
     font-weight: bold;
     font-family: "Bungee", cursive;
@@ -1618,7 +1615,7 @@ tr:nth-child(even) {
 .table-second--info {
   width: 100%;
   height: auto;
-  font-size: 1.4rem;
+  font-size: 16px;
   font-family: "Poppins", sans-serif;
   margin-top: 4.66667rem;
   text-transform: uppercase;
@@ -1982,16 +1979,27 @@ tr:nth-child(even) {
 }
 
 .table-nav {
-  background-color: #828282;
+  background: #ffffff;
+}
+
+.table-nav button {
+  text-transform: lowercase;
+}
+
+.table-nav button::first-letter {
+  text-transform: uppercase;
 }
 
 .table-nav__list {
+  border-bottom: 4px solid #f2f2f2;
+  border-top: 4px solid #f2f2f2;
+  padding-left: 10vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: space-evenly;
-      -ms-flex-pack: space-evenly;
-          justify-content: space-evenly;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
   list-style: none;
@@ -2002,25 +2010,26 @@ tr:nth-child(even) {
 }
 
 .table-nav__item {
-  text-transform: uppercase;
+  margin-right: 6rem;
 }
 
 .table-nav button {
-  text-transform: uppercase;
+  text-transform: lowercase;
+  font-size: var(--h5);
+  font-family: "Poppins", sans-serif;
   border: none;
   outline: none;
   margin: 0;
-  font-size: inherit;
 }
 
 .table-nav__link {
-  color: #ffffff;
+  color: #333333;
   background: none;
   text-decoration: none;
-  height: 5rem;
   padding: 1rem 2rem;
   position: relative;
   z-index: 3;
+  text-transform: none;
 }
 
 .table-nav__link.active {
@@ -2034,7 +2043,31 @@ tr:nth-child(even) {
   transition: hover 0.5s ease;
   font-weight: 400;
   color: #333333;
-  background-color: #ffffff;
+}
+
+.table-nav__link.active::before {
+  content: '';
+  position: absolute;
+  z-index: -4;
+  width: 65px;
+  height: 74.8px;
+  /* top: -28px;
+        left: -14px; */
+  top: -18px;
+  left: -13px;
+  /* @include hexagon; */
+  -webkit-clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+          clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  background: #ffffff;
+  -webkit-transform: rotate(-134deg);
+          transform: rotate(-134deg);
+  /* @include rotate; */
+  -webkit-transition: all 0.5s ease;
+  transition: all 0.5s ease;
+}
+
+.table-nav__link:hover {
+  color: #4F4F4F;
 }
 
 .table-fourth {

@@ -1,30 +1,36 @@
 // only for table-nav
 .table {
-
   &--1,
   &--2,
   &--3,
   &--4 {
     display: none;
-
   }
-
 
   &--active {
     display: block;
-
   }
 
-
-
-
   &-nav {
-    background-color: $color-gray-3;
+    background: $color-white;
+    // @include shadow2;
+    // border-bottom: 2px solid black;
+    button {
+      text-transform: lowercase;
+      &::first-letter {
+        text-transform: uppercase;
+      }
+    }
 
     &__list {
+      border-bottom: 4px solid $color-white-2;
+      border-top: 4px solid $color-white-2;
       // @include list;
+      padding-left: 10vw;
+      // border: 1px solid $color-gray-3;
+      // background: $color-honey-3;
       display: flex;
-      justify-content: space-evenly;
+      justify-content: flex-start;
       flex-wrap: wrap;
       list-style: none;
       max-width: 1440px;
@@ -34,28 +40,33 @@
     }
 
     &__item {
-      text-transform: uppercase;
+      margin-right: 6rem;
+      // @extend .navigation__item;
     }
 
     button {
-      text-transform: uppercase;
+      text-transform: lowercase;
+      font-size: var(--h5);
 
+      font-family: $font-secondary;
       border: none;
       outline: none;
       margin: 0;
-      font-size: inherit;
+      // font-size: 2rem;
+      // letter-spacing: 1px;
       // padding: 0;
     }
 
     &__link {
-      color: $color-white;
+      color: $color-gray;
       background: none;
       text-decoration: none;
-      height: 5rem;
+      // height: 5rem;
       padding: 1rem 2rem;
       // for hexagon
       position: relative;
       z-index: 3;
+      text-transform: none;
 
       &.active {
         position: relative;
@@ -69,16 +80,36 @@
         color: $color-gray;
         // letter-spacing: 3px;
 
-        background-color: $color-white;
+        // background-color: $color-white;
+        &::before {
+          content: '';
+          position: absolute;
+          z-index: -4;
+          width: 65px;
+          height: 74.8px;
+          /* top: -28px;
+        left: -14px; */
+          top: -18px;
+          left: -13px;
+          /* @include hexagon; */
+          clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+          // background: $color-white;
+          background: $color-white;
 
+          transform: rotate(-134deg);
+          /* @include rotate; */
+          transition: all 0.5s ease;
+        }
+      }
+      &:hover {
+        color: $color-dark;
       }
     }
   }
 
   // IMPLEMENT ARROW BTNS FOR TABLE WITH OPINIONS
   &-fourth {
-
-    position: relative;   
+    position: relative;
   }
 
   &__btn {
@@ -87,15 +118,11 @@
     &--left {
       left: -5%;
       transform: translate(-50%, 0);
-
     }
 
     &--right {
       right: -5%;
       transform: translate(50%, 0);
-
     }
   }
-
-
 }

@@ -2,11 +2,10 @@
 and Adrian Roselli: http://adrianroselli.com/2017/11/a-responsive-accessible-table.html#Responsive
 */
 
-
 .table {
   margin: 10rem 7vw $sectionMargin 7vw;
+  min-height: 650px;
 }
-
 
 table {
   border-collapse: separate;
@@ -16,7 +15,6 @@ table {
   border-radius: 5px;
   height: auto;
   @include shadow2;
-
 }
 
 th {
@@ -37,8 +35,6 @@ th,
 tr,
 td {
   display: block;
-
-
 }
 
 /* Hide table headers (but not display: none;, for accessibility -- sighted users will see labels below) */
@@ -47,7 +43,6 @@ thead tr {
   top: -9999px;
   left: -9999px;
   font-family: $font-primary;
-
 }
 
 /* tr {border: 1px solid black;} */
@@ -80,36 +75,36 @@ td:before {
 /* first table only for small screen */
 
 #table-first td:nth-of-type(1)::before {
-  content: "";
+  content: '';
 }
 
 #table-first td:nth-of-type(2)::before {
-  content: "900 ml";
+  content: '900 ml';
 }
 
 #table-first td:nth-of-type(3)::before {
-  content: "720 ml";
+  content: '720 ml';
 }
 
 #table-first td:nth-of-type(4)::before {
-  content: "320 ml";
+  content: '320 ml';
 }
 
 /* second table  only for small screen*/
 #table-second td:nth-of-type(1)::before {
-  content: "";
+  content: '';
 }
 
 #table-second td:nth-of-type(2)::before {
-  content: "Ilość słoików";
+  content: 'Ilość słoików';
 }
 
 #table-second td:nth-of-type(3)::before {
-  content: "Ekonomiczna";
+  content: 'Ekonomiczna';
 }
 
 #table-second td:nth-of-type(4)::before {
-  content: "Priorytet";
+  content: 'Priorytet';
 }
 
 /* third table is not necessary because of different html structure */
@@ -124,7 +119,7 @@ caption {
   width: 100%;
   text-align: left;
   font-weight: bold;
-  font-size: var(--h3);
+  font-size: var(--h4);
   // padding: 0.5rem;
   font-family: $font-primary;
   color: $color-gray;
@@ -142,10 +137,8 @@ th {
   font-family: $font-primary;
 }
 
-
 td {
   font-family: $font-secondary;
-
 }
 
 tr:nth-child(odd) {
@@ -158,7 +151,7 @@ tr:nth-child(even) {
 }
 
 .hexagon-bg-3::before {
-  content: "";
+  content: '';
   position: absolute;
   /* left: -78.97%; */
   left: -50.97%;
@@ -166,9 +159,6 @@ tr:nth-child(even) {
   top: -113%;
   z-index: -1;
 }
-
-
-
 
 /* For wider dimensions, change our layout so the table can take the full width of the screen. */
 /* table MQ's */
@@ -182,16 +172,11 @@ tr:nth-child(even) {
   // }
 
   table {
-
     padding: 0 5rem 5rem 5rem;
-
-
   }
-
 }
 
 @media (min-width: 950px) {
-
   /* section.offer {
     height: 150vh;
   } */
@@ -205,7 +190,7 @@ tr:nth-child(even) {
   #table-first td:nth-of-type(even):before,
   #table-second td:nth-of-type(odd):before,
   #table-second td:nth-of-type(even):before {
-    content: "";
+    content: '';
     margin-right: 0;
   }
 
@@ -222,7 +207,7 @@ tr:nth-child(even) {
   td {
     display: table-cell;
     // padding: 1rem;
-    font-size: var(--h4);
+    font-size: var(--h5);
   }
 
   td {
@@ -230,18 +215,16 @@ tr:nth-child(even) {
     color: $color-gray;
 
     padding: 1.5rem 3rem;
-
   }
 
   //add a border only in table body
-  tbody tr {
-    outline: 2px solid;
-  }
+  // tbody tr {
+  //   // outline: 2px solid;
+  // }
 
   tr {
     display: table-row;
     border-radius: 5px;
-
   }
 
   table {
@@ -251,7 +234,7 @@ tr:nth-child(even) {
   }
 
   caption {
-    font-size: var(--h3);
+    font-size: var(--h4);
     text-align: center;
     text-transform: lowercase;
     display: none;
@@ -260,21 +243,18 @@ tr:nth-child(even) {
 
   .dark,
   thead tr.dark {
-    background-color: $color-white;
+    // background-color: $color-white;
     color: $color-gray;
     font-weight: bold;
     font-family: $font-primary;
     text-transform: uppercase;
   }
-
-
 }
-
 
 .table-second--info {
   width: 100%;
   height: auto;
-  font-size: 1.4rem;
+  font-size: 16px;
   font-family: $font-secondary;
   margin-top: $sectionMargin/3;
   text-transform: uppercase;
@@ -282,15 +262,13 @@ tr:nth-child(even) {
 
 // --------------------------STARS-------
 .table-fourth {
-
   transition: transform 1s;
   display: flex;
   position: relative;
   height: 600px;
 
-  @media(max-width: 950px) {
+  @media (max-width: 950px) {
     height: 300px;
-
   }
 
   table {
@@ -307,21 +285,19 @@ tr:nth-child(even) {
   }
 
   &__star {
-
     .star__table {
       width: var(--h5);
       height: var(--h5);
 
       &--color {
         fill: $color-gray-2;
-
       }
     }
 
     &:not(:last-of-type) {
       margin-right: 3rem;
 
-      @media(max-width: $small) {
+      @media (max-width: $small) {
         margin-right: 1rem;
       }
     }
@@ -332,24 +308,19 @@ tr:nth-child(even) {
   }
 
   &__arrows {
-
     display: flex;
     justify-content: center;
-
   }
-
-
 }
 
-//OPINIONS 
+//OPINIONS
 
 .opinion {
   display: none;
-   &--active {
+  &--active {
     display: table;
-    @media(max-width: 950px){
+    @media (max-width: 950px) {
       display: block;
     }
- 
   }
 }
