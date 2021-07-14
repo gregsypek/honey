@@ -13,7 +13,6 @@
 
   &-nav {
     background: $color-white;
-    // @include shadow2;
     // border-bottom: 2px solid black;
     button {
       text-transform: lowercase;
@@ -23,8 +22,10 @@
     }
 
     &__list {
+      // @include shadow2;
       border-bottom: 4px solid $color-white-2;
-      border-top: 4px solid $color-white-2;
+      // border-top: 4px solid $color-white-2;
+      // background: $color-white;
       // @include list;
       padding-left: 10vw;
       // border: 1px solid $color-gray-3;
@@ -94,7 +95,8 @@
           /* @include hexagon; */
           clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
           // background: $color-white;
-          background: $color-white;
+          // background: $color-white;
+          background: $color-honey-3;
 
           transform: rotate(-134deg);
           /* @include rotate; */

@@ -4,6 +4,6 @@ const viewsController = require('../controllers/viewsController');
 const router = express.Router();
 
 router.get('/', viewsController.getOverview);
-router.get('/honey:id', viewsController.getHoney);
+router.get('/honey/:slug', viewsController.getHoney);
 
 module.exports = router;
