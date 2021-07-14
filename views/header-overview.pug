@@ -1,16 +1,14 @@
-extends base
 
-block header
-  //- include _mixin-wrapper
-  //- +wrapper('shopping') 
   .wrapper--shopping
-    //NAV
-    include _nav
-    //HEADER
-    include _mixin-header
-    +header("Zapraszamy do","zakupów","Z przyjemnością przedstawiamy pełną ofertę naszego sklepu. Szczegółowy opis miodu oraz złoźenie zamówiena moliwe po kliknięciu przycisku 'więcej'.")
+    //- //NAV
+    //- include _nav
 
-  //CARDS
+    //- //HEADER
+    //- include _mixin-header
+
+    //- +header("Zapraszamy do","zakupów"," przyjemnością przedstawiamy pełną ofertę naszego sklepu. Szczegółowy opis miodu oraz złoźenie zamówiena moliwe po kliknięciu przycisku 'więcej'.")
+
+
   .content__content-box.content__cards 
     .card-container
       each card in honey
@@ -68,8 +66,3 @@ block header
               img(src='./src/images/icons/star.svg' alt='star')
           .card__footer 
             a.btn.btn--details.btn--small(href=`/honey/${card.slug}`) Więcej
-
-
-
-
-

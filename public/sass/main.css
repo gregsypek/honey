@@ -1991,7 +1991,7 @@ tr:nth-child(even) {
 }
 
 .table-nav__list {
-  background: #ffffff;
+  border-bottom: 4px solid #f2f2f2;
   padding-left: 10vw;
   display: -webkit-box;
   display: -ms-flexbox;
