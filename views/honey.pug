@@ -1,5 +1,103 @@
 extends base
 
-block header 
+block header
+  //- include _mixin-wrapper
+  //- +wrapper('shopping') 
+  .wrapper--description
+      //NAV
+      include _nav
+      //HEADER
+      main.content.content--description 
+        .content__description 
+          -const name = honey.name.split(' ');
+            h1.content__title= name[0] 
+              | 
+              span= name[1]
+            .content__title-stars 
+              .content__star 
+                svg(width="67"
+                    height="63"
+                    viewBox="0 0 67 63"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="star__title")
+                  path(class="star__title--color"
+                      d="M33.5 0L41.2457 23.8389H66.3114L46.0329 38.5722L53.7786 62.4111L33.5 47.6778L13.2214 62.4111L20.9671 38.5722L0.688549 23.8389H25.7543L33.5 0Z")
+              .content__star 
+                svg(width="67"
+                    height="63"
+                    viewBox="0 0 67 63"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="star__title")
+                  path(class="star__title--color"
+                      d="M33.5 0L41.2457 23.8389H66.3114L46.0329 38.5722L53.7786 62.4111L33.5 47.6778L13.2214 62.4111L20.9671 38.5722L0.688549 23.8389H25.7543L33.5 0Z")
+              .content__star 
+                svg(width="67"
+                    height="63"
+                    viewBox="0 0 67 63"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="star__title")
+                  path(class="star__title--color"
+                      d="M33.5 0L41.2457 23.8389H66.3114L46.0329 38.5722L53.7786 62.4111L33.5 47.6778L13.2214 62.4111L20.9671 38.5722L0.688549 23.8389H25.7543L33.5 0Z")
+              .content__star 
+                svg(width="67"
+                    height="63"
+                    viewBox="0 0 67 63"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="star__title")
+                  path(class="star__title--color"
+                      d="M33.5 0L41.2457 23.8389H66.3114L46.0329 38.5722L53.7786 62.4111L33.5 47.6778L13.2214 62.4111L20.9671 38.5722L0.688549 23.8389H25.7543L33.5 0Z")
+              .content__star 
+                svg(width="67"
+                    height="63"
+                    viewBox="0 0 67 63"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="star__title")
+                  path(class="star__title--color"
+                      d="M33.5 0L41.2457 23.8389H66.3114L46.0329 38.5722L53.7786 62.4111L33.5 47.6778L13.2214 62.4111L20.9671 38.5722L0.688549 23.8389H25.7543L33.5 0Z")
+            .content__short-info 
+              h4= honey.shortDescription
+            .content__picture 
+              .content__picture-frame 
+                .content__picture-overlay 
+                  img(src=`/src/images/honeys/${honey.image}`
+                    alt=`${honey.name}`
+                    class="content__picture-img")  
+            form(action="#" class="content__form")
+              .cap 
+                label(for="capacity") Pojemność
+                select(class="input-css" name="capacity" id="capacity")
+                  each val in honey.jarSizes
+                    option(value= val)= val + 'ml'
+              .qty 
+                label(for="quantity") Ilość
+                input(class="input-css"
+                  type="number"
+                  id="quantity"
+                  name="quantity"
+                  value="1"
+                  min="1"
+                  max="10") 
+              h5.dispatch czas realizacji: 2-5 dni robocze + czas dostawy
+              button.btn.btn--form.btn--submit(type="submit") Do koszyka 
+      nav.table-nav.table-nav--blank   
+        ul.table-nav__list  
+          li.table-nav__item 
+            span 
+            button.table-nav__link(data-nav="1") Oferta     
+          li.table-nav__item 
+            span 
+            button.table-nav__link(data-nav="2") Wysyłka     
+          li.table-nav__item 
+            span 
+            button.table-nav__link(data-nav="3") Płatności     
+          li.table-nav__item 
+            span 
+            button.table-nav__link(data-nav="4") Opinie     
 
-  h1 This is the honey details
+
+
+
+      
+
+
+

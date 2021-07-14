@@ -1,20 +1,25 @@
 .wrapper--description {
- 
-   @include layout(url(../src/images/description-bg.jpg), cover, center);
+  @include layout(url(../src/images/description-bg.jpg), cover, center);
 
   @media (max-width: $large) {
-    @include backImage(url(../src/images/description-bg-medium.jpg), 72deg, 72%, 72%);
+    @include backImage(
+      url(../src/images/description-bg-medium.jpg),
+      72deg,
+      72%,
+      72%
+    );
   }
 
-
-
-
   @media (max-width: $small) {
-    @include backImage(url(../src/images/description-bg-small.jpg), 72deg, 72%, 72%);
+    @include backImage(
+      url(../src/images/description-bg-small.jpg),
+      72deg,
+      72%,
+      72%
+    );
   }
 
   overflow-x: hidden;
-
 }
 
 .content {
@@ -47,7 +52,7 @@
         'h4 h4 h4 ';
 
       //all children center
-      &>* {
+      & > * {
         justify-self: center;
       }
     }
@@ -145,9 +150,13 @@
     }
 
     &-img {
+      border: 1px solid black;
       position: relative;
       width: 100%;
       height: 100%;
+      max-width: 380px;
+      max-height: 450px;
+
       // left: 32px;
       top: 0;
       transform: rotate(88deg);
@@ -171,11 +180,11 @@
       align-items: center;
     }
 
-    >* {
+    > * {
       padding: 1rem 5rem;
     }
 
-    >*:not(:last-child) {
+    > *:not(:last-child) {
       margin-bottom: 2rem;
     }
 
@@ -252,8 +261,8 @@
 
 //this style works only for description.html
 // @media (min-width: 800px) {
-.navigation {
-  &--description {
+.wrapper--description {
+  .navigation {
     .navigation__row--first {
       margin-bottom: 0;
     }

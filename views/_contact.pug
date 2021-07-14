@@ -1,0 +1,14 @@
+extends base
+
+block header
+  //- include _mixin-wrapper
+  //- +wrapper('shopping') 
+  .wrapper--description
+    //NAV
+    include _nav
+    //HEADER
+    include _mixin-header
+    -const name = honey.name.split(' ')
+    +header(name[0],name[1], honey.longDescription)
+
+  //CARDS
