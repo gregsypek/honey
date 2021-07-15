@@ -1,0 +1,275 @@
+//TABLE NAV
+nav.table-nav.table-nav--blank   
+  ul.table-nav__list  
+    li.table-nav__item 
+      span 
+      button.table-nav__link(data-nav="1") Oferta     
+    li.table-nav__item 
+      span 
+      button.table-nav__link(data-nav="2") Wysyłka     
+    li.table-nav__item 
+      span 
+      button.table-nav__link.active(data-nav="3") Płatności     
+    li.table-nav__item 
+      span 
+      button.table-nav__link(data-nav="4") Opinie
+//TABLE BODY     
+section.table.table--blank
+  .table-box--description 
+    div(class="table-first tablescroll table table--1"
+      role="region"
+      aria-labelledby="honey"
+      tabindex="0")
+      table#table-first 
+        caption Oferta
+        thead 
+          tr(class="dark")
+            th(scope="col") Rodzaj 
+            th(scope="col") 900 ml 
+            th(scope="col") 720 ml 
+            th(scope="col") 320 ml 
+        tbody 
+          tr 
+            td M. rzepakowy 
+            td 40 zł
+            td 30zł
+            td 15 zł
+          tr 
+            td M. rzepakowy 
+            td 40 zł
+            td 30zł
+            td 15 zł
+          tr 
+            td M. rzepakowy 
+            td 40 zł
+            td 30zł
+            td 15 zł
+          tr 
+            td M. rzepakowy 
+            td 40 zł
+            td 30zł
+            td 15 zł
+    div(class="table-second tablescroll table table--2"
+      role="region"
+      aria-labelledby="dispatch"
+      tabindex="0")
+      table#table-second 
+        caption#dispatch Wysyłka
+        thead 
+          tr(class="dark")
+            th(scope="col") Waga 
+            th(scope="col") Ilosc sloikow 
+            th(scope="col") Ekonomiczna 
+            th(scope="col") Priorytet 
+        tbody 
+          tr 
+            td do 2kg
+            td 1
+            td 30zł
+            td 15 zł
+          tr 
+            td do 5kg
+            td 2
+            td 20 zł
+            td 25 zł
+          tr 
+            td do 10kg 
+            td 3-5
+            td 30zł
+            td 15 zł
+      h3.table-second--info Zamówienia WYŁĄCZNIE na terenie Polski 
+      h3.table-second--info  CZAS REALIZACJI: 2 - 5 DNI ROBOCZE + CZAS DOSTAWY
+    div(class="table-third tablescroll table table--3"
+      role="region"
+      aria-labelledby="deposit-info"
+      tabindex="0")
+      table#table-third 
+        caption#deposit-info Płatności
+        tr 
+          th(class="dark") Uwaga
+          td Prosimy dokonywać wpłat po uprzednim kontakcie mailowym lub                 telefonicznym
+        tr 
+          th(class="dark") Informacja
+          td Towar wysyłamy w godzinach od 8 -16
+        tr 
+          th(class="dark") Nr konta
+          td 15154512135156464654151
+        tr 
+          th(class="dark") Telefon
+          td 1234569
+    div(class="table-fourth tablescroll table table--4 table--active"
+      role="region"
+      aria-labelledby="dispatch"
+      tabindex="0")
+      table#table-second(class="opinion opinion--0 opinion--active") 
+        caption#dispatch Opinie
+        thead 
+          tr.dark 
+            th(scope="col") Opinia
+        tbody 
+          tr 
+            td Polecam gorąco to naprawdę świetny miodek
+          tr 
+            td Joanna 8 listopada 2020
+
+          tr 
+            td 
+              .table-fourth__stars 
+                .table-fourth__star 
+                  svg(width="67"
+                    height="63"
+                    viewBox="0 0 67 63"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="star__table")
+                    path(class="star__table--color"
+                      d="M33.5 0L41.2457 23.8389H66.3114L46.0329 38.5722L53.7786 62.4111L33.5 47.6778L13.2214 62.4111L20.9671 38.5722L0.688549 23.8389H25.7543L33.5 0Z")
+                .table-fourth__star 
+                  svg(width="67"
+                    height="63"
+                    viewBox="0 0 67 63"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="star__table")
+                    path(class="star__table--color"
+                      d="M33.5 0L41.2457 23.8389H66.3114L46.0329 38.5722L53.7786 62.4111L33.5 47.6778L13.2214 62.4111L20.9671 38.5722L0.688549 23.8389H25.7543L33.5 0Z")
+                .table-fourth__star 
+                  svg(width="67"
+                    height="63"
+                    viewBox="0 0 67 63"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="star__table")
+                    path(class="star__table--color"
+                      d="M33.5 0L41.2457 23.8389H66.3114L46.0329 38.5722L53.7786 62.4111L33.5 47.6778L13.2214 62.4111L20.9671 38.5722L0.688549 23.8389H25.7543L33.5 0Z")
+                .table-fourth__star 
+                  svg(width="67"
+                    height="63"
+                    viewBox="0 0 67 63"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="star__table")
+                    path(class="star__table--color"
+                      d="M33.5 0L41.2457 23.8389H66.3114L46.0329 38.5722L53.7786 62.4111L33.5 47.6778L13.2214 62.4111L20.9671 38.5722L0.688549 23.8389H25.7543L33.5 0Z")
+                .table-fourth__star 
+                  svg(width="67"
+                    height="63"
+                    viewBox="0 0 67 63"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="star__table")
+                    path(class="star__table--color"
+                      d="M33.5 0L41.2457 23.8389H66.3114L46.0329 38.5722L53.7786 62.4111L33.5 47.6778L13.2214 62.4111L20.9671 38.5722L0.688549 23.8389H25.7543L33.5 0Z")
+      table#table-second(class="opinion opinion--1") 
+        caption#dispatch Opinie
+        thead 
+          tr.dark 
+            th(scope="col") Opinia
+        tbody 
+          tr 
+            td Polecam gorąco to naprawdę świetny miodek
+          tr 
+            td Joanna 8 listopada 2020
+
+          tr 
+            td 
+              .table-fourth__stars 
+                .table-fourth__star 
+                  svg(width="67"
+                    height="63"
+                    viewBox="0 0 67 63"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="star__table")
+                    path(class="star__table--color"
+                      d="M33.5 0L41.2457 23.8389H66.3114L46.0329 38.5722L53.7786 62.4111L33.5 47.6778L13.2214 62.4111L20.9671 38.5722L0.688549 23.8389H25.7543L33.5 0Z")
+                .table-fourth__star 
+                  svg(width="67"
+                    height="63"
+                    viewBox="0 0 67 63"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="star__table")
+                    path(class="star__table--color"
+                      d="M33.5 0L41.2457 23.8389H66.3114L46.0329 38.5722L53.7786 62.4111L33.5 47.6778L13.2214 62.4111L20.9671 38.5722L0.688549 23.8389H25.7543L33.5 0Z")
+                .table-fourth__star 
+                  svg(width="67"
+                    height="63"
+                    viewBox="0 0 67 63"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="star__table")
+                    path(class="star__table--color"
+                      d="M33.5 0L41.2457 23.8389H66.3114L46.0329 38.5722L53.7786 62.4111L33.5 47.6778L13.2214 62.4111L20.9671 38.5722L0.688549 23.8389H25.7543L33.5 0Z")
+                .table-fourth__star 
+                  svg(width="67"
+                    height="63"
+                    viewBox="0 0 67 63"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="star__table")
+                    path(class="star__table--color"
+                      d="M33.5 0L41.2457 23.8389H66.3114L46.0329 38.5722L53.7786 62.4111L33.5 47.6778L13.2214 62.4111L20.9671 38.5722L0.688549 23.8389H25.7543L33.5 0Z")
+                .table-fourth__star 
+                  svg(width="67"
+                    height="63"
+                    viewBox="0 0 67 63"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="star__table")
+                    path(class="star__table--color"
+                      d="M33.5 0L41.2457 23.8389H66.3114L46.0329 38.5722L53.7786 62.4111L33.5 47.6778L13.2214 62.4111L20.9671 38.5722L0.688549 23.8389H25.7543L33.5 0Z")
+      table#table-second(class="opinion opinion--2") 
+        caption#dispatch Opinie
+        thead 
+          tr.dark 
+            th(scope="col") Opinia
+        tbody 
+          tr 
+            td Polecam gorąco to naprawdę świetny miodek
+          tr 
+            td Joanna 8 listopada 2020
+
+          tr 
+            td 
+              .table-fourth__stars 
+                .table-fourth__star 
+                  svg(width="67"
+                    height="63"
+                    viewBox="0 0 67 63"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="star__table")
+                    path(class="star__table--color"
+                      d="M33.5 0L41.2457 23.8389H66.3114L46.0329 38.5722L53.7786 62.4111L33.5 47.6778L13.2214 62.4111L20.9671 38.5722L0.688549 23.8389H25.7543L33.5 0Z")
+                .table-fourth__star 
+                  svg(width="67"
+                    height="63"
+                    viewBox="0 0 67 63"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="star__table")
+                    path(class="star__table--color"
+                      d="M33.5 0L41.2457 23.8389H66.3114L46.0329 38.5722L53.7786 62.4111L33.5 47.6778L13.2214 62.4111L20.9671 38.5722L0.688549 23.8389H25.7543L33.5 0Z")
+                .table-fourth__star 
+                  svg(width="67"
+                    height="63"
+                    viewBox="0 0 67 63"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="star__table")
+                    path(class="star__table--color"
+                      d="M33.5 0L41.2457 23.8389H66.3114L46.0329 38.5722L53.7786 62.4111L33.5 47.6778L13.2214 62.4111L20.9671 38.5722L0.688549 23.8389H25.7543L33.5 0Z")
+                .table-fourth__star 
+                  svg(width="67"
+                    height="63"
+                    viewBox="0 0 67 63"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="star__table")
+                    path(class="star__table--color"
+                      d="M33.5 0L41.2457 23.8389H66.3114L46.0329 38.5722L53.7786 62.4111L33.5 47.6778L13.2214 62.4111L20.9671 38.5722L0.688549 23.8389H25.7543L33.5 0Z")
+                .table-fourth__star 
+                  svg(width="67"
+                    height="63"
+                    viewBox="0 0 67 63"
+                    xmlns="http://www.w3.org/2000/svg"
+                    class="star__table")
+                    path(class="star__table--color"
+                      d="M33.5 0L41.2457 23.8389H66.3114L46.0329 38.5722L53.7786 62.4111L33.5 47.6778L13.2214 62.4111L20.9671 38.5722L0.688549 23.8389H25.7543L33.5 0Z")
+      .table-fourth__arrows 
+        button.table__btn.table__btn--left ←
+        button.table__btn.table__btn--right →
+
+
+
+
+
+
+

@@ -1978,10 +1978,6 @@ tr:nth-child(even) {
   display: block;
 }
 
-.table-nav {
-  background: #ffffff;
-}
-
 .table-nav button {
   text-transform: lowercase;
 }
@@ -1991,7 +1987,12 @@ tr:nth-child(even) {
 }
 
 .table-nav__list {
-  border-bottom: 4px solid #f2f2f2;
+  background: linear-gradient(58deg, #F1E2C4 62%, #F1E2C4 62%, white 62%, white 100%, transparent 50%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  -webkit-transform: translateY(25px);
+          transform: translateY(25px);
   padding-left: 10vw;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2808,20 +2809,20 @@ tr:nth-child(even) {
   }
 }
 
-.navigation--description .navigation__row--first {
+.wrapper--description .navigation .navigation__row--first {
   margin-bottom: 0;
 }
 
-.navigation--description .navigation__nav {
+.wrapper--description .navigation .navigation__nav {
   padding: 0;
   overflow-y: visible;
 }
 
-.navigation--description .navigation__list, .navigation--description .navigation__description {
+.wrapper--description .navigation .navigation__list, .wrapper--description .navigation .navigation__description {
   height: 5rem;
 }
 
-.navigation--description .navigation__list::before, .navigation--description .navigation__description::before {
+.wrapper--description .navigation .navigation__list::before, .wrapper--description .navigation .navigation__description::before {
   height: 5rem;
 }
 

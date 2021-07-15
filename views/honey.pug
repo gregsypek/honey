@@ -55,7 +55,7 @@ block header
                   path(class="star__title--color"
                       d="M33.5 0L41.2457 23.8389H66.3114L46.0329 38.5722L53.7786 62.4111L33.5 47.6778L13.2214 62.4111L20.9671 38.5722L0.688549 23.8389H25.7543L33.5 0Z")
             .content__short-info 
-              h4= honey.shortDescription
+              h4= honey.longDescription
             .content__picture 
               .content__picture-frame 
                 .content__picture-overlay 
@@ -78,26 +78,6 @@ block header
                   min="1"
                   max="10") 
               h5.dispatch czas realizacji: 2-5 dni robocze + czas dostawy
-              button.btn.btn--form.btn--submit(type="submit") Do koszyka 
-      nav.table-nav.table-nav--blank   
-        ul.table-nav__list  
-          li.table-nav__item 
-            span 
-            button.table-nav__link(data-nav="1") Oferta     
-          li.table-nav__item 
-            span 
-            button.table-nav__link(data-nav="2") Wysyłka     
-          li.table-nav__item 
-            span 
-            button.table-nav__link(data-nav="3") Płatności     
-          li.table-nav__item 
-            span 
-            button.table-nav__link(data-nav="4") Opinie     
-
-
-
-
-      
-
-
-
+              button.btn.btn--form.btn--submit(type="submit") Do koszyka
+      //TABLES 
+      include _tables
