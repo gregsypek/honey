@@ -14,6 +14,8 @@ exports.getOverview = catchAsync(async (req, res, next) => {
   // next();
 });
 exports.getHoney = catchAsync(async (req, res) => {
+  // I need all honey to display offer in table
+  const allHoney = await Honey.find();
   // 1 Get the data. fot the requested honey
   const honey = await Honey.findOne({ slug: req.params.slug }).populate({
     path: 'reviews',
@@ -26,5 +28,6 @@ exports.getHoney = catchAsync(async (req, res) => {
   res.status(200).render('honey', {
     title: 'Miód malinowy',
     honey,
+    allHoney,
   });
 });

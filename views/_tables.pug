@@ -25,7 +25,7 @@ nav.table-nav.table-nav--blank
 //TABLE BODY     
 section.table.table--blank
   .table-box--description 
-    div(class='table-first tablescroll table table--1'
+    div(class='table-first tablescroll table table--1 table--active'
       role='region'
       aria-labelledby='honey'
       tabindex='0')
@@ -34,30 +34,17 @@ section.table.table--blank
         thead 
           tr(class='dark')
             th(scope='col') Rodzaj 
-            th(scope='col') 900 ml 
-            th(scope='col') 720 ml 
-            th(scope='col') 320 ml 
-        tbody 
-          tr 
-            td M. rzepakowy 
-            td 40 zł
-            td 30zł
-            td 15 zł
-          tr 
-            td M. rzepakowy 
-            td 40 zł
-            td 30zł
-            td 15 zł
-          tr 
-            td M. rzepakowy 
-            td 40 zł
-            td 30zł
-            td 15 zł
-          tr 
-            td M. rzepakowy 
-            td 40 zł
-            td 30zł
-            td 15 zł
+            -const jars = honey.jarSizes;
+              each jar in jars
+                th(scope='col')= jar + ' ml'
+           
+        tbody
+          each honey in allHoney 
+             tr 
+              td= honey.name
+                each price in honey.prices
+                  td= price + ' zł'
+              
     div(class='table-second tablescroll table table--2'
       role='region'
       aria-labelledby='dispatch'
@@ -106,7 +93,7 @@ section.table.table--blank
         tr 
           th(class='dark') Telefon
           td 1234569
-    div(class='table-fourth tablescroll table table--4 table--active'
+    div(class='table-fourth tablescroll table table--4'
       role='region'
       aria-labelledby='dispatch'
       tabindex='0')
