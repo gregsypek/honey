@@ -14,46 +14,18 @@ block header
               | 
               span= name[1]
             .content__title-stars 
-              .content__star 
-                svg(width="67"
-                    height="63"
-                    viewBox="0 0 67 63"
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="star__title")
-                  path(class="star__title--color"
-                      d="M33.5 0L41.2457 23.8389H66.3114L46.0329 38.5722L53.7786 62.4111L33.5 47.6778L13.2214 62.4111L20.9671 38.5722L0.688549 23.8389H25.7543L33.5 0Z")
-              .content__star 
-                svg(width="67"
-                    height="63"
-                    viewBox="0 0 67 63"
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="star__title")
-                  path(class="star__title--color"
-                      d="M33.5 0L41.2457 23.8389H66.3114L46.0329 38.5722L53.7786 62.4111L33.5 47.6778L13.2214 62.4111L20.9671 38.5722L0.688549 23.8389H25.7543L33.5 0Z")
-              .content__star 
-                svg(width="67"
-                    height="63"
-                    viewBox="0 0 67 63"
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="star__title")
-                  path(class="star__title--color"
-                      d="M33.5 0L41.2457 23.8389H66.3114L46.0329 38.5722L53.7786 62.4111L33.5 47.6778L13.2214 62.4111L20.9671 38.5722L0.688549 23.8389H25.7543L33.5 0Z")
-              .content__star 
-                svg(width="67"
-                    height="63"
-                    viewBox="0 0 67 63"
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="star__title")
-                  path(class="star__title--color"
-                      d="M33.5 0L41.2457 23.8389H66.3114L46.0329 38.5722L53.7786 62.4111L33.5 47.6778L13.2214 62.4111L20.9671 38.5722L0.688549 23.8389H25.7543L33.5 0Z")
-              .content__star 
-                svg(width="67"
-                    height="63"
-                    viewBox="0 0 67 63"
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="star__title")
-                  path(class="star__title--color"
-                      d="M33.5 0L41.2457 23.8389H66.3114L46.0329 38.5722L53.7786 62.4111L33.5 47.6778L13.2214 62.4111L20.9671 38.5722L0.688549 23.8389H25.7543L33.5 0Z")
+              each star in [1,2,3,4,5]
+              
+                .content__star 
+                  svg(width="67"
+                      height="63"
+                      viewBox="0 0 67 63"
+                      xmlns="http://www.w3.org/2000/svg"
+                      class="star__title")
+                    path(class=`star__title--color ${Math.floor(honey.ratingsAverage) >= star ? '' : 'gray'}` 
+                        d="M33.5 0L41.2457 23.8389H66.3114L46.0329 38.5722L53.7786 62.4111L33.5 47.6778L13.2214 62.4111L20.9671 38.5722L0.688549 23.8389H25.7543L33.5 0Z")
+             
+               
             .content__short-info 
               h4= honey.longDescription
             .content__picture 

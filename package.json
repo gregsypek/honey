@@ -2,7 +2,7 @@
   "name": "miodek",
   "version": "1.0.0",
   "description": "landing page for \"miodek\"",
-  "main": "index.js",
+  "main": "app.js",
   "scripts": {
     "start": "nodemon server.js",
     "start:prod": "NODE_ENV=production nodemon server.js",

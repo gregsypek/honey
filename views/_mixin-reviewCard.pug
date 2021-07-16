@@ -1,0 +1,23 @@
+mixin reviewCard(review,i)
+  table#table-second(class=`opinion opinion--${i} opinion--active`) 
+    caption#dispatch Opinie
+    thead 
+      tr.dark 
+        th(scope='col') Opinia
+    tbody 
+      tr 
+        td= review.review
+      tr 
+        td= review.user.name
+      tr 
+        td 
+          .table-fourth__stars 
+            each star in [1,2,3,4,5]          
+              .table-fourth__star 
+                svg(width='67'
+                  height='63'
+                  viewBox='0 0 67 63'
+                  xmlns='http://www.w3.org/2000/svg'
+                  class='star__table')
+                  path(class=`star__table--color ${review.rating >= star ? 'gray' : ''}`
+                    d='M33.5 0L41.2457 23.8389H66.3114L46.0329 38.5722L53.7786 62.4111L33.5 47.6778L13.2214 62.4111L20.9671 38.5722L0.688549 23.8389H25.7543L33.5 0Z')
