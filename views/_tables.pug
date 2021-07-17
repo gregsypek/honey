@@ -45,7 +45,7 @@ section.table.table--blank
                 each price in honey.prices
                   td= price + ' zł'
               
-    div(class='table-second tablescroll table table--2 table--active'
+    div(class='table-second tablescroll table table--2'
       role='region'
       aria-labelledby='dispatch'
       tabindex='0')
@@ -69,7 +69,7 @@ section.table.table--blank
          
       h3.table-second--info= data.orderExtent
       h3.table-second--info= data.orderTime
-    div(class='table-third tablescroll table table--3'
+    div(class='table-third tablescroll table table--3 table--active'
       role='region'
       aria-labelledby='deposit-info'
       tabindex='0')
@@ -77,16 +77,16 @@ section.table.table--blank
         caption#deposit-info Płatności
         tr 
           th(class='dark') Uwaga
-          td Prosimy dokonywać wpłat po uprzednim kontakcie mailowym lub                 telefonicznym
+          td= data.attention
         tr 
           th(class='dark') Informacja
-          td Towar wysyłamy w godzinach od 8 -16
+          td= `Towar wysyłamy w godzinach od ${data.dispatchHours[0]} - ${data.dispatchHours[1]}`
         tr 
           th(class='dark') Nr konta
-          td 15154512135156464654151
+          td= data.bankAccount
         tr 
           th(class='dark') Telefon
-          td 1234569
+          td= data.phone
     div(class='table-fourth tablescroll table table--4'
       role='region'
       aria-labelledby='dispatch'

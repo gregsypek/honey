@@ -5,7 +5,7 @@ const infoSchema = new mongoose.Schema({
   attention: String,
   dispatchHours: Array,
   bankAccount: {
-    type: Number,
+    type: String,
     required: [true, 'Please provide your bank account'],
   },
   phone: {
