@@ -25,7 +25,7 @@ nav.table-nav.table-nav--blank
 //TABLE BODY     
 section.table.table--blank
   .table-box--description 
-    div(class='table-first tablescroll table table--1 table--active'
+    div(class='table-first tablescroll table table--1'
       role='region'
       aria-labelledby='honey'
       tabindex='0')
@@ -45,7 +45,7 @@ section.table.table--blank
                 each price in honey.prices
                   td= price + ' zł'
               
-    div(class='table-second tablescroll table table--2'
+    div(class='table-second tablescroll table table--2 table--active'
       role='region'
       aria-labelledby='dispatch'
       tabindex='0')
@@ -58,23 +58,17 @@ section.table.table--blank
             th(scope='col') Ekonomiczna 
             th(scope='col') Priorytet 
         tbody 
-          tr 
-            td do 2kg
-            td 1
-            td 30zł
-            td 15 zł
-          tr 
-            td do 5kg
-            td 2
-            td 20 zł
-            td 25 zł
-          tr 
-            td do 10kg 
-            td 3-5
-            td 30zł
-            td 15 zł
-      h3.table-second--info Zamówienia WYŁĄCZNIE na terenie Polski 
-      h3.table-second--info  CZAS REALIZACJI: 2 - 5 DNI ROBOCZE + CZAS DOSTAWY
+         -const data = info[0]; 
+          -for(var i = 0; i< 3; i++)
+              tr 
+                td= `do ${data.wageMaximum[i]} kg`
+                td= data.jarsQuantity[i]
+                td= `${data.economyPrice[i]} zł` 
+                td= `${data.priorityPrice[i]} zł`           
+      
+         
+      h3.table-second--info= data.orderExtent
+      h3.table-second--info= data.orderTime
     div(class='table-third tablescroll table table--3'
       role='region'
       aria-labelledby='deposit-info'

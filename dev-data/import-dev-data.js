@@ -54,6 +54,7 @@ const deleteData = async () => {
     await Honey.deleteMany();
     await User.deleteMany();
     await Review.deleteMany();
+    await Info.deleteMany();
     console.log('Data successfully deleted');
   } catch (err) {
     console.log(err);

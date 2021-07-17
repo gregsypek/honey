@@ -4,8 +4,12 @@
     "dispatchHours": [8, 16],
     "bankAccount": 12516132131321321321231122,
     "phone": "500733111",
-    "upTo2": [1, 15, 20],
-    "upTo5": [2, 20, 25],
-    "upTo10": [[3, 5], 26, 30]
+
+    "jarsQuantity": ["1", "2", "3-5"],
+    "wageMaximum": [2, 5, 10],
+    "economyPrice": [20, 25, 40],
+    "priorityPrice": [25, 30, 50],
+    "orderExtent": "ZAMÓWIENIA WYŁĄCZNIE NA TERENIE POLSKI",
+    "orderTime": "CZAS REALIZACJI: 2 - 5 DNI ROBOCZE + CZAS DOSTAWY"
   }
 ]

@@ -29,6 +29,7 @@ exports.getHoney = catchAsync(async (req, res) => {
   //3 Render template using data from  1
   res.status(200).render('honey', {
     title: 'Miód malinowy',
+
     honey,
     allHoney,
     info,

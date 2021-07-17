@@ -17,9 +17,12 @@ const infoSchema = new mongoose.Schema({
       'Please provide a valid phone number',
     ],
   },
-  upTo2: [Number],
-  upTo5: [Number],
-  upTo10: [[Number], Number],
+  economyPrice: [Number],
+  priorityPrice: [Number],
+  jarsQuantity: [String],
+  wageMaximum: [Number],
+  orderExtent: String,
+  orderTime: String,
 });
 
 const Info = mongoose.model('Info', infoSchema);
