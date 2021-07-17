@@ -1,4 +1,5 @@
 const Honey = require('../models/honeyModel');
+const Info = require('../models/infoModel');
 const catchAsync = require('../utils/catchAsync');
 
 exports.getOverview = catchAsync(async (req, res, next) => {
@@ -16,6 +17,7 @@ exports.getOverview = catchAsync(async (req, res, next) => {
 exports.getHoney = catchAsync(async (req, res) => {
   // I need all honey to display offer in table
   const allHoney = await Honey.find();
+  const info = await Info.find();
   // 1 Get the data. fot the requested honey
   const honey = await Honey.findOne({ slug: req.params.slug }).populate({
     path: 'reviews',
@@ -29,5 +31,6 @@ exports.getHoney = catchAsync(async (req, res) => {
     title: 'Miód malinowy',
     honey,
     allHoney,
+    info,
   });
 });

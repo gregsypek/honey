@@ -4,6 +4,7 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv');
 const Honey = require('../models/honeyModel');
 const Review = require('../models/reviewModel');
+const Info = require('../models/infoModel');
 const User = require('../models/userModel');
 //And so what this command will now do is to read our variables from the file and save them into node JS environment variables.
 dotenv.config({ path: './config.env' });
@@ -31,6 +32,7 @@ const users = JSON.parse(fs.readFileSync(`${__dirname}/users.json`, 'utf-8'));
 const reviews = JSON.parse(
   fs.readFileSync(`${__dirname}/reviews.json`, 'utf-8')
 );
+const info = JSON.parse(fs.readFileSync(`${__dirname}/info.json`, 'utf-8'));
 
 //  IMPORT DATA INTO DB
 const importData = async () => {
@@ -38,6 +40,7 @@ const importData = async () => {
     await Honey.create(honey);
     await User.create(users, { validateBeforeSave: false });
     await Review.create(reviews);
+    await Info.create(info);
     console.log('Data successfully loaded!');
   } catch (err) {
     console.log(err);

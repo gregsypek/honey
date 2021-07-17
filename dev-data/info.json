@@ -1,0 +1,11 @@
+[
+  {
+    "attention": "Prosimy dokonywać wpłat po uprzednim kontakcie mailowym lub telefonicznym",
+    "dispatchHours": [8, 16],
+    "bankAccount": 12516132131321321321231122,
+    "phone": "500733111",
+    "upTo2": [1, 15, 20],
+    "upTo5": [2, 20, 25],
+    "upTo10": [[3, 5], 26, 30]
+  }
+]
