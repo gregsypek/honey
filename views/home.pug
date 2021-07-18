@@ -1,0 +1,85 @@
+extends base
+
+mixin aboutParagraph(nr, text)
+  div(class=`about__paragraph paragraph--${nr}`)
+    span.rotate 
+    h5(class=`about__info about__info--${nr}`)= text  
+
+
+block header
+  //- include _mixin-wrapper
+  //- +wrapper('shopping') 
+  .wrapper--hero
+    //NAV
+    include _nav
+    //MAIN
+    main.hero 
+      .hero__title-container 
+        h1.hero__title.h1_big Pozwól 
+          br
+          | nam 
+          br
+          span osłodzić
+          br 
+          |ci życie.
+      h5.hero__intro Mamy dla Ciebie naturalny miód, który starannie zbieramy prosto z naszych pasiek.
+      h5.hero__intro Miód, który smakuje jak żaden inny.
+      h5.hero__intro Miód tylko od naszych pszczółek.
+      h5.hero__intro Po prostu miód z którego jesteśmy dumni.
+      a.hero__btn.btn(href='/overview') Kup teraz
+  //INFO
+  section.info 
+    .info__hello 
+      h1.content__title witam na stronie pasieki miodek i 
+        span zapraszam
+    .info__address 
+      h2.info__address--name Jan Pszczelarz 
+      h4.info__address--city Łąki 23
+      h4.info__address--post 30-305 Miody
+      h4.info__id--nr  Nr Identyfikacji Weterynaryjnej: 
+        span 12345678999
+  //ABOUT
+  section.about 
+    .about__triangle 
+    .about__header 
+      h1.about__text Trochę o
+        span.grape nas 
+      .about__image
+   
+        img(src='/src/images/about-bg.jpg' alt='pancakes with honey')
+    .about__main
+      +aboutParagraph(1,'Prowadzimy gospodarstwo pszczelarskie od lat w gronie rodzinnym. Obecnie posiadamy około 100 pasiek rozstawionych w kilku miejscach.')
+      +aboutParagraph(2,'Stworzyliśmy pasiekę miodek bo wierzymy, że nasz miód to samo zdrowie.')
+      +aboutParagraph(3,'Wszystkie produkty, które sprzedajemy pochodzą wyłącznie od naszych pszczół')
+      +aboutParagraph(4,'Zapraszam do zapoznania się z naszą ofertą. Polecamy miód wielokwiatowy oraz lipowy miody z których jesteśmy dumni.')
+    .about__triangle2
+  //THINK_OVER
+  section.think_over 
+    h1.think_over__text Jeszcze się
+      span zastanawiasz?
+    .think_over__container
+      .think_over__left 
+        .think_over__box 
+          
+          .think_over__recommend.recommend--1.recommend--active 
+            h4.think_over__recommended=  reviews[0].review
+            p.think_over__recommended--author Ania
+
+          .think_over__recommend.recommend--2
+            h4.think_over__recommended review
+            p.think_over__recommended--author jozek  
+        
+        .think_over__dots 
+          button.think_over__dot.dot--1.dot--active(data-tab='1')    
+          button.think_over__dot.dot--2(data-tab='2')    
+          button.think_over__dot.dot--3(data-tab='3')    
+      .think_over--right  
+        a(href="/overview" class="btn think_over__btn")  Kup Teraz
+    
+         
+
+
+
+    
+
+

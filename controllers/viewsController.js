@@ -1,6 +1,15 @@
 const Honey = require('../models/honeyModel');
 const Info = require('../models/infoModel');
+const Review = require('../models/reviewModel');
 const catchAsync = require('../utils/catchAsync');
+
+exports.getHomePage = catchAsync(async (req, res) => {
+  const reviews = await Review.find();
+  res.status(200).render('home', {
+    title: 'Miodek',
+    reviews,
+  });
+});
 
 exports.getOverview = catchAsync(async (req, res, next) => {
   // Get honey data from collection
@@ -14,7 +23,7 @@ exports.getOverview = catchAsync(async (req, res, next) => {
   });
   // next();
 });
-exports.getHoney = catchAsync(async (req, res) => {
+exports.getHoney = catchAsync(async (req, res, next) => {
   // I need all honey to display offer in table
   const allHoney = await Honey.find();
   const info = await Info.find();
