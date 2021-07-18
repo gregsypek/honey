@@ -60,23 +60,23 @@ block header
     .think_over__container
       .think_over__left 
         .think_over__box 
-          
-          .think_over__recommend.recommend--1.recommend--active 
-            h4.think_over__recommended=  reviews[0].review
-            p.think_over__recommended--author Ania
+          -const cards = reviews;
+            each card, i in cards
+              div(class=`think_over__recommend recommend--${i+1} ${i+1 === 1 ? 'recommend--active' : '' }`)
+                h4.think_over__recommended= card.review
+                p.think_over__recommended--author= card.user.name
+        .think_over__dots
+         
+          -for(var i = 0; i < cards.length && i < 4; i++)
 
-          .think_over__recommend.recommend--2
-            h4.think_over__recommended review
-            p.think_over__recommended--author jozek  
-        
-        .think_over__dots 
-          button.think_over__dot.dot--1.dot--active(data-tab='1')    
-          button.think_over__dot.dot--2(data-tab='2')    
-          button.think_over__dot.dot--3(data-tab='3')    
+            button(class=`think_over__dot dot--${i+1} ${i+1 === 1 ? 'dot--active' : '' }`  data-tab=`${i+1}`) 
+          
       .think_over--right  
         a(href="/overview" class="btn think_over__btn")  Kup Teraz
     
-         
+
+  //SCRIPTS
+  script(src='js/think_over.js')
 
 
 

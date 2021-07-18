@@ -3,8 +3,16 @@ const Info = require('../models/infoModel');
 const Review = require('../models/reviewModel');
 const catchAsync = require('../utils/catchAsync');
 
+// exports.getHomePage = catchAsync(async (req, res) => {
+//   const reviews = await Review.find();
+//   res.status(200).render('home', {
+//     title: 'Miodek',
+//     reviews,
+//   });
+// });
 exports.getHomePage = catchAsync(async (req, res) => {
-  const reviews = await Review.find();
+  const reviews = await Review.where('rating').gte(4);
+  // .populate({ path: 'user', select: 'name' });
   res.status(200).render('home', {
     title: 'Miodek',
     reviews,
