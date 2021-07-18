@@ -1,5 +1,8 @@
 extends base
 
+block append head
+  script(defer='' src='/js/table-nav.js') 
+  script(defer='' src='/js/table-slider.js')
 block header
   //- include _mixin-wrapper
   //- +wrapper('shopping') 
