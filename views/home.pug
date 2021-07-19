@@ -5,6 +5,8 @@ mixin aboutParagraph(nr, text)
     span.rotate 
     h5(class=`about__info about__info--${nr}`)= text  
 
+mixin theBestInfo(nr, text)
+  p(class=`the-best__info info--${nr} hide`)= text
 
 block header
   //- include _mixin-wrapper
@@ -72,9 +74,41 @@ block header
             button(class=`think_over__dot dot--${i+1} ${i+1 === 1 ? 'dot--active' : '' }`  data-tab=`${i+1}`) 
           
       .think_over--right  
-        a(href="/overview" class="btn think_over__btn")  Kup Teraz
-    
-
+        a(href='/overview' class='btn think_over__btn')  Kup Teraz
+  //THE-BEST
+  section.the-best
+    h1.the-best__title Oto co sprawia,
+      br 
+      | że jesteśmy
+      br    
+      span najlepsi:
+    img(src='/src/images/the-best-bg-medium.jpg' alt='two bees flies over the vessel' class='the-best__img')
+        //- srcset='
+        //-   ./public/src/images/the-best-bg-small.jpg  576w,
+        //-   ./public/src/images/the-best-bg-medium.jpg 768w
+        //- '
+        //- sizes='(max-width: 576px) 90vw, (max-width: 992px) 60vw, 600px'
+    .the-best__box 
+      +theBestInfo(1,'Mamy duże doświadczenie w hodowli pszczół. Nasz miód wyróżnia się wysoką jakością i znajduje spore uznanie wsród klientów.')
+      +theBestInfo(2,' Kupując u nas masz pewność, że miód pochodzi z naszych lokalnych, czystych terenów')
+      +theBestInfo(3,'Nie słodzimy nie poprawiamy nie psujemy. Wszystko odbywa sie w naturalny sposób. Pszczoły wiedzą co dobre!')
+  //QUESTIONS
+  section.questions 
+    h1.questions__header Pytania 
+      span ?
+    .questions__container 
+      .questions__box 
+        p.questions__text Masz pytanie? Śmiało - chętnie odpowiemy.
+        a.btn.questions__btn(href='/contact' ) Przywitaj się
+      .questions__box 
+        p.questions__text  Chcesz zobaczyć naszą ofertę? Zapraszamy
+        a.btn.questions__btn(href='/overview' ) Oferta
+      .questions__box 
+        p.questions__text  Skąd jesteśmy? Sprawdź gdzie można nas znaleźć
+        a.btn.questions__btn(href='/map' ) Mapa
+      .questions__box 
+        p.questions__text  Dlaczego warto jeść miód?
+        a.btn.questions__btn(href='/aboutHoney' ) O miodzie
   //SCRIPTS
   script(src='js/think_over.js')
 
