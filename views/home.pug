@@ -1,4 +1,6 @@
 extends base
+//- block append head
+//-   script(src='https://code.iconify.design/1/1.0.6/iconify.min.js')
 
 mixin aboutParagraph(nr, text)
   div(class=`about__paragraph paragraph--${nr}`)
@@ -13,7 +15,7 @@ block header
   //- +wrapper('shopping') 
   .wrapper--hero
     //NAV
-    include _nav
+    include _navHome
     //MAIN
     main.hero 
       .hero__title-container 
@@ -73,7 +75,7 @@ block header
 
             button(class=`think_over__dot dot--${i+1} ${i+1 === 1 ? 'dot--active' : '' }`  data-tab=`${i+1}`) 
           
-      .think_over--right  
+      .think_over__right  
         a(href='/overview' class='btn think_over__btn')  Kup Teraz
   //THE-BEST
   section.the-best
