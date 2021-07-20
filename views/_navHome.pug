@@ -1,5 +1,4 @@
 
-
 header.navigation 
   .navigation__row.navigation__row--first 
     a#main-menu-toggle.menu-toggle(href='#main-menu' aria-label='Open main menu')
@@ -17,7 +16,7 @@ header.navigation
       a.btn.btn--login(href='/login') zaloguj się
       a.btn.btn--register(href='/register') zarejestruj się
   .navigation__row.navigation__row--second 
-    nav#main-menu.navigation__nav
+    nav#main-menu.navigation__nav.navigation__row--second
       a#main-menu-close.menu-close(href='#main-menu-toggle' aria-label='Close main menu')
         span.sr-only Close main menu 
         span.iconify.iconify__close(data-inline='false' data-icon='eva:close-fill'

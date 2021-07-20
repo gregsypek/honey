@@ -8,7 +8,7 @@ block header
     include _nav
     //HEADER
     include _mixin-header
-    +header("Zapraszamy do","zakupów","Z przyjemnością przedstawiamy pełną ofertę naszego sklepu. Szczegółowy opis miodu oraz złoźenie zamówiena moliwe po kliknięciu przycisku 'więcej'.")
+    +header("Zapraszamy do","zakupów","Z przyjemnością przedstawiamy pełną ofertę naszego sklepu. Szczegółowy opis miodu oraz złożenie zamówiena moliwe po kliknięciu przycisku 'więcej'.")
 
   //CARDS
   .content__content-box.content__cards 
@@ -58,14 +58,18 @@ block header
                   alt='money')
                 span=`${card.prices[2]} zł`
           .card__stars 
-            .card__star 
-              img(src='./src/images/icons/star.svg' alt='star')
-            .card__star.card__star--black
-              img(src='./src/images/icons/star.svg' alt='star')
-            .card__star 
-              img(src='./src/images/icons/star.svg' alt='star')
-            .card__star 
-              img(src='./src/images/icons/star.svg' alt='star')
+            each star in [1,2,3,4,5]
+              .card__star 
+                img(src=`./src/images/icons/${Math.floor(card.ratingsAverage) >= star ? 'star' : 'star-gray'}.svg` alt='star')
+            //- .card__star 
+            //-   img(src='./src/images/icons/star.svg' alt='star')
+            //- .card__star.card__star--black
+            //-   img(src='./src/images/icons/star.svg' alt='star')
+            //- .card__star 
+            //-   img(src='./src/images/icons/star.svg' alt='star')
+            //- .card__star 
+            //-   img(src='./src/images/icons/star.svg' alt='star')
+
           .card__footer 
             a.btn.btn--details.btn--small(href=`/honey/${card.slug}`) Więcej
 
