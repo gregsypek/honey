@@ -10,7 +10,7 @@ const catchAsync = require('../utils/catchAsync');
 //     reviews,
 //   });
 // });
-exports.getHomePage = catchAsync(async (req, res) => {
+exports.getHomePage = catchAsync(async (req, res, next) => {
   const reviews = await Review.where('rating').gte(4);
   // .populate({ path: 'user', select: 'name' });
   res.status(200).render('home', {
@@ -49,6 +49,15 @@ exports.getHoney = catchAsync(async (req, res, next) => {
 
     honey,
     allHoney,
+    info,
+  });
+});
+
+exports.getLoginForm = catchAsync(async (req, res, next) => {
+  const info = await Info.find();
+
+  res.status(200).render('login', {
+    title: 'Zaloguj się',
     info,
   });
 });
