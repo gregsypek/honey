@@ -88,6 +88,8 @@ exports.protect = catchAsync(async (req, res, next) => {
   /*The util.promisify() method defines in utilities module of Node.js standard library. It is basically used to convert a method that returns responses using a callback function to return responses in a promise object. Usually, very soon it becomes very difficult to work with callbacks due to callback nesting or callback hells. It becomes very difficult to organize or format our code so that other developers if working with that code, can understand it easily. In other side, it is very easy to deal with promises as nesting promises are also operate in linear style i.e. promise chaining. The util.promisify() method does this for us and makes the method to operate with promises.
    */
 
+  //Only for rendered pages, no errors
+
   const decoded = await promisify(jwt.verify)(token, process.env.JWT_SECRET);
   // console.log(decoded);
   //Check if user still exists
@@ -105,6 +107,30 @@ exports.protect = catchAsync(async (req, res, next) => {
   }
   // Grant access to protected route
   req.user = currentUser; // req user is going from one middleware to another
+  next();
+});
+
+exports.isLoggedIn = catchAsync(async (req, res, next) => {
+  if (req.cookies.jwt) {
+    // verify token
+    const decoded = await promisify(jwt.verify)(
+      req.cookies.jwt,
+      process.env.JWT_SECRET
+    );
+    //Check if user still exists
+    const currentUser = await User.findById(decoded.id);
+    if (!currentUser) {
+      return next();
+    }
+    //Check if user changed password after the token was issued
+    if (currentUser.changedPasswordAfter(decoded.iat)) {
+      return next();
+    }
+    //User is logged in
+    res.locals.user = currentUser; // pug template will have access to variable 'user'
+
+    return next();
+  }
   next();
 });
 

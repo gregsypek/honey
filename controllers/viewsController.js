@@ -13,10 +13,16 @@ const catchAsync = require('../utils/catchAsync');
 exports.getHomePage = catchAsync(async (req, res, next) => {
   const reviews = await Review.where('rating').gte(4);
   // .populate({ path: 'user', select: 'name' });
-  res.status(200).render('home', {
-    title: 'Miodek',
-    reviews,
-  });
+  res
+    .status(200)
+    .set(
+      'Content-Security-Policy',
+      "connect-src 'self' https://cdnjs.cloudflare.com"
+    )
+    .render('home', {
+      title: 'Miodek',
+      reviews,
+    });
 });
 
 exports.getOverview = catchAsync(async (req, res, next) => {
@@ -50,13 +56,19 @@ exports.getHoney = catchAsync(async (req, res, next) => {
   //2 Build template
 
   //3 Render template using data from  1
-  res.status(200).render('honey', {
-    title: `${honey.name}`,
+  res
+    .status(200)
+    .set(
+      'Content-Security-Policy',
+      "connect-src 'self' https://cdnjs.cloudflare.com"
+    )
+    .render('honey', {
+      title: `${honey.name}`,
 
-    honey,
-    allHoney,
-    info,
-  });
+      honey,
+      allHoney,
+      info,
+    });
 });
 
 exports.getLoginForm = catchAsync(async (req, res, next) => {
