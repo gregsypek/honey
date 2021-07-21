@@ -25,10 +25,16 @@ exports.getOverview = catchAsync(async (req, res, next) => {
   //Build template
 
   //Render that template using honey data from collection
-  res.status(200).render('overview', {
-    title: 'Wszystkie miody',
-    honey,
-  });
+  res
+    .status(200)
+    .set(
+      'Content-Security-Policy',
+      "connect-src 'self' https://cdnjs.cloudflare.com"
+    )
+    .render('overview', {
+      title: 'Wszystkie miody',
+      honey,
+    });
   // next();
 });
 exports.getHoney = catchAsync(async (req, res, next) => {
@@ -56,8 +62,14 @@ exports.getHoney = catchAsync(async (req, res, next) => {
 exports.getLoginForm = catchAsync(async (req, res, next) => {
   const info = await Info.find();
 
-  res.status(200).render('login', {
-    title: 'Zaloguj się',
-    info,
-  });
+  res
+    .status(200)
+    .set(
+      'Content-Security-Policy',
+      "connect-src 'self' https://cdnjs.cloudflare.com"
+    )
+    .render('login', {
+      title: 'Zaloguj się',
+      info,
+    });
 });

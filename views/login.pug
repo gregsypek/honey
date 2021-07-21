@@ -56,7 +56,7 @@ block header
       h1.content__title Zaloguj się do swojego 
         span.honey konta 
       .contact__box 
-        form.contact__form.contact--login(action="../index.html" method="POST")
+        form.contact__form.contact--login
           fieldset 
             .contact__input-group 
               label(for='email') Twój email:
@@ -111,3 +111,6 @@ block header
           span(class="contact__link--info") Kontakt tel. moźliwy od pon. do pt. w godzinach 07:30 - 16: 00
 
       include _footer
+
+     
+      script(src="/js/login.js")
