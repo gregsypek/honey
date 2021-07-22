@@ -1,39 +1,37 @@
-@import "abstracts/functions";
-@import "abstracts/mixins";
-@import "abstracts/variables";
+@import 'abstracts/functions';
+@import 'abstracts/mixins';
+@import 'abstracts/variables';
 
-@import "base/animations";
-@import "base/base";
-@import "base/typography";
-@import "base/utilities";
+@import 'base/animations';
+@import 'base/base';
+@import 'base/typography';
+@import 'base/utilities';
 
-@import "components/button";
-@import "components/inputs";
+@import 'components/button';
+@import 'components/inputs';
+@import 'components/alerts';
 
-@import "layout/hero";
-@import "layout/nav";
-@import "layout/info";
-@import "layout/the-best";
-@import "layout/think-over";
-@import "layout/about";
-@import "layout/questions";
-@import "layout/content";
-@import "layout/wrapper";
-@import "layout/table";
-@import "layout/form";
-@import "layout/links";
-@import "layout/table-nav";
-@import "layout/footer";
+@import 'layout/hero';
+@import 'layout/nav';
+@import 'layout/info';
+@import 'layout/the-best';
+@import 'layout/think-over';
+@import 'layout/about';
+@import 'layout/questions';
+@import 'layout/content';
+@import 'layout/wrapper';
+@import 'layout/table';
+@import 'layout/form';
+@import 'layout/links';
+@import 'layout/table-nav';
+@import 'layout/footer';
 
-@import "pages/gallery";
-@import "pages/shopping";
-@import "pages/description";
-@import "pages/contact";
-@import "pages/login";
-@import "pages/map";
-@import "pages/honey";
-@import "pages/register";
-@import "pages/privacy_policy";
-
-
-
+@import 'pages/gallery';
+@import 'pages/shopping';
+@import 'pages/description';
+@import 'pages/contact';
+@import 'pages/login';
+@import 'pages/map';
+@import 'pages/honey';
+@import 'pages/register';
+@import 'pages/privacy_policy';
