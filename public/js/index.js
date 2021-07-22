@@ -1,8 +1,9 @@
 /* eslint-disable */
-import { login } from './login';
+import { login, logout } from './login';
 
 //DOM ELEMENTS
 const loginForm = document.querySelector('.contact--login');
+const logOutBtn = document.querySelector('.btn--logout');
 
 // VALUES
 
@@ -13,3 +14,5 @@ if (loginForm)
     const password = document.getElementById('password').value;
     login(email, password);
   });
+
+if (logOutBtn) logOutBtn.addEventListener('click', logout);
