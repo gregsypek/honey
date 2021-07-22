@@ -462,6 +462,11 @@ img.lazyload.loaded {
   background-color: transparent;
 }
 
+.navigation__buttons .btn--white {
+  border-color: #333333;
+  color: #333333;
+}
+
 .navigation__icon {
   border-top: 1px solid #333333;
   display: -webkit-box;

@@ -15,7 +15,9 @@ block header
   //- +wrapper('shopping') 
   .wrapper--hero
     //NAV
-    include _navHome
+    //- include _navHome
+    include _mixinNav
+    +nav('login', 'register', 'honey', 'O nas')
     //MAIN
     main.hero 
       .hero__title-container 

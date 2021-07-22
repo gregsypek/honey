@@ -123,6 +123,7 @@
       background-color: transparent;
       align-self: center;
     }
+
     a.btn.btn--user {
       display: flex;
       align-items: center;
@@ -137,6 +138,10 @@
     .btn--register,
     .btn--logout {
       @include btn--register;
+    }
+    .btn--white {
+      border-color: $color-gray;
+      color: $color-gray;
     }
   }
 

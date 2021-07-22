@@ -5,7 +5,8 @@ block header
   //- +wrapper('shopping') 
   .wrapper--shopping
     //NAV
-    include _nav
+    include _mixinNav
+    +nav('login2', 'register2', 'white', 'Oferta')
     //HEADER
     include _mixin-header
     +header("Zapraszamy do","zakupów","Z przyjemnością przedstawiamy pełną ofertę naszego sklepu. Szczegółowy opis miodu oraz złożenie zamówiena moliwe po kliknięciu przycisku 'więcej'.")
