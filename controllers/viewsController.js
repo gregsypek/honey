@@ -2,6 +2,7 @@ const Honey = require('../models/honeyModel');
 const Info = require('../models/infoModel');
 const Review = require('../models/reviewModel');
 const catchAsync = require('../utils/catchAsync');
+const AppError = require('../utils/appError');
 
 // exports.getHomePage = catchAsync(async (req, res) => {
 //   const reviews = await Review.find();
@@ -52,6 +53,10 @@ exports.getHoney = catchAsync(async (req, res, next) => {
     path: 'reviews',
     fields: 'review rating user',
   });
+
+  if (!honey) {
+    return next(new AppError('Nie ma takiego produktu', 404));
+  }
 
   //2 Build template
 

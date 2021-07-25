@@ -1,0 +1,14 @@
+
+extends base
+block head
+block header 
+  
+ 
+    include _mixinNav
+    +nav('login', 'register', 'white', '', 'navHidden')
+
+block main        
+
+   main.content 
+      h1.content__title Upps!, Coś poszło nie tak! 
+        span.honey= msg
