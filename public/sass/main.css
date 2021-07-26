@@ -2150,10 +2150,6 @@ tr:nth-child(even) {
           transform: translate(50%, 0);
 }
 
-.wrapper--login2 {
-  background-color: blue;
-}
-
 .footer {
   height: auto;
   background: #4F4F4F;
@@ -2931,17 +2927,27 @@ tr:nth-child(even) {
   background-color: white;
 }
 
+.wrapper--account h1.content__title {
+  margin-top: 10rem !important;
+}
+
 .account__links {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   padding: 10vw;
   background-color: #EECF90;
 }
 
-.account__left {
-  -ms-flex-preferred-size: 30vw;
-      flex-basis: 30vw;
+.account__links--passwords {
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
 }
 
 .account__link {
@@ -2970,9 +2976,7 @@ tr:nth-child(even) {
 }
 
 .account__right {
-  max-width: 80rem;
-  margin: 0 auto;
-  padding: 0 8rem;
+  margin-left: auto;
 }
 
 .account__btn {
@@ -2980,10 +2984,11 @@ tr:nth-child(even) {
   font-weight: bold;
   cursor: pointer;
   padding: .5rem 2.5rem;
+  margin-top: 5rem;
   background-color: #3c4142;
   color: white;
   font-weight: 300;
-  font-size: var(--h5);
+  font-size: 16px;
 }
 
 @media (max-width: 576px) {
@@ -2992,26 +2997,23 @@ tr:nth-child(even) {
   }
 }
 
-.form__group:not(:last-of-type) {
-  margin-bottom: 2.5rem;
-}
-
 .form__group:last-child {
   text-align: right;
+  margin-top: auto;
 }
 
 .form label {
   display: block;
   font-size: 1.6rem;
   font-weight: 700;
-  margin-bottom: 0.75rem;
-}
-
-.form__label {
-  margin: 1.2rem 0 0.8rem 0;
   font-family: "Poppins", sans-serif;
   color: #4F4F4F;
-  font-size: var(--p);
+  font-size: var(--h5);
+  margin: 1.2rem 0 0.8rem 0;
+}
+
+.form label:first-of-type {
+  margin-top: 4rem;
 }
 
 .form__input {
@@ -3025,11 +3027,16 @@ tr:nth-child(even) {
   padding: 1rem;
 }
 
+.form__input--password {
+  width: auto;
+  margin-right: 7rem;
+}
+
 .form__user-photo {
   height: 7.5rem;
   width: 7.5rem;
   border-radius: 50%;
-  margin-right: 5rem;
+  margin: 5rem 5rem 0 0;
   border: 4px solid #ffffff;
 }
 
@@ -3060,6 +3067,14 @@ tr:nth-child(even) {
   -webkit-transition: all 0.2s;
   transition: all 0.2s;
   cursor: pointer;
+}
+
+.form__password {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 
 .wrapper--map {
