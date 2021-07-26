@@ -1,6 +1,118 @@
-.wrapper--login {
+.wrapper--login,
+.wrapper--account {
   @include layout(url(../src/images/contact-bg.jpg), cover, center);
 
-  height: calc(200vh - 5px); // this help to keep slice background in the same place
+  height: calc(
+    200vh - 5px
+  ); // this help to keep slice background in the same place
+}
+//TODO move below code into separate file
+/////////////@at-root
+.wrapper--account {
+  background-color: white;
+}
 
+.account {
+  &__links {
+    display: flex;
+    padding: 10vw;
+    background-color: $color-honey;
+  }
+  &__left {
+    flex-basis: 30vw;
+  }
+  &__link {
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-right: 5rem;
+    }
+    a {
+      text-decoration: none;
+      color: inherit;
+      text-transform: uppercase;
+      font-size: 1.8rem;
+      font-family: $font-secondary;
+    }
+    &:not(:last-of-type) {
+      margin-bottom: 5rem;
+    }
+  }
+  &__right {
+    // margin-left: auto;
+
+    max-width: 80rem;
+    margin: 0 auto;
+    padding: 0 8rem;
+  }
+  &__btn {
+    @include btn;
+    background-color: $color-sarah;
+    color: white;
+    font-weight: 300;
+    font-size: var(--h5);
+  }
+}
+.form {
+  &__account {
+  }
+  &__group {
+    &:not(:last-of-type) {
+      margin-bottom: 2.5rem;
+    }
+    &:last-child {
+      text-align: right;
+    }
+  }
+  label {
+    display: block;
+    font-size: 1.6rem;
+    font-weight: 700;
+    margin-bottom: 0.75rem;
+  }
+  &__label {
+    margin: 1.2rem 0 0.8rem 0;
+    font-family: $font-secondary;
+    color: $color-dark;
+    font-size: var(--p);
+  }
+  &__input {
+    width: 40vw;
+    outline: none;
+    background: $color-white-2;
+    font-size: var(--h5);
+    color: $color-sarah;
+    border-radius: 5px;
+    border: none;
+    padding: 1rem;
+  }
+  &__user-photo {
+    height: 7.5rem;
+    width: 7.5rem;
+    border-radius: 50%;
+    margin-right: 5rem;
+    border: 4px solid $color-white;
+  }
+  &__photo-upload {
+    display: flex;
+    align-items: center;
+  }
+  &__upload {
+    width: 0.1px;
+    height: 0.1px;
+    opacity: 0;
+    overflow: hidden;
+    position: absolute;
+    z-index: -1;
+    & + label {
+      color: $color-sarah;
+      display: inline-block;
+      text-decoration: none;
+      border-bottom: 4px solid $color-white;
+      padding: 3px;
+      transition: all 0.2s;
+      cursor: pointer;
+    }
+  }
 }
