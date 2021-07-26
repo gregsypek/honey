@@ -22,7 +22,7 @@ mixin nav(btn1, btn2, color, tabName, navHidden)
       .navigation__buttons
         if user 
           a(class=`btn btn--logout btn--${color}`) wyloguj się
-          a(class=`btn btn--user btn--${color}`)
+          a(class=`btn btn--user btn--${color}` href='/me')
             img.btn--user-img(src=`/src/images/users/${user.photo}` alt =`Zdjęcie ${user.name}`)
             span= user.name.split(' ')[0] 
 

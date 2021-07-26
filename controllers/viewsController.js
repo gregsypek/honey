@@ -90,3 +90,14 @@ exports.getLoginForm = catchAsync(async (req, res, next) => {
       info,
     });
 });
+exports.getAccount = (req, res) => {
+  res
+    .status(200)
+    .set(
+      'Content-Security-Policy',
+      "connect-src 'self' https://cdnjs.cloudflare.com"
+    )
+    .render('account', {
+      title: 'Twoje konto',
+    });
+};
