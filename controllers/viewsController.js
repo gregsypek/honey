@@ -1,4 +1,5 @@
 const Honey = require('../models/honeyModel');
+const User = require('../models/userModel');
 const Info = require('../models/infoModel');
 const Review = require('../models/reviewModel');
 const catchAsync = require('../utils/catchAsync');
@@ -101,3 +102,26 @@ exports.getAccount = (req, res) => {
       title: 'Twoje konto',
     });
 };
+exports.updateUserData = catchAsync(async (req, res, next) => {
+  const updatedUser = await User.findByIdAndUpdate(
+    req.user.id,
+    {
+      name: req.body.name,
+      email: req.body.email,
+    },
+    {
+      new: true,
+      runValidators: true,
+    }
+  );
+  res
+    .status(200)
+    .set(
+      'Content-Security-Policy',
+      "connect-src 'self' https://cdnjs.cloudflare.com"
+    )
+    .render('account', {
+      title: 'Twoje konto',
+      user: updatedUser,
+    });
+});
