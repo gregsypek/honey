@@ -1,0 +1,43 @@
+
+extends base
+block head
+block header 
+
+  .wrapper--login
+    include _mixinNav
+    +nav('login2', 'register2', 'white', 'Kontakt')
+
+    include _mixin-header
+    +header("Napisz do nas","wiadomość","W celu skontaktowania się prosimy wypełnić poniższy formularz lub wybrać odpowiedni odnośnik na dole strony. Zachęcamy również do założenia konta, co znacznie ułatwia dokonywanie zakupów.")
+   
+        
+  //FORM
+  .contact.contact-margin(aria-labelledby="contact-section")
+    .contact__box 
+      form.contact__form
+        fieldset 
+          legend Masz pytanie?
+          .contact__input-group 
+            label(for='name') Imię
+            input(type='text' name='questionName' id='name' required)
+          .contact__input-group 
+            label(for='email') Email
+            input(type='text' name='questionEmail' id='email' required)
+          .contact__input-group 
+            label(for='message') Treść wiadomości
+            textarea(trows="6" name="message" id="message")
+          .contact__input-group 
+            span.privacy Podając nam swój email, wyrazasz zgodę na #[a(href="terms_of_use.html") Regulamin sklepu] oraz #[a(href="privacy_policy.html") Politykę Prywatności]
+          .contact__input-group 
+            input(type="submit" name="submit" class="btn-form " value="Wyślij") 
+      .contact__btns 
+        a(href="/overview" class="btn contact__btn") Wróć do sklepu
+        a(href="/register" class="btn contact__btn") Załóź konto
+        a(href="/login" class="btn contact__btn") Mam juz konto
+
+    //CONTACT-LINKS
+    include _contact-links     
+        
+
+    include _footer
+    

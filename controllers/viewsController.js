@@ -91,6 +91,20 @@ exports.getLoginForm = catchAsync(async (req, res, next) => {
       info,
     });
 });
+exports.getContactMessage = catchAsync(async (req, res, next) => {
+  const info = await Info.find();
+
+  res
+    .status(200)
+    .set(
+      'Content-Security-Policy',
+      "connect-src 'self' https://cdnjs.cloudflare.com"
+    )
+    .render('message', {
+      title: 'Wyślij do nas wiadomość',
+      info,
+    });
+});
 exports.getAccount = (req, res) => {
   res
     .status(200)
