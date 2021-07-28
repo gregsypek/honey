@@ -1,18 +1,22 @@
 import axios from 'axios';
 import { showAlert } from './alerts';
 
-export const updateData = async (name, email) => {
+export const updateSettings = async (data, type) => {
   try {
+    const url =
+      type === 'password'
+        ? 'http://127.0.0.1:3001/api/v1/users/updateMyPassword'
+        : 'http://127.0.0.1:3001/api/v1/users/updateMe';
     const res = await axios({
       method: 'PATCH',
-      url: 'http://127.0.0.1:3001/api/v1/users/updateMe',
-      data: {
-        name,
-        email,
-      },
+      url,
+      data,
     });
     if (res.data.status === 'success') {
-      showAlert('success', 'Dane zostały zaktualizowane');
+      showAlert(
+        'success',
+        `${type === 'password' ? 'HASŁA' : 'DANE'} zostały zaktualizowane`
+      );
       // window.setTimeout(() => {
       //   location.assign('/');
       // }, 1500);

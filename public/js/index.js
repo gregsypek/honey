@@ -1,11 +1,12 @@
 /* eslint-disable */
 import { login, logout } from './login';
-import { updateData } from './updateSettings';
+import { updateSettings } from './updateSettings';
 
 //DOM ELEMENTS
 const loginForm = document.querySelector('.contact--login');
 const logOutBtn = document.querySelector('.btn--logout');
 const userDataForm = document.querySelector('.form__account');
+const userPasswordForm = document.querySelector('.form__password');
 
 // VALUES
 
@@ -26,5 +27,24 @@ if (userDataForm)
     const name = document.getElementById('userName').value;
     const email = document.getElementById('userEmail').value;
 
-    updateData(name, email);
+    updateSettings({ name, email }, 'data');
+  });
+if (userPasswordForm)
+  userPasswordForm.addEventListener('submit', async e => {
+    e.preventDefault();
+    document.querySelector('.btn--save-password').textContent =
+      'Aktualizuje...';
+
+    const passwordCurrent = document.getElementById('password-current').value;
+    const password = document.getElementById('password').value;
+    const passwordConfirm = document.getElementById('password-confirm').value;
+
+    await updateSettings(
+      { passwordCurrent, password, passwordConfirm },
+      'password'
+    );
+    document.querySelector('.btn--save-password').textContent = 'Zapisz hasło';
+    document.getElementById('password-current').value = '';
+    document.getElementById('password').value = '';
+    document.getElementById('password-confirm').value = '';
   });
