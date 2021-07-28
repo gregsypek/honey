@@ -34,19 +34,19 @@ block header
             path(d="M29.7246 0.327148L3.82531 0.327148C2.96669 0.327148 2.14324 0.753503 1.53611 1.51242C0.928974 2.27134 0.587891 3.30065 0.587891 4.37392L0.587891 28.6545C0.587891 29.7278 0.928974 30.7571 1.53611 31.516C2.14324 32.275 2.96669 32.7013 3.82531 32.7013L29.7246 32.7013C30.5833 32.7013 31.4067 32.275 32.0138 31.516C32.621 30.7571 32.9621 29.7278 32.9621 28.6545L32.9621 4.37392C32.9621 3.30065 32.621 2.27134 32.0138 1.51242C31.4067 0.753503 30.5833 0.327148 29.7246 0.327148ZM29.7246 14.4908L3.82531 14.4908L3.82531 8.42069L29.7246 8.42069L29.7246 14.4908Z" fill="#4F4F4F")         
           a(href="#" class="account__link--payments") Płatności
       .account__right 
-        //- form.form.form__account(action='/submit-user-data' method='POST') 
+        //- form.form.form__account(action='/submit-user-data' method='POST' enctype='multipart/form-data') 
 
         form.form.form__account
           .form__group 
-            label.form__label(for='name') Imię
+            label.form__label(for='userName') Imię
             input.form__input(id='userName' type='text' value=`${user.name}` required name='name')
           .form__group 
-            label.form__label(for='email') Email
+            label.form__label(for='userEmail') Email
             input.form__input(id='userEmail' type='email' value=`${user.email}` required name='email')
           .form__group.form__photo-upload 
             img.form__user-photo(src=`src/images/users/${user.photo}` alt='Zdjęcie użytkownika')
-            input.form__upload(type='file' accept='image/*' id='photo' name='photo')
-            label(for='photo') Wybierz swoje zdjęcie
+            input.form__upload(type='file' accept='image/*' id='userPhoto' name='photo')
+            label(for='userPhoto') Wybierz swoje zdjęcie
           .form__group 
             button.btn.account__btn(type='submit') Zapisz ustawienia
 

@@ -24,10 +24,13 @@ if (userDataForm)
   userDataForm.addEventListener('submit', e => {
     e.preventDefault();
 
-    const name = document.getElementById('userName').value;
-    const email = document.getElementById('userEmail').value;
+    const form = new FormData();
+    form.append('name', document.getElementById('userName').value);
+    form.append('email', document.getElementById('userEmail').value);
+    form.append('photo', document.getElementById('userPhoto').files[0]);
+    console.log(form);
 
-    updateSettings({ name, email }, 'data');
+    updateSettings(form, 'data');
   });
 if (userPasswordForm)
   userPasswordForm.addEventListener('submit', async e => {
