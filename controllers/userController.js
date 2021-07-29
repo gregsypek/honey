@@ -46,20 +46,20 @@ const upload = multer({
 exports.uploadUserPhoto = upload.single('photo'); //'photo' in middleware upload is the name of the field that is going to hold new file
 
 //sharp.pixelplumbing.com/api-resize
-https: exports.resizeUserPhoto = (req, res, next) => {
+https: exports.resizeUserPhoto = catchAsync(async (req, res, next) => {
   if (!req.file) return next();
 
   req.file.filename = `user-${req.user.id}-${Date.now()}.jpeg`;
 
   //sharp creates an object
-  sharp(req.file.buffer)
+  await sharp(req.file.buffer)
     .resize(500, 500)
     .toFormat('jpeg')
     .jpeg({ quality: 90 })
     .toFile(`public/src/images/users/${req.file.filename}`);
 
   next();
-};
+});
 
 const filterObj = (obj, ...allowedFields) => {
   const newObj = {};

@@ -53,18 +53,6 @@ const honeySchema = new mongoose.Schema(
     },
     jarSizes: [Number],
     prices: [Number],
-    // price350: {
-    //   type: Number,
-    //   required: [true, 'A 350ml honey jar must have a price'],
-    // },
-    // price720: {
-    //   type: Number,
-    //   required: [true, 'A 720ml honey jar must have a price'],
-    // },
-    // price900: {
-    //   type: Number,
-    //   required: [true, 'A 900ml honey jar must have a price'],
-    // },
     image: {
       type: String,
       required: [true, 'A honey must have a cover image'],

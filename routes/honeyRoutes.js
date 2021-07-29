@@ -24,11 +24,14 @@ router
   .patch(
     authController.protect,
     authController.restrictTo('admin'),
+    honeyController.uploadHoneyImage,
+    honeyController.resizeHoneyImage,
     honeyController.updateHoney
   )
   .delete(
     authController.protect,
     authController.restrictTo('admin'),
+
     honeyController.deleteHoney
   );
 
