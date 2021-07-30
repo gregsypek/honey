@@ -1,0 +1,17 @@
+extends baseEmail
+
+block content
+  p Hi #{firstName},
+  p Witamy w pasiece Miodek, cieszymy się, że jesteś z nami 🎉🙏
+  p Jesteśmy tutaj jak jedna rodzina, dlatego upewnij się że wstawiłeś swoje zdjęcie, żebyśmy mogli Cię lepiej poznać!
+  table.btn.btn-primary(role='presentation', border='0', cellpadding='0', cellspacing='0')
+    tbody
+      tr
+        td(align='left')
+          table(role='presentation', border='0', cellpadding='0', cellspacing='0')
+            tbody
+              tr
+                td
+                  a(href=`${url}`, target='_blank') Wybierz swoje zdjęcie
+  p Jeśli potrzebujesz pomocy, nie wahaj się ze mną skontaktować!
+  p - Greg Sypek, CEO
