@@ -48,4 +48,10 @@ module.exports = class Email {
   async sendWelcome() {
     await this.send('welcome', 'Witamy na stronie pasieki Miodek');
   }
+  async sendPasswordReset() {
+    await this.send(
+      'passwordReset',
+      'Twój token do zresetowania hasła jest wazny tylko przez 10 min.'
+    );
+  }
 };
