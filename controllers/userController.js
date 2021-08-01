@@ -46,7 +46,7 @@ const upload = multer({
 exports.uploadUserPhoto = upload.single('photo'); //'photo' in middleware upload is the name of the field that is going to hold new file
 
 //sharp.pixelplumbing.com/api-resize
-https: exports.resizeUserPhoto = catchAsync(async (req, res, next) => {
+exports.resizeUserPhoto = catchAsync(async (req, res, next) => {
   if (!req.file) return next();
 
   req.file.filename = `user-${req.user.id}-${Date.now()}.jpeg`;

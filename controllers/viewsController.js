@@ -2,6 +2,7 @@ const Honey = require('../models/honeyModel');
 const User = require('../models/userModel');
 const Info = require('../models/infoModel');
 const Review = require('../models/reviewModel');
+const Photo = require('../models/photoModel');
 const catchAsync = require('../utils/catchAsync');
 const AppError = require('../utils/appError');
 
@@ -140,7 +141,7 @@ exports.updateUserData = catchAsync(async (req, res, next) => {
     });
 });
 exports.getGallery = catchAsync(async (req, res, next) => {
-  const info = await Info.find();
+  const photo = await Photo.find();
 
   res
     .status(200)
@@ -150,6 +151,6 @@ exports.getGallery = catchAsync(async (req, res, next) => {
     )
     .render('gallery', {
       title: 'Galeria',
-      info,
+      photo,
     });
 });

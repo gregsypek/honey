@@ -6,6 +6,7 @@ const Honey = require('../models/honeyModel');
 const Review = require('../models/reviewModel');
 const Info = require('../models/infoModel');
 const User = require('../models/userModel');
+const Photo = require('../models/photoModel');
 //And so what this command will now do is to read our variables from the file and save them into node JS environment variables.
 dotenv.config({ path: './config.env' });
 
@@ -33,6 +34,7 @@ const reviews = JSON.parse(
   fs.readFileSync(`${__dirname}/reviews.json`, 'utf-8')
 );
 const info = JSON.parse(fs.readFileSync(`${__dirname}/info.json`, 'utf-8'));
+const photo = JSON.parse(fs.readFileSync(`${__dirname}/photo.json`, 'utf-8'));
 
 //  IMPORT DATA INTO DB
 const importData = async () => {
@@ -41,6 +43,7 @@ const importData = async () => {
     await User.create(users, { validateBeforeSave: false });
     await Review.create(reviews);
     await Info.create(info);
+    await Gallery.create(gallery);
     console.log('Data successfully loaded!');
   } catch (err) {
     console.log(err);
@@ -55,6 +58,7 @@ const deleteData = async () => {
     await User.deleteMany();
     await Review.deleteMany();
     await Info.deleteMany();
+    await Photo.deleteMany();
     console.log('Data successfully deleted');
   } catch (err) {
     console.log(err);
