@@ -1,0 +1,55 @@
+
+extends base
+block head
+block header 
+
+  .wrapper--gallery
+    include _mixinNav
+    +nav('login2', 'register2', 'white', 'Galeria', 'navHidden')
+
+    include _mixin-header
+    +header("Zapraszamy do","galerii","Zdjęcia przedstawiają naszą prace oraz zespół który czuwa nad pszczółkami aby te mogły nam produkować nasze słodkości")
+
+      
+  .content__content-box 
+    ul.content__photos 
+      li  
+        figure 
+          img(data-src="./src/images/gallery/img1.jpg" alt="flower"
+            class="content__photo content__photo--1 lazyload")
+          figcaption 
+            p photo
+      li  
+        figure 
+          img(data-src="./src/images/gallery/img2.jpg" alt="flower"
+            class="content__photo content__photo--2 lazyload")
+          figcaption 
+            p photo
+      li  
+        figure 
+          img(data-src="./src/images/gallery/img3.jpg" alt="flower"
+            class="content__photo content__photo--3 lazyload")
+          figcaption 
+            p photo
+      li  
+        figure 
+          img(data-src="./src/images/gallery/img4.jpg" alt="flower"
+            class="content__photo content__photo--4 lazyload")
+          figcaption 
+            p photo
+      li  
+        figure 
+          img(data-src="./src/images/gallery/img5.jpg" alt="flower"
+            class="content__photo content__photo--5 lazyload")
+          figcaption 
+            p photo
+      li  
+        figure 
+          img(data-src="./src/images/gallery/img6.jpg" alt="flower"
+            class="content__photo content__photo--6 lazyload")
+          figcaption 
+            p photo
+
+
+    include _footer
+    

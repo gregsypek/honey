@@ -14,6 +14,7 @@ router.get(
   viewsController.getContactMessage
 );
 router.get('/me', authController.protect, viewsController.getAccount);
+router.get('/gallery', authController.isLoggedIn, viewsController.getGallery);
 router.post(
   '/submit-user-data',
   authController.protect,

@@ -1,6 +1,7 @@
 /* eslint-disable */
 import { login, logout } from './login';
 import { updateSettings } from './updateSettings';
+// import { handleIntersection } from './gallery';
 
 //DOM ELEMENTS
 const loginForm = document.querySelector('.contact--login');
@@ -8,6 +9,7 @@ const logOutBtn = document.querySelector('.btn--logout');
 const userDataForm = document.querySelector('.form__account');
 const userPasswordForm = document.querySelector('.form__password');
 
+const images = document.querySelectorAll('.lazyload');
 // VALUES
 
 if (loginForm)
@@ -32,6 +34,7 @@ if (userDataForm)
 
     updateSettings(form, 'data');
   });
+
 if (userPasswordForm)
   userPasswordForm.addEventListener('submit', async e => {
     e.preventDefault();
@@ -51,3 +54,19 @@ if (userPasswordForm)
     document.getElementById('password').value = '';
     document.getElementById('password-confirm').value = '';
   });
+
+if (images) {
+  const handleIntersection = entries => {
+    console.log('jestem');
+    entries.map(entry => {
+      if (entry.isIntersecting) {
+        entry.target.src = entry.target.dataset.src;
+        entry.target.classList.add('loaded');
+        observer.unobserve(entry.target);
+      } else return;
+    });
+  };
+  const observer = new IntersectionObserver(handleIntersection);
+
+  images.forEach(image => observer.observe(image));
+}

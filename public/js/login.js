@@ -14,7 +14,7 @@ export const login = async (email, password) => {
       },
     });
     if (res.data.status === 'success') {
-      showAlert('success', 'Logged in successful');
+      showAlert('success', 'Jesteś zalogowany!');
       window.setTimeout(() => {
         location.assign('/');
       }, 1500);
@@ -32,6 +32,6 @@ export const logout = async () => {
     });
     if ((res.data.status = 'success')) location.reload(true); //true reload from the server not from the browser cache
   } catch (err) {
-    showAlert('error', 'Error logging out! Try again');
+    showAlert('error', 'Problem z zalogowaniem! Spróbuj ponownie!');
   }
 };

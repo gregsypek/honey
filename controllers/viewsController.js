@@ -139,3 +139,17 @@ exports.updateUserData = catchAsync(async (req, res, next) => {
       user: updatedUser,
     });
 });
+exports.getGallery = catchAsync(async (req, res, next) => {
+  const info = await Info.find();
+
+  res
+    .status(200)
+    .set(
+      'Content-Security-Policy',
+      "connect-src 'self' https://cdnjs.cloudflare.com"
+    )
+    .render('gallery', {
+      title: 'Galeria',
+      info,
+    });
+});
