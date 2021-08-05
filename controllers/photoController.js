@@ -29,18 +29,19 @@ exports.uploadPhotoImage = upload.single('photo');
 exports.resizePhotoImage = catchAsync(async (req, res, next) => {
   if (!req.file) return next();
   //I put the image filenames on request.body. And I do that so that in the next middleware,which is the actual route handler,it will then put that data onto the new document when it updates
-  req.body.image = `Photo-${req.params.id}-${Date.now()}-cover.jpeg`;
+  req.body.image = `photo-${req.params.id}-${Date.now()}-img.jpeg`;
 
   await sharp(req.file.buffer)
     .resize(500, 500)
     .toFormat('jpeg')
     .jpeg({ quality: 90 })
-    .toFile(`public/src/images/Photos/${req.body.image}`);
+    .toFile(`public/src/images/gallery/${req.body.image}`);
 
   next();
 });
 
 exports.getAllPhoto = factory.getAll(Photo);
+exports.getPhoto = factory.getOne(Photo);
 exports.createPhoto = factory.createOne(Photo);
 exports.updatePhoto = factory.updateOne(Photo);
 exports.deletePhoto = factory.deleteOne(Photo);
