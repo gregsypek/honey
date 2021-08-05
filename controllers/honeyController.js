@@ -2,9 +2,10 @@ const multer = require('multer');
 const sharp = require('sharp');
 const Honey = require('../models/honeyModel');
 const catchAsync = require('../utils/catchAsync');
+const factory = require('./handlerFactory');
+const AppError = require('../utils/appError');
 
 // const catchAsync = require('../utils/catchAsync');
-// const AppError = require('../utils/appError');
 
 const multerStorage = multer.memoryStorage();
 
@@ -39,8 +40,6 @@ exports.resizeHoneyImage = catchAsync(async (req, res, next) => {
 
   next();
 });
-
-const factory = require('./handlerFactory');
 
 exports.getAllHoney = factory.getAll(Honey);
 exports.getHoney = factory.getOne(Honey, { path: 'reviews' });

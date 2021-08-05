@@ -13,6 +13,7 @@ const globalErrorHandler = require('./controllers/errorController');
 const honeyRouter = require('./routes/honeyRoutes');
 const userRouter = require('./routes/userRoutes');
 const reviewRouter = require('./routes/reviewRoutes');
+const bookingRouter = require('./routes/bookingRoutes');
 const photoRouter = require('./routes/photoRoutes');
 const viewRouter = require('./routes/viewRoutes');
 
@@ -69,6 +70,7 @@ app.use('/api/v1/honey', honeyRouter);
 app.use('/api/v1/users', userRouter);
 app.use('/api/v1/reviews', reviewRouter);
 app.use('/api/v1/photo', photoRouter);
+app.use('/api/v1/bookings', bookingRouter);
 
 //it has to be after others routes because that's how middleware works one by another
 app.all('*', (req, res, next) => {

@@ -224,17 +224,19 @@
     }
 
     .btn--submit {
-      @include btn--white;
+      @include btn--submit;
       grid-column: 2/3;
       grid-row: 1/2;
-      justify-self: center;
-      @include shadow;
       width: 350px;
       height: 6.2rem;
+    }
 
-      @media (max-width: $large) {
-        width: 27rem;
-      }
+    .btn--submit-unlogged {
+      @include btn--submit-unlogged;
+      grid-column: 2/3;
+      grid-row: 1/2;
+      width: auto;
+      height: 6.2rem;
     }
 
     h5 {

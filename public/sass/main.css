@@ -115,10 +115,10 @@ img.lazyload.loaded {
   text-transform: uppercase;
   text-decoration: none;
   display: inline-block;
-  -webkit-transition: -webkit-transform .2s;
-  transition: -webkit-transform .2s;
-  transition: transform .2s;
-  transition: transform .2s, -webkit-transform .2s;
+  -webkit-transition: -webkit-transform 0.2s;
+  transition: -webkit-transform 0.2s;
+  transition: transform 0.2s;
+  transition: transform 0.2s, -webkit-transform 0.2s;
   border-radius: 5px;
   outline: none;
   cursor: pointer;
@@ -262,7 +262,7 @@ img.lazyload.loaded {
   border: none;
   font-weight: bold;
   cursor: pointer;
-  padding: .5rem 2.5rem;
+  padding: 0.5rem 2.5rem;
   background-color: #F6C768;
   font-size: var(--h5);
   color: #333333;
@@ -274,7 +274,7 @@ img.lazyload.loaded {
 
 @media (max-width: 576px) {
   .hero__btn {
-    padding: .2rem 1.5rem;
+    padding: 0.2rem 1.5rem;
   }
 }
 
@@ -389,14 +389,14 @@ img.lazyload.loaded {
   border: none;
   font-weight: bold;
   cursor: pointer;
-  padding: .5rem 2.5rem;
-  padding: .5rem 2rem;
+  padding: 0.5rem 2.5rem;
+  padding: 0.5rem 2rem;
   color: #828282;
 }
 
 @media (max-width: 576px) {
   .navigation__buttons .btn {
-    padding: .2rem 1.5rem;
+    padding: 0.2rem 1.5rem;
   }
 }
 
@@ -1055,7 +1055,7 @@ img.lazyload.loaded {
   border: none;
   font-weight: bold;
   cursor: pointer;
-  padding: .5rem 2.5rem;
+  padding: 0.5rem 2.5rem;
   background-color: #F6C768;
   font-size: var(--h5);
   color: #333333;
@@ -1066,7 +1066,7 @@ img.lazyload.loaded {
 
 @media (max-width: 576px) {
   .think_over__btn {
-    padding: .2rem 1.5rem;
+    padding: 0.2rem 1.5rem;
   }
 }
 
@@ -1392,19 +1392,19 @@ img.lazyload.loaded {
   border: none;
   font-weight: bold;
   cursor: pointer;
-  padding: .5rem 2.5rem;
+  padding: 0.5rem 2.5rem;
   background-color: #ffffff;
   color: #333333;
   border: 2px solid #333333;
   font-size: 1.2rem;
-  padding: .5rem 2rem;
+  padding: 0.5rem 2rem;
   color: #828282;
   color: #333333;
 }
 
 @media (max-width: 576px) {
   .questions__btn {
-    padding: .2rem 1.5rem;
+    padding: 0.2rem 1.5rem;
   }
 }
 
@@ -1941,15 +1941,15 @@ tr:nth-child(even) {
   border: none;
   font-weight: bold;
   cursor: pointer;
-  padding: .5rem 2.5rem;
+  padding: 0.5rem 2.5rem;
   font-size: 1.2rem;
-  padding: .3rem 1.2rem;
+  padding: 0.3rem 1.2rem;
   color: #BDBDBD;
 }
 
 @media (max-width: 576px) {
   .contact__btns {
-    padding: .2rem 1.5rem;
+    padding: 0.2rem 1.5rem;
   }
 }
 
@@ -2506,7 +2506,7 @@ tr:nth-child(even) {
 .card__footer .btn {
   text-decoration: none;
   font-size: 1.2rem;
-  padding: .3rem 1.2rem;
+  padding: 0.3rem 1.2rem;
   color: #BDBDBD;
   background-color: #ffffff;
   color: #333333;
@@ -2817,19 +2817,20 @@ tr:nth-child(even) {
 }
 
 .content__form .btn--submit {
-  background-color: #ffffff;
+  background-color: #F6C768;
+  font-size: var(--h5);
   color: #333333;
   border: 2px solid #333333;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -webkit-filter: drop-shadow(-4px 2px 5px rgba(79, 79, 79, 0.8));
+          filter: drop-shadow(-4px 2px 5px rgba(79, 79, 79, 0.8));
   -ms-grid-column: 2;
   -ms-grid-column-span: 1;
   grid-column: 2/3;
   -ms-grid-row: 1;
   -ms-grid-row-span: 1;
   grid-row: 1/2;
-  -ms-grid-column-align: center;
-      justify-self: center;
-  -webkit-filter: drop-shadow(-4px 2px 5px rgba(79, 79, 79, 0.8));
-          filter: drop-shadow(-4px 2px 5px rgba(79, 79, 79, 0.8));
   width: 350px;
   height: 6.2rem;
 }
@@ -2838,6 +2839,23 @@ tr:nth-child(even) {
   .content__form .btn--submit {
     width: 27rem;
   }
+}
+
+.content__form .btn--submit-unlogged {
+  background-color: #ffffff;
+  color: #333333;
+  border: 2px solid #333333;
+  font-size: var(--h5);
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-grid-column: 2;
+  -ms-grid-column-span: 1;
+  grid-column: 2/3;
+  -ms-grid-row: 1;
+  -ms-grid-row-span: 1;
+  grid-row: 1/2;
+  width: auto;
+  height: 6.2rem;
 }
 
 .content__form h5 {
@@ -2983,7 +3001,7 @@ tr:nth-child(even) {
   border: none;
   font-weight: bold;
   cursor: pointer;
-  padding: .5rem 2.5rem;
+  padding: 0.5rem 2.5rem;
   margin-top: 5rem;
   background-color: #3c4142;
   color: white;
@@ -2993,7 +3011,7 @@ tr:nth-child(even) {
 
 @media (max-width: 576px) {
   .account__btn {
-    padding: .2rem 1.5rem;
+    padding: 0.2rem 1.5rem;
   }
 }
 
