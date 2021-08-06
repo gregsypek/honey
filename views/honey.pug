@@ -55,7 +55,7 @@ block header
                   max="10") 
               h5.dispatch czas realizacji: 2-5 dni robocze + czas dostawy
               if user 
-                button.btn.btn--form.btn--submit(data-honey-id=`${honey.id}` type="submit") Kup teraz 
+                button.btn.btn--form.btn--submit#book-honey(data-honey-id=`${honey.id}` type="submit") Kup teraz 
               else 
                 abtn.btn.btn--form.btn--submit-unlogged(href='/login') Zaloguj się aby złożyc zamówienie 
       //TABLES 

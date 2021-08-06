@@ -2855,7 +2855,7 @@ tr:nth-child(even) {
   -ms-grid-row-span: 1;
   grid-row: 1/2;
   width: auto;
-  height: 6.2rem;
+  height: auto;
 }
 
 .content__form h5 {

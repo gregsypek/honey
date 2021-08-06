@@ -5,13 +5,22 @@ const slider = function () {
 
   const btnRight = document.querySelector('.table__btn--right');
   const btnLeft = document.querySelector('.table__btn--left');
+  const tableOpinions = document.querySelector('.table-fourth');
 
   const activateOpinion = function (opinion) {
-    opinions.forEach(o => o.classList.remove('opinion--active'));
+    if (opinions.length > 0) {
+      opinions.forEach(o => o.classList.remove('opinion--active'));
 
-    document
-      .querySelector(`.opinion--${opinion}`)
-      .classList.add('opinion--active');
+      document
+        .querySelector(`.opinion--${opinion}`)
+        .classList.add('opinion--active');
+    } else {
+      btnRight.disabled = true;
+      btnLeft.disabled = true;
+      tableOpinions.textContent = 'BRAK OPINII!';
+      tableOpinions.style.setProperty('text-align', 'center');
+      tableOpinions.style.setProperty('font-size', '20px');
+    }
   };
 
   const goToOpinion = function (opinion) {

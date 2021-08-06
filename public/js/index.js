@@ -1,6 +1,8 @@
 /* eslint-disable */
+
 import { login, logout } from './login';
 import { updateSettings } from './updateSettings';
+import { bookHoney } from './stripe';
 // import { handleIntersection } from './gallery';
 
 //DOM ELEMENTS
@@ -8,6 +10,7 @@ const loginForm = document.querySelector('.contact--login');
 const logOutBtn = document.querySelector('.btn--logout');
 const userDataForm = document.querySelector('.form__account');
 const userPasswordForm = document.querySelector('.form__password');
+const bookBtn = document.getElementById('book-honey');
 
 const images = document.querySelectorAll('.lazyload');
 // VALUES
@@ -70,3 +73,9 @@ if (images) {
 
   images.forEach(image => observer.observe(image));
 }
+if (bookBtn)
+  bookBtn.addEventListener('click', e => {
+    e.target.textContent = 'Ładuje...';
+    const { honeyId } = e.target.dataset;
+    bookHoney(honeyId);
+  });

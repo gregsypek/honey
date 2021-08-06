@@ -21,7 +21,10 @@ exports.getCheckoutSession = catchAsync(async (req, res, next) => {
       {
         name: `${honey.name} Honey`,
         description: honey.shortDescription,
-        images: [`https://gregsypek.github.io/honey/${honey.image}`],
+        images: [
+          `https://gregsypek.github.io/honey/public/src/images/honeys/${honey.image}`,
+        ],
+
         amount: honey.prices[0] * 100,
         currency: 'pln',
         quantity: 1,
