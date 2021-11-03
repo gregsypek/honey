@@ -442,14 +442,15 @@
 // change  background for navigation list
 .navigation__list--white::before {
   background-color: $color-white;
+  // background-color: $color-honey-8;
 }
 
 //change  background  for buttons
 .navigation__buttons {
   .btn--login2 {
     @include btn--login;
-    background-color: $color-honey-2;
-    color: $color-white;
+    background-color: $color-white;
+    color: $color-dark;
   }
 
   .btn--register2 {

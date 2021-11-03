@@ -9,7 +9,7 @@ block header
   .wrapper--description
       //NAV
       include _mixinNav
-      +nav('login2', 'register2', 'white', 'Oferta')
+      +nav('login', 'register', 'white', 'Oferta')
       //HEADER
       main.content.content--description 
         .content__description 
@@ -57,7 +57,7 @@ block header
               if user 
                 button.btn.btn--form.btn--submit#book-honey(data-honey-id=`${honey.id}` type="submit") Kup teraz 
               else 
-                abtn.btn.btn--form.btn--submit-unlogged(href='/login') Zaloguj się aby złożyc zamówienie 
+                a.btn.btn--form.btn--submit-unlogged(href='/login') Zaloguj się aby złożyc zamówienie 
       //TABLES 
       include _tables
       include _footer

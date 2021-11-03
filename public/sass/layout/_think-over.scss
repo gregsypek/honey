@@ -1,5 +1,6 @@
 .think_over {
-  background: linear-gradient(0deg, rgba(235, 99, 73, 0.902));
+  // background: linear-gradient(0deg, rgba(235, 99, 73, 0.902));
+  background: $color-red;
   padding: $sectionMargin 10vw;
   @include header(0, $color-honey, $color-white, block);
 
@@ -9,21 +10,19 @@
     width: 100%;
     margin-top: $sectionMargin/2;
 
-    @media(max-width: $large) {
+    @media (max-width: $large) {
       flex-direction: column;
       align-items: center;
     }
   }
 
-
   &__right {
     align-self: center;
-     @media(max-width: $large) {
+    @media (max-width: $large) {
       // order:2;
       margin-top: $sectionMargin/2;
     }
   }
- 
 
   &__btn {
     @include btn;
@@ -83,10 +82,8 @@
     justify-content: center;
 
     @media (max-width: $large) {
-
       height: 3rem;
     }
-
   }
 
   &__dot {

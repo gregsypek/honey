@@ -1,21 +1,21 @@
 .wrapper--description {
-  @include layout(url(../src/images/description-bg.jpg), cover, center);
+  @include layout(url(../src/images/gallery-bg.jpg), cover, center);
 
-  @media (max-width: $large) {
-    @include backImage(
-      url(../src/images/description-bg-medium.jpg),
-      72deg,
-      72%,
-      72%
-    );
-  }
+  // @media (max-width: $large) {
+  @include backImage2(
+    url(../src/images/gallery-bg-medium.jpg),
+    77deg,
+    60%,
+    60%
+  );
+  // }
 
   @media (max-width: $small) {
-    @include backImage(
-      url(../src/images/description-bg-small.jpg),
-      72deg,
-      72%,
-      72%
+    @include backImage2(
+      url(../src/images/gallery-bg-small.jpg),
+      80deg,
+      60%,
+      60%
     );
   }
 
@@ -26,7 +26,7 @@
   &--description {
     position: relative;
     padding: 4rem 10vw $sectionMargin 10vw;
-    background-color: $color-white;
+    background-color: rgba($color-white, 0.5);
 
     // height: 100vh;
     @media (max-width: $big) {
@@ -36,7 +36,7 @@
 
   &__description {
     //  max-width: calc(1440px - 20vw);
-    @include header(5rem 0, $color-gray, $color-honey, inline-block);
+    @include header(5rem 0, $color-gray, $color-red, inline-block);
     display: grid;
     grid-template-areas:
       'h1 h1 img '
@@ -190,7 +190,7 @@
 
     .cap,
     .qty {
-      background-color: $color-red-3;
+      background-color: $color-red;
       color: $color-white;
       justify-self: start;
       grid-column: 1/2;
@@ -236,7 +236,10 @@
       grid-column: 2/3;
       grid-row: 1/2;
       width: auto;
+      min-height: 6rem;
       height: auto;
+      display: flex;
+      align-items: center;
     }
 
     h5 {
@@ -267,6 +270,7 @@
   .navigation {
     .navigation__row--first {
       margin-bottom: 0;
+      background-color: rgba(255, 255, 255, 1);
     }
 
     .navigation__nav {

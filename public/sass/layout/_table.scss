@@ -3,8 +3,18 @@ and Adrian Roselli: http://adrianroselli.com/2017/11/a-responsive-accessible-tab
 */
 
 .table {
-  margin: $sectionMargin 7vw $sectionMargin 7vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // margin: 0 auto;
+  background: $color-white;
+  // width: 100%;
+  // padding: 8rem 7vw $sectionMargin 7vw;
   min-height: 650px;
+  padding: 14rem 2rem;
+  height: 95rem;
+  // padding: 0 $sectionMargin 0;
+  // min-height: 650px;
 }
 
 table {
@@ -35,6 +45,7 @@ th,
 tr,
 td {
   display: block;
+  padding: 1rem;
 }
 
 /* Hide table headers (but not display: none;, for accessibility -- sighted users will see labels below) */
@@ -147,7 +158,8 @@ tr:nth-child(odd) {
 }
 
 tr:nth-child(even) {
-  background-color: $color-honey-3;
+  background-color: $color-honey-8;
+  outline: 1px solid $color-gray;
 }
 
 .hexagon-bg-3::before {
@@ -172,7 +184,9 @@ tr:nth-child(even) {
   // }
 
   table {
-    padding: 0 5rem 5rem 5rem;
+    padding: 5rem;
+
+    // padding: 6rem 2rem;
   }
 }
 
@@ -230,7 +244,9 @@ tr:nth-child(even) {
   table {
     display: table;
     width: 100%;
-    // border: none;
+    // margin-top: $sectionMargin;
+    background: $color-white;
+    border: 1px solid $color-gray;
   }
 
   caption {
@@ -275,8 +291,9 @@ tr:nth-child(even) {
     position: absolute;
     top: 0;
     left: 0;
+    right: 0;
     width: 100%;
-    height: 100%;
+    // height: 100%;
     // display:inline-block;
   }
 

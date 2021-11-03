@@ -2,7 +2,7 @@
   position: relative;
 
   &__header {
-    @include header($sectionMargin 10vw, $color-gray, $color-honey-2, block);
+    @include header($sectionMargin 10vw, $color-gray, $color-red, block);
   }
 
   // small triangles as a background in corners
@@ -16,21 +16,21 @@
   //   z-index: 1;
   // }
 
-  &__triangle2 {
-    position: absolute;
-    width: 400px;
-    height: 500px;
-    bottom: 0;
-    right: 0;
-    background-color: #eecf90;
-    -webkit-clip-path: polygon(0% 0px, 0px 62%, 38.55% 0%);
-    clip-path: polygon(100% 0px, 175px 120%, 100.55% 100%);
-    z-index: 1;
+  // &__triangle2 {
+  //   position: absolute;
+  //   width: 400px;
+  //   height: 500px;
+  //   bottom: 0;
+  //   right: 0;
+  //   background-color: $color-red;
+  //   -webkit-clip-path: polygon(0% 0px, 0px 62%, 38.55% 0%);
+  //   clip-path: polygon(100% 0px, 175px 120%, 100.55% 100%);
+  //   z-index: 1;
 
-    @media only screen and (max-width: $large) {
-      display: none;
-    }
-  }
+  //   @media only screen and (max-width: $large) {
+  //     display: none;
+  //   }
+  // }
 
   &__text {
     position: absolute;
