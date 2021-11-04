@@ -1298,36 +1298,36 @@ td:before {
 
 /* first table only for small screen */
 #table-first td:nth-of-type(1)::before {
-  content: '';
+  content: "";
 }
 
 #table-first td:nth-of-type(2)::before {
-  content: '900 ml';
+  content: "900 ml";
 }
 
 #table-first td:nth-of-type(3)::before {
-  content: '720 ml';
+  content: "720 ml";
 }
 
 #table-first td:nth-of-type(4)::before {
-  content: '320 ml';
+  content: "320 ml";
 }
 
 /* second table  only for small screen*/
 #table-second td:nth-of-type(1)::before {
-  content: '';
+  content: "";
 }
 
 #table-second td:nth-of-type(2)::before {
-  content: 'Ilość słoików';
+  content: "Ilość słoików";
 }
 
 #table-second td:nth-of-type(3)::before {
-  content: 'Ekonomiczna';
+  content: "Ekonomiczna";
 }
 
 #table-second td:nth-of-type(4)::before {
-  content: 'Priorytet';
+  content: "Priorytet";
 }
 
 /* third table is not necessary because of different html structure */
@@ -1359,7 +1359,7 @@ tr:nth-child(even) {
 }
 
 .hexagon-bg-3::before {
-  content: '';
+  content: "";
   position: absolute;
   /* left: -78.97%; */
   left: -50.97%;
@@ -1391,7 +1391,7 @@ tr:nth-child(even) {
   #table-first td:nth-of-type(even):before,
   #table-second td:nth-of-type(odd):before,
   #table-second td:nth-of-type(even):before {
-    content: '';
+    content: "";
     margin-right: 0;
   }
   thead tr {
@@ -1441,8 +1441,7 @@ tr:nth-child(even) {
 .table-second--info {
   width: 100%;
   height: auto;
-  font-size: 1.6rem;
-  font-weight: 600;
+  font-size: 1.4rem;
   font-family: "Poppins", sans-serif;
   margin-top: 4.66667rem;
   text-transform: uppercase;
