@@ -1,3 +1,4 @@
+/* eslint-disable*/
 // LAZY LOADING IMAGES
 
 const images = document.querySelectorAll('.lazyload');

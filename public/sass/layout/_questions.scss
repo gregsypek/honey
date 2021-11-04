@@ -2,6 +2,7 @@
   padding: $sectionMargin 10vw;
   min-height: 600px;
   background: linear-gradient(0deg, rgba(235, 99, 73, 0.902));
+  background: $color-red;
 
   // background: linear-gradient(0deg, rgba(235, 99, 73, 0.902)),
   //   url(../../src/images/questions_bg.jpg);
@@ -13,8 +14,7 @@
     justify-content: space-between;
 
     @media (max-width: 624px) {
-     justify-content: center;
-
+      justify-content: center;
     }
   }
 
@@ -39,6 +39,7 @@
     margin-top: 4rem;
     @include btn;
     @include btn--white;
+    background: $color-honey;
     font-size: 1.2rem;
     @include btn--small;
     color: $color-gray;

@@ -2,7 +2,7 @@
   position: relative;
 
   &__header {
-    @include header($sectionMargin 10vw, $color-gray, $color-honey-2, block);
+    @include header($sectionMargin 10vw, $color-gray, $color-red, block);
   }
 
   // small triangles as a background in corners
