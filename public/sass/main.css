@@ -1574,7 +1574,7 @@ tr:nth-child(even) {
 
 .contact__form {
   justify-content: space-between;
-  background-color: #333333;
+  background-color: #4e3c39;
   width: 50rem;
   max-width: 50rem;
   padding: 2rem;
@@ -1787,6 +1787,7 @@ tr:nth-child(even) {
 
 .contact__link a {
   display: inline-block;
+  font-weight: 600;
   text-decoration: none;
   color: #333333;
 }
@@ -1816,7 +1817,7 @@ tr:nth-child(even) {
 }
 
 .table-nav__list {
-  background: #f6edde;
+  background: #ffffff;
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -1877,7 +1878,7 @@ tr:nth-child(even) {
   left: -13px;
   /* @include hexagon; */
   clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
-  background: #ffffff;
+  background: #f6edde;
   transform: rotate(-134deg);
   /* @include rotate; */
   transition: all 0.5s ease;
@@ -1892,12 +1893,12 @@ tr:nth-child(even) {
 }
 
 .table__btn--left {
-  left: -5%;
+  left: 10%;
   transform: translate(-50%, 0);
 }
 
 .table__btn--right {
-  right: -5%;
+  right: 10%;
   transform: translate(50%, 0);
 }
 
@@ -2308,6 +2309,10 @@ tr:nth-child(even) {
 
 .content__short-info h4 {
   font-weight: 400;
+}
+
+.content h5.desc {
+  font-weight: 600;
 }
 
 .content__picture {
@@ -2785,10 +2790,10 @@ tr:nth-child(even) {
 
 .slider__btn, .table__btn {
   position: absolute;
-  top: 50%;
+  bottom: 25%;
   z-index: 10;
   border: none;
-  background: #dabd84;
+  background: #f6edde;
   font-family: inherit;
   color: #333333;
   border-radius: 50%;
@@ -2809,7 +2814,7 @@ tr:nth-child(even) {
 
 @media (max-width: 576px) {
   .slider__btn, .table__btn {
-    top: 70%;
+    top: 60%;
   }
 }
 
