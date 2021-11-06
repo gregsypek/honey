@@ -1,22 +1,28 @@
 .wrapper--gallery {
-
   @include layout(url(../src/images/gallery-bg.jpg), cover, center);
- padding-bottom: 100vh; // for spreading the area of this background
+  padding-bottom: 100vh; // for spreading the area of this background
 
   @media (max-width: $large) {
-    @include backImage(url(../src/images/gallery-bg-medium.jpg), 72deg, 72%, 72%);
+    @include backImage(
+      url(../src/images/gallery-bg-medium.jpg),
+      72deg,
+      72%,
+      72%
+    );
   }
 
   @media (max-width: $small) {
-    @include backImage(url(../src/images/gallery-bg-small.jpg), 72deg, 72%, 72%);
+    @include backImage(
+      url(../src/images/gallery-bg-small.jpg),
+      72deg,
+      72%,
+      72%
+    );
   }
 }
 
 .content {
-
-
   &__photos {
-
     display: flex;
     flex-flow: row wrap;
     justify-content: space-between;
@@ -26,8 +32,7 @@
 
     li {
       flex-basis: 28vw;
-      margin-bottom: $sectionMargin;
-
+      margin-bottom: 4rem;
 
       @media (max-width: 800px) {
         flex-basis: 44vw;
@@ -35,7 +40,6 @@
 
       @media (max-width: 600px) {
         flex-basis: 92vw;
-
       }
     }
 
@@ -44,8 +48,6 @@
       margin-bottom: 1rem;
       border-radius: 5px;
       @include shadow2;
-
     }
   }
-
 }

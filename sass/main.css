@@ -1284,7 +1284,7 @@ table {
   border-spacing: 0 3rem;
   border-radius: 5px;
   height: auto;
-  filter: drop-shadow(-1px 2px 2px rgba(0, 0, 0, 0.25));
+  border: 1px solid #333333;
 }
 
 th {
@@ -1978,7 +1978,7 @@ tr:nth-child(even) {
 
 .content__photos li {
   flex-basis: 28vw;
-  margin-bottom: 14rem;
+  margin-bottom: 4rem;
 }
 
 @media (max-width: 800px) {

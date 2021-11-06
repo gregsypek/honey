@@ -24,7 +24,8 @@ table {
   // padding: 0 5rem 5rem 5rem;
   border-radius: 5px;
   height: auto;
-  @include shadow2;
+  // @include shadow2;
+  border: 1px solid $color-gray;
 }
 
 th {
