@@ -558,7 +558,6 @@ img.lazyload.loaded {
     max-width: 1440px;
     height: 10rem;
     padding: 0;
-    transform: translateY(3rem);
   }
   .navigation__list li, .navigation__description li {
     margin-bottom: 0rem;
