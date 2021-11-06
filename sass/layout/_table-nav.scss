@@ -143,12 +143,12 @@
     @extend .slider__btn;
 
     &--left {
-      left: 10%;
+      left: 3%;
       transform: translate(-50%, 0);
     }
 
     &--right {
-      right: 10%;
+      right: 3%;
       transform: translate(50%, 0);
     }
   }

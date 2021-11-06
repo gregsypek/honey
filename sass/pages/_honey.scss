@@ -59,7 +59,7 @@
 
   &__btn {
     position: absolute;
-    bottom: 25%;
+    bottom: 50%;
     z-index: 10;
     border: none;
     background: $color-honey-8;
@@ -80,7 +80,7 @@
     }
 
     @media (max-width: $small) {
-      top: 70%;
+      top: 50%;
     }
 
     &--left {
