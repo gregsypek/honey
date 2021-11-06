@@ -1,5 +1,6 @@
 .about {
   position: relative;
+  z-index: -1;
 
   &__header {
     @include header($sectionMargin 10vw, $color-gray, $color-red, block);
@@ -82,9 +83,9 @@
     max-width: 400px;
     margin: 0 auto;
 
-    &:not(:last-of-type) {
-      margin-bottom: $sectionMargin/2;
-    }
+    // &:not(:last-of-type) {
+    //   margin-bottom: $sectionMargin/2;
+    // }
 
     //CREATES A HEXAGON ELEMENT WITH SHADOW AND ROTATE IT ON HOVER
 
@@ -127,7 +128,7 @@
   .paragraph--1,
   .paragraph--3 {
     grid-column: 3/7;
-    margin-top: -8rem;
+    // margin-top: -8rem;
   }
 
   .paragraph--2,
@@ -137,7 +138,7 @@
 
   &__info::first-letter {
     font-size: 5rem;
-    color: $color-white-2;
+    color: $color-red;
     line-height: 100%;
     font-weight: bold;
   }

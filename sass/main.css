@@ -244,6 +244,7 @@ img.lazyload.loaded {
   position: fixed;
   top: 10px;
   left: 10px;
+  z-index: 4;
 }
 
 .navigation__row svg.iconify.iconify__close {
@@ -1025,6 +1026,7 @@ img.lazyload.loaded {
 
 .about {
   position: relative;
+  z-index: -1;
 }
 
 .about__header h1 {
@@ -1100,10 +1102,6 @@ img.lazyload.loaded {
   margin: 0 auto;
 }
 
-.about__paragraph:not(:last-of-type) {
-  margin-bottom: 7rem;
-}
-
 .about__paragraph span {
   position: absolute;
   z-index: -1;
@@ -1140,7 +1138,6 @@ img.lazyload.loaded {
 .about .paragraph--1,
 .about .paragraph--3 {
   grid-column: 3/7;
-  margin-top: -8rem;
 }
 
 .about .paragraph--2,
@@ -1150,7 +1147,7 @@ img.lazyload.loaded {
 
 .about__info::first-letter {
   font-size: 5rem;
-  color: #f2f2f2;
+  color: #624b47;
   line-height: 100%;
   font-weight: bold;
 }
@@ -1572,7 +1569,7 @@ tr:nth-child(even) {
 
 .contact__form {
   justify-content: space-between;
-  background-color: #4e3c39;
+  background-color: #352c2a;
   width: 50rem;
   max-width: 50rem;
   padding: 2rem;
@@ -1902,7 +1899,7 @@ tr:nth-child(even) {
 
 .footer {
   height: auto;
-  background: #4f4f4f;
+  background: #352c2a;
   padding: 5rem 5vw 1rem 5vw;
   color: #f2f2f2;
 }
@@ -1948,7 +1945,7 @@ tr:nth-child(even) {
 
 .wrapper--gallery {
   background-image: linear-gradient(58deg, white 62%, rgba(213, 178, 117, 0.9) 62%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../src/images/gallery-bg.jpg);
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
   padding-bottom: 100vh;
@@ -2313,6 +2310,7 @@ tr:nth-child(even) {
   .content__short-info h4 {
     padding: 1rem;
     background: #ffffff;
+    line-height: 150%;
   }
 }
 

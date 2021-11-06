@@ -1,5 +1,5 @@
 .wrapper--gallery {
-  @include layout(url(../src/images/gallery-bg.jpg), cover, center);
+  @include layout(url(../src/images/gallery-bg.jpg), contain, center);
   padding-bottom: 100vh; // for spreading the area of this background
 
   @media (max-width: $large) {
