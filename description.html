@@ -16,7 +16,7 @@
 
 <body>
   <div class="wrapper--description">
-    <header class="navigation--description">
+    <header class="navigation--description navigation--white">
       <div class="navigation__row navigation__row--first">
         <a href="#main-menu" id="main-menu-toggle" class="menu-toggle" aria-label="Open main menu">
           <span class="sr-only">Open main menu</span>
@@ -37,8 +37,8 @@
           </svg>
         </a>
         <div class="navigation__buttons">
-          <a href="login.html" class="btn btn--login2">zaloguj się</a>
-          <a href="register.html" class="btn btn--register2">zarejestruj się</a>
+          <a href="login.html" class="btn btn--login">zaloguj się</a>
+          <a href="register.html" class="btn btn--register">zarejestruj się</a>
         </div>
       </div>
 
@@ -54,7 +54,7 @@
               ></span>
           </a>
 
-          <ul class="navigation__list--white navigation__description">
+          <ul class="navigation__list navigation__list--white ">
             <li class="navigation__item">
               <!-- span is for shadow effect -->
               <span></span>
@@ -66,7 +66,7 @@
             </li>
             <li class="navigation__item">
               <span></span>
-              <a href="shopping.html" class="navigation__link">Oferta</a>
+              <a href="shopping.html" class="navigation__link active">Oferta</a>
             </li>
             <li class="navigation__item">
               <span></span>
@@ -148,8 +148,8 @@
               <img src="./src/images/honeys/m-rzepakowy.png" alt="miód rzepakowy" class="content__picture-img" />
             </div>
           </div>
-        </div>
-<!-- 
+        </div>,
+
         <form action="#" class="content__form">
           <div class="cap">
             <label for="capacity">Pojemność</label>
@@ -167,10 +167,8 @@
           <h5 class="dispatch">
             czas realizacji: 2-5 dni robocze + czas dostawy
           </h5>
-          <button class="btn btn--form btn--submit" type="submit">
-            Do koszyka
-          </button>
-        </form> -->
+         <a class="btn btn--form btn--submit-unlogged" href="/login">Zaloguj się aby złożyc zamówienie </a>
+        </form>
       </div>
     </main>
     </header>

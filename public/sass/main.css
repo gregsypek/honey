@@ -3,6 +3,10 @@
   font-size: var(--h1);
 }
 
+.mt-bg {
+  margin-top: 8rem;
+}
+
 .hide {
   transition: transform 1s, opacity 1s;
 }
@@ -1531,7 +1535,7 @@ tr:nth-child(even) {
 
 .contact__form {
   justify-content: space-between;
-  background-color: #4f4f4f;
+  background-color: #4e3c39;
   width: 50rem;
   max-width: 50rem;
   padding: 2rem;
@@ -1550,7 +1554,7 @@ tr:nth-child(even) {
 @media (max-width: 576px) {
   .contact__form {
     padding: 1rem;
-    margin: .5rem;
+    margin: 0.5rem;
   }
 }
 
@@ -1585,7 +1589,7 @@ tr:nth-child(even) {
 .contact__input-group .privacy,
 .contact__input-group .privacy--register {
   color: #ffffff;
-  padding: .3rem .2rem;
+  padding: 0.3rem 0.2rem;
   text-decoration: none;
   font-size: var(--p);
   margin-left: 1rem;
@@ -1695,7 +1699,7 @@ tr:nth-child(even) {
 .contact__btns a {
   text-decoration: none;
   color: #828282;
-  padding: .5rem;
+  padding: 0.5rem;
   cursor: pointer;
 }
 
@@ -1744,6 +1748,7 @@ tr:nth-child(even) {
 
 .contact__link a {
   display: inline-block;
+  font-weight: 600;
   text-decoration: none;
   color: #333333;
 }
@@ -2342,7 +2347,7 @@ tr:nth-child(even) {
 
 .content__form .cap,
 .content__form .qty {
-  background-color: #ed806b;
+  background-color: #624b47;
   color: #ffffff;
   justify-self: start;
   grid-column: 1/2;

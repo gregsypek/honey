@@ -3,6 +3,10 @@
   font-size: var(--h1);
 }
 
+.mt-bg {
+  margin-top: 8rem;
+}
+
 .hide {
   transition: transform 1s, opacity 1s;
 }
@@ -99,7 +103,7 @@ img.lazyload.loaded {
   text-transform: uppercase;
   text-decoration: none;
   display: inline-block;
-  transition: transform .2s;
+  transition: transform 0.2s;
   border-radius: 5px;
   outline: none;
   cursor: pointer;
@@ -123,14 +127,14 @@ img.lazyload.loaded {
   font-weight: 700;
   color: #ffffff;
   line-height: 1.3;
-  padding: .6em 1.4em .5em .8em;
-  padding: .5rem 1rem;
+  padding: 0.6em 1.4em 0.5em 0.8em;
+  padding: 0.5rem 1rem;
   width: 45rem;
   max-width: 40%;
   margin: 0;
   border: none;
-  border-radius: .3em;
-  background-color: #ed806b;
+  border-radius: 0.3em;
+  background-color: #624b47;
 }
 
 .input-css:hover {
@@ -203,7 +207,7 @@ img.lazyload.loaded {
   border: none;
   font-weight: bold;
   cursor: pointer;
-  padding: .5rem 2.5rem;
+  padding: 0.5rem 2.5rem;
   background-color: #f6c768;
   font-size: var(--h5);
   color: #333333;
@@ -214,7 +218,7 @@ img.lazyload.loaded {
 
 @media (max-width: 576px) {
   .hero__btn {
-    padding: .2rem 1.5rem;
+    padding: 0.2rem 1.5rem;
   }
 }
 
@@ -295,11 +299,15 @@ img.lazyload.loaded {
   color: #828282;
 }
 
+.navigation__buttons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
 @media (max-width: 800px) {
   .navigation__buttons {
     flex-basis: 100%;
-    display: flex;
-    justify-content: flex-end;
   }
 }
 
@@ -310,14 +318,14 @@ img.lazyload.loaded {
   border: none;
   font-weight: bold;
   cursor: pointer;
-  padding: .5rem 2.5rem;
-  padding: .5rem 2rem;
+  padding: 0.5rem 2.5rem;
+  padding: 0.5rem 2rem;
   color: #828282;
 }
 
 @media (max-width: 576px) {
   .navigation__buttons .btn {
-    padding: .2rem 1.5rem;
+    padding: 0.2rem 1.5rem;
   }
 }
 
@@ -347,11 +355,37 @@ img.lazyload.loaded {
   background-color: #f2f2f2;
 }
 
-.navigation__buttons .btn--register {
+.navigation__buttons .btn--register,
+.navigation__buttons .btn--user {
+  margin-right: 2rem;
+  font-weight: lighter;
+  background-color: transparent;
+  align-self: center;
+}
+
+.navigation__buttons a.btn.btn--user {
+  display: flex;
+  align-items: center;
+}
+
+.navigation__buttons img.btn--user-img {
+  height: 3.5rem;
+  width: 3.5rem;
+  border-radius: 50%;
+  margin-right: 1rem;
+}
+
+.navigation__buttons .btn--register,
+.navigation__buttons .btn--logout {
   border-width: 1px;
   border-style: solid;
   font-weight: lighter;
   background-color: transparent;
+}
+
+.navigation__buttons .btn--white {
+  border-color: #333333;
+  color: #333333;
 }
 
 .navigation__icon {
@@ -399,9 +433,7 @@ img.lazyload.loaded {
 .navigation__nav:target {
   /*
       THE MAGIC: When main-menu is targeted, show the menu by displaying it and setting left to 0 instead of -200px
-
       How is it targeted? Follow the HTML, line 18  <a href="#main-menu" id="main-menu-toggle" class="menu-toggle" aria-label="Open main menu">
-
       Note the href targets the main menu (both class and ID)
   */
   display: block;
@@ -470,6 +502,10 @@ img.lazyload.loaded {
   color: #666666;
 }
 
+.navigation--white {
+  background-color: white;
+}
+
 @media (min-width: 800px) {
   .navigation__row .menu-toggle {
     /* fa-bars and fa-close not needed on desktop so hide them */
@@ -522,6 +558,7 @@ img.lazyload.loaded {
     max-width: 1440px;
     height: 10rem;
     padding: 0;
+    transform: translateY(3rem);
   }
   .navigation__list li, .navigation__description li {
     margin-bottom: 0rem;
@@ -615,8 +652,8 @@ img.lazyload.loaded {
 .navigation__buttons .btn--login2 {
   margin-right: 2rem;
   font-weight: lighter;
-  background-color: #d5b275;
-  color: #ffffff;
+  background-color: #ffffff;
+  color: #4f4f4f;
 }
 
 .navigation__buttons .btn--register2 {
@@ -893,7 +930,7 @@ img.lazyload.loaded {
   border: none;
   font-weight: bold;
   cursor: pointer;
-  padding: .5rem 2.5rem;
+  padding: 0.5rem 2.5rem;
   background-color: #f6c768;
   font-size: var(--h5);
   color: #333333;
@@ -903,7 +940,7 @@ img.lazyload.loaded {
 
 @media (max-width: 576px) {
   .think_over__btn {
-    padding: .2rem 1.5rem;
+    padding: 0.2rem 1.5rem;
   }
 }
 
@@ -1169,20 +1206,20 @@ img.lazyload.loaded {
   border: none;
   font-weight: bold;
   cursor: pointer;
-  padding: .5rem 2.5rem;
+  padding: 0.5rem 2.5rem;
   background-color: #ffffff;
   color: #333333;
   border: 2px solid #333333;
   background: #eecf90;
   font-size: 1.2rem;
-  padding: .5rem 2rem;
+  padding: 0.5rem 2rem;
   color: #828282;
   color: #333333;
 }
 
 @media (max-width: 576px) {
   .questions__btn {
-    padding: .2rem 1.5rem;
+    padding: 0.2rem 1.5rem;
   }
 }
 
@@ -1232,7 +1269,13 @@ img.lazyload.loaded {
 and Adrian Roselli: http://adrianroselli.com/2017/11/a-responsive-accessible-table.html#Responsive
 */
 .table {
-  margin: 10rem 7vw 14rem 7vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background: #ffffff;
+  min-height: 650px;
+  padding: 14rem 2rem;
+  height: 95rem;
 }
 
 table {
@@ -1262,6 +1305,7 @@ th,
 tr,
 td {
   display: block;
+  padding: 1rem;
 }
 
 /* Hide table headers (but not display: none;, for accessibility -- sighted users will see labels below) */
@@ -1298,36 +1342,36 @@ td:before {
 
 /* first table only for small screen */
 #table-first td:nth-of-type(1)::before {
-  content: "";
+  content: '';
 }
 
 #table-first td:nth-of-type(2)::before {
-  content: "900 ml";
+  content: '900 ml';
 }
 
 #table-first td:nth-of-type(3)::before {
-  content: "720 ml";
+  content: '720 ml';
 }
 
 #table-first td:nth-of-type(4)::before {
-  content: "320 ml";
+  content: '320 ml';
 }
 
 /* second table  only for small screen*/
 #table-second td:nth-of-type(1)::before {
-  content: "";
+  content: '';
 }
 
 #table-second td:nth-of-type(2)::before {
-  content: "Ilość słoików";
+  content: 'Ilość słoików';
 }
 
 #table-second td:nth-of-type(3)::before {
-  content: "Ekonomiczna";
+  content: 'Ekonomiczna';
 }
 
 #table-second td:nth-of-type(4)::before {
-  content: "Priorytet";
+  content: 'Priorytet';
 }
 
 /* third table is not necessary because of different html structure */
@@ -1335,7 +1379,7 @@ caption {
   width: 100%;
   text-align: left;
   font-weight: bold;
-  font-size: var(--h3);
+  font-size: var(--h4);
   font-family: "Bungee", cursive;
   color: #333333;
   margin-bottom: 5rem;
@@ -1355,11 +1399,12 @@ tr:nth-child(odd) {
 }
 
 tr:nth-child(even) {
-  background-color: #f1e2c4;
+  background-color: #f6edde;
+  outline: 1px solid #333333;
 }
 
 .hexagon-bg-3::before {
-  content: "";
+  content: '';
   position: absolute;
   /* left: -78.97%; */
   left: -50.97%;
@@ -1374,7 +1419,7 @@ tr:nth-child(even) {
     justify-content: start;
   }
   table {
-    padding: 0 5rem 5rem 5rem;
+    padding: 5rem;
   }
 }
 
@@ -1391,7 +1436,7 @@ tr:nth-child(even) {
   #table-first td:nth-of-type(even):before,
   #table-second td:nth-of-type(odd):before,
   #table-second td:nth-of-type(even):before {
-    content: "";
+    content: '';
     margin-right: 0;
   }
   thead tr {
@@ -1404,14 +1449,11 @@ tr:nth-child(even) {
   th,
   td {
     display: table-cell;
-    font-size: var(--h4);
+    font-size: var(--h5);
   }
   td {
     color: #333333;
     padding: 1.5rem 3rem;
-  }
-  tbody tr {
-    outline: 2px solid;
   }
   tr {
     display: table-row;
@@ -1420,9 +1462,11 @@ tr:nth-child(even) {
   table {
     display: table;
     width: 100%;
+    background: #ffffff;
+    border: 1px solid #333333;
   }
   caption {
-    font-size: var(--h3);
+    font-size: var(--h4);
     text-align: center;
     text-transform: lowercase;
     display: none;
@@ -1430,7 +1474,6 @@ tr:nth-child(even) {
   }
   .dark,
   thead tr.dark {
-    background-color: #ffffff;
     color: #333333;
     font-weight: bold;
     font-family: "Bungee", cursive;
@@ -1441,7 +1484,7 @@ tr:nth-child(even) {
 .table-second--info {
   width: 100%;
   height: auto;
-  font-size: 1.4rem;
+  font-size: 16px;
   font-family: "Poppins", sans-serif;
   margin-top: 4.66667rem;
   text-transform: uppercase;
@@ -1464,8 +1507,8 @@ tr:nth-child(even) {
   position: absolute;
   top: 0;
   left: 0;
+  right: 0;
   width: 100%;
-  height: 100%;
 }
 
 .table-fourth__stars {
@@ -1530,7 +1573,7 @@ tr:nth-child(even) {
 
 .contact__form {
   justify-content: space-between;
-  background-color: #4f4f4f;
+  background-color: #4e3c39;
   width: 50rem;
   max-width: 50rem;
   padding: 2rem;
@@ -1549,7 +1592,7 @@ tr:nth-child(even) {
 @media (max-width: 576px) {
   .contact__form {
     padding: 1rem;
-    margin: .5rem;
+    margin: 0.5rem;
   }
 }
 
@@ -1584,7 +1627,7 @@ tr:nth-child(even) {
 .contact__input-group .privacy,
 .contact__input-group .privacy--register {
   color: #ffffff;
-  padding: .3rem .2rem;
+  padding: 0.3rem 0.2rem;
   text-decoration: none;
   font-size: var(--p);
   margin-left: 1rem;
@@ -1671,15 +1714,15 @@ tr:nth-child(even) {
   border: none;
   font-weight: bold;
   cursor: pointer;
-  padding: .5rem 2.5rem;
+  padding: 0.5rem 2.5rem;
   font-size: 1.2rem;
-  padding: .3rem 1.2rem;
+  padding: 0.3rem 1.2rem;
   color: #bdbdbd;
 }
 
 @media (max-width: 576px) {
   .contact__btns {
-    padding: .2rem 1.5rem;
+    padding: 0.2rem 1.5rem;
   }
 }
 
@@ -1694,7 +1737,7 @@ tr:nth-child(even) {
 .contact__btns a {
   text-decoration: none;
   color: #828282;
-  padding: .5rem;
+  padding: 0.5rem;
   cursor: pointer;
 }
 
@@ -1743,6 +1786,7 @@ tr:nth-child(even) {
 
 .contact__link a {
   display: inline-block;
+  font-weight: 600;
   text-decoration: none;
   color: #333333;
 }
@@ -1763,13 +1807,22 @@ tr:nth-child(even) {
   display: block;
 }
 
-.table-nav {
-  background-color: #828282;
+.table-nav button {
+  text-transform: lowercase;
+}
+
+.table-nav button::first-letter {
+  text-transform: uppercase;
 }
 
 .table-nav__list {
+  background: #ffffff;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding-left: 10vw;
   display: flex;
-  justify-content: space-evenly;
+  justify-content: flex-start;
   flex-wrap: wrap;
   list-style: none;
   max-width: 1440px;
@@ -1779,25 +1832,26 @@ tr:nth-child(even) {
 }
 
 .table-nav__item {
-  text-transform: uppercase;
+  margin-right: 6rem;
 }
 
 .table-nav button {
-  text-transform: uppercase;
+  text-transform: lowercase;
+  font-size: var(--h5);
+  font-family: "Poppins", sans-serif;
   border: none;
   outline: none;
   margin: 0;
-  font-size: inherit;
 }
 
 .table-nav__link {
-  color: #ffffff;
+  color: #333333;
   background: none;
   text-decoration: none;
-  height: 5rem;
   padding: 1rem 2rem;
   position: relative;
   z-index: 3;
+  text-transform: none;
 }
 
 .table-nav__link.active {
@@ -1809,7 +1863,28 @@ tr:nth-child(even) {
   transition: hover 0.5s ease;
   font-weight: 400;
   color: #333333;
-  background-color: #ffffff;
+}
+
+.table-nav__link.active::before {
+  content: '';
+  position: absolute;
+  z-index: -4;
+  width: 65px;
+  height: 74.8px;
+  /* top: -28px;
+        left: -14px; */
+  top: -18px;
+  left: -13px;
+  /* @include hexagon; */
+  clip-path: polygon(50% 0, 100% 25%, 100% 75%, 50% 100%, 0 75%, 0 25%);
+  background: #f6edde;
+  transform: rotate(-134deg);
+  /* @include rotate; */
+  transition: all 0.5s ease;
+}
+
+.table-nav__link:hover {
+  color: #4f4f4f;
 }
 
 .table-fourth {
@@ -1817,12 +1892,12 @@ tr:nth-child(even) {
 }
 
 .table__btn--left {
-  left: -5%;
+  left: 10%;
   transform: translate(-50%, 0);
 }
 
 .table__btn--right {
-  right: -5%;
+  right: 10%;
   transform: translate(50%, 0);
 }
 
@@ -2115,7 +2190,7 @@ tr:nth-child(even) {
 .card__footer .btn {
   text-decoration: none;
   font-size: 1.2rem;
-  padding: .3rem 1.2rem;
+  padding: 0.3rem 1.2rem;
   color: #bdbdbd;
   background-color: #ffffff;
   color: #333333;
@@ -2132,29 +2207,24 @@ tr:nth-child(even) {
 }
 
 .wrapper--description {
-  background-image: linear-gradient(58deg, white 62%, rgba(213, 178, 117, 0.9) 62%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../src/images/description-bg.jpg);
+  background-image: linear-gradient(58deg, white 62%, rgba(213, 178, 117, 0.9) 62%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../src/images/gallery-bg.jpg);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  background-image: linear-gradient(77deg, white 60%, rgba(241, 226, 196, 0.9) 60%, rgba(241, 226, 196, 0.9) 100%, transparent 50%), url(../src/images/gallery-bg-medium.jpg);
   overflow-x: hidden;
-}
-
-@media (max-width: 992px) {
-  .wrapper--description {
-    background-image: linear-gradient(72deg, white 72%, rgba(213, 178, 117, 0.9) 72%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../src/images/description-bg-medium.jpg);
-  }
 }
 
 @media (max-width: 576px) {
   .wrapper--description {
-    background-image: linear-gradient(72deg, white 72%, rgba(213, 178, 117, 0.9) 72%, rgba(213, 178, 117, 0.9) 100%, transparent 50%), url(../src/images/description-bg-small.jpg);
+    background-image: linear-gradient(80deg, white 60%, rgba(241, 226, 196, 0.9) 60%, rgba(241, 226, 196, 0.9) 100%, transparent 50%), url(../src/images/gallery-bg-small.jpg);
   }
 }
 
 .content--description {
   position: relative;
   padding: 4rem 10vw 14rem 10vw;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.5);
 }
 
 @media (max-width: 768px) {
@@ -2176,7 +2246,7 @@ tr:nth-child(even) {
 
 .content__description h1 span {
   display: inline-block;
-  color: #eecf90;
+  color: #624b47;
 }
 
 @media (max-width: 992px) {
@@ -2238,6 +2308,10 @@ tr:nth-child(even) {
 
 .content__short-info h4 {
   font-weight: 400;
+}
+
+.content h5.desc {
+  font-weight: 600;
 }
 
 .content__picture {
@@ -2304,9 +2378,12 @@ tr:nth-child(even) {
 }
 
 .content__picture-img {
+  border: 1px solid black;
   position: relative;
   width: 100%;
   height: 100%;
+  max-width: 380px;
+  max-height: 450px;
   top: 0;
   transform: rotate(88deg);
   opacity: 0.8;
@@ -2341,7 +2418,7 @@ tr:nth-child(even) {
 
 .content__form .cap,
 .content__form .qty {
-  background-color: #ed806b;
+  background-color: #624b47;
   color: #ffffff;
   justify-self: start;
   grid-column: 1/2;
@@ -2378,13 +2455,14 @@ tr:nth-child(even) {
 }
 
 .content__form .btn--submit {
-  background-color: #ffffff;
+  background-color: #f6c768;
+  font-size: var(--h5);
   color: #333333;
   border: 2px solid #333333;
-  grid-column: 2/3;
-  grid-row: 1/2;
   justify-self: center;
   filter: drop-shadow(-4px 2px 5px rgba(79, 79, 79, 0.8));
+  grid-column: 2/3;
+  grid-row: 1/2;
   width: 350px;
   height: 6.2rem;
 }
@@ -2393,6 +2471,21 @@ tr:nth-child(even) {
   .content__form .btn--submit {
     width: 27rem;
   }
+}
+
+.content__form .btn--submit-unlogged {
+  background-color: #ffffff;
+  color: #333333;
+  border: 2px solid #333333;
+  font-size: var(--h5);
+  justify-self: center;
+  grid-column: 2/3;
+  grid-row: 1/2;
+  width: auto;
+  min-height: 6rem;
+  height: auto;
+  display: flex;
+  align-items: center;
 }
 
 .content__form h5 {
@@ -2419,20 +2512,21 @@ tr:nth-child(even) {
   }
 }
 
-.navigation--description .navigation__row--first {
+.wrapper--description .navigation .navigation__row--first {
   margin-bottom: 0;
+  background-color: white;
 }
 
-.navigation--description .navigation__nav {
+.wrapper--description .navigation .navigation__nav {
   padding: 0;
   overflow-y: visible;
 }
 
-.navigation--description .navigation__list, .navigation--description .navigation__description {
+.wrapper--description .navigation .navigation__list, .wrapper--description .navigation .navigation__description {
   height: 5rem;
 }
 
-.navigation--description .navigation__list::before, .navigation--description .navigation__description::before {
+.wrapper--description .navigation .navigation__list::before, .wrapper--description .navigation .navigation__description::before {
   height: 5rem;
 }
 
@@ -2559,10 +2653,10 @@ tr:nth-child(even) {
 
 .slider__btn, .table__btn {
   position: absolute;
-  top: 50%;
+  bottom: 25%;
   z-index: 10;
   border: none;
-  background: #eecf90;
+  background: #f6edde;
   font-family: inherit;
   color: #333333;
   border-radius: 50%;

@@ -3,12 +3,11 @@
     padding: $sectionMargin/2 10vw;
     color: $color-gray;
     font-size: var(--h5);
-    background-color: $color-honey-3; 
+    background-color: $color-honey-3;
 
-    @media (max-width:$small) {
+    @media (max-width: $small) {
       font-size: var(--p);
     }
-
   }
 
   &__link {
@@ -18,8 +17,8 @@
       width: 3rem;
       height: 3rem;
       margin-right: 5rem;
-      
-      @media (max-width:$small) {
+
+      @media (max-width: $small) {
         width: 2.5rem;
         height: 2.5rem;
         margin-right: 3rem;
@@ -30,6 +29,7 @@
       display: inline-block;
       // margin: auto 0;
       // padding: .5rem;
+      font-weight: 600;
 
       text-decoration: none;
       color: $color-gray;
@@ -38,13 +38,9 @@
         color: darken($color-gray, 20%);
       }
     }
-
   }
 
   &__link:not(:last-child) {
     margin-bottom: 3rem;
-
   }
-
-
 }

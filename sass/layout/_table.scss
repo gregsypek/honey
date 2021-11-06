@@ -3,7 +3,18 @@ and Adrian Roselli: http://adrianroselli.com/2017/11/a-responsive-accessible-tab
 */
 
 .table {
-  margin: 10rem 7vw $sectionMargin 7vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // margin: 0 auto;
+  background: $color-white;
+  // width: 100%;
+  // padding: 8rem 7vw $sectionMargin 7vw;
+  min-height: 650px;
+  padding: 14rem 2rem;
+  height: 95rem;
+  // padding: 0 $sectionMargin 0;
+  // min-height: 650px;
 }
 
 table {
@@ -34,6 +45,7 @@ th,
 tr,
 td {
   display: block;
+  padding: 1rem;
 }
 
 /* Hide table headers (but not display: none;, for accessibility -- sighted users will see labels below) */
@@ -118,7 +130,7 @@ caption {
   width: 100%;
   text-align: left;
   font-weight: bold;
-  font-size: var(--h3);
+  font-size: var(--h4);
   // padding: 0.5rem;
   font-family: $font-primary;
   color: $color-gray;
@@ -146,7 +158,8 @@ tr:nth-child(odd) {
 }
 
 tr:nth-child(even) {
-  background-color: $color-honey-3;
+  background-color: $color-honey-8;
+  outline: 1px solid $color-gray;
 }
 
 .hexagon-bg-3::before {
@@ -171,7 +184,9 @@ tr:nth-child(even) {
   // }
 
   table {
-    padding: 0 5rem 5rem 5rem;
+    padding: 5rem;
+
+    // padding: 6rem 2rem;
   }
 }
 
@@ -206,7 +221,7 @@ tr:nth-child(even) {
   td {
     display: table-cell;
     // padding: 1rem;
-    font-size: var(--h4);
+    font-size: var(--h5);
   }
 
   td {
@@ -217,9 +232,9 @@ tr:nth-child(even) {
   }
 
   //add a border only in table body
-  tbody tr {
-    outline: 2px solid;
-  }
+  // tbody tr {
+  //   // outline: 2px solid;
+  // }
 
   tr {
     display: table-row;
@@ -229,11 +244,13 @@ tr:nth-child(even) {
   table {
     display: table;
     width: 100%;
-    // border: none;
+    // margin-top: $sectionMargin;
+    background: $color-white;
+    border: 1px solid $color-gray;
   }
 
   caption {
-    font-size: var(--h3);
+    font-size: var(--h4);
     text-align: center;
     text-transform: lowercase;
     display: none;
@@ -242,7 +259,7 @@ tr:nth-child(even) {
 
   .dark,
   thead tr.dark {
-    background-color: $color-white;
+    // background-color: $color-white;
     color: $color-gray;
     font-weight: bold;
     font-family: $font-primary;
@@ -253,8 +270,7 @@ tr:nth-child(even) {
 .table-second--info {
   width: 100%;
   height: auto;
-  font-size: 1.6rem;
-  font-weight: 600;
+  font-size: 16px;
   font-family: $font-secondary;
   margin-top: $sectionMargin/3;
   text-transform: uppercase;
@@ -275,8 +291,9 @@ tr:nth-child(even) {
     position: absolute;
     top: 0;
     left: 0;
+    right: 0;
     width: 100%;
-    height: 100%;
+    // height: 100%;
     // display:inline-block;
   }
 

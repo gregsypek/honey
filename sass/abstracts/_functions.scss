@@ -8,7 +8,7 @@
     line-height: 140%;
 
     span {
-    display: $span;
+      display: $span;
       color: $color2;
     }
   }
@@ -19,24 +19,36 @@
 
 //----------------LAYOUT-----------------
 
-@mixin backImageHero($path, $deg:58deg, $point1: 62%, $point2:62%) {
-  background-image: linear-gradient($deg,
+@mixin backImageHero($path, $deg: 58deg, $point1: 62%, $point2: 62%) {
+  background-image: linear-gradient(
+      $deg,
       rgba($color-honey, 0.8) $point1,
       rgba($color-white, 0.8) $point2,
       rgba($color-white, 0.8) 100%,
-      transparent 50%),
+      transparent 50%
+    ),
     $path;
-
 }
 
-@mixin backImage($path, $deg:58deg, $point1: 62%, $point2:62%) {
-  background-image: linear-gradient($deg,
+@mixin backImage($path, $deg: 58deg, $point1: 62%, $point2: 62%) {
+  background-image: linear-gradient(
+      $deg,
       rgba($color-white, 1) $point1,
       rgba($color-honey-2, 0.9) $point2,
       rgba($color-honey-2, 0.9) 100%,
-      transparent 50%),
+      transparent 50%
+    ),
     $path;
-
+}
+@mixin backImage2($path, $deg: 66deg, $point1: 62%, $point2: 62%) {
+  background-image: linear-gradient(
+      $deg,
+      rgba($color-white, 1) $point1,
+      rgba($color-honey-3, 0.9) $point2,
+      rgba($color-honey-3, 0.9) 100%,
+      transparent 50%
+    ),
+    $path;
 }
 
 @mixin layout($path, $bc-size, $bc-pos) {
@@ -53,5 +65,4 @@
   background-size: $bc-size;
   background-position: $bc-pos;
   background-repeat: no-repeat;
-
 }
