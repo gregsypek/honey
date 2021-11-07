@@ -30,6 +30,8 @@ Technologies being used under the hood:
 - Sass
 
 ![alt tag](./public/src/screenshots/miodekv3-3.png)
+![alt tag](./public/src/screenshots/miodekv3-5.png)
+![alt tag](./public/src/screenshots/miodekv3-6.png)
 
 #### Future plans
 
