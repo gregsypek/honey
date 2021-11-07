@@ -32,6 +32,7 @@
 
     li {
       flex-basis: 28vw;
+      max-width: 600px;
       margin-bottom: 4rem;
 
       @media (max-width: 800px) {
