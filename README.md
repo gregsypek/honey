@@ -4,7 +4,7 @@
 
 **Miodek v3** is my biggest website - containing 14 pages. Write for a real company with honey for sale. Including lazy loading images and slider components. Fully responsive with an easy to manage SCSS structure.
 
-just visit [gregsypek.github.io/honey](http://gregsypek.github.io/honey)!
+just visit [https://pasieka2.netlify.app](https://pasieka2.netlify.app)!
 
 ![alt tag](./public/src/screenshots/miodekv3-1.png)
 
