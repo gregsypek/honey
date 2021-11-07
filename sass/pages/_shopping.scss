@@ -38,7 +38,7 @@
   max-width: 120rem;
   margin: 7rem 10vw;
   display: grid;
-
+  justify-items: center;
   grid-template-columns: repeat(3, 1fr);
   grid-column-gap: 7rem;
   grid-row-gap: calc(#{$sectionMargin} + 4rem);
