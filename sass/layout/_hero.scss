@@ -1,18 +1,27 @@
 .wrapper--hero {
   position: relative;
   // <a href="https://www.freepik.com">designed by Racool_Studio - Freepik.com</a>
-  @include layoutHero(url(../src/images/hero-bg.jpg), cover, bottom);
-
+  @include layoutHero(url(../src/images/hero-bg.jpg), cover, center);
 
   @media (max-width: $large) {
-    @include backImageHero(url(../src/images/hero-bg-medium.jpg), 72deg, 72%, 72%);
+    @include backImageHero(
+      url(../src/images/hero-bg-medium.jpg),
+      72deg,
+      72%,
+      72%
+    );
   }
-  
+
   @media (max-width: $large) {
     flex-direction: column;
   }
   @media (max-width: $big) {
-    @include backImageHero(url(../src/images/hero-bg-small.jpg), 72deg, 72%, 72%);
+    @include backImageHero(
+      url(../src/images/hero-bg-small.jpg),
+      72deg,
+      72%,
+      72%
+    );
   }
 }
 
@@ -26,7 +35,6 @@
   @media (max-width: $big) {
     grid-template-columns: 10% 50% 40%;
     grid-row-gap: 6rem;
-
   }
 
   &__title {
@@ -40,7 +48,6 @@
     span {
       color: $color-white;
     }
-
   }
 
   &__intro {
@@ -48,7 +55,6 @@
     font-family: $font-secondary;
     color: $color-gray;
     font-weight: 400;
-
   }
 
   &__btn {

@@ -296,7 +296,7 @@
         background-color: rgba($color-white, 1);
         z-index: 999;
         height: 8rem;
-        max-width: 1440px;
+        // max-width: 1440px;
 
         ::before {
           content: '';
@@ -344,7 +344,7 @@
       // margin:3rem 0;
       background: transparent;
       width: 100vw;
-      max-width: 1440px;
+      // max-width: 1440px;
       height: 10rem;
       // reset padding which was given to burger nav
       padding: 0;

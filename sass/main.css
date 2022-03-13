@@ -49,7 +49,7 @@ html {
 body {
   box-sizing: border-box;
   overflow-x: hidden;
-  max-width: 1440px;
+  max-width: 1920px;
   margin: 0 auto;
 }
 
@@ -61,7 +61,7 @@ em {
   display: block;
 }
 
-a[href^=href]:after {
+a[href^='href']:after {
   content: "(" attr(href) ")";
 }
 
@@ -145,7 +145,7 @@ img.lazyload.loaded {
   position: relative;
   background-image: linear-gradient(58deg, rgba(238, 207, 144, 0.8) 62%, rgba(255, 255, 255, 0.8) 62%, rgba(255, 255, 255, 0.8) 100%, transparent 50%), url(../src/images/hero-bg.jpg);
   background-size: cover;
-  background-position: bottom;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
@@ -522,7 +522,6 @@ img.lazyload.loaded {
     background-color: white;
     z-index: 999;
     height: 8rem;
-    max-width: 1440px;
   }
   .navigation__row--second.sticky ::before {
     content: '';
@@ -556,7 +555,6 @@ img.lazyload.loaded {
     padding-top: 0;
     background: transparent;
     width: 100vw;
-    max-width: 1440px;
     height: 10rem;
     padding: 0;
   }
@@ -1073,7 +1071,6 @@ img.lazyload.loaded {
   position: absolute;
   z-index: -1;
   object-fit: cover;
-  max-width: 1440px;
   width: 100%;
   min-height: 600px;
 }
@@ -1820,7 +1817,6 @@ tr:nth-child(even) {
   justify-content: flex-start;
   flex-wrap: wrap;
   list-style: none;
-  max-width: 1440px;
   min-height: 100%;
   font-size: var(--h5);
   font-weight: normal;
